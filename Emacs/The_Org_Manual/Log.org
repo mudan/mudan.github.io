@@ -1,0 +1,42 @@
+﻿
+* TODO The Org manual
+SCHEDULED: <2015-08-14 周五 .+1d/3d>
+  :LOGBOOK:
+  - State "DONE"       from "TODO"       [2015-08-13 周四 11:47] \\
+    增加 easy-template 列表以及 Org 个人配置
+  - State "DONE"       from "TODO"       [2015-07-11 周六 11:01] \\
+    11 Markup for rich export DONE
+  - State "DONE"       from "TODO"       [2015-06-26 五 10:30] \\
+    11.1 Structural markup elements,update '2.7 Plain lists' and '2.10 Footnotes'
+  - State "DONE"       from "TODO"       [2015-06-25 四 09:57] \\
+    10 Agenda views DONE
+  - State "DONE"       from "TODO"       [2015-06-18 四 11:42] \\
+    10 Agenda views - 10.4 Presentation and sorting ~ 10.5 Commands in the agenda buffer
+  - State "DONE"       from "TODO"       [2015-06-17 三 15:26] \\
+    10 Agenda views - 10.1 Agenda files ~ 10.3 The built-in agenda views
+  - State "DONE"       from "TODO"       [2015-06-09 二 20:19] \\
+    9 Capture Refile Archive DONE
+  - State "DONE"       from "TODO"       [2015-06-07 日 21:27] \\
+    9 Capture Refile Archive - 9.1 Capture
+  - State "DONE"       from "TODO"       [2015-06-05 五 10:22] \\
+    8 Dates and times DONE
+  - State "DONE"       from "TODO"       [2015-05-31 日 22:05] \\
+    8 Dates and times - 8.4.1 Clocking commands ~ 8.4.2 The clock table
+  - State "DONE"       from "TODO"       [2015-05-30 六 13:07] \\
+    8 Dates and times - 8.1 Timestamps, deadlines, and scheduling ~ 8.2 Creating timestamps
+  - State "DONE"       from "TODO"       [2015-05-27 三 08:49] \\
+    7 Properties and columns DONE
+  - State "DONE"       from "TODO"       [2015-05-25 一 19:36] \\
+    7 Properties and columns - 7.1 Property syntax ~ 7.4 Property Inheritance
+  - State "DONE"       from "TODO"       [2015-05-21 四 08:14] \\
+    6 Org Tags DONE
+  - State "DONE"       from "TODO"       [2015-05-20 三 08:41] \\
+    5 TODO Items DONE - 5.4 Prioritiesp ~ 5.6 Checkboxes
+  - State "DONE"       from "TODO"       [2015-05-18 一 10:03] \\
+    5 TODO Items - 5.3 Progress logging
+  :END:
+  :PROPERTIES:
+  :LOGGING: DONE(@) logrepeat
+  :STYLE:    habit
+  :LAST_REPEAT: [2015-08-13 周四 11:47]
+  :END:

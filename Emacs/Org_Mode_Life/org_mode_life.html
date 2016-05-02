@@ -1,0 +1,474 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<title>Org Mode<sub>文字生活</sub></title>
+<!-- 2015-08-20 周四 09:29 -->
+<meta  http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta  name="generator" content="Org-mode" />
+<meta  name="author" content="mudan" />
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { color: green; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  pre.src-sh:before    { content: 'sh'; }
+  pre.src-bash:before  { content: 'sh'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-R:before     { content: 'R'; }
+  pre.src-perl:before  { content: 'Perl'; }
+  pre.src-java:before  { content: 'Java'; }
+  pre.src-sql:before   { content: 'SQL'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.right  { text-align: center;  }
+  th.left   { text-align: center;   }
+  th.center { text-align: center; }
+  td.right  { text-align: right;  }
+  td.left   { text-align: left;   }
+  td.center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara:nth-child(2) { display: inline; }
+  .footpara { display: block; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  /*]]>*/-->
+</style>
+<link rel="stylesheet" type="text/css" href="../emacs.css" />
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2013 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+</head>
+<body>
+<div id="content">
+<h1 class="title">Org Mode<sub>文字生活</sub></h1>
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#sec-1">1. 如何阅读本文档</a></li>
+<li><a href="#sec-2">2. 协议</a></li>
+<li><a href="#sec-3">3. 开始</a>
+<ul>
+<li><a href="#sec-3-1">3.1. 从 Git 得到 org-mode</a></li>
+<li><a href="#sec-3-2">3.2. Org-Mode 安装</a></li>
+<li><a href="#sec-3-3">3.3. 在 Org 文件中组织你的生活</a></li>
+<li><a href="#sec-3-4">3.4. Agenda 安装</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<p>
+本文译自：<a href="http://doc.norang.ca/org-mode.html">Org Mode - Organize Your Life In Plain Text</a> <sup><a id="fnr.1" name="fnr.1" class="footref" href="#fn.1">1</a></sup>
+</p>
+
+<div id="outline-container-sec-1" class="outline-2">
+<h2 id="sec-1"><span class="section-number-2">1</span> 如何阅读本文档</h2>
+<div class="outline-text-2" id="text-1">
+<p>
+本文档假设你已经接触过并熟悉 Org mode 的一些概念，比如：agenda、capture mode 等等，对此你不会完全陌生。更多使用技巧可以在 <a href="http://orgmode.org/index.html#sec-4.1">Org-Mode Manual</a> 和 <a href="http://orgmode.org/worg/">Worg Site</a> 找到<sup><a id="fnr.2" name="fnr.2" class="footref" href="#fn.2">2</a></sup>。
+</p>
+
+<p>
+多年来我一直使用 Org mode 作为我的个人信息管理工具，开始的时候也仅仅只用到默认关键词 <code>TODO</code> 和 <code>DONE</code> 。从小的修改开始，日积月累，直到现在文档所描述的样子。
+</p>
+
+<p>
+直到现在，我仍然不断完善着我的工作流程并且定期尝试新的事物。本文档所描述的是利用我当前 Org mode 营造出的一个成熟的工作流程，同时我也倾向于在我新的工作流程运行 30 天以后再修改本文档以便让新添加的部分测试成熟。
+</p>
+
+<p>
+本文档描述的 Emacs 所有自定义设置均为编辑器默认值，这明确了在我的工作流程中 org mode 使用的一些重要变量，同时确保流程的稳定。这些默认变量将在之后陆续修改。
+</p>
+</div>
+</div>
+
+<div id="outline-container-sec-2" class="outline-2">
+<h2 id="sec-2"><span class="section-number-2">2</span> 协议</h2>
+<div class="outline-text-2" id="text-2">
+<pre class="example">
+Copyright (C)  2013  Bernt Hansen.
+Permission is granted to copy, distribute and/or modify this document
+under the terms of the GNU Free Documentation License, Version 1.3
+or any later version published by the Free Software Foundation;
+with no Invariant Sections, no Front-Cover Texts, and no Back-Cover Texts.
+
+Code in this document is free software: you can redistribute it
+and/or modify it under the terms of the GNU General Public
+License as published by the Free Software Foundation, either
+version 3 of the License, or (at your option) any later version.
+
+This code is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+</pre>
+
+<p>
+This document <a href="http://doc.norang.ca/org-mode.html">http://doc.norang.ca/org-mode.html</a> (either in its <a href="http://doc.norang.ca/org-mode.html">HTML format</a> or in its <a href="http://doc.norang.ca/org-mode.org">Org format</a>) is licensed under the GNU Free Documentation License version 1.3 or later(<a href="http://www.gnu.org/copyleft/fdl.html">http://www.gnu.org/copyleft/fdl.html</a>).
+</p>
+
+<p>
+The code examples and CSS stylesheets are licensed under the GNU General Public License v3 or later.
+</p>
+</div>
+</div>
+
+<div id="outline-container-sec-3" class="outline-2">
+<h2 id="sec-3"><span class="section-number-2">3</span> 开始</h2>
+<div class="outline-text-2" id="text-3">
+<p>
+使用 org mode 十分简单，你只需要几句命令行启动你的 Emacs 并从 git 仓库中得到最新版本的 org mode。
+</p>
+</div>
+
+<div id="outline-container-sec-3-1" class="outline-3">
+<h3 id="sec-3-1"><span class="section-number-3">3.1</span> 从 Git 得到 org-mode</h3>
+<div class="outline-text-3" id="text-3-1">
+<p>
+我保留了一个 org-mode <code>git</code> 仓库拷贝在 <code>~/git/org-mode/</code> ，使用 clone 命令创建：
+</p>
+
+<div class="org-src-container">
+
+<pre class="src src-sh"><span style="color: #DCDCCC; font-weight: bold;">cd</span> ~/git
+git clone git://orgmode.org/org-mode.git
+</pre>
+</div>
+
+<p>
+想从 org-mode 开发人员那里获取新的更新可以使用：
+</p>
+
+<div class="org-src-container">
+
+<pre class="src src-sh"><span style="color: #DCDCCC; font-weight: bold;">cd</span> ~/git/org-mode
+git pull
+make uncompiled
+</pre>
+</div>
+
+<p>
+我在安装时没有编译源文件，因此 make 文件中的目标就是所有你所需要的。
+</p>
+
+<p>
+通常情况下我会跟踪 org-mode 代码仓库的主分支。
+</p>
+</div>
+</div>
+
+<div id="outline-container-sec-3-2" class="outline-3">
+<h3 id="sec-3-2"><span class="section-number-3">3.2</span> Org-Mode 安装</h3>
+<div class="outline-text-3" id="text-3-2">
+<p>
+在 <code>.emacs</code> 配置文件里我会在多数缓冲区中打开 org-mode，而其默认打开的后缀名包括 <code>.org</code> 、 <code>.org_archive</code> 以及 <code>.txt</code> 文件。
+</p>
+
+<div class="org-src-container">
+
+<pre class="src src-lisp"><span style="color: #5F7F5F;">;;;</span>
+<span style="color: #5F7F5F;">;;; </span><span style="color: #7F9F7F;">Org Mode</span>
+<span style="color: #5F7F5F;">;;;</span>
+(add-to-list 'load-path (expand-file-name <span style="color: #CC9393;">"~/git/org-mode/lisp"</span>))
+(add-to-list 'auto-mode-alist '(<span style="color: #CC9393;">"\\.\\(org\\|org_archive\\|txt\\)$"</span> . org-mode))
+(<span style="color: #F0DFAF; font-weight: bold;">require</span> '<span style="color: #BFEBBF;">org</span>)
+<span style="color: #5F7F5F;">;;</span>
+<span style="color: #5F7F5F;">;; </span><span style="color: #7F9F7F;">&#26631;&#20934;&#24555;&#25463;&#38190;&#32465;&#23450;</span>
+(global-set-key <span style="color: #CC9393;">"\C-cl"</span> 'org-store-link)
+(global-set-key <span style="color: #CC9393;">"\C-ca"</span> 'org-agenda)
+(global-set-key <span style="color: #CC9393;">"\C-cb"</span> 'org-iswitchb)
+</pre>
+</div>
+
+<p>
+开始的时候这些就是所有你所需要的 org-mode 配置。
+</p>
+
+<p>
+本文档其余部分则介绍有关我的 org 文件构成以及其他一些用于适应我工作方式的自定义配置。
+</p>
+</div>
+</div>
+
+<div id="outline-container-sec-3-3" class="outline-3">
+<h3 id="sec-3-3"><span class="section-number-3">3.3</span> 在 Org 文件中组织你的生活</h3>
+<div class="outline-text-3" id="text-3-3">
+<p>
+任务通常被合理分配成几个组或项目：单独分组不同任务类型的 org 文件及其子目录下的文件也将最终整合成一个整体。
+</p>
+
+<p>
+以下是我使用的示例文件。
+</p>
+
+<p>
+与工作无关的任务：
+</p>
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="left" />
+</colgroup>
+
+<colgroup>
+<col  class="left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="left">文件名称</th>
+<th scope="col" class="left">用途描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="left">todo.org</td>
+<td class="left">个人任务、事件跟踪</td>
+</tr>
+
+<tr>
+<td class="left">gsoc2009.org</td>
+<td class="left">2009 年 Google Summer of Code</td>
+</tr>
+
+<tr>
+<td class="left">farm.org</td>
+<td class="left">和农场有关的任务</td>
+</tr>
+
+<tr>
+<td class="left">mark.org</td>
+<td class="left">和我儿子马克有关的任务</td>
+</tr>
+
+<tr>
+<td class="left">org.org</td>
+<td class="left">和 org-mode 有关的任务</td>
+</tr>
+
+<tr>
+<td class="left">git.org</td>
+<td class="left">和 git 有关的任务</td>
+</tr>
+</tbody>
+</table>
+
+<p>
+收集 org-capture 笔记以及相关任务：
+</p>
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="left" />
+</colgroup>
+
+<colgroup>
+<col  class="left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="left">文件名称</th>
+<th scope="col" class="left">用途描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="left">refile.org</td>
+<td class="left">笔记及相关任务收集</td>
+</tr>
+</tbody>
+</table>
+
+<p>
+工作相关 org 商务文件（使用虚拟客户名称）：
+</p>
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="left" />
+</colgroup>
+
+<colgroup>
+<col  class="left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="left">文件名称</th>
+<th scope="col" class="left">用途描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="left">norang.org</td>
+<td class="left">Norang 任务和笔记</td>
+</tr>
+
+<tr>
+<td class="left">XYZ.org</td>
+<td class="left">XYZ 公司任务和笔记</td>
+</tr>
+
+<tr>
+<td class="left">ABC.org</td>
+<td class="left">ABC 公司任务</td>
+</tr>
+
+<tr>
+<td class="left">ABC-DEF.org</td>
+<td class="left">ABC 公司及其客户 DEF 公司相关任务</td>
+</tr>
+
+<tr>
+<td class="left">ABC-KKK.org</td>
+<td class="left">ABC 公司及其客户 KKK 公司有关任务</td>
+</tr>
+
+<tr>
+<td class="left">YYY.org</td>
+<td class="left">YYY 公司任务</td>
+</tr>
+</tbody>
+</table>
+
+<p>
+Org-mode 非常适合用于处理多个客户和项目，一个 org 文件可以收集单个客户或项目相关的所有计划、笔记等等。
+</p>
+
+<p>
+比如在我的工作中 ABC 公司拥有多位客户。将每一位客户分离为单独的 org 文件有助于保持合理地分组，由于客户来来去去，整个 org 文件会不断添加或完成条目而 Agenda 视图中将始终保持只有重要的条目可见。
+</p>
+
+<p>
+除以上所述文件以外其他 org 文件主要用于发布，在 Agenda 中并不适用。
+</p>
+</div>
+</div>
+
+<div id="outline-container-sec-3-4" class="outline-3">
+<h3 id="sec-3-4"><span class="section-number-3">3.4</span> Agenda 安装</h3>
+</div>
+</div>
+<div id="footnotes">
+<h2 class="footnotes">Footnotes: </h2>
+<div id="text-footnotes">
+
+<div class="footdef"><sup><a id="fn.1" name="fn.1" class="footnum" href="#fnr.1">1</a></sup> <p class="footpara">
+作者最后修改时间在 2015-06-18 Thu 22:39，使用的 org mode 版本是 v8.2.10。
+</p></div>
+
+<div class="footdef"><sup><a id="fn.2" name="fn.2" class="footnum" href="#fnr.2">2</a></sup> <p class="footpara">
+如果看见英文头疼的话，也可以参考下我的 <a href="https://mudan.github.io/Emacs/The_Org_Manual/The_Org_Manual.html">The Org Manual 笔记</a>。
+</p></div>
+
+
+</div>
+</div></div>
+<div id="postamble" class="status">
+<p class="author">Author: mudan</p>
+<p class="date">Created: 2015-08-20 周四 09:29</p>
+<p class="creator"><a href="http://www.gnu.org/software/emacs/">Emacs</a> 24.5.1 (<a href="http://orgmode.org">Org</a> mode 8.2.10)</p>
+<p class="validation"></p>
+</div>
+</body>
+</html>

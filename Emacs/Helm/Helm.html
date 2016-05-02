@@ -1,0 +1,898 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<title>Helm 工具包</title>
+<!-- 2016-04-30 周六 10:21 -->
+<meta  http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta  name="generator" content="Org-mode" />
+<meta  name="author" content="mudan" />
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { color: green; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  pre.src-sh:before    { content: 'sh'; }
+  pre.src-bash:before  { content: 'sh'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-R:before     { content: 'R'; }
+  pre.src-perl:before  { content: 'Perl'; }
+  pre.src-java:before  { content: 'Java'; }
+  pre.src-sql:before   { content: 'SQL'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.right  { text-align: center;  }
+  th.left   { text-align: center;   }
+  th.center { text-align: center; }
+  td.right  { text-align: right;  }
+  td.left   { text-align: left;   }
+  td.center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara:nth-child(2) { display: inline; }
+  .footpara { display: block; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  /*]]>*/-->
+</style>
+<link rel="stylesheet" type="text/css" href="../emacs.css" />
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2013 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+</head>
+<body>
+<div id="content">
+<h1 class="title">Helm 工具包</h1>
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#sec-1">1. 基本使用</a></li>
+<li><a href="#sec-2">2. 命令 Command</a>
+<ul>
+<li><a href="#sec-2-1">2.1. helm-M-x</a></li>
+<li><a href="#sec-2-2">2.2. helm-show-kill-ring</a></li>
+<li><a href="#sec-2-3">2.3. helm-mini</a></li>
+<li><a href="#sec-2-4">2.4. helm-ff-do-grep</a></li>
+<li><a href="#sec-2-5">2.5. helm-semantic-or-imenu</a></li>
+<li><a href="#sec-2-6">2.6. helm-man-woman</a></li>
+<li><a href="#sec-2-7">2.7. helm-find</a></li>
+<li><a href="#sec-2-8">2.8. helm-locate</a></li>
+<li><a href="#sec-2-9">2.9. helm-occur</a></li>
+<li><a href="#sec-2-10">2.10. helm-apropos</a></li>
+<li><a href="#sec-2-11">2.11. helm-info-*</a></li>
+<li><a href="#sec-2-12">2.12. helm-lisp-completion-at-point</a></li>
+<li><a href="#sec-2-13">2.13. helm-resume</a></li>
+<li><a href="#sec-2-14">2.14. helm-all-mark-rings</a></li>
+<li><a href="#sec-2-15">2.15. helm-regexp</a></li>
+<li><a href="#sec-2-16">2.16. helm-register</a></li>
+<li><a href="#sec-2-17">2.17. helm-eval-expression-with-eldoc</a></li>
+<li><a href="#sec-2-18">2.18. helm-top</a></li>
+<li><a href="#sec-2-19">2.19. helm-surfraw</a></li>
+<li><a href="#sec-2-20">2.20. helm-google-suggest</a></li>
+<li><a href="#sec-2-21">2.21. helm-color</a></li>
+<li><a href="#sec-2-22">2.22. helm-calcul-expression</a></li>
+<li><a href="#sec-2-23">2.23. helm-eshell-history</a></li>
+<li><a href="#sec-2-24">2.24. helm-systemd</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<p>
+本文所有 gif 图片来自 <a href="http://tuhdo.github.io/helm-intro.html">http://tuhdo.github.io/helm-intro.html</a>
+</p>
+
+<p>
+我的设置 init-helm.el
+</p>
+<div class="org-src-container">
+
+<pre class="src src-emacs-lisp">(require-package 'helm)
+(<span style="color: #F0DFAF; font-weight: bold;">require</span> '<span style="color: #BFEBBF;">helm</span>)
+(<span style="color: #F0DFAF; font-weight: bold;">require</span> '<span style="color: #BFEBBF;">helm-config</span>)
+<span style="color: #5F7F5F;">;</span><span style="color: #7F9F7F;">(require 'helm-dash)</span>
+
+(helm-mode 1)
+(helm-autoresize-mode 1)
+<span style="color: #5F7F5F;">;</span><span style="color: #7F9F7F;">(setq helm-ff-auto-update-initial-value nil)    ; &#31105;&#27490;&#33258;&#21160;&#34917;&#20840;</span>
+
+(global-set-key (kbd <span style="color: #CC9393;">"M-x"</span>) 'helm-M-x)
+(global-set-key (kbd <span style="color: #CC9393;">"M-y"</span>) 'helm-show-kill-ring)
+(global-set-key (kbd <span style="color: #CC9393;">"C-c h"</span>) 'helm-command-prefix)
+(global-set-key (kbd <span style="color: #CC9393;">"C-x b"</span>) 'helm-mini)
+(global-set-key (kbd <span style="color: #CC9393;">"C-x C-f"</span>) 'helm-find-files)
+(global-set-key (kbd <span style="color: #CC9393;">"C-s"</span>) 'helm-occur)
+(global-set-key (kbd <span style="color: #CC9393;">"C-h SPC"</span>) 'helm-all-mark-rings)
+
+(setq helm-split-window-in-side-p           t
+      helm-move-to-line-cycle-in-source     t
+      helm-ff-search-library-in-sexp        t
+      helm-M-x-fuzzy-match                  t   <span style="color: #5F7F5F;">; </span><span style="color: #7F9F7F;">&#27169;&#31946;&#25628;&#32034;</span>
+      helm-buffers-fuzzy-matching           t
+      helm-locate-fuzzy-match               t
+      helm-recentf-fuzzy-match              t
+      helm-scroll-amount                    8
+      helm-ff-file-name-history-use-recentf t)
+
+(<span style="color: #F0DFAF; font-weight: bold;">provide</span> '<span style="color: #BFEBBF;">init-helm</span>)
+</pre>
+</div>
+
+<div id="outline-container-sec-1" class="outline-2">
+<h2 id="sec-1"><span class="section-number-2">1</span> 基本使用</h2>
+<div class="outline-text-2" id="text-1">
+<pre class="example">
+C-h f           相当于 describle-function，列出所有函数
+C-h v           相当于 describle-variable，列出所有变量
+C-h w           相当于 where-is，列出所有键绑定
+.....
+
+在 minibuffer 下
+C-s             相当于 grep，可模糊/正则搜索，helm-ff-run-grep
+C-n/C-p         移动光标
+C-v/M-v         快速移动
+C-k             回到根目录，清空原先的内容
+C-l             返回上一级
+C-c C-i         将选中的文件绝对插入缓冲区
+C-t             Helm.org
+C-x @           用 root 打开文件
+C-c h           切换到文件打开历史列表
+M-p             切换到其他目录
+M-a             选择所有，可与 C-c C-i 配合使用
+                本来还有 C-SPC 标记一个，但与中文输入法冲突……
+M-D             删除选中的文件
+M-R             重命名选定文件
+M-C             复制选定文件
+M-S             选定文件建立软连接
+M-H             选定文件建立硬链接
+</pre>
+
+<p>
+简单演示：
+</p>
+
+
+<div class="figure">
+<p><img src="./image/helm_projectile.gif" alt="helm_projectile.gif" />
+</p>
+</div>
+
+<p>
+1.首先键入 <code>main.c</code> ，出现众多候选。我只想要在 x86 目录下的 <code>main.c</code> ，所以再次键入 <code>x86</code> 。完整的过程即键入 <code>main.c x86</code> ，Helm 自动搜索到正确的候选 <code>arch/x86/boot/main.c</code> 。
+</p>
+
+<p>
+2.模糊搜索。比如路径是 <code>driver/edac/i5100_edac.c</code> 的文件，键入 <code>dedi51</code> ： <b>d</b> 表示 <code>driver</code> ， <b>ed</b> 表示 <code>edac</code> ， <b>i51</b> 表示 <code>i5100_edac.c</code> 。
+</p>
+</div>
+</div>
+<div id="outline-container-sec-2" class="outline-2">
+<h2 id="sec-2"><span class="section-number-2">2</span> 命令 Command</h2>
+<div class="outline-text-2" id="text-2">
+</div><div id="outline-container-sec-2-1" class="outline-3">
+<h3 id="sec-2-1"><span class="section-number-3">2.1</span> helm-M-x</h3>
+<div class="outline-text-3" id="text-2-1">
+<div class="org-src-container">
+
+<pre class="src src-emacs-lisp">(global-set-key (kbd <span style="color: #CC9393;">"M-x"</span>) 'helm-M-x)
+(setq helm-M-x-fuzzy-match t)
+</pre>
+</div>
+
+<p>
+<code>helm-M-x</code> 代替 <code>M-x</code> 命令，多出一个候选列表，且可以进行模糊搜索。
+</p>
+
+<p>
+演示：
+</p>
+
+
+<div class="figure">
+<p><img src="./image/helm-m-x.gif" alt="helm-m-x.gif" />
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-sec-2-2" class="outline-3">
+<h3 id="sec-2-2"><span class="section-number-3">2.2</span> helm-show-kill-ring</h3>
+<div class="outline-text-3" id="text-2-2">
+<div class="org-src-container">
+
+<pre class="src src-emacs-lisp">(global-set-key (kbd <span style="color: #CC9393;">"M-y"</span>) 'helm-show-kill-ring)
+</pre>
+</div>
+
+<p>
+<code>helm-show-kill-ring</code> 代替默认的 <code>M-y</code> ，可以在 emacs 剪切和复制的内容列表中选择/搜索。
+</p>
+
+<p>
+演示：
+</p>
+
+
+<div class="figure">
+<p><img src="./image/helm-kill-ring.gif" alt="helm-kill-ring.gif" />
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-sec-2-3" class="outline-3">
+<h3 id="sec-2-3"><span class="section-number-3">2.3</span> helm-mini</h3>
+<div class="outline-text-3" id="text-2-3">
+<div class="org-src-container">
+
+<pre class="src src-emacs-lisp">(global-set-key (kbd <span style="color: #CC9393;">"C-x b"</span>) 'helm-mini)
+(setq helm-buffers-fuzzy-matching t
+      helm-recentf-fuzzy-match    t)
+</pre>
+</div>
+
+<p>
+<code>helm-mini</code> 代替默认的 <code>C-x b</code> ，显示缓冲区列表，可搜索，完全可以代替默认的缓冲区列表命令，即 C-x b/C-x C-b。
+</p>
+
+<p>
+演示：
+</p>
+
+
+<div class="figure">
+<p><img src="./image/helm-mini.gif" alt="helm-mini.gif" />
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-sec-2-4" class="outline-3">
+<h3 id="sec-2-4"><span class="section-number-3">2.4</span> helm-ff-do-grep</h3>
+<div class="outline-text-3" id="text-2-4">
+<p>
+也可以用 <code>ack-grep</code> 代替 <code>grep</code>
+</p>
+<div class="org-src-container">
+
+<pre class="src src-emacs-lisp">(<span style="color: #F0DFAF; font-weight: bold;">when</span> (executable-find <span style="color: #CC9393;">"ack-grep"</span>)
+  (setq helm-grep-default-command <span style="color: #CC9393;">"ack-grep -Hn --no-group --no-color %e %p %f"</span>
+        helm-grep-default-recurse-command <span style="color: #CC9393;">"ack-grep -H --no-group --no-color %e %p %f"</span>))
+</pre>
+</div>
+
+<p>
+在 helm-find-files 的 minibuffer 中，键入 <code>C-s</code> 即可进入。
+</p>
+
+<p>
+演示：
+</p>
+
+
+<div class="figure">
+<p><img src="./image/helm-ff-do-grep.gif" alt="helm-ff-do-grep.gif" />
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-sec-2-5" class="outline-3">
+<h3 id="sec-2-5"><span class="section-number-3">2.5</span> helm-semantic-or-imenu</h3>
+<div class="outline-text-3" id="text-2-5">
+<div class="org-src-container">
+
+<pre class="src src-emacs-lisp">(setq helm-semantic-fuzzy-match t
+      helm-imenu-fuzzy-match    t)
+</pre>
+</div>
+
+<p>
+键入 <code>C-c h i</code> 进入，列出当前文件章节/节点列表，选择后跳转到指定章节/节点。
+</p>
+
+<p>
+演示：
+</p>
+
+
+<div class="figure">
+<p><img src="./image/helm-semantic-or-imenu.gif" alt="helm-semantic-or-imenu.gif" />
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-sec-2-6" class="outline-3">
+<h3 id="sec-2-6"><span class="section-number-3">2.6</span> helm-man-woman</h3>
+<div class="outline-text-3" id="text-2-6">
+<div class="org-src-container">
+
+<pre class="src src-emacs-lisp">(add-to-list 'helm-sources-using-default-as-input 'helm-source-man-pages)
+</pre>
+</div>
+
+<p>
+快速调整到指定 man 文档，需自己手工设置快捷键。
+</p>
+
+<p>
+演示：
+</p>
+
+
+<div class="figure">
+<p><img src="./image/helm-man-woman.gif" alt="helm-man-woman.gif" />
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-sec-2-7" class="outline-3">
+<h3 id="sec-2-7"><span class="section-number-3">2.7</span> helm-find</h3>
+<div class="outline-text-3" id="text-2-7">
+<p>
+<code>C-c h /</code> 默认情况下只搜索当前目录， <code>C-u C-c h /</code> 可指定要搜索的目录。
+</p>
+
+<p>
+在 <code>helm-find-files</code> （即 <code>C-x C-f</code> ）窗口中键入 <code>C-c /</code> 同样可以调用该命令。
+</p>
+
+<p>
+演示：
+</p>
+
+
+<div class="figure">
+<p><img src="./image/helm-find.gif" alt="helm-find.gif" />
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-sec-2-8" class="outline-3">
+<h3 id="sec-2-8"><span class="section-number-3">2.8</span> helm-locate</h3>
+<div class="outline-text-3" id="text-2-8">
+<div class="org-src-container">
+
+<pre class="src src-emacs-lisp">(setq helm-locate-fuzzy-match t)        <span style="color: #5F7F5F;">; </span><span style="color: #7F9F7F;">&#20165;&#20379; Linux &#24179;&#21488;&#19979;&#35774;&#32622;</span>
+</pre>
+</div>
+
+<p>
+<code>C-c h l</code> 启动， <code>C-!</code> 暂停/继续进行实时搜索，大硬盘搜索迟缓时可用。
+</p>
+
+<p>
+类似 helm-find，但进行全局搜索。Mac OS 下 需要用到 <code>mdfind</code> ，Windows 下需要安装 <a href="http://www.voidtools.com">Everthing search engine</a> 并添加 <code>es.exe</code> 环境变量。
+</p>
+
+<p>
+演示：
+</p>
+
+
+<div class="figure">
+<p><img src="./image/helm-locate.gif" alt="helm-locate.gif" />
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-sec-2-9" class="outline-3">
+<h3 id="sec-2-9"><span class="section-number-3">2.9</span> helm-occur</h3>
+<div class="outline-text-3" id="text-2-9">
+<div class="org-src-container">
+
+<pre class="src src-emacs-lisp">(global-set-key (kbd <span style="color: #CC9393;">"C-s"</span>) 'helm-occur)
+</pre>
+</div>
+
+<p>
+文件全文搜索，个人感觉完全可以代替 Emacs 默认搜索命令，按 <code>TAB</code> 显示扩展命令，同时可以按 <code>C-j</code> 临时跳转到某个搜索结果。
+</p>
+
+<p>
+<b>注意：搜索关键词之间加空格可以模糊搜索，比如键入“h l”，搜索结果中会有“helm”。</b>
+</p>
+
+<p>
+<i>功能类似的还有 Helm-swoop，地址：<a href="https://github.com/ShingoFukuyama/helm-swoop">https://github.com/ShingoFukuyama/helm-swoop</a></i>
+</p>
+
+<p>
+演示：
+</p>
+
+
+<div class="figure">
+<p><img src="./image/helm-occur.gif" alt="helm-occur.gif" />
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-sec-2-10" class="outline-3">
+<h3 id="sec-2-10"><span class="section-number-3">2.10</span> helm-apropos</h3>
+<div class="outline-text-3" id="text-2-10">
+<div class="org-src-container">
+
+<pre class="src src-emacs-lisp">(setq helm-apropos-fuzzy-match t)
+</pre>
+</div>
+
+<p>
+显示 Emacs 指定命令简述(包括可用函数、变量、属性、功能等等)，可模糊/正则搜索。
+</p>
+
+<p>
+截图：
+</p>
+
+
+<div class="figure">
+<p><img src="./image/helm-apropos.png" alt="helm-apropos.png" />
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-sec-2-11" class="outline-3">
+<h3 id="sec-2-11"><span class="section-number-3">2.11</span> helm-info-*</h3>
+<div class="outline-text-3" id="text-2-11">
+<p>
+helm emacs info 帮助系统，提供搜索/补全功能，键入 <code>M-x helm-info</code> 可以看到所有可选择的列表。
+</p>
+
+<p>
+截图：
+</p>
+
+
+<div class="figure">
+<p><img src="./image/helm-info.png" alt="helm-info.png" />
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-sec-2-12" class="outline-3">
+<h3 id="sec-2-12"><span class="section-number-3">2.12</span> helm-lisp-completion-at-point</h3>
+<div class="outline-text-3" id="text-2-12">
+<div class="org-src-container">
+
+<pre class="src src-emacs-lisp">(setq helm-lisp-fuzzy-completion t)
+</pre>
+</div>
+
+<p>
+提供 lisp 命令补全/候选，使用该命令之前必须先键入几个 lisp 关键词，哪怕是一个括号。
+</p>
+
+<p>
+截图：
+</p>
+
+
+<div class="figure">
+<p><img src="./image/helm-lisp-completion-at-point.png" alt="helm-lisp-completion-at-point.png" />
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-sec-2-13" class="outline-3">
+<h3 id="sec-2-13"><span class="section-number-3">2.13</span> helm-resume</h3>
+<div class="outline-text-3" id="text-2-13">
+<p>
+用于回复以前的缓冲区，且恢复那个缓冲区已有的输入，哪怕你没有保存。
+</p>
+
+<p>
+键入 <code>C-c h b</code> 启动。
+</p>
+</div>
+</div>
+<div id="outline-container-sec-2-14" class="outline-3">
+<h3 id="sec-2-14"><span class="section-number-3">2.14</span> helm-all-mark-rings</h3>
+<div class="outline-text-3" id="text-2-14">
+<div class="org-src-container">
+
+<pre class="src src-emacs-lisp">(global-set-key (kbd <span style="color: #CC9393;">"C-h SPC"</span>) 'helm-all-mark-rings)
+</pre>
+</div>
+
+<p>
+在窗口处列出当前文件和全局 <code>mark-rings</code> ，可以使用 <code>C-n/C-p</code> 上下移动，也可以直接输入标记编号，回车跳转到指定行。
+</p>
+
+<p>
+截图：
+</p>
+
+
+<div class="figure">
+<p><img src="./image/helm-all-mark-rings.png" alt="helm-all-mark-rings.png" />
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-sec-2-15" class="outline-3">
+<h3 id="sec-2-15"><span class="section-number-3">2.15</span> helm-regexp</h3>
+<div class="outline-text-3" id="text-2-15">
+<p>
+实时显示某个正则表达式效果，测试时可用。
+</p>
+
+<pre class="example">
+F1 保存正则表达式作为一个 kill-ring
+F2 替换当前正则表达式
+F3 保存正则表达式作为当前提示
+</pre>
+
+<p>
+演示：
+</p>
+
+
+<div class="figure">
+<p><img src="./image/helm-regexp.gif" alt="helm-regexp.gif" />
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-sec-2-16" class="outline-3">
+<h3 id="sec-2-16"><span class="section-number-3">2.16</span> helm-register</h3>
+<div class="outline-text-3" id="text-2-16">
+<div class="org-src-container">
+
+<pre class="src src-emacs-lisp">(global-set-key (kbd <span style="color: #CC9393;">"C-c h x"</span>) 'helm-register)
+</pre>
+</div>
+
+<p>
+查看并列出所有 Emacs 寄存器（emacs register）。
+</p>
+
+<p>
+演示：
+</p>
+
+
+<div class="figure">
+<p><img src="./image/helm-registers.gif" alt="helm-registers.gif" />
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-sec-2-17" class="outline-3">
+<h3 id="sec-2-17"><span class="section-number-3">2.17</span> helm-eval-expression-with-eldoc</h3>
+<div class="outline-text-3" id="text-2-17">
+<p>
+在该命令下输入的 Emacs Lisp 表达式其结果可以马上在缓冲区中表现出来。如果你有一个命令希望马上看到效果，该命令会有很大帮助。
+</p>
+
+<p>
+演示：
+</p>
+
+
+<div class="figure">
+<p><img src="./image/helm-eval-expression.gif" alt="helm-eval-expression.gif" />
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-sec-2-18" class="outline-3">
+<h3 id="sec-2-18"><span class="section-number-3">2.18</span> helm-top</h3>
+<div class="outline-text-3" id="text-2-18">
+<p>
+类似 Linux top 命令。
+</p>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="left" />
+
+<col  class="left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="left">Key</th>
+<th scope="col" class="left">用途</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="left">C-c C-u</td>
+<td class="left">刷新</td>
+</tr>
+
+<tr>
+<td class="left">M-C</td>
+<td class="left">按照 Shell command 排序</td>
+</tr>
+
+<tr>
+<td class="left">M-P</td>
+<td class="left">按照 CPU 使用率排序</td>
+</tr>
+
+<tr>
+<td class="left">M-U</td>
+<td class="left">按照用户名称排序</td>
+</tr>
+
+<tr>
+<td class="left">M-M</td>
+<td class="left">按照内存占用排序</td>
+</tr>
+</tbody>
+</table>
+
+<p>
+演示：
+</p>
+
+
+<div class="figure">
+<p><img src="./image/helm-top.gif" alt="helm-top.gif" />
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-sec-2-19" class="outline-3">
+<h3 id="sec-2-19"><span class="section-number-3">2.19</span> helm-surfraw</h3>
+<div class="outline-text-3" id="text-2-19">
+<p>
+一个快速搜索命令，包含多个搜索引擎，会跳转到浏览器。
+</p>
+
+<p>
+演示：
+</p>
+
+
+<div class="figure">
+<p><img src="./image/helm-surfraw.gif" alt="helm-surfraw.gif" />
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-sec-2-20" class="outline-3">
+<h3 id="sec-2-20"><span class="section-number-3">2.20</span> helm-google-suggest</h3>
+<div class="outline-text-3" id="text-2-20">
+<div class="org-src-container">
+
+<pre class="src src-emacs-lisp">(global-set-key (kbd <span style="color: #CC9393;">"C-c h g"</span>) 'helm-google-suggest)
+</pre>
+</div>
+
+<p>
+交互式输入检索词，并得到 helm 来自 google 的结果，当然可以用于其他服务，诸如：Google Maps、Google News、Youtube、Wikipedia 等等。
+</p>
+
+<p>
+演示：
+</p>
+
+
+<div class="figure">
+<p><img src="./image/helm-google-suggest.gif" alt="helm-google-suggest.gif" />
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-sec-2-21" class="outline-3">
+<h3 id="sec-2-21"><span class="section-number-3">2.21</span> helm-color</h3>
+<div class="outline-text-3" id="text-2-21">
+<p>
+用于查看/复制颜色的十六进制值。
+</p>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="left" />
+
+<col  class="left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="left">Key</th>
+<th scope="col" class="left">用途</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="left">[f1] or C-c N</td>
+<td class="left">复制名称</td>
+</tr>
+
+<tr>
+<td class="left">[f2] or C-c R</td>
+<td class="left">复制 RGB</td>
+</tr>
+
+<tr>
+<td class="left">[f3] or C-c n</td>
+<td class="left">插入名称</td>
+</tr>
+
+<tr>
+<td class="left">[f4] or C-c r</td>
+<td class="left">插入 RGB</td>
+</tr>
+</tbody>
+</table>
+
+<p>
+演示：
+</p>
+
+
+<div class="figure">
+<p><img src="./image/helm-color.gif" alt="helm-color.gif" />
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-sec-2-22" class="outline-3">
+<h3 id="sec-2-22"><span class="section-number-3">2.22</span> helm-calcul-expression</h3>
+<div class="outline-text-3" id="text-2-22">
+<p>
+一个相当于计算器（calc）命令，可以使用符号诸如：+、-、*、/、sin、cos、tan、sqrt 等等。
+</p>
+
+<p>
+演示：
+</p>
+
+
+<div class="figure">
+<p><img src="./image/helm-calc.gif" alt="helm-calc.gif" />
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-sec-2-23" class="outline-3">
+<h3 id="sec-2-23"><span class="section-number-3">2.23</span> helm-eshell-history</h3>
+<div class="outline-text-3" id="text-2-23">
+<div class="org-src-container">
+
+<pre class="src src-emacs-lisp">(<span style="color: #F0DFAF; font-weight: bold;">require</span> '<span style="color: #BFEBBF;">helm-eshell</span>)
+
+(add-hook 'eshell-mode-hook
+          #'(<span style="color: #F0DFAF; font-weight: bold;">lambda</span> ()
+              (define-key eshell-mode-map (kbd <span style="color: #CC9393;">"C-c C-l"</span>)  'helm-eshell-history)))
+</pre>
+</div>
+
+<p>
+查看 eshell 命令历史。
+</p>
+
+<p>
+演示：
+</p>
+
+
+<div class="figure">
+<p><img src="./image/helm-eshell-history.gif" alt="helm-eshell-history.gif" />
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-sec-2-24" class="outline-3">
+<h3 id="sec-2-24"><span class="section-number-3">2.24</span> helm-systemd</h3>
+<div class="outline-text-3" id="text-2-24">
+<p>
+使用 Helm 控制 Linux systemd 服务。软件包地址：<a href="https://github.com/lompik/helm-systemd">https://github.com/lompik/helm-systemd</a>
+</p>
+
+
+<div class="figure">
+<p><img src="./image/helm-systemd.png" alt="helm-systemd.png" />
+</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: mudan</p>
+<p class="date">Created: 2016-04-30 周六 10:21</p>
+<p class="creator"><a href="http://www.gnu.org/software/emacs/">Emacs</a> 24.5.1 (<a href="http://orgmode.org">Org</a> mode 8.2.10)</p>
+<p class="validation"></p>
+</div>
+</body>
+</html>

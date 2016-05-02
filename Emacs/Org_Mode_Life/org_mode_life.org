@@ -1,0 +1,145 @@
+#+TITLE: Org Mode_文字生活
+#+AUTHOR: mudan
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="../emacs.css" />
+
+本文译自：[[http://doc.norang.ca/org-mode.html][Org Mode - Organize Your Life In Plain Text]] [1]
+
+* COMMENT TODO Log
+SCHEDULED: <2015-08-22 周六 .+2d/4d>
+:LOGBOOK:
+- State "DONE"       from "TODO"       [2015-08-20 周四 09:36] \\
+  4.1 Getting org-mode with Git ~ 4.3 Organizing Your Life Into Org Files
+:END:
+:PROPERTIES:
+:LOGGING: DONE(@) logrepeat
+:STYLE:    habit
+:LAST_REPEAT: [2015-08-20 周四 09:53]
+:END:
+* 如何阅读本文档
+
+本文档假设你已经接触过并熟悉 Org mode 的一些概念，比如：agenda、capture mode 等等，对此你不会完全陌生。更多使用技巧可以在 [[http://orgmode.org/index.html#sec-4.1][Org-Mode Manual]] 和 [[http://orgmode.org/worg/][Worg Site]] 找到[2]。
+
+多年来我一直使用 Org mode 作为我的个人信息管理工具，开始的时候也仅仅只用到默认关键词 =TODO= 和 =DONE= 。从小的修改开始，日积月累，直到现在文档所描述的样子。
+
+直到现在，我仍然不断完善着我的工作流程并且定期尝试新的事物。本文档所描述的是利用我当前 Org mode 营造出的一个成熟的工作流程，同时我也倾向于在我新的工作流程运行 30 天以后再修改本文档以便让新添加的部分测试成熟。
+
+本文档描述的 Emacs 所有自定义设置均为编辑器默认值，这明确了在我的工作流程中 org mode 使用的一些重要变量，同时确保流程的稳定。这些默认变量将在之后陆续修改。
+
+* 协议
+
+#+begin_example
+Copyright (C)  2013  Bernt Hansen.
+Permission is granted to copy, distribute and/or modify this document
+under the terms of the GNU Free Documentation License, Version 1.3
+or any later version published by the Free Software Foundation;
+with no Invariant Sections, no Front-Cover Texts, and no Back-Cover Texts.
+
+Code in this document is free software: you can redistribute it
+and/or modify it under the terms of the GNU General Public
+License as published by the Free Software Foundation, either
+version 3 of the License, or (at your option) any later version.
+
+This code is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+#+end_example
+
+This document http://doc.norang.ca/org-mode.html (either in its [[http://doc.norang.ca/org-mode.html][HTML format]] or in its [[http://doc.norang.ca/org-mode.org][Org format]]) is licensed under the GNU Free Documentation License version 1.3 or later(http://www.gnu.org/copyleft/fdl.html).
+
+The code examples and CSS stylesheets are licensed under the GNU General Public License v3 or later.
+
+* 开始
+
+使用 org mode 十分简单，你只需要几句命令行启动你的 Emacs 并从 git 仓库中得到最新版本的 org mode。
+
+** 从 Git 得到 org-mode
+
+我保留了一个 org-mode =git= 仓库拷贝在 =~/git/org-mode/= ，使用 clone 命令创建：
+
+#+BEGIN_SRC sh
+cd ~/git
+git clone git://orgmode.org/org-mode.git
+#+END_SRC
+
+想从 org-mode 开发人员那里获取新的更新可以使用：
+
+#+BEGIN_SRC sh
+cd ~/git/org-mode
+git pull
+make uncompiled
+#+END_SRC
+
+我在安装时没有编译源文件，因此 make 文件中的目标就是所有你所需要的。
+
+通常情况下我会跟踪 org-mode 代码仓库的主分支。
+
+** Org-Mode 安装
+
+在 =.emacs= 配置文件里我会在多数缓冲区中打开 org-mode，而其默认打开的后缀名包括 =.org= 、 =.org_archive= 以及 =.txt= 文件。
+
+#+BEGIN_SRC lisp
+;;;
+;;; Org Mode
+;;;
+(add-to-list 'load-path (expand-file-name "~/git/org-mode/lisp"))
+(add-to-list 'auto-mode-alist '("\\.\\(org\\|org_archive\\|txt\\)$" . org-mode))
+(require 'org)
+;;
+;; 标准快捷键绑定
+(global-set-key "\C-cl" 'org-store-link)
+(global-set-key "\C-ca" 'org-agenda)
+(global-set-key "\C-cb" 'org-iswitchb)
+#+END_SRC
+
+开始的时候这些就是所有你所需要的 org-mode 配置。
+
+本文档其余部分则介绍有关我的 org 文件构成以及其他一些用于适应我工作方式的自定义配置。
+
+** 在 Org 文件中组织你的生活
+
+任务通常被合理分配成几个组或项目：单独分组不同任务类型的 org 文件及其子目录下的文件也将最终整合成一个整体。
+
+以下是我使用的示例文件。
+
+与工作无关的任务：
+| 文件名称     | 用途描述                      |
+|--------------+-------------------------------|
+| /            | <                             |
+| todo.org     | 个人任务、事件跟踪            |
+| gsoc2009.org | 2009 年 Google Summer of Code |
+| farm.org     | 和农场有关的任务              |
+| mark.org     | 和我儿子马克有关的任务        |
+| org.org      | 和 org-mode 有关的任务        |
+| git.org      | 和 git 有关的任务             |
+|--------------+-------------------------------|
+
+收集 org-capture 笔记以及相关任务：
+| 文件名称   | 用途描述           |
+|------------+--------------------|
+| /          | <                  |
+| refile.org | 笔记及相关任务收集 |
+
+工作相关 org 商务文件（使用虚拟客户名称）：
+| 文件名称    | 用途描述                        |
+|-------------+---------------------------------|
+| /           | <                               |
+| norang.org  | Norang 任务和笔记               |
+| XYZ.org     | XYZ 公司任务和笔记               |
+| ABC.org     | ABC 公司任务                    |
+| ABC-DEF.org | ABC 公司及其客户 DEF 公司相关任务 |
+| ABC-KKK.org | ABC 公司及其客户 KKK 公司有关任务 |
+| YYY.org     | YYY 公司任务                    |
+
+Org-mode 非常适合用于处理多个客户和项目，一个 org 文件可以收集单个客户或项目相关的所有计划、笔记等等。
+
+比如在我的工作中 ABC 公司拥有多位客户。将每一位客户分离为单独的 org 文件有助于保持合理地分组，由于客户来来去去，整个 org 文件会不断添加或完成条目而 Agenda 视图中将始终保持只有重要的条目可见。
+
+除以上所述文件以外其他 org 文件主要用于发布，在 Agenda 中并不适用。
+
+** Agenda 安装
+* Footnotes
+
+[1] 作者最后修改时间在 2015-06-18 Thu 22:39，使用的 org mode 版本是 v8.2.10。
+
+[2] 如果看见英文头疼的话，也可以参考下我的 [[https://mudan.github.io/Emacs/The_Org_Manual/The_Org_Manual.html][The Org Manual 笔记]]。
