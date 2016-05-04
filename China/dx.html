@@ -3,23 +3,30 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<title>大學集註</title>
-<!-- 2016-05-02 一 13:51 -->
+<!-- 2016-05-04 三 20:31 -->
 <meta  http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta  name="viewport" content="width=device-width, initial-scale=1" />
+<title>大學集註</title>
 <meta  name="generator" content="Org-mode" />
 <meta  name="author" content="mudan" />
 <style type="text/css">
  <!--/*--><![CDATA[/*><!--*/
-  .title  { text-align: center; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
   .todo   { font-family: monospace; color: red; }
-  .done   { color: green; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
   .tag    { background-color: #eee; font-family: monospace;
             padding: 2px; font-size: 80%; font-weight: normal; }
   .timestamp { color: #bebebe; }
   .timestamp-kwd { color: #5f9ea0; }
-  .right  { margin-left: auto; margin-right: 0px;  text-align: right; }
-  .left   { margin-left: 0px;  margin-right: auto; text-align: left; }
-  .center { margin-left: auto; margin-right: auto; text-align: center; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
   .underline { text-decoration: underline; }
   #postamble p, #preamble p { font-size: 90%; margin: .2em; }
   p.verse { margin-left: 3%; }
@@ -58,15 +65,14 @@
   caption.t-above { caption-side: top; }
   caption.t-bottom { caption-side: bottom; }
   td, th { vertical-align:top;  }
-  th.right  { text-align: center;  }
-  th.left   { text-align: center;   }
-  th.center { text-align: center; }
-  td.right  { text-align: right;  }
-  td.left   { text-align: left;   }
-  td.center { text-align: center; }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
   dt { font-weight: bold; }
-  .footpara:nth-child(2) { display: inline; }
-  .footpara { display: block; }
+  .footpara { display: inline; }
   .footdef  { margin-bottom: 1em; }
   .figure { padding: 1em; }
   .figure p { text-align: center; }
@@ -143,21 +149,21 @@ for the JavaScript code in this tag.
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#sec-1">1. 經一章</a></li>
-<li><a href="#sec-2">2. 傳第一章</a></li>
-<li><a href="#sec-3">3. 傳第二章</a></li>
-<li><a href="#sec-4">4. 傳第三章</a></li>
-<li><a href="#sec-5">5. 傳第四章</a></li>
-<li><a href="#sec-6">6. 傳第五章</a></li>
-<li><a href="#sec-7">7. 傳第六章</a></li>
-<li><a href="#sec-8">8. 傳第七章</a></li>
-<li><a href="#sec-9">9. 傳第八章</a></li>
-<li><a href="#sec-10">10. 傳第九章</a></li>
-<li><a href="#sec-11">11. 傳第十章</a></li>
-<li><a href="#sec-12">12. 大學章句序.朱熹</a></li>
-<li><a href="#sec-13">13. 大學問.王陽明</a></li>
-<li><a href="#sec-14">14. 小學之教.胡渭</a></li>
-<li><a href="#sec-15">15. 大學之教.胡渭</a></li>
+<li><a href="#orgheadline2">1. 經一章</a></li>
+<li><a href="#orgheadline3">2. 傳第一章</a></li>
+<li><a href="#orgheadline4">3. 傳第二章</a></li>
+<li><a href="#orgheadline5">4. 傳第三章</a></li>
+<li><a href="#orgheadline6">5. 傳第四章</a></li>
+<li><a href="#orgheadline7">6. 傳第五章</a></li>
+<li><a href="#orgheadline8">7. 傳第六章</a></li>
+<li><a href="#orgheadline9">8. 傳第七章</a></li>
+<li><a href="#orgheadline10">9. 傳第八章</a></li>
+<li><a href="#orgheadline11">10. 傳第九章</a></li>
+<li><a href="#orgheadline12">11. 傳第十章</a></li>
+<li><a href="#orgheadline13">12. 大學章句序.朱熹</a></li>
+<li><a href="#orgheadline1">13. 大學問.王守仁</a></li>
+<li><a href="#orgheadline14">14. 小學之教.胡渭</a></li>
+<li><a href="#orgheadline15">15. 大學之教.胡渭</a></li>
 </ul>
 </div>
 </div>
@@ -165,8 +171,8 @@ for the JavaScript code in this tag.
 鄭曉曰：「《大学》一篇初在《戴記》中，程子始表章，因而更定之，朱子為之章句，今傳習者是也。漢大司農鄭玄所註，唐国子祭酒孔頴達所疏，皆古本也。」
 </p>
 
-<div id="outline-container-sec-1" class="outline-2">
-<h2 id="sec-1"><span class="section-number-2">1</span> 經一章</h2>
+<div id="outline-container-orgheadline2" class="outline-2">
+<h2 id="orgheadline2"><span class="section-number-2">1</span> 經一章</h2>
 <div class="outline-text-2" id="text-1">
 <p>
 鄭子曰：「大學者，以其記博學，可以爲政也。」
@@ -370,13 +376,17 @@ for the JavaScript code in this tag.
 </p>
 
 <p>
-<a href="#sec-13">大學問.王陽明</a>
+胡渭《大學翼真》：篇首一章朱子以爲孔子之言而又疑其或出於古昔先民，愚竊謂《大學》既爲孔氏之遺書則此章必爲孔子之言無疑也，其餘則朱子據其引曾子之言又多與《中庸》、《孟子》者合，斷以爲曾氏門人所記，此則未有明徵。
+</p>
+
+<p>
+<a href="#orgheadline1">大學問.王守仁</a>
 </p>
 </div>
 </div>
 
-<div id="outline-container-sec-2" class="outline-2">
-<h2 id="sec-2"><span class="section-number-2">2</span> 傳第一章</h2>
+<div id="outline-container-orgheadline3" class="outline-2">
+<h2 id="orgheadline3"><span class="section-number-2">2</span> 傳第一章</h2>
 <div class="outline-text-2" id="text-2">
 <p>
 <b>◎　康誥曰：「克明德。」</b>
@@ -442,8 +452,8 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-3" class="outline-2">
-<h2 id="sec-3"><span class="section-number-2">3</span> 傳第二章</h2>
+<div id="outline-container-orgheadline4" class="outline-2">
+<h2 id="orgheadline4"><span class="section-number-2">3</span> 傳第二章</h2>
 <div class="outline-text-2" id="text-3">
 <p>
 <b>◎　湯之盤銘曰：「苟日新，日日新，又日新。」</b>
@@ -501,8 +511,8 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-4" class="outline-2">
-<h2 id="sec-4"><span class="section-number-2">4</span> 傳第三章</h2>
+<div id="outline-container-orgheadline5" class="outline-2">
+<h2 id="orgheadline5"><span class="section-number-2">4</span> 傳第三章</h2>
 <div class="outline-text-2" id="text-4">
 <p>
 <b>◎　詩云：「邦畿千里，惟民所止。」</b>
@@ -548,6 +558,10 @@ for the JavaScript code in this tag.
 <b>◎　詩云：「瞻彼淇澳，菉竹猗猗。有斐君子，如切如磋，如琢如磨。瑟兮僩兮，赫兮喧兮，有斐君子，終不可諠兮！」如切如磋者，道學也；如琢如磨者，自脩也；瑟兮僩兮者，恂慄也；赫兮喧兮者，威儀也；有斐君子，終不可諠兮者，道盛德至善，民之不能忘也。</b>
 </p>
 
+<pre class="example">
+《禮記・學記》：君子曰：「大德不官，大道不器，大信不約，大時不齊。」
+</pre>
+
 <p>
 鄭玄古本舊註：此『心廣體胖』之詩也。澳，隈崖也。『菉竹猗猗』，喻美盛。斐，有文章貌也。諠，忘也。道，猶言也。『恂』字或作『峻』，讀如『嚴峻』之『峻』，言其容貌嚴栗也。民不能忘，以其意誠而徳著也。
 </p>
@@ -592,8 +606,8 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-5" class="outline-2">
-<h2 id="sec-5"><span class="section-number-2">5</span> 傳第四章</h2>
+<div id="outline-container-orgheadline6" class="outline-2">
+<h2 id="orgheadline6"><span class="section-number-2">5</span> 傳第四章</h2>
 <div class="outline-text-2" id="text-5">
 <p>
 <b>◎　子曰：「聽訟，吾猶人也，必也使無訟乎！」無情者不得盡其辭。大畏民志，此謂知本。</b>
@@ -623,8 +637,8 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-6" class="outline-2">
-<h2 id="sec-6"><span class="section-number-2">6</span> 傳第五章</h2>
+<div id="outline-container-orgheadline7" class="outline-2">
+<h2 id="orgheadline7"><span class="section-number-2">6</span> 傳第五章</h2>
 <div class="outline-text-2" id="text-6">
 <p>
 <b>◎　此謂知本，</b>
@@ -660,14 +674,34 @@ for the JavaScript code in this tag.
 閒嘗竊取程子之意以補之曰：「所謂致知在格物者，言欲致吾之知，在即物而窮其理也。蓋人心之靈莫不有知，而天下之物莫不有理，惟於理有未窮，故其知有不盡也。是以大學始教，必使學者即凡天下之物，莫不因其已知之理而益窮之，以求至乎其極。至於用力之久，而一旦豁然貫通焉，則眾物之表裏精粗無不到，而吾心之全體大用無不明矣。此謂物格，此謂知之至也。」
 </p>
 
-<pre class="example">
-明朝劉斯源《大學古今本通考》：格物二字朱子以爲窮至物理，近儒以爲格去物慾，即無遠引『有物有則』、『格知天命』二語爲證。然則物有本末之物，豈是物慾之物，此不待辯而明矣。
-</pre>
+<p>
+劉斯源《大學古今本通考》：格物二字朱子以爲窮至物理，近儒以爲格去物慾，即無遠引『有物有則』、『格知天命』二語爲證。然則物有本末之物，豈是物慾之物，此不待辯而明矣。
+</p>
+
+<p>
+高攀龍《高子遺書》：何謂格物，曰程朱之言至矣，所謂窮至事物之理者，窮究到極處即本之所在也，即至善之所在也。修身爲本是一句眼前極平常話，卻不是道理十分透徹者。信不過格物，是直窮到底，斷知天下之物無有本而末治者，無有薄於身反能厚於家國天下者，知道本處便是知到至處，此謂知之至也。
+</p>
+
+<p>
+崔汝稷《格物訓》：『大學之道』雖列爲三而其歸於『止至善』也，『明明德於天下』其序凡八而『格物』其第一義也。由格物而止至善如由治國而平天下，釋格物無別止至善之功，釋治國無別平天下之功，故平天下之傳寓諸治國而不別立格物之傳寓諸止至善。而不別立格物之無傳，非逸簡也，寓諸止至善中與寓平天下於治國傳中一也。
+</p>
+
+<p>
+胡渭《大學翼真》：
+</p>
+
+<p>
+《大學》所謂本者以綱領言之則明德爲本、新民爲末，以條目言之則修身爲本、家國天下爲末，若至善爲本，將以何爲末乎？至善即天命之性，《中庸》以爲中者，天下之大本，大學無此義，不可附會其說，以知性爲知本也。
+</p>
+
+<p>
+崔氏謂格物之傳寓止至善傳中而非逸簡，此真千秋絕識……然二句作何安頓，斯又崔氏之所未詳也。廣德夏君雨蒼曰『此當在與國人交止於信之下』，余聞之豁然……而思之『知本』與『知至』絕無干涉，『知本』當爲『知止』之譌，若讀『知本』曰『知止』而移置此二句在『止於信』之下則錯簡正而文義亦順，以是始知『君子無所不用其極』乃畧釋『在止於至善』句，而『邦幾』一章復詳釋之。
+</p>
 </div>
 </div>
 
-<div id="outline-container-sec-7" class="outline-2">
-<h2 id="sec-7"><span class="section-number-2">7</span> 傳第六章</h2>
+<div id="outline-container-orgheadline8" class="outline-2">
+<h2 id="orgheadline8"><span class="section-number-2">7</span> 傳第六章</h2>
 <div class="outline-text-2" id="text-7">
 <p>
 <b>◎　所謂誠其意者，毋自欺也，如惡惡臭，如好好色，此之謂自謙，故君子必慎其獨也。</b>
@@ -769,8 +803,8 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-8" class="outline-2">
-<h2 id="sec-8"><span class="section-number-2">8</span> 傳第七章</h2>
+<div id="outline-container-orgheadline9" class="outline-2">
+<h2 id="orgheadline9"><span class="section-number-2">8</span> 傳第七章</h2>
 <div class="outline-text-2" id="text-8">
 <p>
 <b>◎　所謂脩身在正其心者，身有所忿懥則不得其正，有所恐懼則不得其正，有所好樂則不得其正，有所憂患則不得其正。</b>
@@ -824,8 +858,8 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-9" class="outline-2">
-<h2 id="sec-9"><span class="section-number-2">9</span> 傳第八章</h2>
+<div id="outline-container-orgheadline10" class="outline-2">
+<h2 id="orgheadline10"><span class="section-number-2">9</span> 傳第八章</h2>
 <div class="outline-text-2" id="text-9">
 <p>
 <b>◎　所謂齊其家在脩其身者，人之其所親愛而辟焉，之其所賤惡而辟焉，之其所畏敬而辟焉，之其所哀矜而辟焉，之其所慠惰而辟焉。故好而知其惡，惡而知其美者，天下鮮矣！</b>
@@ -875,8 +909,8 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-10" class="outline-2">
-<h2 id="sec-10"><span class="section-number-2">10</span> 傳第九章</h2>
+<div id="outline-container-orgheadline11" class="outline-2">
+<h2 id="orgheadline11"><span class="section-number-2">10</span> 傳第九章</h2>
 <div class="outline-text-2" id="text-10">
 <p>
 <b>◎　所謂治國必先齊其家者，其家不可教而能教人者無之，故君子不出家而成教於國：孝者所以事君也，弟者所以事長也，慈者所以使眾也。</b>
@@ -986,8 +1020,8 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-11" class="outline-2">
-<h2 id="sec-11"><span class="section-number-2">11</span> 傳第十章</h2>
+<div id="outline-container-orgheadline12" class="outline-2">
+<h2 id="orgheadline12"><span class="section-number-2">11</span> 傳第十章</h2>
 <div class="outline-text-2" id="text-11">
 <p>
 <b>◎　所謂平天下在治其國者：上老老而民興孝，上長長而民興弟，上恤孤而民不倍，是以君子有絜矩之道也。</b>
@@ -1185,6 +1219,10 @@ for the JavaScript code in this tag.
 <b>◎　見賢而不能舉，舉而不能先，命也。見不善而不能退，退而不能遠，過也。</b>
 </p>
 
+<pre class="example">
+《漢書・武帝紀》有司奏議曰：「古者諸侯貢士壹適謂之好德，再適謂之賢，賢三適謂之有功。」
+</pre>
+
 <p>
 鄭玄古本舊註：命讀為『慢』，聲之誤也。舉賢而不能使君以先己，是輕慢於舉人也。
 </p>
@@ -1313,8 +1351,8 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-12" class="outline-2">
-<h2 id="sec-12"><span class="section-number-2">12</span> 大學章句序.朱熹</h2>
+<div id="outline-container-orgheadline13" class="outline-2">
+<h2 id="orgheadline13"><span class="section-number-2">12</span> 大學章句序.朱熹</h2>
 <div class="outline-text-2" id="text-12">
 <p>
 大學之書，古之大學所以教人之法也。蓋自天降生民，則既莫不與之以仁義禮智之性矣。然其氣質之稟或不能齊，是以不能皆有以知其性之所有而全之也。一有聰明睿智能盡其性者出於其閒，則天必命之以為億兆之君師，使之治而教之，以復其性。此伏羲、神農、黃帝、堯、舜，所以繼天立極，而司徒之職、典樂之官所由設也。
@@ -1346,8 +1384,8 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-13" class="outline-2">
-<h2 id="sec-13"><span class="section-number-2">13</span> 大學問.王陽明</h2>
+<div id="outline-container-orgheadline1" class="outline-2">
+<h2 id="orgheadline1"><span class="section-number-2">13</span> 大學問.王守仁</h2>
 <div class="outline-text-2" id="text-13">
 <p>
 曰：「《大學》者，昔儒以為大人之學矣。敢問大人之學何以在於明明德乎？」
@@ -1407,8 +1445,8 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-14" class="outline-2">
-<h2 id="sec-14"><span class="section-number-2">14</span> 小學之教.胡渭</h2>
+<div id="outline-container-orgheadline14" class="outline-2">
+<h2 id="orgheadline14"><span class="section-number-2">14</span> 小學之教.胡渭</h2>
 <div class="outline-text-2" id="text-14">
 <p>
 <i>摘自《大學翼真》</i>
@@ -1575,6 +1613,10 @@ for the JavaScript code in this tag.
 </p>
 
 <p>
+<i>陳氏：『曲藝』鄭但云小技能也，孔疏乃以爲醫卜之屬，後儒皆遵其說。今按《王制》：『祝史射御醫卜及百工，凡執技以事上者不貳事，不移官，出鄉不與士，齒賤之也。』郊學之士由論秀以升此，竊謂此曲藝之人亦鄉所興之能者也。鄉三物之教本有六藝，鄭註鄉大夫職曰『賢有德行者能有道藝』者，則今之曲藝爲初時所興之能不足於德行者明矣，蓋藝而本之於德行，此之謂道藝，《保氏》『養國子以道而教之六藝』是也。</i>
+</p>
+
+<p>
 <b>《論語》子曰：「弟子入則孝，出則弟，謹而信，汎愛眾而親仁，行有餘力則以學文。」</b>
 </p>
 
@@ -1587,11 +1629,16 @@ for the JavaScript code in this tag.
 </p>
 </div>
 </div>
-<div id="outline-container-sec-15" class="outline-2">
-<h2 id="sec-15"><span class="section-number-2">15</span> 大學之教.胡渭</h2>
+
+<div id="outline-container-orgheadline15" class="outline-2">
+<h2 id="orgheadline15"><span class="section-number-2">15</span> 大學之教.胡渭</h2>
 <div class="outline-text-2" id="text-15">
 <p>
 <i>摘自《大學翼真》</i>
+</p>
+
+<p>
+王氏《困學紀聞》曰：「取士之制其塗有三。諸侯三年一貢士，侯國之士也；鄉大夫興賢能，王畿之士也；大司樂教國子，國之貴游子弟也。」渭按：然即三歲一貢約合計之有三千餘人，豈能皆入大學，左雄云『升之司徒』是也。《漢志》所謂『學於大學，命曰造士』者，蓋司徒又論其秀者升諸大樂正耳。造士九年大成，而後升諸司馬曰『進士』，別之以射，其在司馬辯論官材之日乎。
 </p>
 
 <p>
@@ -1670,9 +1717,17 @@ for the JavaScript code in this tag.
 渭按：大學考校之法自離經始，經即樂正之詩書禮樂，離經敬業、博習論學即《內則》之所謂博學論語，之所謂博文也。下文『入學鼓篋，孫其業也』注云：學士至大胥，擊鼓以發篋，而出其書籍。然則所謂孫其業者，即博文之業也，故朱子釋此五者雖以上截為學業，下截為德行。然大槩屬知一邊於『辨志』云『分別其心所趨向』，『取友』云『知人而能識人之賢否』，至於『知類通達』則曰『聞一知十，能觸類而貫通』，此即補傳所謂『用力之久，一旦豁然貫通』者。『強立而不反』則以為『知止有定而物不能移』，蓋初年所辨之志至此而有定向矣，可見七年以前皆格物致知之功，九年乃物格知至之。
 </p>
 
+<pre class="example">
+九年大成，學止也，謂之出學。
+</pre>
+
 <p>
 <b>王制：樂正崇四術，立四教，順先王詩書禮樂以造士。春、秋教以禮樂，冬、夏教以詩書。王大子、王子、群後之大子、卿大夫元士之適子、國之俊選，皆造焉。凡入學以齒。</b>
 </p>
+
+<pre class="example">
+王制：大樂正論造士之秀者以告于王，而升諸司馬，曰進士。司馬辨論官材，論進士之賢者以告於王，而定其論。論定然後官之，任官然後爵之，位定然後祿之。
+</pre>
 
 <p>
 樂正官名即下文所謂大樂正，《周禮》所謂大司樂，乃樂官之長，主敎國子者也。術者，道路之名，詩書禮樂四者乃入道之路，故言術也。四教，謂以四者教也。
@@ -1699,7 +1754,7 @@ for the JavaScript code in this tag.
 </p>
 
 <p>
-渭按：詩書禮樂皆格物致知之具也，大學之所以敎，四術盡之矣。三代以上詩書禮樂極其明備，不僅如今日之所存，然《易》為卜筮之書，《春秋》為國史紀事之文，不列於學官及經。夫子之贊修則《易》為反身寡過，窮理盡性之學，而《春秋》則定天下之邪正，為百王之大法。撥亂反正之道莫近於此，皆敎之不可一日無者，於是與四者並列而為六經矣。士生今日雖不幸而不覩詩書禮樂之全，猶幸而得見《易》、《春秋》之微言大義，又有《論語》、《孟子》以為入德之門。嗚呼，備矣，蔑以加矣。所患學者志之不立，或以為詞章之用，或以為祿利之途，而卒無躬行心得之實耳，豈患經之不全哉。
+渭按：詩書禮樂皆格物致知之具也，大學之所以敎，四術盡之矣。三代以上詩書禮樂極其明備，不僅如今日之所存，然《易》為卜筮之書，《春秋》為國史紀事之文，不列於學官及經。夫子之贊修則《易》為反身寡過，窮理盡性之學，而《春秋》則定天下之邪正，為百王之大法。撥亂反正之道莫近於此，皆敎之不可一日無者，於是與四者並列而為六經矣。士生今日雖不幸而不覩詩書禮樂之全，猶幸而得見《易》、《春秋》之微言大義，又有《論語》、《孟子》以為入德之門。嗚呼，備矣，蔑以加矣。所患學者志之不立，或以為詞章之用，或以為祿利之途，而卒無躬行心得之實耳，豈患經之不全哉。 
 </p>
 
 <p>
@@ -1798,6 +1853,13 @@ for the JavaScript code in this tag.
 <b>子曰：「志於道，據於德，依於仁，游於藝。」</b>
 </p>
 
+<pre class="example">
+《禮記・樂記》：「德成而上，藝成而下；行成而先，事成而後。」
+</pre>
+<p>
+<i>廣源輔氏廣曰：「德成而上非遺其藝也，藝成而下則局於藝者耳。行成而先非廢其事也，事成而後則役於事耳。」</i>
+</p>
+
 <p>
 朱子曰：「志者心之所之之謂，道則人倫日用之間所當行者是也。知此而心必之焉，則所適者正而無他歧之惑矣。據者執守之意，德則行道而有得於心者也，得之於心而守之不失，則終始惟一而有日新之功矣。依者不違之謂，仁則私慾盡去而心德之全也，工夫至此而無終食之違，則存養之熟無適而非天理之流行矣。遊者玩物適情之謂，藝則禮樂之文射御書數之法，皆至理所寓而日用之不可闕者也。朝夕遊焉以博其義理之趣，則應務有餘而心亦無所放矣。」
 </p>
@@ -1822,8 +1884,7 @@ for the JavaScript code in this tag.
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: mudan</p>
-<p class="date">Created: 2016-05-02 一 13:51</p>
-<p class="creator"><a href="http://www.gnu.org/software/emacs/">Emacs</a> 24.5.1 (<a href="http://orgmode.org">Org</a> mode 8.2.10)</p>
+<p class="date">Created: 2016-05-04 三 20:31</p>
 <p class="validation"></p>
 </div>
 </body>
