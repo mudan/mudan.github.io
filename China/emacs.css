@@ -1,6 +1,6 @@
 ﻿html {
   font-size: 100%;
-
+  word-break: break-all;
 }
 
 img.qtipImg {
@@ -48,8 +48,8 @@ body {
 #table-of-contents {
     	font-size: 10pt;
    	position: fixed;
-  	right: 0em;
- 	top: 0em;
+	  	right: 0em;
+	 	top: 0em;
     	background: white;
     	-webkit-box-shadow: 0 0 1em #777777;
     	-moz-box-shadow: 0 0 1em #777777;
