@@ -3,30 +3,23 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2016-05-06 五 20:10 -->
-<meta  http-equiv="Content-Type" content="text/html;charset=utf-8" />
-<meta  name="viewport" content="width=device-width, initial-scale=1" />
 <title>大學集註</title>
+<!-- 2016-05-08 周日 19:56 -->
+<meta  http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta  name="generator" content="Org-mode" />
 <meta  name="author" content="mudan" />
 <style type="text/css">
  <!--/*--><![CDATA[/*><!--*/
-  .title  { text-align: center;
-             margin-bottom: .2em; }
-  .subtitle { text-align: center;
-              font-size: medium;
-              font-weight: bold;
-              margin-top:0; }
+  .title  { text-align: center; }
   .todo   { font-family: monospace; color: red; }
-  .done   { font-family: monospace; color: green; }
-  .priority { font-family: monospace; color: orange; }
+  .done   { color: green; }
   .tag    { background-color: #eee; font-family: monospace;
             padding: 2px; font-size: 80%; font-weight: normal; }
   .timestamp { color: #bebebe; }
   .timestamp-kwd { color: #5f9ea0; }
-  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
-  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
-  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .center { margin-left: auto; margin-right: auto; text-align: center; }
   .underline { text-decoration: underline; }
   #postamble p, #preamble p { font-size: 90%; margin: .2em; }
   p.verse { margin-left: 3%; }
@@ -65,14 +58,15 @@
   caption.t-above { caption-side: top; }
   caption.t-bottom { caption-side: bottom; }
   td, th { vertical-align:top;  }
-  th.org-right  { text-align: center;  }
-  th.org-left   { text-align: center;   }
-  th.org-center { text-align: center; }
-  td.org-right  { text-align: right;  }
-  td.org-left   { text-align: left;   }
-  td.org-center { text-align: center; }
+  th.right  { text-align: center;  }
+  th.left   { text-align: center;   }
+  th.center { text-align: center; }
+  td.right  { text-align: right;  }
+  td.left   { text-align: left;   }
+  td.center { text-align: center; }
   dt { font-weight: bold; }
-  .footpara { display: inline; }
+  .footpara:nth-child(2) { display: inline; }
+  .footpara { display: block; }
   .footdef  { margin-bottom: 1em; }
   .figure { padding: 1em; }
   .figure p { text-align: center; }
@@ -149,21 +143,21 @@ for the JavaScript code in this tag.
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#orgheadline2">1. 經一章</a></li>
-<li><a href="#orgheadline3">2. 傳第一章</a></li>
-<li><a href="#orgheadline4">3. 傳第二章</a></li>
-<li><a href="#orgheadline5">4. 傳第三章</a></li>
-<li><a href="#orgheadline6">5. 傳第四章</a></li>
-<li><a href="#orgheadline7">6. 傳第五章</a></li>
-<li><a href="#orgheadline8">7. 傳第六章</a></li>
-<li><a href="#orgheadline9">8. 傳第七章</a></li>
-<li><a href="#orgheadline10">9. 傳第八章</a></li>
-<li><a href="#orgheadline11">10. 傳第九章</a></li>
-<li><a href="#orgheadline12">11. 傳第十章</a></li>
-<li><a href="#orgheadline13">12. 大學章句序.朱熹</a></li>
-<li><a href="#orgheadline1">13. 大學問.王守仁</a></li>
-<li><a href="#orgheadline14">14. 小學之教.胡渭</a></li>
-<li><a href="#orgheadline15">15. 大學之教.胡渭</a></li>
+<li><a href="#sec-1">1. 經一章</a></li>
+<li><a href="#sec-2">2. 傳第一章</a></li>
+<li><a href="#sec-3">3. 傳第二章</a></li>
+<li><a href="#sec-4">4. 傳第三章</a></li>
+<li><a href="#sec-5">5. 傳第四章</a></li>
+<li><a href="#sec-6">6. 傳第五章</a></li>
+<li><a href="#sec-7">7. 傳第六章</a></li>
+<li><a href="#sec-8">8. 傳第七章</a></li>
+<li><a href="#sec-9">9. 傳第八章</a></li>
+<li><a href="#sec-10">10. 傳第九章</a></li>
+<li><a href="#sec-11">11. 傳第十章</a></li>
+<li><a href="#sec-12">12. 大學章句序.朱熹</a></li>
+<li><a href="#sec-13">13. 大學問.王守仁</a></li>
+<li><a href="#sec-14">14. 小學之教.胡渭</a></li>
+<li><a href="#sec-15">15. 大學之教.胡渭</a></li>
 </ul>
 </div>
 </div>
@@ -171,8 +165,8 @@ for the JavaScript code in this tag.
 鄭曉曰：「《大学》一篇初在《戴記》中，程子始表章，因而更定之，朱子為之章句，今傳習者是也。漢大司農鄭玄所註，唐国子祭酒孔頴達所疏，皆古本也。」
 </p>
 
-<div id="outline-container-orgheadline2" class="outline-2">
-<h2 id="orgheadline2"><span class="section-number-2">1</span> 經一章</h2>
+<div id="outline-container-sec-1" class="outline-2">
+<h2 id="sec-1"><span class="section-number-2">1</span> 經一章</h2>
 <div class="outline-text-2" id="text-1">
 <p>
 鄭子曰：「大學者，以其記博學，可以爲政也。」
@@ -363,6 +357,10 @@ for the JavaScript code in this tag.
 </p>
 
 <p>
+朱熹曰：「致知者理在物而推吾之知以知之也，知至者理雖在物而吾心之知已得其極也。」
+</p>
+
+<p>
 朱熹《大學章句》：物格者，物理之極處無不到也。知至者，吾心之所知無不盡也。知既盡，則意可得而實矣，意既實，則心可得而正矣。脩身以上，明明德之事也。齊家以下，新民之事也。物格知至，則知所止矣。意誠以下，則皆得所止之序也。
 </p>
 
@@ -429,13 +427,13 @@ for the JavaScript code in this tag.
 </p>
 
 <p>
-<a href="#orgheadline1">大學問.王守仁</a>
+<a href="#sec-13">大學問.王守仁</a>
 </p>
 </div>
 </div>
 
-<div id="outline-container-orgheadline3" class="outline-2">
-<h2 id="orgheadline3"><span class="section-number-2">2</span> 傳第一章</h2>
+<div id="outline-container-sec-2" class="outline-2">
+<h2 id="sec-2"><span class="section-number-2">2</span> 傳第一章</h2>
 <div class="outline-text-2" id="text-2">
 <p>
 <b>◎　康誥曰：「克明德。」</b>
@@ -447,6 +445,10 @@ for the JavaScript code in this tag.
 
 <p>
 金履祥《大學疏義》：康誥者周武王封第康叔於衛而告之之書也，舊謂成王之書，失之也。克，能也，克雖訓能而有勇猛之意焉。夫人莫不有是德，亦莫不知明是德也而終於不能明者，以其無勇猛之功耳。
+</p>
+
+<p>
+許謙曰：「明字即上『明』字，德字包『明德』字。」
 </p>
 
 <p>
@@ -462,7 +464,15 @@ for the JavaScript code in this tag.
 </p>
 
 <p>
+饒魯曰：「靜存動察皆是顧。明命即明德，上明字卻在顧諟二字中。」
+</p>
+
+<p>
 金履祥《大學疏義》：太甲，商之君王，伊尹作書告之。自天之予於人言之則曰明命，自人之得於心則曰明德，其實一也。
+</p>
+
+<p>
+吳新安曰：「言德則命在其中，故釋明德曰人知所得乎天。言命則德在其中，故釋明命曰天知所以與我而我之所以爲德。」
 </p>
 
 <p>
@@ -492,7 +502,7 @@ for the JavaScript code in this tag.
 </p>
 
 <p>
-右傳之首章。釋明明德。
+傳之首章釋明明德。
 </p>
 
 <p>
@@ -501,8 +511,8 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-orgheadline4" class="outline-2">
-<h2 id="orgheadline4"><span class="section-number-2">3</span> 傳第二章</h2>
+<div id="outline-container-sec-3" class="outline-2">
+<h2 id="sec-3"><span class="section-number-2">3</span> 傳第二章</h2>
 <div class="outline-text-2" id="text-3">
 <p>
 <b>◎　湯之盤銘曰：「苟日新，日日新，又日新。」</b>
@@ -525,6 +535,10 @@ for the JavaScript code in this tag.
 </p>
 
 <p>
+朱熹《四書或問》：武王之封康叔也，以商之餘民染紂污俗而失其本心也，故作康誥之書而告之。以此欲其有以鼓舞而作興之，使之振奮踊躍以去其惡而遷於善，舍其舊而進乎新也。
+</p>
+
+<p>
 金履祥《大學疏義》：作者開其進善之機，新者革其污染之舊也。
 </p>
 
@@ -537,11 +551,19 @@ for the JavaScript code in this tag.
 </p>
 
 <p>
+朱熹《四書或問》：言周之有邦，自后稷以來千餘年，至於文王，聖德日新，而民亦丕變。故天命之，有天下。是其邦雖舊，而命則新也。
+</p>
+
+<p>
 <b>◎　是故君子無所不用其極。</b>
 </p>
 
 <p>
 鄭玄古本舊註：極，猶盡也。君子日新其徳，常盡心力，不有餘也。
+</p>
+
+<p>
+朱熹《四書或問》：極即至善之云也，用極者求其止於是而已矣。
 </p>
 
 <hr  />
@@ -555,13 +577,13 @@ for the JavaScript code in this tag.
 </p>
 
 <p>
-右傳之二章。釋新民。
+傳之二章釋新民。
 </p>
 </div>
 </div>
 
-<div id="outline-container-orgheadline5" class="outline-2">
-<h2 id="orgheadline5"><span class="section-number-2">4</span> 傳第三章</h2>
+<div id="outline-container-sec-4" class="outline-2">
+<h2 id="sec-4"><span class="section-number-2">4</span> 傳第三章</h2>
 <div class="outline-text-2" id="text-4">
 <p>
 <b>◎　詩云：「邦畿千里，惟民所止。」</b>
@@ -588,7 +610,11 @@ for the JavaScript code in this tag.
 </p>
 
 <p>
-<b>◎　詩云：「穆穆文王，於緝熙敬止！」為人君，止於仁。為人臣，止於敬。為人子，止於孝。為人父，止於慈。與國人交，止於信。</b>
+胡雪峰曰：「此傳不特釋止至善，並知止能得皆釋之。」
+</p>
+
+<p>
+<b>◎　詩云：「穆穆文王，於緝熙敬止！」為人君止於仁，為人臣止於敬，為人子止於孝，為人父止於慈，與國人交止於信。</b>
 </p>
 
 <p>
@@ -600,8 +626,19 @@ for the JavaScript code in this tag.
 </p>
 
 <p>
+朱熹《四書或問》：得其明而不得其所以名則仁或流於姑息，敬或墮於阿諛，孝或陷父而慈或敗子，且其爲信亦未必不爲尾生、白公之爲也。
+</p>
+
+<p>
 金履祥《大學疏義》：五者之止其事理之精蘊固非一語之可盡，而天下之事至多至衆亦非止於五事而已也，故必究其精微之蘊而又推類以通其餘焉。精者天理之不雜者也，微者事理之易忽者也，必究其精則有以見其所當然而不可違，又有以見其所以然而不容己，必究其微則有以見其至纖至悉之事而不可不盡，又有以其毫釐曲折之間而不可或差也。
 </p>
+
+<p>
+胡渭《大學翼真》：從來說此節皆重『敬』字，亦是講學門面通套話，其實傳者之意尤重『緝熙』二字。緝熙即上蔡所謂常惺惺者，惟其緝熙，是以無不敬也。
+</p>
+<pre class="example">
+毛傳：「緝熙，光明也。」
+</pre>
 
 <p>
 <b>◎　詩云：「瞻彼淇澳，菉竹猗猗。有斐君子，如切如磋，如琢如磨。瑟兮僩兮，赫兮喧兮，有斐君子，終不可諠兮！」如切如磋者，道學也；如琢如磨者，自脩也；瑟兮僩兮者，恂慄也；赫兮喧兮者，威儀也；有斐君子，終不可諠兮者，道盛德至善，民之不能忘也。</b>
@@ -628,6 +665,10 @@ for the JavaScript code in this tag.
 </p>
 
 <p>
+胡渭《大學翼真》：文王無不敬而安所止，聖人之事也，若君子則知止豈無其由，而得止豈無其序哉。於是引詩而釋之，學謂格物致知，此知止之由也。自修謂誠意正心，修身恂慄則心正而物格知至，意誠不待言矣。威儀則身修而盛德至善，民不能忘，明明德之事全而新民之事起矣，故下節又以賢親樂利證聖德至善之餘澤被諸國家天下者，爲新民之止至善也，此皆得止之序也。
+</p>
+
+<p>
 <b>◎　詩云：「於戲前王不忘！」君子賢其賢而親其親，小人樂其樂而利其利，此以沒世不忘也。</b>
 </p>
 
@@ -646,7 +687,7 @@ for the JavaScript code in this tag.
 </p>
 
 <p>
-右傳之三章。釋止於至善。
+傳之三章釋止於至善。
 </p>
 
 <p>
@@ -655,8 +696,8 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-orgheadline6" class="outline-2">
-<h2 id="orgheadline6"><span class="section-number-2">5</span> 傳第四章</h2>
+<div id="outline-container-sec-5" class="outline-2">
+<h2 id="sec-5"><span class="section-number-2">5</span> 傳第四章</h2>
 <div class="outline-text-2" id="text-5">
 <p>
 <b>◎　子曰：「聽訟，吾猶人也，必也使無訟乎！」無情者不得盡其辭。大畏民志，此謂知本。</b>
@@ -681,13 +722,13 @@ for the JavaScript code in this tag.
 </p>
 
 <p>
-右傳之四章。釋本末。此章舊本誤在「止於信」下。
+傳之四章釋本末。此章舊本誤在「止於信」下。
 </p>
 </div>
 </div>
 
-<div id="outline-container-orgheadline7" class="outline-2">
-<h2 id="orgheadline7"><span class="section-number-2">6</span> 傳第五章</h2>
+<div id="outline-container-sec-6" class="outline-2">
+<h2 id="sec-6"><span class="section-number-2">6</span> 傳第五章</h2>
 <div class="outline-text-2" id="text-6">
 <p>
 <b>◎　此謂知本，</b>
@@ -712,7 +753,7 @@ for the JavaScript code in this tag.
 </p>
 
 <p>
-右傳之五章，蓋釋格物、致知之義，而今亡矣。
+傳之五章蓋釋格物、致知之義，而今亡矣。
 </p>
 
 <p>
@@ -749,8 +790,8 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-orgheadline8" class="outline-2">
-<h2 id="orgheadline8"><span class="section-number-2">7</span> 傳第六章</h2>
+<div id="outline-container-sec-7" class="outline-2">
+<h2 id="sec-7"><span class="section-number-2">7</span> 傳第六章</h2>
 <div class="outline-text-2" id="text-7">
 <p>
 <b>◎　所謂誠其意者，毋自欺也，如惡惡臭，如好好色，此之謂自謙，故君子必慎其獨也。</b>
@@ -827,7 +868,7 @@ for the JavaScript code in this tag.
 </p>
 
 <p>
-右傳之六章。釋誠意。
+傳之六章釋誠意。
 </p>
 
 <p>
@@ -852,8 +893,8 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-orgheadline9" class="outline-2">
-<h2 id="orgheadline9"><span class="section-number-2">8</span> 傳第七章</h2>
+<div id="outline-container-sec-8" class="outline-2">
+<h2 id="sec-8"><span class="section-number-2">8</span> 傳第七章</h2>
 <div class="outline-text-2" id="text-8">
 <p>
 <b>◎　所謂脩身在正其心者，身有所忿懥則不得其正，有所恐懼則不得其正，有所好樂則不得其正，有所憂患則不得其正。</b>
@@ -894,7 +935,7 @@ for the JavaScript code in this tag.
 </p>
 
 <p>
-右傳之七章。釋正心脩身。
+傳之七章釋正心脩身。
 </p>
 
 <p>
@@ -907,8 +948,8 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-orgheadline10" class="outline-2">
-<h2 id="orgheadline10"><span class="section-number-2">9</span> 傳第八章</h2>
+<div id="outline-container-sec-9" class="outline-2">
+<h2 id="sec-9"><span class="section-number-2">9</span> 傳第八章</h2>
 <div class="outline-text-2" id="text-9">
 <p>
 <b>◎　所謂齊其家在脩其身者，人之其所親愛而辟焉，之其所賤惡而辟焉，之其所畏敬而辟焉，之其所哀矜而辟焉，之其所慠惰而辟焉。故好而知其惡，惡而知其美者，天下鮮矣！</b>
@@ -953,13 +994,13 @@ for the JavaScript code in this tag.
 </p>
 
 <p>
-右傳之八章。釋脩身齊家。
+傳之八章釋脩身齊家。
 </p>
 </div>
 </div>
 
-<div id="outline-container-orgheadline11" class="outline-2">
-<h2 id="orgheadline11"><span class="section-number-2">10</span> 傳第九章</h2>
+<div id="outline-container-sec-10" class="outline-2">
+<h2 id="sec-10"><span class="section-number-2">10</span> 傳第九章</h2>
 <div class="outline-text-2" id="text-10">
 <p>
 <b>◎　所謂治國必先齊其家者，其家不可教而能教人者無之，故君子不出家而成教於國：孝者所以事君也，弟者所以事長也，慈者所以使眾也。</b>
@@ -1064,13 +1105,13 @@ for the JavaScript code in this tag.
 </p>
 
 <p>
-右傳之九章。釋齊家治國。
+傳之九章釋齊家治國。
 </p>
 </div>
 </div>
 
-<div id="outline-container-orgheadline12" class="outline-2">
-<h2 id="orgheadline12"><span class="section-number-2">11</span> 傳第十章</h2>
+<div id="outline-container-sec-11" class="outline-2">
+<h2 id="sec-11"><span class="section-number-2">11</span> 傳第十章</h2>
 <div class="outline-text-2" id="text-11">
 <p>
 <b>◎　所謂平天下在治其國者：上老老而民興孝，上長長而民興弟，上恤孤而民不倍，是以君子有絜矩之道也。</b>
@@ -1391,7 +1432,7 @@ for the JavaScript code in this tag.
 </p>
 
 <p>
-右傳之十章。釋治國平天下。
+傳之十章釋治國平天下。
 </p>
 
 <p>
@@ -1404,8 +1445,8 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-orgheadline13" class="outline-2">
-<h2 id="orgheadline13"><span class="section-number-2">12</span> 大學章句序.朱熹</h2>
+<div id="outline-container-sec-12" class="outline-2">
+<h2 id="sec-12"><span class="section-number-2">12</span> 大學章句序.朱熹</h2>
 <div class="outline-text-2" id="text-12">
 <p>
 大學之書，古之大學所以教人之法也。蓋自天降生民，則既莫不與之以仁義禮智之性矣。然其氣質之稟或不能齊，是以不能皆有以知其性之所有而全之也。一有聰明睿智能盡其性者出於其閒，則天必命之以為億兆之君師，使之治而教之，以復其性。此伏羲、神農、黃帝、堯、舜，所以繼天立極，而司徒之職、典樂之官所由設也。
@@ -1437,8 +1478,8 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-orgheadline1" class="outline-2">
-<h2 id="orgheadline1"><span class="section-number-2">13</span> 大學問.王守仁</h2>
+<div id="outline-container-sec-13" class="outline-2">
+<h2 id="sec-13"><span class="section-number-2">13</span> 大學問.王守仁</h2>
 <div class="outline-text-2" id="text-13">
 <p>
 曰：「《大學》者，昔儒以為大人之學矣。敢問大人之學何以在於明明德乎？」
@@ -1498,8 +1539,8 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-orgheadline14" class="outline-2">
-<h2 id="orgheadline14"><span class="section-number-2">14</span> 小學之教.胡渭</h2>
+<div id="outline-container-sec-14" class="outline-2">
+<h2 id="sec-14"><span class="section-number-2">14</span> 小學之教.胡渭</h2>
 <div class="outline-text-2" id="text-14">
 <p>
 <i>摘自《大學翼真》</i>
@@ -1683,8 +1724,8 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-orgheadline15" class="outline-2">
-<h2 id="orgheadline15"><span class="section-number-2">15</span> 大學之教.胡渭</h2>
+<div id="outline-container-sec-15" class="outline-2">
+<h2 id="sec-15"><span class="section-number-2">15</span> 大學之教.胡渭</h2>
 <div class="outline-text-2" id="text-15">
 <p>
 <i>摘自《大學翼真》</i>
@@ -1937,7 +1978,8 @@ for the JavaScript code in this tag.
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: mudan</p>
-<p class="date">Created: 2016-05-06 五 20:10</p>
+<p class="date">Created: 2016-05-08 周日 19:56</p>
+<p class="creator"><a href="http://www.gnu.org/software/emacs/">Emacs</a> 24.5.1 (<a href="http://orgmode.org">Org</a> mode 8.2.10)</p>
 <p class="validation"></p>
 </div>
 </body>
