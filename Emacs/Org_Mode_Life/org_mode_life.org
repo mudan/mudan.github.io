@@ -1,6 +1,6 @@
-#+TITLE: Org Mode_文字生活
+#+TITLE: Org Mode 文字生活
 #+AUTHOR: mudan
-#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="../emacs.css" />
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="./emacs.css" />
 
 本文译自：[[http://doc.norang.ca/org-mode.html][Org Mode - Organize Your Life In Plain Text]] [1]
 
@@ -138,6 +138,17 @@ Org-mode 非常适合用于处理多个客户和项目，一个 org 文件可以
 除以上所述文件以外其他 org 文件主要用于发布，在 Agenda 中并不适用。
 
 ** Agenda 安装
+
+这里是我的 =org-agenda-files= 配置：
+
+#+BEGIN_SRC lisp
+(setq org-agenda-files (quote ("~/git/org"
+                               "~/git/org/client1"
+                               "~/git/client2")))
+#+END_SRC
+
+org-mode 可以使用 =C-c [= 和 =C-c ]= 添加或者删除一个 =org-angenda-files= ，但这种添加办法使用的是文件的绝对路径，并不十分理想。如果你添加了一个新的 org 文件以上操作并不能帮助你自动添加到 Agenda 列表，很可能因此错过一些重要事情。
+
 * Footnotes
 
 [1] 作者最后修改时间在 2015-06-18 Thu 22:39，使用的 org mode 版本是 v8.2.10。

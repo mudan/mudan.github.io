@@ -11,7 +11,7 @@ img.qtipImg {
 }
 
 body, pre, code {
-   	 font-family: Monaco, Consolas, monospace, "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+   	 font-family: Monaco, Consolas, "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
 	}
 
 html,
@@ -47,9 +47,9 @@ body {
 
 #table-of-contents {
     	font-size: 10pt;
-	   	position: fixed;
- 	 	right: 0em;
- 		top: 0em;
+   	position: fixed;
+	  	right: 0em;
+	 	top: 0em;
     	background: white;
     	-webkit-box-shadow: 0 0 1em #777777;
     	-moz-box-shadow: 0 0 1em #777777;

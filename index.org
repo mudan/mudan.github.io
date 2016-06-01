@@ -1,13 +1,16 @@
-﻿
 #+TITLE:     Mudan's note
 #+STARTUP: showall
-#+OPTIONS: toc:nil
+#+OPTIONS: toc:nil num:nil
 #+HTML_HEAD: <link rel="stylesheet" type="text/css" href="emacs.css" />
 * Emacs
 
 [[./Emacs/The_Org_Manual/The_Org_Manual.org][The Org Manual 笔记]]
 
 [[./Emacs/Helm/Helm.org][Helm 工具包]]
+
+* Linux
+
+[[./Linux/gentoo-story.org][Gentoo Linux 前世今生]]
 
 * History
 
