@@ -10,6 +10,8 @@
 
 * Linux
 
+[[./Linux/arch_tips.org][Arch Linux Tips]]
+
 [[./Linux/gentoo-story.org][Gentoo Linux 前世今生]]
 
 * History

@@ -1,0 +1,337 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<title>Arch Linux Tips</title>
+<!-- 2016-06-03 五 12:52 -->
+<meta  http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta  name="generator" content="Org-mode" />
+<meta  name="author" content="mudan" />
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { color: green; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  pre.src-sh:before    { content: 'sh'; }
+  pre.src-bash:before  { content: 'sh'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-R:before     { content: 'R'; }
+  pre.src-perl:before  { content: 'Perl'; }
+  pre.src-java:before  { content: 'Java'; }
+  pre.src-sql:before   { content: 'SQL'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.right  { text-align: center;  }
+  th.left   { text-align: center;   }
+  th.center { text-align: center; }
+  td.right  { text-align: right;  }
+  td.left   { text-align: left;   }
+  td.center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara:nth-child(2) { display: inline; }
+  .footpara { display: block; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  /*]]>*/-->
+</style>
+<link rel="stylesheet" type="text/css" href="./emacs.css" />
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2013 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+</head>
+<body>
+<div id="content">
+<h1 class="title">Arch Linux Tips</h1>
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#sec-1">1. 配置</a></li>
+<li><a href="#sec-2">2. 命令</a></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-sec-1" class="outline-2">
+<h2 id="sec-1"><span class="section-number-2">1</span> 配置</h2>
+<div class="outline-text-2" id="text-1">
+<p>
+gedit 添加 GBK，GB2312 支持
+</p>
+<pre class="example">
+gsettings set org.gnome.gedit.preferences.encodings candidate-encodings "['GB18030', 'GB2312', 'GBK', 'UTF-8', 'CURRENT']"
+</pre>
+
+<p>
+使用 gdm 启动 gedit 和 gnome-terminal 无法使用输入法
+</p>
+<pre class="example">
+gsettings set org.gnome.settings-daemon.plugins.xsettings overrides "{'Gtk/IMModule':&lt;'fcitx'&gt;}"
+</pre>
+
+<p>
+nautilus 默认按类型排列
+</p>
+<pre class="example">
+dconf write /org/gnome/nautilus/preferences/default-sort-order type
+</pre>
+
+<p>
+NTFS 自动挂载并修改文件夹权限，在 <code>/etc/fstab</code> 中添加
+</p>
+<pre class="example">
+/dev/sda5               /mnt/windows    ntfs-3g         gid=users,fmask=113,dmask=002           0 0
+</pre>
+
+<p>
+设置家目录默认文件夹位置及名称，修改 <code>~/.config/user-dirs.dirs</code> 这个文件
+</p>
+<div class="org-src-container">
+
+<pre class="src src-sh"><span style="color: #a0522d;">XDG_DESKTOP_DIR</span>=<span style="color: #8b2252;">"$HOME/Desktop"</span>
+<span style="color: #a0522d;">XDG_DOWNLOAD_DIR</span>=<span style="color: #8b2252;">"$HOME/Downloads"</span>
+<span style="color: #a0522d;">XDG_TEMPLATES_DIR</span>=<span style="color: #8b2252;">"$HOME/Templates"</span>
+<span style="color: #a0522d;">XDG_PUBLICSHARE_DIR</span>=<span style="color: #8b2252;">"$HOME/Public"</span>
+<span style="color: #a0522d;">XDG_DOCUMENTS_DIR</span>=<span style="color: #8b2252;">"$HOME/MEGA/Documents"</span>
+<span style="color: #a0522d;">XDG_MUSIC_DIR</span>=<span style="color: #8b2252;">"$HOME/MEGA/Music"</span>
+<span style="color: #a0522d;">XDG_PICTURES_DIR</span>=<span style="color: #8b2252;">"$HOME/MEGA/Pictures"</span>
+<span style="color: #a0522d;">XDG_VIDEOS_DIR</span>=<span style="color: #8b2252;">"$HOME/Videos"</span>
+</pre>
+</div>
+
+<p>
+mpv 全能媒体播放器，另外推荐 autoload.lua 这个插件
+</p>
+<div class="org-src-container">
+
+<pre class="src src-conf"><span style="color: #a0522d;">screenshot-template</span>=~/mpv-screenshot-%f-%p
+<span style="color: #a0522d;">screenshot-format</span>=png
+<span style="color: #b22222;">#</span><span style="color: #b22222;">no-border</span>
+<span style="color: #a0522d;">autofit-larger</span>=100%
+<span style="color: #a0522d;">sub-auto</span>=fuzzy
+<span style="color: #a0522d;">sub-codepage</span>=enca:zh:cp936
+<span style="color: #a0522d;">vo</span>=opengl-hq:interpolation:icc-profile-auto:scale=ewa_lanczossharp
+<span style="color: #a0522d;">video-sync</span>=display-resample
+</pre>
+</div>
+
+<p>
+为 emacs 改 ctrl 键
+</p>
+<div class="org-src-container">
+
+<pre class="src src-sh"><span style="color: #b22222;"># </span><span style="color: #b22222;">&#20808;&#22312; ~/.bash_profile &#25991;&#20214;&#20013;&#21152;&#20837;</span>
+: xmodmap ~/.xmodmap
+<span style="color: #b22222;"># </span><span style="color: #b22222;">&#28982;&#21518;&#24314;&#31435; ~/.xmodmap &#25991;&#20214;&#65292;&#21152;&#20837;</span>
+remove Lock = Caps_Lock
+remove Control = Control_R
+keysym Control_R = Caps_Lock
+keysym Caps_Lock = Control_R
+add Lock = Caps_Lock
+add Control = Control_R
+</pre>
+</div>
+
+<p>
+<code>./config/fontconfig/fonts.conf</code> 设置
+</p>
+<div class="org-src-container">
+
+<pre class="src src-conf"><span style="color: #a0522d;">&lt;?xml version</span>=<span style="color: #8b2252;">"1.0"</span>?&gt;
+&lt;!DOCTYPE fontconfig SYSTEM <span style="color: #8b2252;">"fonts.dtd"</span>&gt;
+&lt;fontconfig&gt;
+        &lt;!-- &#25239;&#38191;&#40831; --&gt;
+        <span style="color: #a0522d;">&lt;match target</span>=<span style="color: #8b2252;">"font"</span>&gt;
+                <span style="color: #a0522d;">&lt;edit name</span>=<span style="color: #8b2252;">"antialias"</span> mode=<span style="color: #8b2252;">"assign"</span>&gt;
+                &lt;bool&gt;true&lt;/bool&gt;
+        &lt;/edit&gt;
+        &lt;/match&gt;
+        &lt;!-- &#23383;&#33410;&#30721;&#35299;&#37322;&#22120;(BCI) --&gt;
+        <span style="color: #a0522d;">&lt;match target</span>=<span style="color: #8b2252;">"font"</span>&gt;
+                <span style="color: #a0522d;">&lt;edit name</span>=<span style="color: #8b2252;">"hinting"</span> mode=<span style="color: #8b2252;">"assign"</span>&gt;
+                &lt;bool&gt;true&lt;/bool&gt;
+        &lt;/edit&gt;
+        &lt;/match&gt;
+        &lt;!-- &#24494;&#35843;&#26679;&#24335; --&gt;
+        <span style="color: #a0522d;">&lt;match target</span>=<span style="color: #8b2252;">"font"</span>&gt;
+                <span style="color: #a0522d;">&lt;edit name</span>=<span style="color: #8b2252;">"hintstyle"</span> mode=<span style="color: #8b2252;">"assign"</span>&gt;
+                &lt;const&gt;hintmedium&lt;/const&gt;
+        &lt;/edit&gt;
+        &lt;/match&gt;
+&lt;/fontconfig&gt;
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-sec-2" class="outline-2">
+<h2 id="sec-2"><span class="section-number-2">2</span> 命令</h2>
+<div class="outline-text-2" id="text-2">
+<p>
+更新镜像清单
+</p>
+<pre class="example">
+sudo pacman-mirrors -g
+</pre>
+
+<p>
+使用 pepper-flash，默认的早就不更新了
+</p>
+<pre class="example">
+sudo yaourt -S chromium-pepper-flash
+</pre>
+
+<p>
+转换 CD 到 iso 文件
+</p>
+<pre class="example">
+dd if=/dev/cdrom of=isofile.iso
+</pre>
+
+<p>
+IMAGE/PNG/PDF/DJVU 互转
+</p>
+<div class="org-src-container">
+
+<pre class="src src-sh">sudo pacman -S djvulibre
+ddjvu --format=pdf inputfile.djvu ouputfile.pdf  <span style="color: #b22222;"># </span><span style="color: #b22222;">djvu &#36716; pdf</span>
+
+sudo pacman -S ghostscript imagemagick
+convert *.png outputfile.pdf    <span style="color: #b22222;"># </span><span style="color: #b22222;">&#24403;&#21069;&#30446;&#24405;&#19979;&#25152;&#26377; png &#22270;&#29255;&#36716;&#25104; pdf</span>
+convert *.jpg outputfile.pdf    <span style="color: #b22222;"># </span><span style="color: #b22222;">&#24403;&#21069;&#30446;&#24405;&#19979;&#25152;&#26377; jpg &#22270;&#29255;&#36716;&#25104; pdf</span>
+pdftoppm -png file.pdf file     <span style="color: #b22222;"># </span><span style="color: #b22222;">&#23558;&#25351;&#23450; pdf &#36716;&#25104;&#19968;&#24352;&#24352; png &#22270;&#29255;</span>
+gs -q -dNOPAUSE -sDEVICE=pdfwrite -sOUTPUTFILE=1.pdf -dBATCH *.pdf      <span style="color: #b22222;"># </span><span style="color: #b22222;">&#23558;&#24403;&#21069;&#30446;&#24405;&#19979;&#25152;&#26377; pdf &#36716;&#25104;&#19968;&#20010; pdf</span>
+</pre>
+</div>
+
+<p>
+释放 Linux 自动为每个分区预留的空间，默认 5%
+</p>
+<div class="org-src-container">
+
+<pre class="src src-sh">tune2fs -m 1 /dev/sda1          <span style="color: #b22222;"># </span><span style="color: #b22222;">/dev/sda1 &#21482;&#39044;&#30041; 1% &#30340;&#31354;&#38388;</span>
+</pre>
+</div>
+
+<p>
+systemctl 常用命令
+</p>
+<div class="org-src-container">
+
+<pre class="src src-sh">systemctl enable httpd.service  <span style="color: #b22222;"># </span><span style="color: #b22222;">&#23558; httpd &#26381;&#21153;&#35774;&#20026;&#24320;&#26426;&#33258;&#21160;&#21551;&#21160;</span>
+systemctl disable httpd.service <span style="color: #b22222;"># </span><span style="color: #b22222;">&#31105;&#27490; httpd &#26381;&#21153;&#24320;&#26426;&#33258;&#21160;&#21551;&#21160;</span>
+systemctl status httpd.service  <span style="color: #b22222;"># </span><span style="color: #b22222;">&#26597;&#30475; httpd &#26381;&#21153;&#30340;&#36816;&#34892;&#29366;&#24577;</span>
+systemctl is-active httpd.service       <span style="color: #b22222;"># </span><span style="color: #b22222;">&#26816;&#26597; httpd &#26381;&#21153;&#26159;&#21542;&#22788;&#20110;&#27963;&#21160;&#29366;&#24577;</span>
+systemctl start httpd.service   <span style="color: #b22222;"># </span><span style="color: #b22222;">&#21551;&#21160; httpd &#26381;&#21153;</span>
+systemctl stop httpd.service    <span style="color: #b22222;"># </span><span style="color: #b22222;">&#20572;&#27490; httpd &#26381;&#21153;</span>
+systemctl restart httpd.service <span style="color: #b22222;"># </span><span style="color: #b22222;">&#37325;&#26032;&#21551;&#21160; httpd &#26381;&#21153;</span>
+</pre>
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: mudan</p>
+<p class="date">Created: 2016-06-03 五 12:52</p>
+<p class="creator"><a href="http://www.gnu.org/software/emacs/">Emacs</a> 24.5.1 (<a href="http://orgmode.org">Org</a> mode 8.2.10)</p>
+<p class="validation"></p>
+</div>
+</body>
+</html>

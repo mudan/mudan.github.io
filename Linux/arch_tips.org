@@ -1,0 +1,118 @@
+#+TITLE: Arch Linux Tips
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="./emacs.css" />
+
+* 配置
+
+gedit 添加 GBK，GB2312 支持
+: gsettings set org.gnome.gedit.preferences.encodings candidate-encodings "['GB18030', 'GB2312', 'GBK', 'UTF-8', 'CURRENT']"
+
+使用 gdm 启动 gedit 和 gnome-terminal 无法使用输入法
+: gsettings set org.gnome.settings-daemon.plugins.xsettings overrides "{'Gtk/IMModule':<'fcitx'>}"
+
+nautilus 默认按类型排列
+: dconf write /org/gnome/nautilus/preferences/default-sort-order type
+
+NTFS 自动挂载并修改文件夹权限，在 =/etc/fstab= 中添加
+: /dev/sda5		/mnt/windows	ntfs-3g		gid=users,fmask=113,dmask=002		0 0
+
+设置家目录默认文件夹位置及名称，修改 =~/.config/user-dirs.dirs= 这个文件
+#+BEGIN_SRC sh
+XDG_DESKTOP_DIR="$HOME/Desktop"
+XDG_DOWNLOAD_DIR="$HOME/Downloads"
+XDG_TEMPLATES_DIR="$HOME/Templates"
+XDG_PUBLICSHARE_DIR="$HOME/Public"
+XDG_DOCUMENTS_DIR="$HOME/MEGA/Documents"
+XDG_MUSIC_DIR="$HOME/MEGA/Music"
+XDG_PICTURES_DIR="$HOME/MEGA/Pictures"
+XDG_VIDEOS_DIR="$HOME/Videos"
+#+END_SRC
+
+mpv 全能媒体播放器，另外推荐 autoload.lua 这个插件
+#+BEGIN_SRC conf
+screenshot-template=~/mpv-screenshot-%f-%p
+screenshot-format=png
+#no-border
+autofit-larger=100%
+sub-auto=fuzzy
+sub-codepage=enca:zh:cp936
+vo=opengl-hq:interpolation:icc-profile-auto:scale=ewa_lanczossharp
+video-sync=display-resample
+#+END_SRC
+
+为 emacs 改 ctrl 键
+#+BEGIN_SRC sh
+# 先在 ~/.bash_profile 文件中加入
+: xmodmap ~/.xmodmap
+# 然后建立 ~/.xmodmap 文件，加入
+remove Lock = Caps_Lock
+remove Control = Control_R
+keysym Control_R = Caps_Lock
+keysym Caps_Lock = Control_R
+add Lock = Caps_Lock
+add Control = Control_R
+#+END_SRC
+
+=./config/fontconfig/fonts.conf= 设置
+#+BEGIN_SRC conf
+<?xml version="1.0"?>
+<!DOCTYPE fontconfig SYSTEM "fonts.dtd">
+<fontconfig>
+        <!-- 抗锯齿 -->
+        <match target="font">
+                <edit name="antialias" mode="assign">
+                <bool>true</bool>
+        </edit>
+        </match>
+        <!-- 字节码解释器(BCI) -->
+        <match target="font">
+                <edit name="hinting" mode="assign">
+                <bool>true</bool>
+        </edit>
+        </match>
+        <!-- 微调样式 -->
+        <match target="font">
+                <edit name="hintstyle" mode="assign">
+                <const>hintmedium</const>
+        </edit>
+        </match>
+</fontconfig>
+#+END_SRC
+
+* 命令
+
+更新镜像清单
+: sudo pacman-mirrors -g
+
+使用 pepper-flash，默认的早就不更新了
+: sudo yaourt -S chromium-pepper-flash
+
+转换 CD 到 iso 文件
+: dd if=/dev/cdrom of=isofile.iso
+
+IMAGE/PNG/PDF/DJVU 互转
+#+BEGIN_SRC sh
+sudo pacman -S djvulibre
+ddjvu --format=pdf inputfile.djvu ouputfile.pdf  # djvu 转 pdf
+
+sudo pacman -S ghostscript imagemagick
+convert *.png outputfile.pdf    # 当前目录下所有 png 图片转成 pdf
+convert *.jpg outputfile.pdf    # 当前目录下所有 jpg 图片转成 pdf
+pdftoppm -png file.pdf file     # 将指定 pdf 转成一张张 png 图片
+gs -q -dNOPAUSE -sDEVICE=pdfwrite -sOUTPUTFILE=1.pdf -dBATCH *.pdf      # 将当前目录下所有 pdf 转成一个 pdf
+#+END_SRC
+
+释放 Linux 自动为每个分区预留的空间，默认 5%
+#+BEGIN_SRC sh
+tune2fs -m 1 /dev/sda1          # /dev/sda1 只预留 1% 的空间
+#+END_SRC
+
+systemctl 常用命令
+#+BEGIN_SRC sh
+systemctl enable httpd.service  # 将 httpd 服务设为开机自动启动
+systemctl disable httpd.service # 禁止 httpd 服务开机自动启动
+systemctl status httpd.service  # 查看 httpd 服务的运行状态
+systemctl is-active httpd.service       # 检查 httpd 服务是否处于活动状态
+systemctl start httpd.service   # 启动 httpd 服务
+systemctl stop httpd.service    # 停止 httpd 服务
+systemctl restart httpd.service # 重新启动 httpd 服务
+#+END_SRC

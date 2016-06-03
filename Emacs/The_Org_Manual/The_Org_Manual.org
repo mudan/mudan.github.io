@@ -64,6 +64,9 @@ Org 文件开头结构标记
      #+OPTIONS: toc:4     ; 4 表示第 4 层以后的子树不显示在目录上
      #+OPTIONS: toc:nil   ; 不导出目录
 
+设置标题是否加入序号
+     #+OPTIONS: num:4     ; 4 级以上标题添加序号，以下标题无序号
+     #+OPTIONS: num:nil   ; 取消序号
 #+END_EXAMPLE
 
 文件内部排版
@@ -1452,16 +1455,22 @@ C-u C-c C-x C-u		org-update-all-dblocks，更新所有导出的视图
 
 杂类设置
 #+BEGIN_SRC lisp
-(setq org-log-done t
+(setq org-log-done t            ; 日志记录
+      org-log-done '(done)      ; 日志记录类型
+      org-enable-table-editor 1 ; 启用内建的电子表格
       org-completion-use-ido t
       org-edit-timestamp-down-means-later t
       org-archive-mark-done nil
       org-catch-invisible-edits 'show
       org-export-coding-system 'utf-8
+;      org-export-default-language "zh-CN"
       org-fast-tag-selection-single-key 'expert
       org-html-validation-link nil
       org-export-kill-product-buffer-when-displayed t
       org-tags-column 80)
+;; 大纲模式下省略号改成箭头
+;; ▼, ↴, ⬎, ⤷
+(setq org-ellipsis "⤵")
 ;; 自动缩排模式
 (setq org-startup-indented t)
 ;; 所有项目隐藏，只保留母节点
@@ -1485,6 +1494,21 @@ Agenda 设置
 (setq org-agenda-files (list org-directory))    ; angenda 文件从 org 文件夹中寻找
 (add-hook 'org-agenda-mode-hook 'hl-line-mode)  ; agenda 启动 hl-line
 (setq org-agenda-show-all-dates t)	; C-c C-t 直接选择 TODO 状态
+;; 任何未完成的子任务会阻止父任务变为完成状态，若像临时屏蔽该功能，可以为该任务添加`:NOBLOCKING: t'属性
+;; 若父任务中设置了属性`:ORDERED: t'，则表示其子任务必须依照顺序从上到下完成
+(setq org-enforce-todo-dependencies t)
+#+END_SRC
+
+#+BEGIN_SRC lisp
+;; 设定 org 目录
+(setq org-publish-project-alist
+      '(("org-notes"
+         :base-directory "~/MEGA/note/"
+         :publishing-directory "~/MEGA/note/public_html/"
+         :publishing-function org-twbs-publish-to-html
+         :with-sub-superscript nil
+         )))
+;;(local-set-key (kbd "s-\\") 'my-org-publish-buffer)	;; 在 OSX 下使用 CMD- \
 #+END_SRC
 
 Org Capture 设置
@@ -1565,6 +1589,17 @@ unwanted space when exporting org-mode to html."
      (add-hook 'message-mode-hook 'turn-on-orgstruct++)
 #+END_SRC
 
+图片相关设置
+#+BEGIN_SRC lisp
+;(setq org-html-inline-images t)		;; 导出 html 时,嵌入图片,而不是创建图片的链接
+;; M-x org-toggle-inline-images	直接在 org 文件中显示图片
+(setq org-image-actual-width t)			;; org 文件中显示的图片为原始大小
+;; 尋找你額外進行的 #+ATTR.* 設定，若尋找失敗的話，則會變成使用你的寬度設定
+;; #+CAPTION: 設定圖片寬度為 100
+;; #+ATTR_HTML: :width 100
+;(setq org-image-actual-width '(300))
+#+END_SRC
+
 Org babel 设定支援的语言
 #+BEGIN_SRC lisp
 ;; C-c C-c 选定程序码块进行运算
@@ -1585,6 +1620,11 @@ Org babel 设定支援的语言
    ))
 ;; C-c C-c 不再询问是否进行运算，直接开始
 (setq org-confirm-babel-evaluate nil)
+#+END_SRC
+
+导出 markdown 文档（org 自带，只需手工加载）
+#+BEGIN_SRC lisp
+(require 'ox-md)
 #+END_SRC
 
 利用 EasyPG 加密条目

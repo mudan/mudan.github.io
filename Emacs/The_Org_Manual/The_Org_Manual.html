@@ -4,7 +4,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
 <title>The Org Manual 笔记</title>
-<!-- 2016-04-30 周六 22:27 -->
+<!-- 2016-06-02 周四 16:00 -->
 <meta  http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta  name="generator" content="Org-mode" />
 <meta  name="author" content="mudan" />
@@ -238,6 +238,10 @@ Org 文件开头结构标记
 设置标题目录显示到第 N 层子树
      #+OPTIONS: toc:4     ; 4 表示第 4 层以后的子树不显示在目录上
      #+OPTIONS: toc:nil   ; 不导出目录
+
+设置标题是否加入序号
+     #+OPTIONS: num:4     ; 4 级以上标题添加序号，以下标题无序号
+     #+OPTIONS: num:nil   ; 取消序号
 </pre>
 
 <p>
@@ -315,7 +319,7 @@ I	#+INCLUDE: line
 
 <div class="org-src-container">
 
-<pre class="src src-emacs-lisp"><span id="coderef-sc" class="coderef-off"><span class="linenr">1: </span>(<span style="color: #F0DFAF; font-weight: bold;">save-excursion</span></span>
+<pre class="src src-emacs-lisp"><span id="coderef-sc" class="coderef-off"><span class="linenr">1: </span>(<span style="color: #a020f0;">save-excursion</span></span>
 <span id="coderef-jump" class="coderef-off"><span class="linenr">2: </span>   (goto-char (point-min)))</span>
 </pre>
 </div>
@@ -1956,10 +1960,10 @@ C-u C-c C-x C-u		org-update-all-dblocks，更新所有导出的视图
 </p>
 <div class="org-src-container">
 
-<pre class="src src-lisp">(global-set-key <span style="color: #CC9393;">"\C-cl"</span> 'org-store-link)
-(global-set-key <span style="color: #CC9393;">"\C-cc"</span> 'org-capture)
-(global-set-key <span style="color: #CC9393;">"\C-ca"</span> 'org-agenda)
-(global-set-key <span style="color: #CC9393;">"\C-cb"</span> 'org-iswitchb)
+<pre class="src src-lisp">(global-set-key <span style="color: #8b2252;">"\C-cl"</span> 'org-store-link)
+(global-set-key <span style="color: #8b2252;">"\C-cc"</span> 'org-capture)
+(global-set-key <span style="color: #8b2252;">"\C-ca"</span> 'org-agenda)
+(global-set-key <span style="color: #8b2252;">"\C-cb"</span> 'org-iswitchb)
 </pre>
 </div>
 
@@ -1968,25 +1972,31 @@ C-u C-c C-x C-u		org-update-all-dblocks，更新所有导出的视图
 </p>
 <div class="org-src-container">
 
-<pre class="src src-lisp">(setq org-log-done t
+<pre class="src src-lisp">(setq org-log-done t            <span style="color: #b22222;">; &#26085;&#24535;&#35760;&#24405;</span>
+      org-log-done '(done)      <span style="color: #b22222;">; &#26085;&#24535;&#35760;&#24405;&#31867;&#22411;</span>
+      org-enable-table-editor 1 <span style="color: #b22222;">; &#21551;&#29992;&#20869;&#24314;&#30340;&#30005;&#23376;&#34920;&#26684;</span>
       org-completion-use-ido t
       org-edit-timestamp-down-means-later t
       org-archive-mark-done nil
       org-catch-invisible-edits 'show
       org-export-coding-system 'utf-8
+<span style="color: #b22222;">;      </span><span style="color: #b22222;">org-export-default-language "zh-CN"</span>
       org-fast-tag-selection-single-key 'expert
       org-html-validation-link nil
       org-export-kill-product-buffer-when-displayed t
       org-tags-column 80)
-<span style="color: #5F7F5F;">;; </span><span style="color: #7F9F7F;">&#33258;&#21160;&#32553;&#25490;&#27169;&#24335;</span>
+<span style="color: #b22222;">;; </span><span style="color: #b22222;">&#22823;&#32434;&#27169;&#24335;&#19979;&#30465;&#30053;&#21495;&#25913;&#25104;&#31661;&#22836;</span>
+<span style="color: #b22222;">;; </span><span style="color: #b22222;">&#9660;, &#8628;, &#11022;, &#10551;</span>
+(setq org-ellipsis <span style="color: #8b2252;">"&#10549;"</span>)
+<span style="color: #b22222;">;; </span><span style="color: #b22222;">&#33258;&#21160;&#32553;&#25490;&#27169;&#24335;</span>
 (setq org-startup-indented t)
-<span style="color: #5F7F5F;">;; </span><span style="color: #7F9F7F;">&#25152;&#26377;&#39033;&#30446;&#38544;&#34255;&#65292;&#21482;&#20445;&#30041;&#27597;&#33410;&#28857;</span>
+<span style="color: #b22222;">;; </span><span style="color: #b22222;">&#25152;&#26377;&#39033;&#30446;&#38544;&#34255;&#65292;&#21482;&#20445;&#30041;&#27597;&#33410;&#28857;</span>
 (setq org-startup-folded t)
-<span style="color: #5F7F5F;">;; </span><span style="color: #7F9F7F;">&#22312;&#31243;&#24207;&#30721;&#26639;&#20026;&#31243;&#24207;&#19978;&#33394;</span>
+<span style="color: #b22222;">;; </span><span style="color: #b22222;">&#22312;&#31243;&#24207;&#30721;&#26639;&#20026;&#31243;&#24207;&#19978;&#33394;</span>
 (setq org-src-fontify-natively t)
-<span style="color: #5F7F5F;">;; </span><span style="color: #7F9F7F;">&#35753;&#27491;&#25991;&#20013;&#30340; plain list &#20063;&#33021;&#25240;&#21472;</span>
+<span style="color: #b22222;">;; </span><span style="color: #b22222;">&#35753;&#27491;&#25991;&#20013;&#30340; plain list &#20063;&#33021;&#25240;&#21472;</span>
 (setq org-cycle-include-plain-lists t)
-<span style="color: #5F7F5F;">;; </span><span style="color: #7F9F7F;">&#39640;&#20142;&#26174;&#31034; code blocks</span>
+<span style="color: #b22222;">;; </span><span style="color: #b22222;">&#39640;&#20142;&#26174;&#31034; code blocks</span>
 (setq org-src-fontify-natively t)
 </pre>
 </div>
@@ -1996,15 +2006,32 @@ Agenda 设置
 </p>
 <div class="org-src-container">
 
-<pre class="src src-lisp">(setq org-agenda-include-diary t)       <span style="color: #7F9F7F;">; &#23558; diary &#30340;&#20107;&#39033;&#20063;&#32435;&#20837; agenda &#20013;&#26174;&#31034;</span>
-(setq org-agenda-compact-blocks t)      <span style="color: #7F9F7F;">; Compact the block agenda view</span>
-(setq org-agenda-show-all-dates t)      <span style="color: #7F9F7F;">; &#26174;&#31034;&#25152;&#26377; Agenda &#26085;&#26399;&#65292;&#21363;&#20351;&#27809;&#26377;&#20219;&#21153;</span>
-(setq org-agenda-text-search-extra-files (quote (agenda-archives))) <span style="color: #7F9F7F;">; &#24403;&#25628;&#32034;&#25991;&#26412;&#26102;,&#20063;&#20174;&#24402;&#26723;&#25991;&#20214;&#20013;&#26597;&#25214;</span>
-(setq org-agenda-start-on-weekday 1)    <span style="color: #7F9F7F;">; &#26143;&#26399;&#19968;&#24320;&#22987;&#27599;&#21608;&#35758;&#31243;</span>
-(setq org-agenda-window-setup 'current-window)  <span style="color: #7F9F7F;">; agenda &#26174;&#31034;&#22312;&#24403;&#21069;&#31383;&#21475;</span>
-(setq org-agenda-files (list org-directory))    <span style="color: #7F9F7F;">; angenda &#25991;&#20214;&#20174; org &#25991;&#20214;&#22841;&#20013;&#23547;&#25214;</span>
-(add-hook 'org-agenda-mode-hook 'hl-line-mode)  <span style="color: #7F9F7F;">; agenda &#21551;&#21160; hl-line</span>
-(setq org-agenda-show-all-dates t)      <span style="color: #7F9F7F;">; C-c C-t &#30452;&#25509;&#36873;&#25321; TODO &#29366;&#24577;</span>
+<pre class="src src-lisp">(setq org-agenda-include-diary t)       <span style="color: #b22222;">; &#23558; diary &#30340;&#20107;&#39033;&#20063;&#32435;&#20837; agenda &#20013;&#26174;&#31034;</span>
+(setq org-agenda-compact-blocks t)      <span style="color: #b22222;">; Compact the block agenda view</span>
+(setq org-agenda-show-all-dates t)      <span style="color: #b22222;">; &#26174;&#31034;&#25152;&#26377; Agenda &#26085;&#26399;&#65292;&#21363;&#20351;&#27809;&#26377;&#20219;&#21153;</span>
+(setq org-agenda-text-search-extra-files (quote (agenda-archives))) <span style="color: #b22222;">; &#24403;&#25628;&#32034;&#25991;&#26412;&#26102;,&#20063;&#20174;&#24402;&#26723;&#25991;&#20214;&#20013;&#26597;&#25214;</span>
+(setq org-agenda-start-on-weekday 1)    <span style="color: #b22222;">; &#26143;&#26399;&#19968;&#24320;&#22987;&#27599;&#21608;&#35758;&#31243;</span>
+(setq org-agenda-window-setup 'current-window)  <span style="color: #b22222;">; agenda &#26174;&#31034;&#22312;&#24403;&#21069;&#31383;&#21475;</span>
+(setq org-agenda-files (list org-directory))    <span style="color: #b22222;">; angenda &#25991;&#20214;&#20174; org &#25991;&#20214;&#22841;&#20013;&#23547;&#25214;</span>
+(add-hook 'org-agenda-mode-hook 'hl-line-mode)  <span style="color: #b22222;">; agenda &#21551;&#21160; hl-line</span>
+(setq org-agenda-show-all-dates t)      <span style="color: #b22222;">; C-c C-t &#30452;&#25509;&#36873;&#25321; TODO &#29366;&#24577;</span>
+<span style="color: #b22222;">;; </span><span style="color: #b22222;">&#20219;&#20309;&#26410;&#23436;&#25104;&#30340;&#23376;&#20219;&#21153;&#20250;&#38459;&#27490;&#29238;&#20219;&#21153;&#21464;&#20026;&#23436;&#25104;&#29366;&#24577;&#65292;&#33509;&#20687;&#20020;&#26102;&#23631;&#34109;&#35813;&#21151;&#33021;&#65292;&#21487;&#20197;&#20026;&#35813;&#20219;&#21153;&#28155;&#21152;`:NOBLOCKING: t'&#23646;&#24615;</span>
+<span style="color: #b22222;">;; </span><span style="color: #b22222;">&#33509;&#29238;&#20219;&#21153;&#20013;&#35774;&#32622;&#20102;&#23646;&#24615;`:ORDERED: t'&#65292;&#21017;&#34920;&#31034;&#20854;&#23376;&#20219;&#21153;&#24517;&#39035;&#20381;&#29031;&#39034;&#24207;&#20174;&#19978;&#21040;&#19979;&#23436;&#25104;</span>
+(setq org-enforce-todo-dependencies t)
+</pre>
+</div>
+
+<div class="org-src-container">
+
+<pre class="src src-lisp"><span style="color: #b22222;">;; </span><span style="color: #b22222;">&#35774;&#23450; org &#30446;&#24405;</span>
+(setq org-publish-project-alist
+      '((<span style="color: #8b2252;">"org-notes"</span>
+         <span style="color: #483d8b;">:base-directory</span> <span style="color: #8b2252;">"~/MEGA/note/"</span>
+         <span style="color: #483d8b;">:publishing-directory</span> <span style="color: #8b2252;">"~/MEGA/note/public_html/"</span>
+         <span style="color: #483d8b;">:publishing-function</span> org-twbs-publish-to-html
+         <span style="color: #483d8b;">:with-sub-superscript</span> nil
+         )))
+<span style="color: #b22222;">;;</span><span style="color: #b22222;">(local-set-key (kbd "s-\\") 'my-org-publish-buffer)   ;; &#22312; OSX &#19979;&#20351;&#29992; CMD- \</span>
 </pre>
 </div>
 
@@ -2014,20 +2041,20 @@ Org Capture 设置
 <div class="org-src-container">
 
 <pre class="src src-lisp">(setq org-capture-templates
-      '((<span style="color: #CC9393;">"t"</span> <span style="color: #CC9393;">"Todo"</span> entry (file+headline <span style="color: #CC9393;">"D:/Dropbox/note/todo.org"</span> <span style="color: #CC9393;">"Tasks"</span>)
-         <span style="color: #CC9393;">"* TODO %?\n  %i\n  %a"</span>)
-        (<span style="color: #CC9393;">"j"</span> <span style="color: #CC9393;">"Journal"</span> entry (file+datetree <span style="color: #CC9393;">"D:/Dropbox/note/journal.org"</span>)
-         <span style="color: #CC9393;">"* %?\nEntered on %U\n  %i\n  %a"</span>)
-        (<span style="color: #CC9393;">"n"</span> <span style="color: #CC9393;">"Note"</span> entry (file+datetree <span style="color: #CC9393;">"D:/Dropbox/note/note.org"</span>)
-         <span style="color: #CC9393;">"* %? :NOTE:\n%U\n%a\n"</span>)
+      '((<span style="color: #8b2252;">"t"</span> <span style="color: #8b2252;">"Todo"</span> entry (file+headline <span style="color: #8b2252;">"D:/Dropbox/note/todo.org"</span> <span style="color: #8b2252;">"Tasks"</span>)
+         <span style="color: #8b2252;">"* TODO %?\n  %i\n  %a"</span>)
+        (<span style="color: #8b2252;">"j"</span> <span style="color: #8b2252;">"Journal"</span> entry (file+datetree <span style="color: #8b2252;">"D:/Dropbox/note/journal.org"</span>)
+         <span style="color: #8b2252;">"* %?\nEntered on %U\n  %i\n  %a"</span>)
+        (<span style="color: #8b2252;">"n"</span> <span style="color: #8b2252;">"Note"</span> entry (file+datetree <span style="color: #8b2252;">"D:/Dropbox/note/note.org"</span>)
+         <span style="color: #8b2252;">"* %? :NOTE:\n%U\n%a\n"</span>)
         ))
-<span style="color: #5F7F5F;">;; </span><span style="color: #7F9F7F;">C-c t &#30452;&#25509;&#25171;&#24320; todo.org</span>
-(define-key global-map <span style="color: #CC9393;">"\C-ct"</span>
-   (<span style="color: #F0DFAF; font-weight: bold;">lambda</span> () (interactive) (org-capture nil <span style="color: #CC9393;">"t"</span>)))
-(define-key global-map <span style="color: #CC9393;">"\C-cj"</span>
-   (<span style="color: #F0DFAF; font-weight: bold;">lambda</span> () (interactive) (org-capture nil <span style="color: #CC9393;">"j"</span>)))
-(define-key global-map <span style="color: #CC9393;">"\C-cn"</span>
-   (<span style="color: #F0DFAF; font-weight: bold;">lambda</span> () (interactive) (org-capture nil <span style="color: #CC9393;">"n"</span>)))
+<span style="color: #b22222;">;; </span><span style="color: #b22222;">C-c t &#30452;&#25509;&#25171;&#24320; todo.org</span>
+(define-key global-map <span style="color: #8b2252;">"\C-ct"</span>
+   (<span style="color: #a020f0;">lambda</span> () (interactive) (org-capture nil <span style="color: #8b2252;">"t"</span>)))
+(define-key global-map <span style="color: #8b2252;">"\C-cj"</span>
+   (<span style="color: #a020f0;">lambda</span> () (interactive) (org-capture nil <span style="color: #8b2252;">"j"</span>)))
+(define-key global-map <span style="color: #8b2252;">"\C-cn"</span>
+   (<span style="color: #a020f0;">lambda</span> () (interactive) (org-capture nil <span style="color: #8b2252;">"n"</span>)))
 </pre>
 </div>
 
@@ -2036,25 +2063,25 @@ Org clock 计时
 </p>
 <div class="org-src-container">
 
-<pre class="src src-lisp">(<span style="color: #F0DFAF; font-weight: bold;">require</span> '<span style="color: #BFEBBF;">org-clock</span>)
+<pre class="src src-lisp">(<span style="color: #a020f0;">require</span> '<span style="color: #008b8b;">org-clock</span>)
 (setq org-clock-persist 'history)
-<span style="color: #5F7F5F;">;; </span><span style="color: #7F9F7F;">Resume clocking task when emacs is restarted</span>
+<span style="color: #b22222;">;; </span><span style="color: #b22222;">Resume clocking task when emacs is restarted</span>
 (org-clock-persistence-insinuate)
 (setq org-clock-persist t)
-<span style="color: #5F7F5F;">;; </span><span style="color: #7F9F7F;">Resume clocking task on clock-in if the clock is open</span>
+<span style="color: #b22222;">;; </span><span style="color: #b22222;">Resume clocking task on clock-in if the clock is open</span>
 (setq org-clock-in-resume t)
-<span style="color: #5F7F5F;">;; </span><span style="color: #7F9F7F;">&#35774;&#32622; clock tracking &#30340;&#26102;&#38388;&#21040;&#36798;&#39044;&#20272;&#24037;&#20316;&#37327;&#26102;&#30340;&#25552;&#37266;&#22768;&#38899;</span>
+<span style="color: #b22222;">;; </span><span style="color: #b22222;">&#35774;&#32622; clock tracking &#30340;&#26102;&#38388;&#21040;&#36798;&#39044;&#20272;&#24037;&#20316;&#37327;&#26102;&#30340;&#25552;&#37266;&#22768;&#38899;</span>
 (setq org-clock-sound t)
-<span style="color: #5F7F5F;">;; </span><span style="color: #7F9F7F;">Separate drawers for clocking and logs</span>
-<span style="color: #5F7F5F;">;; </span><span style="color: #7F9F7F;">(setq org-drawers (quote ("PROPERTIES" "LOGBOOK")))</span>
-<span style="color: #5F7F5F;">;; </span><span style="color: #7F9F7F;">Save clock data and notes in the LOGBOOK drawer</span>
+<span style="color: #b22222;">;; </span><span style="color: #b22222;">Separate drawers for clocking and logs</span>
+<span style="color: #b22222;">;; </span><span style="color: #b22222;">(setq org-drawers (quote ("PROPERTIES" "LOGBOOK")))</span>
+<span style="color: #b22222;">;; </span><span style="color: #b22222;">Save clock data and notes in the LOGBOOK drawer</span>
 (setq org-clock-into-drawer t)
-<span style="color: #5F7F5F;">;; </span><span style="color: #7F9F7F;">Save state changes in the LOGBOOK drawer</span>
+<span style="color: #b22222;">;; </span><span style="color: #b22222;">Save state changes in the LOGBOOK drawer</span>
 (setq org-log-into-drawer t)
-<span style="color: #5F7F5F;">;; </span><span style="color: #7F9F7F;">Removes clocked tasks with 0:00 duration</span>
-<span style="color: #5F7F5F;">;; </span><span style="color: #7F9F7F;">Show clock sums as hours and minutes, not "n days" etc.</span>
+<span style="color: #b22222;">;; </span><span style="color: #b22222;">Removes clocked tasks with 0:00 duration</span>
+<span style="color: #b22222;">;; </span><span style="color: #b22222;">Show clock sums as hours and minutes, not "n days" etc.</span>
 (setq org-time-clocksum-format
-      '(<span style="color: #DCDCCC; font-weight: bold;">:hours</span> <span style="color: #CC9393;">"%d"</span> <span style="color: #DCDCCC; font-weight: bold;">:require-hours</span> t <span style="color: #DCDCCC; font-weight: bold;">:minutes</span> <span style="color: #CC9393;">":%02d"</span> <span style="color: #DCDCCC; font-weight: bold;">:require-minutes</span> t))
+      '(<span style="color: #483d8b;">:hours</span> <span style="color: #8b2252;">"%d"</span> <span style="color: #483d8b;">:require-hours</span> t <span style="color: #483d8b;">:minutes</span> <span style="color: #8b2252;">":%02d"</span> <span style="color: #483d8b;">:require-minutes</span> t))
 (setq org-clock-out-remove-zero-time-clocks t)
 </pre>
 </div>
@@ -2064,15 +2091,15 @@ Org clock 计时
 </p>
 <div class="org-src-container">
 
-<pre class="src src-lisp">(<span style="color: #F0DFAF; font-weight: bold;">defun</span> <span style="color: #93E0E3;">new-org-file-init</span> ()
-  <span style="color: #9FC59F;">"init new org file template"</span>
+<pre class="src src-lisp">(<span style="color: #a020f0;">defun</span> <span style="color: #0000ff;">new-org-file-init</span> ()
+  <span style="color: #8b2252;">"init new org file template"</span>
   (interactive)
-  (<span style="color: #F0DFAF; font-weight: bold;">when</span> (equal <span style="color: #CC9393;">"org"</span> (file-name-extension buffer-file-name))
-    (insert (concat <span style="color: #CC9393;">"#+TITLE: "</span>(file-name-base buffer-file-name)) <span style="color: #CC9393;">"\n"</span>)
-    (insert <span style="color: #CC9393;">"#+AUTHOR: "</span> user-login-name <span style="color: #CC9393;">"\n"</span>)
-    (insert <span style="color: #CC9393;">"#+CATEGORY: "</span>  (get-category-from-path buffer-file-name)<span style="color: #CC9393;">"\n"</span>)
-    (insert <span style="color: #CC9393;">"#+DATE: "</span> (format-time-string <span style="color: #CC9393;">"[%Y-%m-%d %a %H:%M]"</span> (current-time)) <span style="color: #CC9393;">"\n"</span>)
-    (insert <span style="color: #CC9393;">"#+OPTIONS: ^:{}"</span>)))
+  (<span style="color: #a020f0;">when</span> (equal <span style="color: #8b2252;">"org"</span> (file-name-extension buffer-file-name))
+    (insert (concat <span style="color: #8b2252;">"#+TITLE: "</span>(file-name-base buffer-file-name)) <span style="color: #8b2252;">"\n"</span>)
+    (insert <span style="color: #8b2252;">"#+AUTHOR: "</span> user-login-name <span style="color: #8b2252;">"\n"</span>)
+    (insert <span style="color: #8b2252;">"#+CATEGORY: "</span>  (get-category-from-path buffer-file-name)<span style="color: #8b2252;">"\n"</span>)
+    (insert <span style="color: #8b2252;">"#+DATE: "</span> (format-time-string <span style="color: #8b2252;">"[%Y-%m-%d %a %H:%M]"</span> (current-time)) <span style="color: #8b2252;">"\n"</span>)
+    (insert <span style="color: #8b2252;">"#+OPTIONS: ^:{}"</span>)))
 (add-to-list 'find-file-not-found-hooks 'new-org-file-init)
 </pre>
 </div>
@@ -2084,14 +2111,14 @@ Org clock 计时
 
 <pre class="src src-lisp">(defadvice org-html-paragraph (before org-html-paragraph-advice
                                       (paragraph contents info) activate)
-  <span style="color: #9FC59F;">"Join consecutive Chinese lines into a single long line without</span>
-<span style="color: #9FC59F;">unwanted space when exporting org-mode to html."</span>
-  (<span style="color: #F0DFAF; font-weight: bold;">let*</span> ((origin-contents (ad-get-arg 1))
-         (fix-regexp <span style="color: #CC9393;">"[[:multibyte:]]"</span>)
+  <span style="color: #8b2252;">"Join consecutive Chinese lines into a single long line without</span>
+<span style="color: #8b2252;">unwanted space when exporting org-mode to html."</span>
+  (<span style="color: #a020f0;">let*</span> ((origin-contents (ad-get-arg 1))
+         (fix-regexp <span style="color: #8b2252;">"[[:multibyte:]]"</span>)
          (fixed-contents
           (replace-regexp-in-string
            (concat
-            <span style="color: #CC9393;">"\\("</span> fix-regexp <span style="color: #CC9393;">"\\) *\n *\\("</span> fix-regexp <span style="color: #CC9393;">"\\)"</span>) <span style="color: #CC9393;">"\\1\\2"</span> origin-contents)))
+            <span style="color: #8b2252;">"\\("</span> fix-regexp <span style="color: #8b2252;">"\\) *\n *\\("</span> fix-regexp <span style="color: #8b2252;">"\\)"</span>) <span style="color: #8b2252;">"\\1\\2"</span> origin-contents)))
     (ad-set-arg 1 fixed-contents)))
 </pre>
 </div>
@@ -2107,11 +2134,26 @@ Org clock 计时
 </div>
 
 <p>
+图片相关设置
+</p>
+<div class="org-src-container">
+
+<pre class="src src-lisp"><span style="color: #b22222;">;</span><span style="color: #b22222;">(setq org-html-inline-images t)                ;; &#23548;&#20986; html &#26102;,&#23884;&#20837;&#22270;&#29255;,&#32780;&#19981;&#26159;&#21019;&#24314;&#22270;&#29255;&#30340;&#38142;&#25509;</span>
+<span style="color: #b22222;">;; </span><span style="color: #b22222;">M-x org-toggle-inline-images &#30452;&#25509;&#22312; org &#25991;&#20214;&#20013;&#26174;&#31034;&#22270;&#29255;</span>
+(setq org-image-actual-width t)                 <span style="color: #b22222;">;; </span><span style="color: #b22222;">org &#25991;&#20214;&#20013;&#26174;&#31034;&#30340;&#22270;&#29255;&#20026;&#21407;&#22987;&#22823;&#23567;</span>
+<span style="color: #b22222;">;; </span><span style="color: #b22222;">&#23563;&#25214;&#20320;&#38989;&#22806;&#36914;&#34892;&#30340; #+ATTR.* &#35373;&#23450;&#65292;&#33509;&#23563;&#25214;&#22833;&#25943;&#30340;&#35441;&#65292;&#21063;&#26371;&#35722;&#25104;&#20351;&#29992;&#20320;&#30340;&#23532;&#24230;&#35373;&#23450;</span>
+<span style="color: #b22222;">;; </span><span style="color: #b22222;">#+CAPTION: &#35373;&#23450;&#22294;&#29255;&#23532;&#24230;&#28858; 100</span>
+<span style="color: #b22222;">;; </span><span style="color: #b22222;">#+ATTR_HTML: :width 100</span>
+<span style="color: #b22222;">;</span><span style="color: #b22222;">(setq org-image-actual-width '(300))</span>
+</pre>
+</div>
+
+<p>
 Org babel 设定支援的语言
 </p>
 <div class="org-src-container">
 
-<pre class="src src-lisp"><span style="color: #5F7F5F;">;; </span><span style="color: #7F9F7F;">C-c C-c &#36873;&#23450;&#31243;&#24207;&#30721;&#22359;&#36827;&#34892;&#36816;&#31639;</span>
+<pre class="src src-lisp"><span style="color: #b22222;">;; </span><span style="color: #b22222;">C-c C-c &#36873;&#23450;&#31243;&#24207;&#30721;&#22359;&#36827;&#34892;&#36816;&#31639;</span>
 (org-babel-do-load-languages
  'org-babel-load-languages
  '((emacs-lisp . t)
@@ -2127,8 +2169,17 @@ Org babel 设定支援的语言
    (plantuml . t)
    (clojure .t)
    ))
-<span style="color: #5F7F5F;">;; </span><span style="color: #7F9F7F;">C-c C-c &#19981;&#20877;&#35810;&#38382;&#26159;&#21542;&#36827;&#34892;&#36816;&#31639;&#65292;&#30452;&#25509;&#24320;&#22987;</span>
+<span style="color: #b22222;">;; </span><span style="color: #b22222;">C-c C-c &#19981;&#20877;&#35810;&#38382;&#26159;&#21542;&#36827;&#34892;&#36816;&#31639;&#65292;&#30452;&#25509;&#24320;&#22987;</span>
 (setq org-confirm-babel-evaluate nil)
+</pre>
+</div>
+
+<p>
+导出 markdown 文档（org 自带，只需手工加载）
+</p>
+<div class="org-src-container">
+
+<pre class="src src-lisp">(<span style="color: #a020f0;">require</span> '<span style="color: #008b8b;">ox-md</span>)
 </pre>
 </div>
 
@@ -2137,11 +2188,11 @@ Org babel 设定支援的语言
 </p>
 <div class="org-src-container">
 
-<pre class="src src-lisp">(require-package 'org-crypt)   <span style="color: #7F9F7F;">; &#38656;&#21551;&#21160; EasyPG &#21152;&#23494;&#25351;&#23450;&#26465;&#30446;</span>
-(<span style="color: #F0DFAF; font-weight: bold;">require</span> '<span style="color: #BFEBBF;">org-crypt</span>)
-(setq org-crypt-tag-matcher <span style="color: #CC9393;">"secret"</span>)  <span style="color: #7F9F7F;">; &#35774;&#23450;&#35201;&#21152;&#23494;&#30340;&#26465;&#30446; TAG &#26631;&#31614;&#20026; secret</span>
-(org-crypt-use-before-save-magic)      <span style="color: #7F9F7F;">; &#24403;&#34987;&#21152;&#23494;&#37096;&#20998;&#26356;&#26032;&#23384;&#20837;&#30828;&#30424;&#26102;&#65292;&#33258;&#21160;&#21152;&#23494;&#22238;&#21435;</span>
-(setq org-tags-exclude-from-inheritance (quote (<span style="color: #CC9393;">"secret"</span>)))    <span style="color: #7F9F7F;">; &#36991;&#20813;&#23376;&#33410;&#28857;&#37325;&#22797;&#21152;&#23494;</span>
+<pre class="src src-lisp">(require-package 'org-crypt)   <span style="color: #b22222;">; &#38656;&#21551;&#21160; EasyPG &#21152;&#23494;&#25351;&#23450;&#26465;&#30446;</span>
+(<span style="color: #a020f0;">require</span> '<span style="color: #008b8b;">org-crypt</span>)
+(setq org-crypt-tag-matcher <span style="color: #8b2252;">"secret"</span>)  <span style="color: #b22222;">; &#35774;&#23450;&#35201;&#21152;&#23494;&#30340;&#26465;&#30446; TAG &#26631;&#31614;&#20026; secret</span>
+(org-crypt-use-before-save-magic)      <span style="color: #b22222;">; &#24403;&#34987;&#21152;&#23494;&#37096;&#20998;&#26356;&#26032;&#23384;&#20837;&#30828;&#30424;&#26102;&#65292;&#33258;&#21160;&#21152;&#23494;&#22238;&#21435;</span>
+(setq org-tags-exclude-from-inheritance (quote (<span style="color: #8b2252;">"secret"</span>)))    <span style="color: #b22222;">; &#36991;&#20813;&#23376;&#33410;&#28857;&#37325;&#22797;&#21152;&#23494;</span>
 </pre>
 </div>
 
@@ -2150,8 +2201,8 @@ Org babel 设定支援的语言
 </p>
 <div class="org-src-container">
 
-<pre class="src src-lisp">(require-package 'ob-ditaa)            <span style="color: #7F9F7F;">; &#21152;&#20837; ditaa &#25903;&#25345;</span>
-(setq org-ditaa-jar-path (concat emacs-etc-dir <span style="color: #CC9393;">"ditaa.jar"</span>))
+<pre class="src src-lisp">(require-package 'ob-ditaa)            <span style="color: #b22222;">; &#21152;&#20837; ditaa &#25903;&#25345;</span>
+(setq org-ditaa-jar-path (concat emacs-etc-dir <span style="color: #8b2252;">"ditaa.jar"</span>))
 </pre>
 </div>
 </div>
@@ -2252,8 +2303,8 @@ Org babel 设定支援的语言
 <div class="org-src-container">
 
 <pre class="src src-lisp">(require-package 'org-bullets)
-(<span style="color: #F0DFAF; font-weight: bold;">require</span> '<span style="color: #BFEBBF;">org-bullets</span>)
-(add-hook 'org-mode-hook (<span style="color: #F0DFAF; font-weight: bold;">lambda</span> () (org-bullets-mode 1)))
+(<span style="color: #a020f0;">require</span> '<span style="color: #008b8b;">org-bullets</span>)
+(add-hook 'org-mode-hook (<span style="color: #a020f0;">lambda</span> () (org-bullets-mode 1)))
 </pre>
 </div>
 
@@ -2268,7 +2319,7 @@ Org babel 设定支援的语言
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: mudan</p>
-<p class="date">Created: 2016-04-30 周六 22:27</p>
+<p class="date">Created: 2016-06-02 周四 16:00</p>
 <p class="creator"><a href="http://www.gnu.org/software/emacs/">Emacs</a> 24.5.1 (<a href="http://orgmode.org">Org</a> mode 8.2.10)</p>
 <p class="validation"></p>
 </div>
