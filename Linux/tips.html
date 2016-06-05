@@ -3,8 +3,8 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<title>Arch Linux Tips</title>
-<!-- 2016-06-03 五 12:52 -->
+<title>Linux Tips</title>
+<!-- 2016-06-05 日 18:22 -->
 <meta  http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta  name="generator" content="Org-mode" />
 <meta  name="author" content="mudan" />
@@ -138,7 +138,7 @@ for the JavaScript code in this tag.
 </head>
 <body>
 <div id="content">
-<h1 class="title">Arch Linux Tips</h1>
+<h1 class="title">Linux Tips</h1>
 <div id="table-of-contents">
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
@@ -156,7 +156,7 @@ for the JavaScript code in this tag.
 gedit 添加 GBK，GB2312 支持
 </p>
 <pre class="example">
-gsettings set org.gnome.gedit.preferences.encodings candidate-encodings "['GB18030', 'GB2312', 'GBK', 'UTF-8', 'CURRENT']"
+gsettings set org.gnome.gedit.preferences.encodings candidate-encodings "['UTF-8', 'GB18030', 'GB2312', 'GBK', 'CURRENT']"
 </pre>
 
 <p>
@@ -230,32 +230,63 @@ add Control = Control_R
 </div>
 
 <p>
+修改 gnome-shell 中 ibus 候选框的字体和字号，文件地址 <code>/usr/share/themes/主题名/gnome-shell/gnome-shell.css</code>
+</p>
+<div class="org-src-container">
+
+<pre class="src src-css"><span style="color: #b22222;">/* </span><span style="color: #b22222;">&#25913;&#21464;&#36755;&#20837;&#30340;&#23383;&#27597;&#30340;&#23383;&#20307;&#21644;&#23383;&#21495; </span><span style="color: #b22222;">*/</span>
+<span style="color: #0000ff;">.candidate-popup-content </span>{
+        <span style="color: #a0522d;">font-family</span>: <span style="color: #8b2252;">"&#24605;&#28304;&#40657;&#20307; CN"</span>, serif,cantarell,sans-serif;
+        <span style="color: #a0522d;">font-size</span>: 15px;
+}
+
+<span style="color: #b22222;">/* </span><span style="color: #b22222;">&#25913;&#21464;&#20505;&#36873;&#26694;&#30340;&#23383;&#20307;&#21644;&#23383;&#21495; </span><span style="color: #b22222;">*/</span>
+<span style="color: #0000ff;">.candidate-box </span>{
+        <span style="color: #a0522d;">font-family</span>: <span style="color: #8b2252;">"&#24605;&#28304;&#40657;&#20307; CN"</span>, serif,cantarell,sans-serif;
+        <span style="color: #a0522d;">font-size</span>: 15px;
+}
+</pre>
+</div>
+
+<p>
+恢复 gnome shell 默认字体渲染设置
+</p>
+<div class="org-src-container">
+
+<pre class="src src-conf">gsettings reset org.gnome.desktop.interface font-name
+gsettings reset org.gnome.settings-daemon.plugins.xsettings antialiasing
+gsettings reset org.gnome.settings-daemon.plugins.xsettings hinting
+gsettings reset org.gnome.settings-daemon.plugins.xsettings rgba-order
+</pre>
+</div>
+
+<p>
 <code>./config/fontconfig/fonts.conf</code> 设置
 </p>
 <div class="org-src-container">
 
-<pre class="src src-conf"><span style="color: #a0522d;">&lt;?xml version</span>=<span style="color: #8b2252;">"1.0"</span>?&gt;
-&lt;!DOCTYPE fontconfig SYSTEM <span style="color: #8b2252;">"fonts.dtd"</span>&gt;
-&lt;fontconfig&gt;
-        &lt;!-- &#25239;&#38191;&#40831; --&gt;
-        <span style="color: #a0522d;">&lt;match target</span>=<span style="color: #8b2252;">"font"</span>&gt;
-                <span style="color: #a0522d;">&lt;edit name</span>=<span style="color: #8b2252;">"antialias"</span> mode=<span style="color: #8b2252;">"assign"</span>&gt;
-                &lt;bool&gt;true&lt;/bool&gt;
-        &lt;/edit&gt;
-        &lt;/match&gt;
-        &lt;!-- &#23383;&#33410;&#30721;&#35299;&#37322;&#22120;(BCI) --&gt;
-        <span style="color: #a0522d;">&lt;match target</span>=<span style="color: #8b2252;">"font"</span>&gt;
-                <span style="color: #a0522d;">&lt;edit name</span>=<span style="color: #8b2252;">"hinting"</span> mode=<span style="color: #8b2252;">"assign"</span>&gt;
-                &lt;bool&gt;true&lt;/bool&gt;
-        &lt;/edit&gt;
-        &lt;/match&gt;
-        &lt;!-- &#24494;&#35843;&#26679;&#24335; --&gt;
-        <span style="color: #a0522d;">&lt;match target</span>=<span style="color: #8b2252;">"font"</span>&gt;
-                <span style="color: #a0522d;">&lt;edit name</span>=<span style="color: #8b2252;">"hintstyle"</span> mode=<span style="color: #8b2252;">"assign"</span>&gt;
-                &lt;const&gt;hintmedium&lt;/const&gt;
-        &lt;/edit&gt;
-        &lt;/match&gt;
-&lt;/fontconfig&gt;
+<pre class="src src-xml">&lt;?<span style="color: #a020f0;">xml</span> <span style="color: #a0522d;">version</span>=<span style="color: #8b2252;">"</span><span style="color: #8b2252;">1.0</span><span style="color: #8b2252;">"</span>?&gt;
+&lt;!<span style="color: #a020f0;">DOCTYPE</span> fontconfig <span style="color: #a020f0;">SYSTEM</span> <span style="color: #8b2252;">"</span><span style="color: #8b2252;">fonts.dtd</span><span style="color: #8b2252;">"</span>&gt;
+&lt;<span style="color: #0000ff;">fontconfig</span>&gt;
+        <span style="color: #b22222;">&lt;!--</span><span style="color: #b22222;"> &#25239;&#38191;&#40831; </span><span style="color: #b22222;">--&gt;</span>
+        &lt;<span style="color: #0000ff;">match</span> <span style="color: #a0522d;">target</span>=<span style="color: #8b2252;">"</span><span style="color: #8b2252;">font</span><span style="color: #8b2252;">"</span>&gt;
+                &lt;<span style="color: #0000ff;">edit</span> <span style="color: #a0522d;">name</span>=<span style="color: #8b2252;">"</span><span style="color: #8b2252;">antialias</span><span style="color: #8b2252;">"</span> <span style="color: #a0522d;">mode</span>=<span style="color: #8b2252;">"</span><span style="color: #8b2252;">assign</span><span style="color: #8b2252;">"</span>&gt;
+                &lt;<span style="color: #0000ff;">bool</span>&gt;true&lt;/<span style="color: #0000ff;">bool</span>&gt;
+        &lt;/<span style="color: #0000ff;">edit</span>&gt;
+        &lt;/<span style="color: #0000ff;">match</span>&gt;
+        <span style="color: #b22222;">&lt;!--</span><span style="color: #b22222;"> &#23383;&#33410;&#30721;&#35299;&#37322;&#22120;(BCI) </span><span style="color: #b22222;">--&gt;</span>
+        &lt;<span style="color: #0000ff;">match</span> <span style="color: #a0522d;">target</span>=<span style="color: #8b2252;">"</span><span style="color: #8b2252;">font</span><span style="color: #8b2252;">"</span>&gt;
+                &lt;<span style="color: #0000ff;">edit</span> <span style="color: #a0522d;">name</span>=<span style="color: #8b2252;">"</span><span style="color: #8b2252;">hinting</span><span style="color: #8b2252;">"</span> <span style="color: #a0522d;">mode</span>=<span style="color: #8b2252;">"</span><span style="color: #8b2252;">assign</span><span style="color: #8b2252;">"</span>&gt;
+                &lt;<span style="color: #0000ff;">bool</span>&gt;true&lt;/<span style="color: #0000ff;">bool</span>&gt;
+        &lt;/<span style="color: #0000ff;">edit</span>&gt;
+        &lt;/<span style="color: #0000ff;">match</span>&gt;
+        <span style="color: #b22222;">&lt;!--</span><span style="color: #b22222;"> &#24494;&#35843;&#26679;&#24335; </span><span style="color: #b22222;">--&gt;</span>
+        &lt;<span style="color: #0000ff;">match</span> <span style="color: #a0522d;">target</span>=<span style="color: #8b2252;">"</span><span style="color: #8b2252;">font</span><span style="color: #8b2252;">"</span>&gt;
+                &lt;<span style="color: #0000ff;">edit</span> <span style="color: #a0522d;">name</span>=<span style="color: #8b2252;">"</span><span style="color: #8b2252;">hintstyle</span><span style="color: #8b2252;">"</span> <span style="color: #a0522d;">mode</span>=<span style="color: #8b2252;">"</span><span style="color: #8b2252;">assign</span><span style="color: #8b2252;">"</span>&gt;
+                &lt;<span style="color: #0000ff;">const</span>&gt;hintmedium&lt;/<span style="color: #0000ff;">const</span>&gt;
+        &lt;/<span style="color: #0000ff;">edit</span>&gt;
+        &lt;/<span style="color: #0000ff;">match</span>&gt;
+&lt;/<span style="color: #0000ff;">fontconfig</span>&gt;
 </pre>
 </div>
 </div>
@@ -272,11 +303,24 @@ sudo pacman-mirrors -g
 </pre>
 
 <p>
-使用 pepper-flash，默认的早就不更新了
+Arch Linux 使用 pepper-flash，默认的早就不更新了
 </p>
 <pre class="example">
-sudo yaourt -S chromium-pepper-flash
+sudo yaourt -S chromium-pepper-flash freshplayerplugin
 </pre>
+
+<p>
+Fedora 安装 pepper-flash，可以到 <code>https://sourceforge.net/projects/postinstaller/files/fedora/releases/</code> 下载最新版本，你用的 Fedora 发行版本不一定是最新的，所以建议手工下载安装
+</p>
+<div class="org-src-container">
+
+<pre class="src src-sh">dnf install chromium-pepper-flash freshplayerplugin
+<span style="color: #b22222;"># </span><span style="color: #b22222;">&#22914;&#26524; firefox &#25554;&#20214;&#21015;&#34920;&#37324;&#38754;&#36824;&#26159;&#27809;&#26377; flash &#25191;&#34892;&#19979;&#21015;&#21629;&#20196;</span>
+<span style="color: #a020f0;">exit</span> firefox
+rm ~/.mozilla/firefox/*/pluginreg.dat
+start firefox again
+</pre>
+</div>
 
 <p>
 转换 CD 到 iso 文件
@@ -329,7 +373,7 @@ systemctl restart httpd.service <span style="color: #b22222;"># </span><span sty
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: mudan</p>
-<p class="date">Created: 2016-06-03 五 12:52</p>
+<p class="date">Created: 2016-06-05 日 18:22</p>
 <p class="creator"><a href="http://www.gnu.org/software/emacs/">Emacs</a> 24.5.1 (<a href="http://orgmode.org">Org</a> mode 8.2.10)</p>
 <p class="validation"></p>
 </div>

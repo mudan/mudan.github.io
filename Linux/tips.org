@@ -1,10 +1,10 @@
-#+TITLE: Arch Linux Tips
+#+TITLE: Linux Tips
 #+HTML_HEAD: <link rel="stylesheet" type="text/css" href="./emacs.css" />
 
 * 配置
 
 gedit 添加 GBK，GB2312 支持
-: gsettings set org.gnome.gedit.preferences.encodings candidate-encodings "['GB18030', 'GB2312', 'GBK', 'UTF-8', 'CURRENT']"
+: gsettings set org.gnome.gedit.preferences.encodings candidate-encodings "['UTF-8', 'GB18030', 'GB2312', 'GBK', 'CURRENT']"
 
 使用 gdm 启动 gedit 和 gnome-terminal 无法使用输入法
 : gsettings set org.gnome.settings-daemon.plugins.xsettings overrides "{'Gtk/IMModule':<'fcitx'>}"
@@ -52,8 +52,31 @@ add Lock = Caps_Lock
 add Control = Control_R
 #+END_SRC
 
-=./config/fontconfig/fonts.conf= 设置
+修改 gnome-shell 中 ibus 候选框的字体和字号，文件地址 =/usr/share/themes/主题名/gnome-shell/gnome-shell.css=
+#+BEGIN_SRC css
+/* 改变输入的字母的字体和字号 */
+.candidate-popup-content {
+        font-family: "思源黑体 CN", serif,cantarell,sans-serif;
+        font-size: 15px;
+}
+
+/* 改变候选框的字体和字号 */
+.candidate-box {
+        font-family: "思源黑体 CN", serif,cantarell,sans-serif;
+        font-size: 15px;
+}
+#+END_SRC
+
+恢复 gnome shell 默认字体渲染设置
 #+BEGIN_SRC conf
+gsettings reset org.gnome.desktop.interface font-name
+gsettings reset org.gnome.settings-daemon.plugins.xsettings antialiasing
+gsettings reset org.gnome.settings-daemon.plugins.xsettings hinting
+gsettings reset org.gnome.settings-daemon.plugins.xsettings rgba-order
+#+END_SRC
+
+=./config/fontconfig/fonts.conf= 设置
+#+BEGIN_SRC xml
 <?xml version="1.0"?>
 <!DOCTYPE fontconfig SYSTEM "fonts.dtd">
 <fontconfig>
@@ -83,8 +106,17 @@ add Control = Control_R
 更新镜像清单
 : sudo pacman-mirrors -g
 
-使用 pepper-flash，默认的早就不更新了
-: sudo yaourt -S chromium-pepper-flash
+Arch Linux 使用 pepper-flash，默认的早就不更新了
+: sudo yaourt -S chromium-pepper-flash freshplayerplugin
+
+Fedora 安装 pepper-flash，可以到 =https://sourceforge.net/projects/postinstaller/files/fedora/releases/= 下载最新版本，你用的 Fedora 发行版本不一定是最新的，所以建议手工下载安装
+#+BEGIN_SRC sh
+dnf install chromium-pepper-flash freshplayerplugin
+# 如果 firefox 插件列表里面还是没有 flash 执行下列命令
+exit firefox
+rm ~/.mozilla/firefox/*/pluginreg.dat
+start firefox again
+#+END_SRC
 
 转换 CD 到 iso 文件
 : dd if=/dev/cdrom of=isofile.iso

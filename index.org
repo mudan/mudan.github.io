@@ -10,7 +10,7 @@
 
 * Linux
 
-[[./Linux/arch_tips.org][Arch Linux Tips]]
+[[./Linux/tips.org][Linux Tips]]
 
 [[./Linux/gentoo-story.org][Gentoo Linux 前世今生]]
 
