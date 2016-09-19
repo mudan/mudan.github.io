@@ -2,22 +2,23 @@
 #+STARTUP: showall
 #+OPTIONS: toc:nil num:nil
 #+HTML_HEAD: <link rel="stylesheet" type="text/css" href="emacs.css" />
+
+[[./xh-rz.org][日记-个人基本经验的基本认知杂录]]
+
 * Emacs
 
 [[./Emacs/The_Org_Manual/The_Org_Manual.org][The Org Manual 笔记]]
 
 [[./Emacs/Helm/Helm.org][Helm 工具包]]
 
+* Read
+
+[[./read/dx.org][大学各家注疏]]
+
+[[./read/churchill/yygjsl.org][英语国家史略.英.温斯顿·丘吉尔]]
+
 * Linux
 
 [[./Linux/tips.org][Linux Tips]]
 
 [[./Linux/gentoo-story.org][Gentoo Linux 前世今生]]
-
-* History
-
-[[./history/churchill/yygjsl.org][英语国家史略.英.温斯顿·丘吉尔]]
-
-* 国学
-
-[[./China/dx.org][大学各家注疏]]
