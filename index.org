@@ -3,6 +3,8 @@
 #+OPTIONS: toc:nil num:nil
 #+HTML_HEAD: <link rel="stylesheet" type="text/css" href="emacs.css" />
 
+[[./fire.org][心理的火]]
+
 [[./xh-rz.org][日记-个人基本经验的基本认知杂录]]
 
 * Emacs
