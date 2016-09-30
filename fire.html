@@ -1,227 +1,675 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<!doctype html>
+<html>
 <head>
-<title>心理的火</title>
-<!-- 2016-09-22 Thu 10:52 -->
-<meta  http-equiv="Content-Type" content="text/html;charset=utf-8" />
-<meta  name="generator" content="Org-mode" />
-<meta  name="author" content="mudan" />
-<style type="text/css">
- <!--/*--><![CDATA[/*><!--*/
-  .title  { text-align: center; }
-  .todo   { font-family: monospace; color: red; }
-  .done   { color: green; }
-  .tag    { background-color: #eee; font-family: monospace;
-            padding: 2px; font-size: 80%; font-weight: normal; }
-  .timestamp { color: #bebebe; }
-  .timestamp-kwd { color: #5f9ea0; }
-  .right  { margin-left: auto; margin-right: 0px;  text-align: right; }
-  .left   { margin-left: 0px;  margin-right: auto; text-align: left; }
-  .center { margin-left: auto; margin-right: auto; text-align: center; }
-  .underline { text-decoration: underline; }
-  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
-  p.verse { margin-left: 3%; }
-  pre {
-    border: 1px solid #ccc;
-    box-shadow: 3px 3px 3px #eee;
-    padding: 8pt;
-    font-family: monospace;
-    overflow: auto;
-    margin: 1.2em;
-  }
-  pre.src {
-    position: relative;
-    overflow: visible;
-    padding-top: 1.2em;
-  }
-  pre.src:before {
-    display: none;
-    position: absolute;
-    background-color: white;
-    top: -10px;
-    right: 10px;
-    padding: 3px;
-    border: 1px solid black;
-  }
-  pre.src:hover:before { display: inline;}
-  pre.src-sh:before    { content: 'sh'; }
-  pre.src-bash:before  { content: 'sh'; }
-  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
-  pre.src-R:before     { content: 'R'; }
-  pre.src-perl:before  { content: 'Perl'; }
-  pre.src-java:before  { content: 'Java'; }
-  pre.src-sql:before   { content: 'SQL'; }
+<meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
+<title>心理的火</title><style type='text/css'>html, body {overflow-x: initial !important;}html { font-size: 14px; background-color: rgb(255, 255, 255); color: rgb(51, 51, 51); }
+body { margin: 0px; padding: 0px; height: auto; bottom: 0px; top: 0px; left: 0px; right: 0px; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 1rem; line-height: 1.42857143; overflow-x: hidden; background-image: inherit; background-size: inherit; background-attachment: inherit; background-origin: inherit; background-clip: inherit; background-color: inherit; background-position: inherit inherit; background-repeat: inherit inherit; }
+a:active, a:hover { outline: 0px; }
+.in-text-selection, ::selection { background-color: rgb(181, 214, 252); text-shadow: none; background-position: initial initial; background-repeat: initial initial; }
+#write { margin: 0px auto; height: auto; width: inherit; word-break: normal; word-wrap: break-word; position: relative; padding-bottom: 70px; white-space: pre-wrap; }
+body.typora-export { padding-left: 30px; padding-right: 30px; }
+@media screen and (max-width: 500px) { 
+  body.typora-export { padding-left: 0px; padding-right: 0px; }
+  .CodeMirror-sizer { margin-left: 0px !important; }
+  .CodeMirror-gutters { display: none !important; }
+}
+.typora-export #write { margin: 0px auto; }
+#write > p:first-child, #write > ul:first-child, #write > ol:first-child, #write > pre:first-child, #write > blockquote:first-child, #write > div:first-child, #write > table:first-child { margin-top: 30px; }
+img { max-width: 100%; }
+input, button, select, textarea { color: inherit; font-family: inherit; font-size: inherit; font-style: inherit; font-variant-caps: inherit; font-weight: inherit; line-height: inherit; }
+input[type="checkbox"], input[type="radio"] { line-height: normal; padding: 0px; }
+::before, ::after, * { box-sizing: border-box; }
+#write p, #write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write div, #write pre { width: inherit; }
+#write p, #write h1, #write h2, #write h3, #write h4, #write h5, #write h6 { position: relative; }
+h1 { font-size: 2rem; }
+h2 { font-size: 1.8rem; }
+h3 { font-size: 1.6rem; }
+h4 { font-size: 1.4rem; }
+h5 { font-size: 1.2rem; }
+h6 { font-size: 1rem; }
+p { -webkit-margin-before: 1rem; -webkit-margin-after: 1rem; -webkit-margin-start: 0px; -webkit-margin-end: 0px; }
+.mathjax-block { margin-top: 0px; margin-bottom: 0px; -webkit-margin-before: 0rem; -webkit-margin-after: 0rem; }
+.hidden { display: none; }
+.md-blockmeta { color: rgb(204, 204, 204); font-weight: bold; font-style: italic; }
+a { cursor: pointer; }
+#write input[type="checkbox"] { cursor: pointer; width: inherit; height: inherit; margin: 4px 0px 0px; }
+tr { page-break-inside: avoid; page-break-after: auto; }
+thead { display: table-header-group; }
+table { border-collapse: collapse; border-spacing: 0px; width: 100%; overflow: auto; page-break-inside: auto; text-align: left; }
+table.md-table td { min-width: 80px; }
+.CodeMirror-gutters { border-right-width: 0px; background-color: inherit; }
+.CodeMirror { text-align: left; }
+.CodeMirror-placeholder { opacity: 0.3; }
+.CodeMirror pre { padding: 0px 4px; }
+.CodeMirror-lines { padding: 0px; }
+div.hr:focus { cursor: none; }
+pre { white-space: pre-wrap; }
+.CodeMirror-gutters { margin-right: 4px; }
+.md-fences { font-size: 0.9rem; display: block; page-break-inside: avoid; text-align: left; overflow: visible; white-space: pre; background-image: inherit; background-size: inherit; background-attachment: inherit; background-origin: inherit; background-clip: inherit; background-color: inherit; position: relative !important; background-position: inherit inherit; background-repeat: inherit inherit; }
+.md-diagram-panel { width: 100%; margin-top: 10px; text-align: center; padding-top: 0px; padding-bottom: 8px; overflow-x: auto; }
+.md-fences .CodeMirror.CodeMirror-wrap { top: -1.6em; margin-bottom: -1.6em; }
+.md-fences.mock-cm { white-space: pre-wrap; }
+.show-fences-line-number .md-fences { padding-left: 0px; }
+.show-fences-line-number .md-fences.mock-cm { padding-left: 40px; }
+.footnotes { opacity: 0.8; font-size: 0.9rem; padding-top: 1em; padding-bottom: 1em; }
+.footnotes + .footnotes { margin-top: -1em; }
+.md-reset { margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: top; background-color: transparent; text-decoration: none; text-shadow: none; float: none; position: static; width: auto; height: auto; white-space: nowrap; cursor: inherit; line-height: normal; font-weight: normal; text-align: left; box-sizing: content-box; direction: ltr; background-position: initial initial; background-repeat: initial initial; }
+li div { padding-top: 0px; }
+blockquote { margin: 1rem 0px; }
+li p, li .mathjax-block { margin: 0.5rem 0px; }
+li { margin: 0px; position: relative; }
+blockquote > :last-child { margin-bottom: 0px; }
+blockquote > :first-child { margin-top: 0px; }
+.footnotes-area { color: rgb(136, 136, 136); margin-top: 0.714rem; padding-bottom: 0.143rem; }
+@media print { 
+  html, body { height: 100%; }
+  .typora-export * { -webkit-print-color-adjust: exact; }
+  h1, h2, h3, h4, h5, h6 { page-break-after: avoid; break-after: avoid-page; orphans: 2; }
+  p { orphans: 4; }
+  html.blink-to-pdf { font-size: 13px; }
+  .typora-export #write { padding-left: 1cm; padding-right: 1cm; }
+  .typora-export #write::after { height: 0px; }
+  @page { margin: 20mm 0mm; }
+}
+.footnote-line { margin-top: 0.714em; font-size: 0.7em; }
+a img, img a { cursor: pointer; }
+pre.md-meta-block { font-size: 0.8rem; min-height: 2.86rem; white-space: pre-wrap; background-color: rgb(204, 204, 204); display: block; background-position: initial initial; background-repeat: initial initial; }
+p > .md-image:only-child { display: inline-block; width: 100%; text-align: center; }
+#write .MathJax_Display { margin: 0.8em 0px 0px; }
+.mathjax-block { white-space: pre; overflow: hidden; width: 100%; }
+p + .mathjax-block { margin-top: -1.143rem; }
+.mathjax-block:not(:empty)::after { display: none; }
+[contenteditable="true"]:active, [contenteditable="true"]:focus { outline: none; box-shadow: none; }
+.task-list { list-style-type: none; }
+.task-list-item { position: relative; padding-left: 1em; }
+.task-list-item input { position: absolute; top: 0px; left: 0px; }
+.math { font-size: 1rem; }
+.md-toc { min-height: 3.58rem; position: relative; font-size: 0.9rem; border-top-left-radius: 10px; border-top-right-radius: 10px; border-bottom-right-radius: 10px; border-bottom-left-radius: 10px; }
+.md-toc-content { position: relative; margin-left: 0px; }
+.md-toc::after, .md-toc-content::after { display: none; }
+.md-toc-item { display: block; color: rgb(65, 131, 196); text-decoration: none; }
+.md-toc-inner:hover { }
+.md-toc-inner { display: inline-block; cursor: pointer; }
+.md-toc-h1 .md-toc-inner { margin-left: 0px; font-weight: bold; }
+.md-toc-h2 .md-toc-inner { margin-left: 2em; }
+.md-toc-h3 .md-toc-inner { margin-left: 4em; }
+.md-toc-h4 .md-toc-inner { margin-left: 6em; }
+.md-toc-h5 .md-toc-inner { margin-left: 8em; }
+.md-toc-h6 .md-toc-inner { margin-left: 10em; }
+@media screen and (max-width: 48em) { 
+  .md-toc-h3 .md-toc-inner { margin-left: 3.5em; }
+  .md-toc-h4 .md-toc-inner { margin-left: 5em; }
+  .md-toc-h5 .md-toc-inner { margin-left: 6.5em; }
+  .md-toc-h6 .md-toc-inner { margin-left: 8em; }
+}
+a.md-toc-inner { font-size: inherit; font-style: inherit; font-weight: inherit; line-height: inherit; }
+.footnote-line a:not(.reversefootnote) { color: inherit; }
+.md-attr { display: none; }
+.md-fn-count::after { content: '.'; }
+.md-tag { opacity: 0.5; }
+code { text-align: left; }
+h1 .md-tag, h2 .md-tag, h3 .md-tag, h4 .md-tag, h5 .md-tag, h6 .md-tag { font-weight: initial; opacity: 0.35; }
+a.md-header-anchor.md-print-anchor { border: none !important; display: inline-block !important; position: absolute !important; width: 1px !important; right: 0px !important; outline: none !important; background-color: transparent !important; text-shadow: initial !important; background-position: initial initial !important; background-repeat: initial initial !important; }
+.md-inline-math .MathJax_SVG .noError { display: none !important; }
+.mathjax-block .MathJax_SVG_Display { text-align: center; margin: 1em 0em; position: relative; text-indent: 0px; max-width: none; max-height: none; min-width: 0px; min-height: 0px; width: 100%; display: block !important; }
+.MathJax_SVG_Display, .md-inline-math .MathJax_SVG_Display { width: auto; margin: inherit; display: inline-block !important; }
+.MathJax_SVG .MJX-monospace { font-family: monospace; }
+.MathJax_SVG .MJX-sans-serif { font-family: sans-serif; }
+.MathJax_SVG { display: inline; font-style: normal; font-weight: normal; line-height: normal; zoom: 90%; text-indent: 0px; text-align: left; text-transform: none; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; direction: ltr; max-width: none; max-height: none; min-width: 0px; min-height: 0px; border: 0px; padding: 0px; margin: 0px; }
+.MathJax_SVG * { -webkit-transition: none; transition: none; }
 
-  table { border-collapse:collapse; }
-  caption.t-above { caption-side: top; }
-  caption.t-bottom { caption-side: bottom; }
-  td, th { vertical-align:top;  }
-  th.right  { text-align: center;  }
-  th.left   { text-align: center;   }
-  th.center { text-align: center; }
-  td.right  { text-align: right;  }
-  td.left   { text-align: left;   }
-  td.center { text-align: center; }
-  dt { font-weight: bold; }
-  .footpara:nth-child(2) { display: inline; }
-  .footpara { display: block; }
-  .footdef  { margin-bottom: 1em; }
-  .figure { padding: 1em; }
-  .figure p { text-align: center; }
-  .inlinetask {
-    padding: 10px;
-    border: 2px solid gray;
-    margin: 10px;
-    background: #ffffcc;
-  }
-  #org-div-home-and-up
-   { text-align: right; font-size: 70%; white-space: nowrap; }
-  textarea { overflow-x: auto; }
-  .linenr { font-size: smaller }
-  .code-highlighted { background-color: #ffff00; }
-  .org-info-js_info-navigation { border-style: none; }
-  #org-info-js_console-label
-    { font-size: 10px; font-weight: bold; white-space: nowrap; }
-  .org-info-js_search-highlight
-    { background-color: #ffff00; color: #000000; font-weight: bold; }
-  /*]]>*/-->
-</style>
-<link rel="stylesheet" type="text/css" href="./emacs.css" />
-<script type="text/javascript">
+
+@import-when-export url(http://fonts.googleapis.com/css?family=Merriweather:900,900italic,300,300italic);
+@import-when-export url(http://fonts.googleapis.com/css?family=Lato:900,300);
+
+
+/**
+ * forked from pixyll.com
+ * MIT license
+ */
+
+@charset "UTF-8";
+@font-face {
+	font-family: 'Merriweather';
+	font-style: normal;
+	font-weight: 300;
+	src: local('Merriweather Light'), local('Merriweather-Light'), url(file:///Users/mudan/Library/Application%20Support/abnerworks.Typora/themes/pixyll/Merriweather-Light.ttf);
+}
+@font-face {
+	font-family: 'Merriweather';
+	font-style: normal;
+	font-weight: 900;
+	src: local('Merriweather Heavy'), local('Merriweather-Heavy'), url(file:///Users/mudan/Library/Application%20Support/abnerworks.Typora/themes/pixyll/Merriweather-Bold.ttf);
+}
+@font-face {
+	font-family: 'Merriweather';
+	font-style: italic;
+	font-weight: 300;
+	src: local('Merriweather Light Italic'), local('Merriweather-LightItalic'), url(file:///Users/mudan/Library/Application%20Support/abnerworks.Typora/themes/pixyll/Merriweather-LightItalic.ttf);
+}
+@font-face {
+	font-family: 'Merriweather';
+	font-style: italic;
+	font-weight: 900;
+	src: local('Merriweather Heavy Italic'), local('Merriweather-HeavyItalic'), url(file:///Users/mudan/Library/Application%20Support/abnerworks.Typora/themes/pixyll/Merriweather-HeavyItalic.ttf);
+}
+
+@font-face {
+	font-family: 'Lato';
+	font-style: normal;
+	font-weight: 300;
+	src: local('Lato Light'), local('Lato-Light'), url(file:///Users/mudan/Library/Application%20Support/abnerworks.Typora/themes/pixyll/Lato-Light.ttf);
+}
+@font-face {
+	font-family: 'Lato';
+	font-style: normal;
+	font-weight: 900;
+	src: local('Lato Black'), local('Lato-Blcak'), url(file:///Users/mudan/Library/Application%20Support/abnerworks.Typora/themes/pixyll/Lato-Black.ttf);
+}
+@font-face {
+	font-family: 'Lato';
+	font-style: normal;
+	font-weight: bold;
+	src: local('Lato Black'), local('Lato-Blcak'), url(file:///Users/mudan/Library/Application%20Support/abnerworks.Typora/themes/pixyll/Lato-Black.ttf);
+}
+@font-face {
+	font-family: 'Lato';
+	font-style: italic;
+	font-weight: 900;
+	src: local('Lato BlackItalic'), local('Lato-BlackItalic'), url(file:///Users/mudan/Library/Application%20Support/abnerworks.Typora/themes/pixyll/Lato-BlackItalic.ttf);
+}
+@font-face {
+	font-family: 'Lato';
+	font-style: italic;
+	font-weight: bold;
+	src: local('Lato BlackItalic'), local('Lato-BlackItalic'), url(file:///Users/mudan/Library/Application%20Support/abnerworks.Typora/themes/pixyll/Lato-BlackItalic.ttf);
+}
+
+h1,
+.h1,
+.f1 {
+	font-size: 2rem;
+	line-height: 2.5rem;
+}
+h2,
+.h2,
+.f2 {
+	font-size: 1.5rem;
+	line-height: 2rem;
+}
+h3,
+.h3,
+.f3 {
+	font-size: 1.25rem;
+	line-height: 1.5rem;
+}
+p,
+.p,
+.f4,
+h4,
+h5,
+h6,
+dl,
+ol,
+ul,
+pre[cid],
+div[cid],
+#typora-source {
+	font-size: 1.125rem;
+	line-height: 1.5rem;
+}
+
+h4 {
+	font-size: 1.13rem;
+}
 /*
-@licstart  The following is the entire license notice for the
-JavaScript code in this tag.
+ Pixyll
+ A simple, beautiful theme for Jekyll that emphasizes content rather than aesthetic fluff.
+ Best served with BASSCSS (http://jxnblk.github.io/basscss)
+ Crafted with <3 by John Otander (@4lpine) - ©2015 John Otander MIT License http://opensource.org/licenses/MIT
 
-Copyright (C) 2012-2013 Free Software Foundation, Inc.
-
-The JavaScript code in this tag is free software: you can
-redistribute it and/or modify it under the terms of the GNU
-General Public License (GNU GPL) as published by the Free Software
-Foundation, either version 3 of the License, or (at your option)
-any later version.  The code is distributed WITHOUT ANY WARRANTY;
-without even the implied warranty of MERCHANTABILITY or FITNESS
-FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
-
-As additional permission under GNU GPL version 3 section 7, you
-may distribute non-source (e.g., minimized or compacted) forms of
-that code without the copy of the GNU GPL normally required by
-section 4, provided you include this license notice and a URL
-through which recipients can access the Corresponding Source.
-
-
-@licend  The above is the entire license notice
-for the JavaScript code in this tag.
 */
-<!--/*--><![CDATA[/*><!--*/
- function CodeHighlightOn(elem, id)
- {
-   var target = document.getElementById(id);
-   if(null != target) {
-     elem.cacheClassElem = elem.className;
-     elem.cacheClassTarget = target.className;
-     target.className = "code-highlighted";
-     elem.className   = "code-highlighted";
-   }
- }
- function CodeHighlightOff(elem, id)
- {
-   var target = document.getElementById(id);
-   if(elem.cacheClassElem)
-     elem.className = elem.cacheClassElem;
-   if(elem.cacheClassTarget)
-     target.className = elem.cacheClassTarget;
- }
-/*]]>*///-->
-</script>
+
+body {
+	font-family: "Merriweather", "PT Serif", Georgia, "Times New Roman", "STSong", Serif;
+	line-height: 1.5rem;
+	font-weight: 400;
+}
+
+#write {
+	max-width: 914px;
+	color: #333;
+}
+
+img {
+	width: auto;
+	max-width: 100%;
+}
+body {
+	font-size: 1.5rem;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+}
+
+.md-table-edit {
+	background: #ededed;
+    padding-top: 4px;
+}
+
+table {
+	width: 100%;
+	font-size: 1.125rem;
+}
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td,
+table > tfoot > tr > th,
+table > tfoot > tr > td {
+	padding: 12px;
+	line-height: 1.2;
+	vertical-align: top;
+	border-top: 1px solid #333;
+}
+table > thead > tr > th {
+	vertical-align: bottom;
+	border-bottom: 2px solid #333;
+}
+table > caption + thead > tr:first-child > th,
+table > caption + thead > tr:first-child > td,
+table > colgroup + thead > tr:first-child > th,
+table > colgroup + thead > tr:first-child > td,
+table > thead:first-child > tr:first-child > th,
+table > thead:first-child > tr:first-child > td {
+	border-top: 0;
+}
+table > tbody + tbody {
+	border-top: 2px solid #333;
+}
+p {
+	font-weight: 300;
+	line-height: 1.5;
+}
+abbr {
+	border-bottom: 1px black dotted;
+	cursor: help;
+}
+pre,
+code {
+	font-family: Menlo, Monaco, "Courier New", monospace;
+}
+
+code,
+.md-fences  {
+	color: #7a7a7a;
+}
+
+.md-fences .CodeMirror.CodeMirror-wrap {
+	top: -1.5em;
+    margin-bottom: -1.5em;
+}
+
+.md-fences {
+	padding: 1.125em;
+	margin-bottom: 0.88em;
+	font-size: 1rem;
+	border: 1px solid #7a7a7a;
+}
+
+blockquote {
+	padding: 1.33em;
+	font-style: italic;
+	border-left: 5px solid #7a7a7a;
+	color: #555;
+}
+blockquote em {
+	color: #000;
+}
+blockquote footer {
+	font-size: .85rem;
+	font-style: normal;
+	background-color: #fff;
+	color: #7a7a7a;
+	border-color: transparent;
+}
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4,
+h5,
+.h5,
+h6,
+.h6 {
+	font-family: "Lato", 'Helvetica Neue', Helvetica, sans-serif;
+	font-weight: 900;
+	line-height: 1.2;
+	margin: 1em 0 0.5em;
+}
+@media screen and (min-width: 48em) {
+	.h1,
+	h1 {
+		font-size: 3.250rem;
+	}
+	.h2,
+	h2 {
+		font-size: 2.298rem;
+	}
+	.h3,
+	h3 {
+		font-size: 1.625rem;
+	}
+	.h4,
+	h4 {
+		font-size: 1.3rem;
+	}
+	#write>h4.md-focus:before,
+	#write>h5.md-focus:before,
+	#write>h6.md-focus:before{
+		top: 1px;
+	}
+	.p,
+	p,
+	li {
+		font-size: 1.25rem;
+		line-height: 1.8;
+	}
+	table {
+		font-size: 1.25rem;
+	}
+}
+@media (max-width: 48em) {
+	blockquote {
+		margin-left: 1rem;
+		margin-right: 0;
+		padding: 0.5em;
+	}
+	.h1,
+	h1 {
+		font-size: 2.827rem;
+	}
+	.h2,
+	h2 {
+		font-size: 1.999rem;
+	}
+	.h3,
+	h3 {
+		font-size: 1.413rem;
+	}
+	.h4,
+	h4 {
+		font-size: 1.3rem;
+	}
+}
+@media screen and (min-width: 64em) {
+	.h1,
+	h1 {
+		font-size: 4.498rem;
+	}
+	.h2,
+	h2 {
+		font-size: 2.29rem;
+	}
+	.h3,
+	h3 {
+		font-size: 1.9rem;
+	}
+	.h4,
+	h4 {
+		font-size: 1.591rem;
+	}
+	#write>h4.md-focus:before{
+		top:4px;
+	}
+}
+a {
+	color: #463F5C;
+	text-decoration: underline;
+}
+
+#write {
+	padding-top: 2rem;
+}
+#write pre.md-meta-block {
+	min-height: 35px;
+	padding: 0.5em 1em;
+	white-space: pre;
+	border: 0px;
+	border-left: 1000px #f8f8f8 solid;
+	margin-left: -1000px;
+	border-right: 1000px #f8f8f8 solid;
+	margin-right: -1000px;
+	margin-bottom: 2em;
+	margin-top: -2010px;
+	padding-top: 2000px;
+	padding-bottom: 10px;
+	line-height: 1.5em;
+	color: #7a7a7a;
+	background-color: #fafafa;
+	font-family: 'Lato', 'Helvetica Neue', Helvetica, sans-serif;
+	font-weight: 300;
+	clear: both;
+	padding-left: 0;
+	font-size:1.125rem;
+}
+.md-image>.md-meta {
+	color: #463F5C
+}
+.footnotes {
+	font-size:1.1rem;
+}
+.md-tag {
+	font-family: 'Lato', 'Helvetica Neue', Helvetica, sans-serif;
+}
+.code-tooltip {
+	background: white;
+}
+.code-tooltip-content {
+	font-size: 1.1rem;
+}
+
+.task-list{
+	padding-left: 0;
+}
+
+.task-list-item {
+	padding-left:34px;
+}
+
+.task-list-item input{
+	width: 1.25rem;
+	height: 1.25rem;
+	display: block;
+	-webkit-appearance: initial;
+	top: -2px;
+}
+
+.task-list-item input:focus{
+	outline: none;
+	box-shadow: none;
+}
+
+.task-list-item input:before{
+	border: 1px solid #555;
+	border-radius: 1.5rem;
+	width: 1.5rem;
+	height: 1.5rem;
+	background: #fff;
+	content: ' ';
+	transition: background-color 200ms ease-in-out;
+	display: block;
+}
+
+.task-list-item input:checked:before,
+.task-list-item input[checked]:before{
+	background: #333;
+	border-width: 2px;
+	display:inline-block;
+	transition: background-color 200ms ease-in-out;
+}
+
+.task-list-item input:checked:after,
+.task-list-item input[checked]:after {
+	opacity: 1;
+}
+
+.task-list-item input:after {
+	opacity: 1;
+	-webkit-transition: opacity 0.05s ease-in-out;
+	-moz-transition: opacity 0.05s ease-in-out;
+	transition: opacity 0.05s ease-in-out;
+	-webkit-transform: rotate(-45deg);
+	-moz-transform: rotate(-45deg);
+	transform: rotate(-45deg);
+	position: absolute;
+	top: 0.4375rem;
+	left: 0.28125rem;
+	width: 0.9375rem;
+	height: 0.5rem;
+	border: 3px solid #fff;
+	border-top: 0;
+	border-right: 0;
+	content: ' ';
+	opacity: 0;
+}
+
+.md-tag {
+	color:inherit;
+}
+
+.md-toc:focus .md-toc-content{
+	margin-top: 19px;
+}
+
+#outline-dropmenu {
+	background-color:white;
+	font-size:1rem !important;
+}
+
+#outline-content li, #outline-content ul {
+	font-size:1rem !important;
+}
+
+.outline-title {
+	line-height: inherit;
+	margin-top: 10px;
+}
+
+.outline-expander {
+	width: 18px;
+}
+
+.outline-expander:before {
+ 	content: "+";
+	font-family: inherit;
+	color: rgb(108, 108, 108); 
+  	font-size: 1.5rem;
+ 	top: 0.1rem;
+}
+
+.outline-expander:hover:before {
+	content: "+";
+}
+
+.outline-item-open>.outline-item>.outline-expander:before{
+	content: "-";
+}
+
+/** source code mode */
+#typora-source {
+	font-family: Courier, monospace;
+    color: #6A6A6A;
+}
+
+.os-windows #typora-source {
+	font-family: inherit;
+}
+
+.cm-s-typora-default .cm-header, 
+.cm-s-typora-default .cm-property,
+.CodeMirror.cm-s-typora-default div.CodeMirror-cursor {
+	color: #428bca;
+}
+
+.cm-s-typora-default .cm-atom, .cm-s-typora-default .cm-number {
+	color: #777777;
+}
+
+
+.md-diagram-panel {
+	margin-top: 24px;
+	margin-left: -1.2em;
+}
+
+
+</style>
 </head>
-<body>
-<div id="content">
-<h1 class="title">心理的火</h1>
-<p class="verse">
-<br  />
-我们不知道心灵是什么样子，姑且将之比喻为一团火。<br  />
-这团火，燃烧的太热烈总爱熄灭，<br  />
-也许它能重新燃起，可自己左看右看，悲哀发现早不是当初模样。<br  />
-疑惑审视，即使将之点燃的媒介相同，<br  />
-不敢肯定是它从虚无的某处突兀地钻入你无意识的心海，<br  />
-还是你漂泊无依的身躯找到同样漂泊的它。<br  />
-迷茫也不待细察，你们只是命运地结合在一起，<br  />
-从此不再刻意比较相互之间优劣好坏，<br  />
-自漆黑的幕后匆忙走出，撕下片缕点燃了第一把火。<br  />
-<br  />
-初生最是值得赞美却也最容易让人困扰，<br  />
-纯洁的火焰在襁褓中还未真正升华便迫不及待地展示——<br  />
-那火，那火，不断高涨自己的气势与身姿，肆意散发自己的激情与精血；<br  />
-那火，那火，经受和风细雨的洗礼亦绝不停歇，路遇柔花嫩草化为灰烬也未尝怜悯；<br  />
-那火，那火，牢笼之外纵肮脏泥泞也以为自由潇洒，密室之中无垢无尘可曾想你寂寞窒息。<br  />
-也许风暴终有来袭之时，可在那之前唯有你独一无二的演绎：<br  />
-并非展开原型本质宣告火焰的新生，而是自我确认的存在，<br  />
-从此不再有空虚无归的身躯与灵魂，火焰阴影之下显出真名与形状。<br  />
-<br  />
-此时岁月洗礼犹未见衰容，火焰也仍旧不带丝毫杂质，<br  />
-只是下方薪柴堆积如山，黑烟也在空气中弥漫，<br  />
-哪怕无畏如你时有羞愧身后多少因你被迫或自愿付出，<br  />
-时有恐惧在天空下的阴霾不自觉地笼罩中会就此迷离。<br  />
-火焰至今没有过为谁燃烧，也更没有放弃过谁，<br  />
-当沙被烧制成璀璨的琉璃，火焰本身却已开始忽明忽暗，<br  />
-似乎连原本的通透也一起灌入迄今为止仅有的作品之中。<br  />
-<br  />
-是时间在将一切打磨，敢于挑战者转眼间不复从前，<br  />
-匍匐卑微也只能当做被蚕食的腐肉，<br  />
-铁律宣告之下怕纵使这片天地间的虚无亦无法逃离。<br  />
-当助你挥霍的、就是你踩在脚下的逐渐无力，<br  />
-原本坚实硕壮的臂膀再也承担不起此等重量，<br  />
-身架成齑粉，精神成墓碑上凹凸的文字，一切随风而去。<br  />
-啊，新生的火，猛烈燃烧的火，纵你万般不愿，请只留下火种。<br  />
-火种，火种，黑暗中你依旧是明亮的一点，<br  />
-虽无法将光明传递他人，却也不再继续焚烧身边的可怜。<br  />
-你不是，你不是，永远不是新律的宣告者，永远不是光明，<br  />
-也许当光明真的洒下，你自愿成为其中的一缕，<br  />
-而非过早熄灭，湮没在呼吸的天地间。<br  />
-<br  />
-你的心，你的血，没了外力帮助露出原形，<br  />
-是的，仅仅似乎随时都会熄灭的火种。<br  />
-可这段时间不会太久，也许让你刚有省悟的念头便过去，<br  />
-自你初生便有的朋友，自你初生便有上苍指定与你血脉相连的亲人，<br  />
-他们在你尚未意识到的时候便将你重新燃起，<br  />
-依旧炙热，依旧明亮，依旧蓬勃，依旧繁华……<br  />
-曾经失去的重回，那温度正是你熟悉的，日思夜想的，可终究失去了什么？<br  />
-你不愿意承认，不愿意细想，即使四周空旷，并无窃听偷窥。<br  />
-啊，重新燃起的那一刻你确实清晰听到阴暗中低吟着丧歌，哭泣的丧歌——<br  />
-可知丧歌由谁唱起那第一个音符，又为早早惊醒梦中的谁？<br  />
-<br  />
-何以推倒青铜的火架，何以嫌弃漆黑的燃煤，<br  />
-豪华的装扮与帮助是你所应有，哪怕不是天生也是必需。<br  />
-重燃的第二把火，深藏的帷幕不再为你掀起，<br  />
-茫茫天地的造化也不愿被曾经失去的你肆意挥霍，<br  />
-当黑暗地穴里的丑陋被第一次奋力凿出提炼，<br  />
-你被告之那是不再幼稚的你今后生命的唯一依赖，<br  />
-那是有志光明的你开始洒下斑驳的最大凭借。<br  />
-<br  />
-无论是有了瞬间的迷思，还是长久的彷惶，又或看似不曾有过的彻悟，<br  />
-飘逸的焰形哪怕何等随心也灌注了自己的模样，<br  />
-哪怕何等天赋也被赠予平凡的恩赐，是融入世界、也被踏入。<br  />
-你知道了自己再也不是伟大自然被设定的造物，<br  />
-虽不至于狂妄宣称自己创造了显现的一切，<br  />
-可却将你的迷思、你的彷惶、你的彻悟抽象在火焰的核心，<br  />
-你将膜拜从伟岸的神奇转向虔诚的光辉，以为光辉便是光明。<br  />
-什么声音开始在耳畔大声疾呼原初之火，那将铁律铸就的火，<br  />
-并非仅仅将你点亮，而是其纷飞的灰烬被当丝絮织就你眼中的朦胧，<br  />
-而是其被燃烧的某物竟是不可名状的虚无——<br  />
-你只看见滚烫如熔岩，鲜红似黑暗中流淌着等待重生的鲜血，<br  />
-啊，想象中的渺小火焰又怎形容火山爆发与沉寂、巍峨与内敛，<br  />
-无论幻象，还是表象，又或本质。<br  />
-<br  />
-（未完待续）<br  />
-</p>
-</div>
-<div id="postamble" class="status">
-<p class="author">Author: mudan</p>
-<p class="date">Created: 2016-09-22 Thu 10:52</p>
-<p class="creator"><a href="http://www.gnu.org/software/emacs/">Emacs</a> 25.1.3 (<a href="http://orgmode.org">Org</a> mode 8.2.10)</p>
-<p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
-</div>
+<body class='typora-export ' >
+<div  id='write'  class = 'is-mac'><h1><a name='header-c1' class='md-header-anchor '></a><center>心理的火</center></h1><p><poem>
+我们不知道心灵是什么样子，姑且将之比喻为一团火。
+这团火，燃烧的太热烈总爱熄灭，
+也许它能重新燃起，可自己左看右看，悲哀发现早不是当初模样。
+疑惑审视，即使将之点燃的媒介相同，
+不敢肯定是它从虚无的某处突兀地钻入你无意识的心海，
+还是你漂泊无依的身躯找到同样漂泊的它。
+迷茫也不待细察，你们只是命运地结合在一起，
+从此不再刻意比较相互之间优劣好坏，
+自漆黑的幕后匆忙走出，撕下片缕点燃了第一把火。</p><p>初生最是值得赞美却也最容易让人困扰，
+纯洁的火焰在襁褓中还未真正升华便迫不及待地展示——
+那火，那火，不断高涨自己的气势与身姿，肆意散发自己的激情与精血；
+那火，那火，经受和风细雨的洗礼也绝不停歇，路遇柔花嫩草化为灰烬亦未尝怜悯；
+那火，那火，牢笼之外纵肮脏泥泞也以为自由潇洒，密室之中无垢无尘可曾想你寂寞窒息。
+也许风暴终有来袭之时，可在那之前唯有你独一无二的演绎：
+并非展开原型本质宣告火焰的新生，而是自我确认的存在，
+从此不再有空虚无归的身躯与灵魂，火焰阴影之下显出真名与形状。</p><p>此时岁月洗礼犹未见衰容，火焰也仍旧不带丝毫杂质，
+只是下方薪柴堆积如山，黑烟也在空气中弥漫，
+哪怕无畏如你时有羞愧身后多少因你被迫或自愿付出，
+时有恐惧在天空下的阴霾不自觉地笼罩中会就此迷离。
+火焰至今没有过为谁燃烧，也更没有放弃过谁，
+当沙被烧制成璀璨的琉璃，火焰本身却已开始忽明忽暗，
+似乎连原本的通透也一起灌入迄今为止仅有的作品之中。</p><p>是时间在将一切打磨，敢于挑战者转眼间不复从前，
+匍匐卑微也只能当做被蚕食的腐肉，
+铁律宣告之下怕纵使这片天地间的虚无亦无法逃离。
+当助你挥霍的、就是你踩在脚下的逐渐无力，
+原本坚实硕壮的臂膀再也承担不起此等重量，
+身架成齑粉，精神成墓碑上凹凸的文字，一切随风而去。
+啊，新生的火，猛烈燃烧的火，纵你万般不愿，请只留下火种。
+火种，火种，黑暗中你依旧是明亮的一点，
+虽无法将光明传递他人，却也不再继续焚烧身边的可怜。
+你不是，你不是，永远不是新律的宣告者，永远不是光明，
+也许当光明真的洒下，你自愿成为其中的一缕，
+而非过早熄灭，湮没在呼吸的天地间。</p><p>你的心，你的血，没了外力帮助露出原形，
+是的，仅仅似乎随时都会熄灭的火种。
+可这段时间不会太久，也许让你刚有省悟的念头便过去，
+自你初生便有的朋友，自你初生便有上苍指定与你血脉相连的亲人，
+他们在你尚未意识到的时候便将你重新燃起，
+依旧炙热，依旧明亮，依旧蓬勃，依旧气盛……
+曾经失去的重回，那温度正是你熟悉的，日思夜想的，可终究失去了什么？
+你不愿意承认，不愿意细想，即使四周空旷，并无窃听偷窥。
+啊，重新燃起的那一刻你确实清晰听到阴暗中低吟着丧歌，哭泣的丧歌——
+可知丧歌由谁唱起那第一个音符，又为早早惊醒梦中的谁？</p><p>何以推倒青铜的火架，何以嫌弃漆黑的燃煤，
+豪华的装扮与帮助是你所应有，哪怕不是天生也是必需。
+重燃的第二把火，深藏的帷幕不再为你掀起，
+茫茫天地的造化也不愿被曾经失去的你肆意挥霍，
+当黑暗地穴里的丑陋被第一次奋力凿出提炼，
+你被告之那是不再幼稚的你今后生命的唯一依赖，
+那是有志光明的你开始洒下斑驳的最大凭借。</p><p>无论是有了瞬间的迷思，还是长久的彷惶，又或看似不曾有过的彻悟，
+飘逸的焰形哪怕何等随心也灌注了自己的模样，
+哪怕何等天赋也被赠予平凡的恩赐，是融入世界、也被踏入。
+你知道了自己再也不是伟大自然被设定的造物，
+虽不至于狂妄宣称自己创造了显现的一切，
+可却将你的迷思、你的彷惶、你的彻悟抽象在火焰的核心，
+你将膜拜从伟岸的神奇转向虔诚的光辉，以为光辉便是光明。
+什么声音开始在耳畔大声疾呼原初之火，那将铁律铸就的火，
+并非仅仅将你点亮，而是其纷飞的灰烬被当丝絮织就你眼中的朦胧，
+而是其被燃烧的某物竟是不可名状的虚无——
+你只看见滚烫如熔岩，鲜红似黑暗中流淌着等待重生的鲜血，
+啊，心意的渺小火焰又怎形容火山爆发与沉寂、巍峨与内敛，
+无论幻象，还是表象，又或本质。</p><p>（未完待续）
+</poem></p><p>2016.09.22.</p></div>
 </body>
 </html>
