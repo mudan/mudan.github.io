@@ -3,9 +3,9 @@
 #+OPTIONS: toc:nil num:nil
 #+HTML_HEAD: <link rel="stylesheet" type="text/css" href="emacs.css" />
 
-[[./fire.org][心理的火]]
+[[./writer/fire.org][心理的火]]
 
-[[./xh-rz.org][日记-个人基本经验的基本认知杂录]]
+[[./writer/xh-rz.org][日记-个人基本经验的基本认知杂录]]
 
 * Emacs
 
@@ -15,7 +15,9 @@
 
 * Read
 
-[[./read/dx.org][大学各家注疏]]
+[[./read/dx.org][大学注疏摘录]]
+
+[[./read/mz.org][孟子·告子上下/尽心上下 注疏摘录]]
 
 [[./read/churchill/yygjsl.org][英语国家史略.英.温斯顿·丘吉尔]]
 

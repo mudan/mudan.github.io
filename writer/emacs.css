@@ -1,14 +1,14 @@
-﻿html {
+html {
   font-size: 100%;
 }
 
 body, pre, code {
-   	 font-family: Monaco, Consolas, monospace, "Hiragino Sans GB", "Microsoft YaHei Light", sans-serif;
+   	 font-family: Monaco, Consolas, monospace, "PT Sans Caption", "Microsoft YaHei Light", sans-serif;
 	}
 
 html,
 body {
-  margin: 15px 10% 10px 10%;
+  margin: 15px 3% 10px 3%;
   background: #fff;
 }
 
@@ -104,7 +104,6 @@ p {
   font-weight: 400;
   font-style: normal;
   font-size: 21px;
-  text-indent:2em;		/* 首行缩进 */
 }
 
 p a {
