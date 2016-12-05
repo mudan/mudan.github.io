@@ -1,9 +1,9 @@
-html {
+﻿html {
   font-size: 100%;
 }
 
 body, pre, code {
-   	 font-family: Monaco, Consolas, monospace, "PT Sans Caption", "Microsoft YaHei Light", sans-serif;
+   	 font-family: Monaco, Consolas, monospace, "PT Sans Caption", "Microsoft YaHei", sans-serif;
 	}
 
 html,

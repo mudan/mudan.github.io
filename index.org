@@ -1,4 +1,4 @@
-#+TITLE:     Mudan's note
+#+TITLE:     Mudan note
 #+STARTUP: showall
 #+OPTIONS: toc:nil num:nil
 #+HTML_HEAD: <link rel="stylesheet" type="text/css" href="emacs.css" />
