@@ -4,7 +4,7 @@ body {
   margin: 15px 6% 10px 2%;
   background: #fff;
   line-height: 1.555;
-  text-align: justify;
+  text-justify: inter-ideographic;
   padding: 2em;
   font-size: 1.3rem;
   text-rendering: optimizeLegibility;
@@ -21,6 +21,9 @@ p {
   font-weight: 400;
   font-style: normal;
   font-size: 21px;
+  text-align: justify;
+  text-justify: inter-ideographic;
+  word-break: break-all; 
 }
 
 p a {
