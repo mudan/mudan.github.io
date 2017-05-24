@@ -1,6 +1,6 @@
 body {
   font-size: 100%;
-  font-family: Monaco, Consolas, monospace, "Source Han Serif CN Medium", "PT Sans Caption", "Microsoft YaHei", sans-serif;
+  font-family: Menlo, Consolas, monospace, "Source Han Serif CN Medium", "PT Sans Caption", "Microsoft YaHei", sans-serif;
   margin: 5px 10% 10px 10%;
   background: #fff;
   line-height: 1.555;
@@ -94,6 +94,20 @@ blockquote {
 blockquote p {
   font-style: normal;
   margin-bottom: 0;
+}
+
+.verse {
+  margin-left: 2em;
+  padding-left: 0.4em;
+  margin-right: 2em;
+  border-left: 3px solid #ddd;
+  font-style: normal;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 24px;
+  font-family: "Kaiti SC", Kaiti;
 }
 
 img{
