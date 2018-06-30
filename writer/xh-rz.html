@@ -3,23 +3,30 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
+<!-- 2018-06-24 周日 17:42 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>个人基本经验的基本认知</title>
-<!-- 2018-05-12 周六 07:50 -->
-<meta  http-equiv="Content-Type" content="text/html;charset=utf-8" />
-<meta  name="generator" content="Org-mode" />
-<meta  name="author" content="Mudan" />
+<meta name="generator" content="Org mode" />
+<meta name="author" content="Mudan" />
 <style type="text/css">
  <!--/*--><![CDATA[/*><!--*/
-  .title  { text-align: center; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
   .todo   { font-family: monospace; color: red; }
-  .done   { color: green; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
   .tag    { background-color: #eee; font-family: monospace;
             padding: 2px; font-size: 80%; font-weight: normal; }
   .timestamp { color: #bebebe; }
   .timestamp-kwd { color: #5f9ea0; }
-  .right  { margin-left: auto; margin-right: 0px;  text-align: right; }
-  .left   { margin-left: 0px;  margin-right: auto; text-align: left; }
-  .center { margin-left: auto; margin-right: auto; text-align: center; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
   .underline { text-decoration: underline; }
   #postamble p, #preamble p { font-size: 90%; margin: .2em; }
   p.verse { margin-left: 3%; }
@@ -46,27 +53,111 @@
     border: 1px solid black;
   }
   pre.src:hover:before { display: inline;}
-  pre.src-sh:before    { content: 'sh'; }
-  pre.src-bash:before  { content: 'sh'; }
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
   pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
-  pre.src-R:before     { content: 'R'; }
-  pre.src-perl:before  { content: 'Perl'; }
-  pre.src-java:before  { content: 'Java'; }
-  pre.src-sql:before   { content: 'SQL'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
 
   table { border-collapse:collapse; }
   caption.t-above { caption-side: top; }
   caption.t-bottom { caption-side: bottom; }
   td, th { vertical-align:top;  }
-  th.right  { text-align: center;  }
-  th.left   { text-align: center;   }
-  th.center { text-align: center; }
-  td.right  { text-align: right;  }
-  td.left   { text-align: left;   }
-  td.center { text-align: center; }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
   dt { font-weight: bold; }
-  .footpara:nth-child(2) { display: inline; }
-  .footpara { display: block; }
+  .footpara { display: inline; }
   .footdef  { margin-bottom: 1em; }
   .figure { padding: 1em; }
   .figure p { text-align: center; }
@@ -86,6 +177,7 @@
     { font-size: 10px; font-weight: bold; white-space: nowrap; }
   .org-info-js_search-highlight
     { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
   /*]]>*/-->
 </style>
 <link rel="stylesheet" type="text/css" href="./emacs.css" />
@@ -94,7 +186,7 @@
 @licstart  The following is the entire license notice for the
 JavaScript code in this tag.
 
-Copyright (C) 2012-2013 Free Software Foundation, Inc.
+Copyright (C) 2012-2018 Free Software Foundation, Inc.
 
 The JavaScript code in this tag is free software: you can
 redistribute it and/or modify it under the terms of the GNU
@@ -163,9 +255,9 @@ for the JavaScript code in this tag.
 </p>
 </blockquote>
 
-<div id="outline-container-sec-1" class="outline-2">
-<h2 id="sec-1">2016.09.06</h2>
-<div class="outline-text-2" id="text-1">
+<div id="outline-container-org019dcc2" class="outline-2">
+<h2 id="org019dcc2">2016.09.06</h2>
+<div class="outline-text-2" id="text-org019dcc2">
 <p>
 <b>被动意识的认知缺陷</b>
 </p>
@@ -180,18 +272,16 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-2" class="outline-2">
-<h2 id="sec-2">2016.09.08</h2>
-<div class="outline-text-2" id="text-2">
+<div id="outline-container-org0b1f0a4" class="outline-2">
+<h2 id="org0b1f0a4">2016.09.08</h2>
+<div class="outline-text-2" id="text-org0b1f0a4">
 <p>
 <b>体验与经验</b>
 </p>
 
 <ul class="org-ul">
-<li>感觉器官的印象（体验）
-</li>
-<li>记忆的印象（经验）
-</li>
+<li>感觉器官的印象（体验）</li>
+<li>记忆的印象（经验）</li>
 </ul>
 
 <p>
@@ -208,9 +298,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-3" class="outline-2">
-<h2 id="sec-3">2016.09.09</h2>
-<div class="outline-text-2" id="text-3">
+<div id="outline-container-org883a8a1" class="outline-2">
+<h2 id="org883a8a1">2016.09.09</h2>
+<div class="outline-text-2" id="text-org883a8a1">
 <p>
 <b>因果恒常结合</b>
 </p>
@@ -235,9 +325,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-4" class="outline-2">
-<h2 id="sec-4">2016.09.10</h2>
-<div class="outline-text-2" id="text-4">
+<div id="outline-container-org74f27fd" class="outline-2">
+<h2 id="org74f27fd">2016.09.10</h2>
+<div class="outline-text-2" id="text-org74f27fd">
 <p>
 <b>两种信</b>
 </p>
@@ -266,9 +356,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-5" class="outline-2">
-<h2 id="sec-5">2016.09.11</h2>
-<div class="outline-text-2" id="text-5">
+<div id="outline-container-org7ba45fb" class="outline-2">
+<h2 id="org7ba45fb">2016.09.11</h2>
+<div class="outline-text-2" id="text-org7ba45fb">
 <p>
 <b>经验、经验的观念、思验</b>
 </p>
@@ -313,7 +403,7 @@ for the JavaScript code in this tag.
 没有完全的思验，经验的观念中无法剔除“信”等感性的存在就是思验不完整的最佳证明。
 </p>
 
-<hr  />
+<hr />
 
 <p>
 守则第一条：可以区分，不可以孤立。
@@ -333,9 +423,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-6" class="outline-2">
-<h2 id="sec-6">2016.09.12</h2>
-<div class="outline-text-2" id="text-6">
+<div id="outline-container-org776b227" class="outline-2">
+<h2 id="org776b227">2016.09.12</h2>
+<div class="outline-text-2" id="text-org776b227">
 <p>
 <b>感性、知性、理性</b>
 </p>
@@ -360,7 +450,7 @@ for the JavaScript code in this tag.
 推到不重建是怀疑，推到之前先新建是否定，否定需要现成的资本。
 </p>
 
-<hr  />
+<hr />
 
 <p>
 感性＝直观认识＝体验＝感觉器官到意识这条路
@@ -376,33 +466,25 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-7" class="outline-2">
-<h2 id="sec-7">2016.09.13</h2>
-<div class="outline-text-2" id="text-7">
+<div id="outline-container-orgb81b460" class="outline-2">
+<h2 id="orgb81b460">2016.09.13</h2>
+<div class="outline-text-2" id="text-orgb81b460">
 <ul class="org-ul">
-<li>没有什么是单独进行的，体验、经验必须同时进行，哪怕是最基本的生理反应。
-</li>
-<li>思验包括了理性的推断和感性的判断，是否仅仅只有这二者还需考虑。
-</li>
-<li>意识察觉到的是经验可察觉部分，不可察觉的经验在潜意识中，而不是在前意识中。
-</li>
-<li>人能意识到的思验就是思验的全部。
-</li>
-<li>精神世界的进步前景在于前意识的认知以及意识的缺陷的弥补，潜意识世界应该留到最后。
-</li>
-<li>意识没有办法绕过前意识范围直接思验潜意识，而通过外部论证又逃脱不了意识本身的认知缺陷和潜意识的经验反射，因此在解决意识和前意识问题以前讨论潜意识是无用功，或者至少是片面的。
-</li>
-<li>意识是随着人类个体的成长茁壮起来的，不是潜意识要与意识争夺精神空间，而是意识要与潜意识争夺精神空间。
-</li>
-<li>感官到潜意识并不是条件的，仅仅只是反射，哪怕“被动”也是一个不准确的形容词。
-</li>
+<li>没有什么是单独进行的，体验、经验必须同时进行，哪怕是最基本的生理反应。</li>
+<li>思验包括了理性的推断和感性的判断，是否仅仅只有这二者还需考虑。</li>
+<li>意识察觉到的是经验可察觉部分，不可察觉的经验在潜意识中，而不是在前意识中。</li>
+<li>人能意识到的思验就是思验的全部。</li>
+<li>精神世界的进步前景在于前意识的认知以及意识的缺陷的弥补，潜意识世界应该留到最后。</li>
+<li>意识没有办法绕过前意识范围直接思验潜意识，而通过外部论证又逃脱不了意识本身的认知缺陷和潜意识的经验反射，因此在解决意识和前意识问题以前讨论潜意识是无用功，或者至少是片面的。</li>
+<li>意识是随着人类个体的成长茁壮起来的，不是潜意识要与意识争夺精神空间，而是意识要与潜意识争夺精神空间。</li>
+<li>感官到潜意识并不是条件的，仅仅只是反射，哪怕“被动”也是一个不准确的形容词。</li>
 </ul>
 </div>
 </div>
 
-<div id="outline-container-sec-8" class="outline-2">
-<h2 id="sec-8">2016.09.14</h2>
-<div class="outline-text-2" id="text-8">
+<div id="outline-container-org9402361" class="outline-2">
+<h2 id="org9402361">2016.09.14</h2>
+<div class="outline-text-2" id="text-org9402361">
 <p>
 <b>对立与矛盾</b>
 </p>
@@ -417,9 +499,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-9" class="outline-2">
-<h2 id="sec-9">2016.09.15</h2>
-<div class="outline-text-2" id="text-9">
+<div id="outline-container-org48b3cee" class="outline-2">
+<h2 id="org48b3cee">2016.09.15</h2>
+<div class="outline-text-2" id="text-org48b3cee">
 <p>
 <b>没有逻辑矛盾才有对立</b>
 </p>
@@ -434,7 +516,7 @@ for the JavaScript code in this tag.
 当我们从经验中提出一个命题，我们会很是自然而然地再从经验中提出一个相反的看法，一个命题两种看法，哪怕是同样出自经验看起来也似乎是矛盾，而不仅仅对立。我在这里考察的是逻辑意义上的矛盾，当我们说时间永恒，我们便涌现出时间不永恒的念头，这两种对时间的不同看法各自都有一大堆理论支撑，而没有一个是在当前体验中得到任何证明的，我们想起时间，仅仅只是经验地想起。就像我们说宇宙有限、无限一样，这不仅仅只是文字游戏地玩弄，它们的背后的的确确有着知性的不同支撑，而它们的终点则是理性地碰撞——矛盾又或对立又或其他？
 </p>
 
-<hr  />
+<hr />
 
 <p>
 只有经过经验逻辑矛盾的审查，才有经验的单个观念中复数概念的对立。如太极生阴阳，阴与阳便是对立的；如意识分主动被动，主动与被动便是对立的——这类概念没有逻辑的矛盾，因为我们知道双方无法完全排除任何一方（甚至是相辅相成的），而矛盾最终目的在于消除其中一方（将一个看法的特征单独加于本身观念之上），所以它们通过了逻辑矛盾的审查，变为只是概念区分的对立。
@@ -446,9 +528,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-10" class="outline-2">
-<h2 id="sec-10">2016.09.16</h2>
-<div class="outline-text-2" id="text-10">
+<div id="outline-container-orgd862d18" class="outline-2">
+<h2 id="orgd862d18">2016.09.16</h2>
+<div class="outline-text-2" id="text-orgd862d18">
 <p>
 <b>崇高与美最初步理解</b>
 </p>
@@ -463,9 +545,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-11" class="outline-2">
-<h2 id="sec-11">2016.09.17</h2>
-<div class="outline-text-2" id="text-11">
+<div id="outline-container-org5ab094a" class="outline-2">
+<h2 id="org5ab094a">2016.09.17</h2>
+<div class="outline-text-2" id="text-org5ab094a">
 <p>
 <b>存在的一点最初步理解</b>
 </p>
@@ -484,9 +566,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-12" class="outline-2">
-<h2 id="sec-12">2016.09.18</h2>
-<div class="outline-text-2" id="text-12">
+<div id="outline-container-orgc050f05" class="outline-2">
+<h2 id="orgc050f05">2016.09.18</h2>
+<div class="outline-text-2" id="text-orgc050f05">
 <p>
 <b>先验知性</b>
 </p>
@@ -499,50 +581,39 @@ for the JavaScript code in this tag.
 以为这样就算知道了先验，甚至已经掀开黑幕一角？完全错了，我是经验地晓得先验，我不可能先验地晓得先验，说知道先验那就是个笑话，说掀开黑幕更是无可救药的自大。问题依旧没有完全解决，换一句话说：是什么点亮了这个循环？在潜意识中经验与先验又是经过了怎样的转变？
 </p>
 
-<hr  />
+<hr />
 
 <p>
 一个暂时无法更好发明、更恰当应用的例子：我知道眼前的物体一重十斤，一个人走过来告诉我物体一比我从未见过的物体二重两斤，那么我仅凭这句话便知道了物体二重量是八斤。我是怎么知道的？
 </p>
 
 <ul class="org-ul">
-<li>我知道十减二等于八，并能很自然地运用在这里
-</li>
-<li>哪怕我从来没有见过物体二，我也能通过名词概念与物体产生认知
-</li>
-<li>我相信这个人的话而不是选择费力寻找到物体二并称重它
-</li>
-<li>两个毫无关系的物体经验能够通过另一个独立的感官经历被清楚地体验认知，经验并非仅能通过经验认知
-</li>
+<li>我知道十减二等于八，并能很自然地运用在这里</li>
+<li>哪怕我从来没有见过物体二，我也能通过名词概念与物体产生认知</li>
+<li>我相信这个人的话而不是选择费力寻找到物体二并称重它</li>
+<li>两个毫无关系的物体经验能够通过另一个独立的感官经历被清楚地体验认知，经验并非仅能通过经验认知</li>
 </ul>
 </div>
 </div>
 
-<div id="outline-container-sec-13" class="outline-2">
-<h2 id="sec-13">2016.09.19</h2>
-<div class="outline-text-2" id="text-13">
+<div id="outline-container-org10e081b" class="outline-2">
+<h2 id="org10e081b">2016.09.19</h2>
+<div class="outline-text-2" id="text-org10e081b">
 <ul class="org-ul">
-<li>体验、经验、思验、本验、先验，这五个“验”构成了个人的认知框架。
-</li>
-<li>时间、空间、存在三大概念在子宫里，也就是说在出生以前已经被先验完成，它们最早、也永远有一部分是先验的。
-</li>
-<li>人类所能表象的空间已经有三个：二维、三维、四维，这一论断证明空间并非仅仅先验。
-</li>
-<li>近现代科学对灵感与大脑的研究证明思验只有在尽可能少的受外界干扰的时候才能发挥作用（无论是我们行为地逃避干扰，还是大脑自身作用屏蔽干扰），日常交际生活我们大多靠着经验知识，即直接从前意识中提取，而不做任何过滤。
-</li>
-<li>我昨天显然搞错了，经验的经验是本验而不是先验，但之后的话还是描述先验的，不是本验。昨天的一个问题应该随着本验被提出改为：在潜意识中先验与本验与经验经历了什么过程？
-</li>
-<li>我很想说所有的前意识都是经验知识，但对先验的浅显理解让我无法肯定这个命题。
-</li>
-<li>依旧支持思验中不仅仅只是理性，也包括了感性。
-</li>
+<li>体验、经验、思验、本验、先验，这五个“验”构成了个人的认知框架。</li>
+<li>时间、空间、存在三大概念在子宫里，也就是说在出生以前已经被先验完成，它们最早、也永远有一部分是先验的。</li>
+<li>人类所能表象的空间已经有三个：二维、三维、四维，这一论断证明空间并非仅仅先验。</li>
+<li>近现代科学对灵感与大脑的研究证明思验只有在尽可能少的受外界干扰的时候才能发挥作用（无论是我们行为地逃避干扰，还是大脑自身作用屏蔽干扰），日常交际生活我们大多靠着经验知识，即直接从前意识中提取，而不做任何过滤。</li>
+<li>我昨天显然搞错了，经验的经验是本验而不是先验，但之后的话还是描述先验的，不是本验。昨天的一个问题应该随着本验被提出改为：在潜意识中先验与本验与经验经历了什么过程？</li>
+<li>我很想说所有的前意识都是经验知识，但对先验的浅显理解让我无法肯定这个命题。</li>
+<li>依旧支持思验中不仅仅只是理性，也包括了感性。</li>
 </ul>
 </div>
 </div>
 
-<div id="outline-container-sec-14" class="outline-2">
-<h2 id="sec-14">2016.09.20</h2>
-<div class="outline-text-2" id="text-14">
+<div id="outline-container-org3559328" class="outline-2">
+<h2 id="org3559328">2016.09.20</h2>
+<div class="outline-text-2" id="text-org3559328">
 <p>
 <b>先验的一点补充说明</b>
 </p>
@@ -561,9 +632,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-15" class="outline-2">
-<h2 id="sec-15">2016.09.21</h2>
-<div class="outline-text-2" id="text-15">
+<div id="outline-container-orgcfd6cb3" class="outline-2">
+<h2 id="orgcfd6cb3">2016.09.21</h2>
+<div class="outline-text-2" id="text-orgcfd6cb3">
 <p>
 <b>心理治疗与潜意识之间的一个假设</b>
 </p>
@@ -573,23 +644,18 @@ for the JavaScript code in this tag.
 </p>
 
 <ul class="org-ul">
-<li>潜意识除先验知性以外无法被前意识改变。
-</li>
-<li>先验知性在我们成长以后已经无法工作。
-</li>
-<li>潜意识到前意识的经验无法消除，它如果希望不被意识察觉并表现出来只能让意识从外界有一个新的体验，作用地把它压倒，而且是持续性地压倒。
-</li>
-<li>这一压倒一直到要到与意识体验一同产生的经验经过潜意识、前意识，最后重新被意识察觉，可即便如此最早的那个经验也不是被改变的，是被覆盖的。
-</li>
-<li>心理治疗之所以长期是因为这一经验想要达到覆盖的地步，它的第一步就是让体验先行的习惯，而习惯从来不是短期能够形成的，尤其是修正性质的习惯（这时你需要用到的只能是主动规范意识）。
-</li>
+<li>潜意识除先验知性以外无法被前意识改变。</li>
+<li>先验知性在我们成长以后已经无法工作。</li>
+<li>潜意识到前意识的经验无法消除，它如果希望不被意识察觉并表现出来只能让意识从外界有一个新的体验，作用地把它压倒，而且是持续性地压倒。</li>
+<li>这一压倒一直到要到与意识体验一同产生的经验经过潜意识、前意识，最后重新被意识察觉，可即便如此最早的那个经验也不是被改变的，是被覆盖的。</li>
+<li>心理治疗之所以长期是因为这一经验想要达到覆盖的地步，它的第一步就是让体验先行的习惯，而习惯从来不是短期能够形成的，尤其是修正性质的习惯（这时你需要用到的只能是主动规范意识）。</li>
 </ul>
 </div>
 </div>
 
-<div id="outline-container-sec-16" class="outline-2">
-<h2 id="sec-16">2016.09.22</h2>
-<div class="outline-text-2" id="text-16">
+<div id="outline-container-orga306aa9" class="outline-2">
+<h2 id="orga306aa9">2016.09.22</h2>
+<div class="outline-text-2" id="text-orga306aa9">
 <p>
 先验、感、念、思验、意识（被动？），还有太多尚未被发掘。
 </p>
@@ -632,9 +698,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-17" class="outline-2">
-<h2 id="sec-17">2016.09.23</h2>
-<div class="outline-text-2" id="text-17">
+<div id="outline-container-org632a356" class="outline-2">
+<h2 id="org632a356">2016.09.23</h2>
+<div class="outline-text-2" id="text-org632a356">
 <p>
 <b>真正的本能所在</b>
 </p>
@@ -649,9 +715,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-18" class="outline-2">
-<h2 id="sec-18">2016.09.24</h2>
-<div class="outline-text-2" id="text-18">
+<div id="outline-container-org7bf8b23" class="outline-2">
+<h2 id="org7bf8b23">2016.09.24</h2>
+<div class="outline-text-2" id="text-org7bf8b23">
 <p>
 <b>经验、经验知识</b>
 </p>
@@ -672,7 +738,7 @@ for the JavaScript code in this tag.
 经验知识、可接受的经验在前意识中，潜意识中只有不被接受的经验、本验和先验，这一点和我二十一号做出的那个假设是相通的，它是一层层覆盖的。
 </p>
 
-<hr  />
+<hr />
 
 <p>
 古人云“格物致知”，显然已经把上述经验知识的过程早说明透彻了。
@@ -688,9 +754,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-19" class="outline-2">
-<h2 id="sec-19">2016.09.25</h2>
-<div class="outline-text-2" id="text-19">
+<div id="outline-container-org51b8199" class="outline-2">
+<h2 id="org51b8199">2016.09.25</h2>
+<div class="outline-text-2" id="text-org51b8199">
 <p>
 <b>幻想与联想</b>
 </p>
@@ -717,9 +783,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-20" class="outline-2">
-<h2 id="sec-20">2016.09.26</h2>
-<div class="outline-text-2" id="text-20">
+<div id="outline-container-org38cc5c9" class="outline-2">
+<h2 id="org38cc5c9">2016.09.26</h2>
+<div class="outline-text-2" id="text-org38cc5c9">
 <p>
 <b>先验的存在就是隔阂</b>
 </p>
@@ -742,9 +808,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-21" class="outline-2">
-<h2 id="sec-21">2016.09.27</h2>
-<div class="outline-text-2" id="text-21">
+<div id="outline-container-orgaf2d500" class="outline-2">
+<h2 id="orgaf2d500">2016.09.27</h2>
+<div class="outline-text-2" id="text-orgaf2d500">
 <p>
 <b>思验作为一个整体</b>
 </p>
@@ -767,9 +833,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-22" class="outline-2">
-<h2 id="sec-22">2016.09.28</h2>
-<div class="outline-text-2" id="text-22">
+<div id="outline-container-org543c596" class="outline-2">
+<h2 id="org543c596">2016.09.28</h2>
+<div class="outline-text-2" id="text-org543c596">
 <p>
 <b>思验的初步分析</b>
 </p>
@@ -785,28 +851,20 @@ for the JavaScript code in this tag.
 <ul class="org-ul">
 <li>计算
 <ul class="org-ul">
-<li>数、图、维
-</li>
-</ul>
-</li>
+<li>数、图、维</li>
+</ul></li>
 <li>逻辑
 <ul class="org-ul">
-<li>公理、辩证、循环
-</li>
-</ul>
-</li>
+<li>公理、辩证、循环</li>
+</ul></li>
 <li>联想
 <ul class="org-ul">
-<li>类比、假设、幻想
-</li>
-</ul>
-</li>
+<li>类比、假设、幻想</li>
+</ul></li>
 <li>认识
 <ul class="org-ul">
-<li>实质、表体、抽象
-</li>
-</ul>
-</li>
+<li>实质、表体、抽象</li>
+</ul></li>
 </ul>
 
 <p>
@@ -814,27 +872,20 @@ for the JavaScript code in this tag.
 </p>
 
 <ul class="org-ul">
-<li>公理这个词或许还是不准确的，但一时间找不出更好的词来表达，因为严格的说并没有什么是可以与辩证相对应的，它本身所表达的就含有中庸之意。
-</li>
-<li>公理不是真理，但在生活中却被当做真理运用，因此它不含有相容的意思，也没有反方的意思。而之所以使用公理不使用真理，是因为在我看来没有真理的，正如我认为没有绝对一样，公理已经是最大的肯定了。
-</li>
-<li>哪怕先验也因辩证才得以表现，作为辩证的另一方——经验是必不可少的。
-</li>
-<li>我没使用“想象”而选择使用“类比”，因为“类比”作为规律的一种显然范围更广大一些，并非所有固定联结都是想象的。
-</li>
-<li>质、体、象，对此斟酌了好久，我以为这三个字所表达的认识是较为准确的。我绝不因追求文字的对称而牺牲本义，文字的优美在这里一无是处，文字的准确才是至上原则。
-</li>
-<li>如果实质概念在思想上得不到进一步拓展，那么我们也许应该把视线转向科学，然后便可以发现所谓实质就是分子、原子、中子、质子、量子等等微观世界粒子，现实表体的改变不会对它们造成本身结构和数量上的影响。只是有一点还需要说明的是，哪怕从科学上说实质概念依旧没能做到完整解答，我们并没有晓得微观世界的一切。
-</li>
-<li>我做不到跟上康德的思维，所以那个有关圈养还是放养的问题虽然看起来愚蠢但却是必须的，当这样尝试去做，我至少能够试着跟上他的某几个思考。
-</li>
+<li>公理这个词或许还是不准确的，但一时间找不出更好的词来表达，因为严格的说并没有什么是可以与辩证相对应的，它本身所表达的就含有中庸之意。</li>
+<li>公理不是真理，但在生活中却被当做真理运用，因此它不含有相容的意思，也没有反方的意思。而之所以使用公理不使用真理，是因为在我看来没有真理的，正如我认为没有绝对一样，公理已经是最大的肯定了。</li>
+<li>哪怕先验也因辩证才得以表现，作为辩证的另一方——经验是必不可少的。</li>
+<li>我没使用“想象”而选择使用“类比”，因为“类比”作为规律的一种显然范围更广大一些，并非所有固定联结都是想象的。</li>
+<li>质、体、象，对此斟酌了好久，我以为这三个字所表达的认识是较为准确的。我绝不因追求文字的对称而牺牲本义，文字的优美在这里一无是处，文字的准确才是至上原则。</li>
+<li>如果实质概念在思想上得不到进一步拓展，那么我们也许应该把视线转向科学，然后便可以发现所谓实质就是分子、原子、中子、质子、量子等等微观世界粒子，现实表体的改变不会对它们造成本身结构和数量上的影响。只是有一点还需要说明的是，哪怕从科学上说实质概念依旧没能做到完整解答，我们并没有晓得微观世界的一切。</li>
+<li>我做不到跟上康德的思维，所以那个有关圈养还是放养的问题虽然看起来愚蠢但却是必须的，当这样尝试去做，我至少能够试着跟上他的某几个思考。</li>
 </ul>
 </div>
 </div>
 
-<div id="outline-container-sec-23" class="outline-2">
-<h2 id="sec-23">2016.09.29</h2>
-<div class="outline-text-2" id="text-23">
+<div id="outline-container-org945e8f6" class="outline-2">
+<h2 id="org945e8f6">2016.09.29</h2>
+<div class="outline-text-2" id="text-org945e8f6">
 <p>
 <b>直觉与知觉</b>
 </p>
@@ -863,7 +914,7 @@ for the JavaScript code in this tag.
 既然直觉与知觉强度如此之大，那么我们还应该再问一个问题，什么不是直觉或知觉，什么能脱离它们掌控？无论是先知的预判还是结果的判断都受控于先验，因此首先一点就是先验掌控直觉和知觉。另外无论是经验的实践还是经验知识的产生是受理性检验的，而理性只要被足够意识到便能够做到不受直觉和知觉掌控。最后直觉和知觉所下结论还受意志（也就是位于“意识金字塔”顶端的“主动规范意识”）影响，而我虽对意志理解不深却也知道当某个结论严重违反社会伦理或者个人主导思想的时候是能够做到强行控制的（除非另有他力颠覆这一控制，这也是很常见的）。
 </p>
 
-<hr  />
+<hr />
 
 <p>
 直观并非直觉，直观是器官的体验所带来对意识明显刺激所表现出来的客观感觉，直觉是从潜意识中浮现的经验所带来的大量感的相信所表现出来的主观感受。
@@ -875,9 +926,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-24" class="outline-2">
-<h2 id="sec-24">2016.09.30</h2>
-<div class="outline-text-2" id="text-24">
+<div id="outline-container-org4ded420" class="outline-2">
+<h2 id="org4ded420">2016.09.30</h2>
+<div class="outline-text-2" id="text-org4ded420">
 <p>
 <b>认识与知识浅述</b>
 </p>
@@ -899,21 +950,17 @@ for the JavaScript code in this tag.
 </p>
 
 <ul class="org-ul">
-<li>用词的肯定程度。对一个命题来说“是”、“不是”与“可能”、“好像”在理解上是完全不同的，知识的命题不该有任何含糊字眼，纵使辩证的相容也必然列出足以让人信服的清楚说明。而认识则不必严格服从这一原则，它所需要做到的只是让命题本身成立，不会自相矛盾即可。因此，你不可以说只有知识才会用词的肯定，你可以说只有认识才会用词模糊。
-</li>
-<li>应用的广泛程度。命题服务于应用，无论认识命题，还是知识命题。比如看见一条线，我说“两点成一线”，这一知识命题应用的范围并不局限于当前眼中的这一条线，它适用于所有有关线概念的应用；而同一时间我说“这是一条线”，这一认识命题（即使它也一样是明确的）却有着极度狭隘的局限，它所唯一的应用只是说明眼前的图像就是一条线。
-</li>
-<li>文义的指导作用。认识命题因其上述所言的局限性导致它只能够是对某事某物的一个结论性质的命题，而它的唯一指导作用只在于让你对这件事情或这个物体有一个大概的理解。知识命题则截然不同，它并不一定就是结论的描述，它可以向你展示一个完整的步骤，就好像有一个现场的教师亲自指点你的行为一样，知识命题在让你有更深层次理解的同时也会让你如何更有效率地行动。
-</li>
-<li>时间的有效作用。认识命题无论是经验、还是体验，它获取认识的来源只是时间概念上的一点，脱离指定的时间它的有效性便开始减弱（除非像直觉的形成一样不停有新的填充进来），从怀疑论角度说甚至是荡然无存的。知识命题则没有这个顾虑，要么它是公理性质的，对现实来说时间有效性长期保持，要么它是命题本身已经限制好时间段的，在这一时间段里面有效性依旧得以保持。
-</li>
+<li>用词的肯定程度。对一个命题来说“是”、“不是”与“可能”、“好像”在理解上是完全不同的，知识的命题不该有任何含糊字眼，纵使辩证的相容也必然列出足以让人信服的清楚说明。而认识则不必严格服从这一原则，它所需要做到的只是让命题本身成立，不会自相矛盾即可。因此，你不可以说只有知识才会用词的肯定，你可以说只有认识才会用词模糊。</li>
+<li>应用的广泛程度。命题服务于应用，无论认识命题，还是知识命题。比如看见一条线，我说“两点成一线”，这一知识命题应用的范围并不局限于当前眼中的这一条线，它适用于所有有关线概念的应用；而同一时间我说“这是一条线”，这一认识命题（即使它也一样是明确的）却有着极度狭隘的局限，它所唯一的应用只是说明眼前的图像就是一条线。</li>
+<li>文义的指导作用。认识命题因其上述所言的局限性导致它只能够是对某事某物的一个结论性质的命题，而它的唯一指导作用只在于让你对这件事情或这个物体有一个大概的理解。知识命题则截然不同，它并不一定就是结论的描述，它可以向你展示一个完整的步骤，就好像有一个现场的教师亲自指点你的行为一样，知识命题在让你有更深层次理解的同时也会让你如何更有效率地行动。</li>
+<li>时间的有效作用。认识命题无论是经验、还是体验，它获取认识的来源只是时间概念上的一点，脱离指定的时间它的有效性便开始减弱（除非像直觉的形成一样不停有新的填充进来），从怀疑论角度说甚至是荡然无存的。知识命题则没有这个顾虑，要么它是公理性质的，对现实来说时间有效性长期保持，要么它是命题本身已经限制好时间段的，在这一时间段里面有效性依旧得以保持。</li>
 </ul>
 </div>
 </div>
 
-<div id="outline-container-sec-25" class="outline-2">
-<h2 id="sec-25">2016.10.01</h2>
-<div class="outline-text-2" id="text-25">
+<div id="outline-container-org08d7e2d" class="outline-2">
+<h2 id="org08d7e2d">2016.10.01</h2>
+<div class="outline-text-2" id="text-org08d7e2d">
 <p>
 <b>存在与不在</b>
 </p>
@@ -940,9 +987,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-26" class="outline-2">
-<h2 id="sec-26">2016.10.02</h2>
-<div class="outline-text-2" id="text-26">
+<div id="outline-container-orgaed9e20" class="outline-2">
+<h2 id="orgaed9e20">2016.10.02</h2>
+<div class="outline-text-2" id="text-orgaed9e20">
 <p>
 <b>日常经验因果关系认知浅述</b>
 </p>
@@ -969,9 +1016,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-27" class="outline-2">
-<h2 id="sec-27">2016.10.03</h2>
-<div class="outline-text-2" id="text-27">
+<div id="outline-container-org4297677" class="outline-2">
+<h2 id="org4297677">2016.10.03</h2>
+<div class="outline-text-2" id="text-org4297677">
 <p>
 <b>本验假设</b>
 </p>
@@ -994,9 +1041,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-28" class="outline-2">
-<h2 id="sec-28">2016.10.04</h2>
-<div class="outline-text-2" id="text-28">
+<div id="outline-container-org7d3fe55" class="outline-2">
+<h2 id="org7d3fe55">2016.10.04</h2>
+<div class="outline-text-2" id="text-org7d3fe55">
 <p>
 <b>分析的理性</b>
 </p>
@@ -1023,9 +1070,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-29" class="outline-2">
-<h2 id="sec-29">2016.10.05</h2>
-<div class="outline-text-2" id="text-29">
+<div id="outline-container-orgbc4b59c" class="outline-2">
+<h2 id="orgbc4b59c">2016.10.05</h2>
+<div class="outline-text-2" id="text-orgbc4b59c">
 <p>
 <b>先验牢笼之外</b>
 </p>
@@ -1048,9 +1095,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-30" class="outline-2">
-<h2 id="sec-30">2016.10.06</h2>
-<div class="outline-text-2" id="text-30">
+<div id="outline-container-org5a23728" class="outline-2">
+<h2 id="org5a23728">2016.10.06</h2>
+<div class="outline-text-2" id="text-org5a23728">
 <p>
 <b>日常情感浅述</b>
 </p>
@@ -1060,16 +1107,11 @@ for the JavaScript code in this tag.
 </p>
 
 <ul class="org-ul">
-<li>在潜意识中记忆首先剥离感的部分，然后才被本验修改补正（对于本验的具体修改内容依旧无法确定，我不能说我意识之所好就是本验之所好，所以我只能确定一点，它的确用于修改补正）。
-</li>
-<li>前意识念中包括着体验认识、经验认识、经验知识，它们在单独对象上不一定被一起运用，须由实情而定。
-</li>
-<li>前意识经验认识只是经验知性的认识，即与对象的行为记忆，而不携带任何原本的感。
-</li>
-<li>当感试图有所表达只能通过感性思验，它无法通过一个整体的思验去表达，因此感情至始至终都是主观冲动的产物。
-</li>
-<li>循环让情有进一步发展的可能（无论发展是否随心所欲），一个言行的作用力必然被今后言行所利用，从局部看它的确是因果的，可如果进一步深究那么只有那个初见的情才是唯一的因，而只有死亡才是唯一的果，这样的因果并无任何意义。
-</li>
+<li>在潜意识中记忆首先剥离感的部分，然后才被本验修改补正（对于本验的具体修改内容依旧无法确定，我不能说我意识之所好就是本验之所好，所以我只能确定一点，它的确用于修改补正）。</li>
+<li>前意识念中包括着体验认识、经验认识、经验知识，它们在单独对象上不一定被一起运用，须由实情而定。</li>
+<li>前意识经验认识只是经验知性的认识，即与对象的行为记忆，而不携带任何原本的感。</li>
+<li>当感试图有所表达只能通过感性思验，它无法通过一个整体的思验去表达，因此感情至始至终都是主观冲动的产物。</li>
+<li>循环让情有进一步发展的可能（无论发展是否随心所欲），一个言行的作用力必然被今后言行所利用，从局部看它的确是因果的，可如果进一步深究那么只有那个初见的情才是唯一的因，而只有死亡才是唯一的果，这样的因果并无任何意义。</li>
 </ul>
 
 <p>
@@ -1077,23 +1119,18 @@ for the JavaScript code in this tag.
 </p>
 
 <ul class="org-ul">
-<li>在前意识中感是被过去的经历重新组合起来的，它逃不出先验的基本感范围，可是它从内容上说也再不等于先验的基本感。
-</li>
-<li>体验认识的感通常因触觉而起，又或因生理反应而起。
-</li>
-<li>对单独对象的感的深刻和纯粹是思验整体判断的证明，正因为有思验将各方整合在一起，然后才有前后如一、从始至终的感（其判断结果就是感性思验最优先的凭借）。而从另一方面叙述，对任何单独对象的感之所以能够深刻和纯粹必然不是因为当前与对象在一起的任何一个时刻，而是相互分离的时候才有可能，只有在那时思验才能够暂时发下感性更多地从思验整体考虑对象。
-</li>
-<li>感的矛盾和繁杂是多方面感和经验认识参与其中的证明，当对立的多方面有了细节的差异便开始出入不齐，直到成为所谓“无法言喻”的感，这代表着对具体对象无法结论、即无法快速思验整体判断（有待进一步现实发展以便加重体验和经验砝码）的证明。
-</li>
-<li>一个妄图列举所有基本感和组合感的人注定没有任何成果，因为我们与对象的感之所以无法确定就是因为我们把握不住具体的感，所以只要这一现实情况不被改善那么这一成果也就不会真正被人类自身发掘出来。
-</li>
+<li>在前意识中感是被过去的经历重新组合起来的，它逃不出先验的基本感范围，可是它从内容上说也再不等于先验的基本感。</li>
+<li>体验认识的感通常因触觉而起，又或因生理反应而起。</li>
+<li>对单独对象的感的深刻和纯粹是思验整体判断的证明，正因为有思验将各方整合在一起，然后才有前后如一、从始至终的感（其判断结果就是感性思验最优先的凭借）。而从另一方面叙述，对任何单独对象的感之所以能够深刻和纯粹必然不是因为当前与对象在一起的任何一个时刻，而是相互分离的时候才有可能，只有在那时思验才能够暂时发下感性更多地从思验整体考虑对象。</li>
+<li>感的矛盾和繁杂是多方面感和经验认识参与其中的证明，当对立的多方面有了细节的差异便开始出入不齐，直到成为所谓“无法言喻”的感，这代表着对具体对象无法结论、即无法快速思验整体判断（有待进一步现实发展以便加重体验和经验砝码）的证明。</li>
+<li>一个妄图列举所有基本感和组合感的人注定没有任何成果，因为我们与对象的感之所以无法确定就是因为我们把握不住具体的感，所以只要这一现实情况不被改善那么这一成果也就不会真正被人类自身发掘出来。</li>
 </ul>
 </div>
 </div>
 
-<div id="outline-container-sec-31" class="outline-2">
-<h2 id="sec-31">2016.10.07</h2>
-<div class="outline-text-2" id="text-31">
+<div id="outline-container-org66e7475" class="outline-2">
+<h2 id="org66e7475">2016.10.07</h2>
+<div class="outline-text-2" id="text-org66e7475">
 <p>
 <b>分析的理性再论</b>
 </p>
@@ -1103,14 +1140,10 @@ for the JavaScript code in this tag.
 </p>
 
 <ul class="org-ul">
-<li>错误一：体验认识的确产生了先验，但这一产生不是通过思验整体，是通过思验感性──它是以感性产生先验，而此时的确没能有任何形式分析，所以后一句话是正确的。
-</li>
-<li>错误二：需要澄清的是如今的思验整体在思验理性产生之前是不存在的，而在此之前只有思验感性，但由于此刻只有思验感性，说它是一个整体也未尝有错，只是太过容易误解。
-</li>
-<li>错误三：当经验知性以经验认识的形式浮现，它不存在迫使或者不迫使的意思。试想有关思验整体的概念（九月二十七号日记），当我们有所认知的时候必须在内部重塑一个思验图型（这是一个不可避免的心理行为）且是对外部事物表体的复刻──那么在这里就需要问一个再简单不过的问题，请问有任何表体事物是只能做为一个整体而不能拆分的吗？答案是明显的，所以思验图型的复刻也是明显的，它要不营造一个虚构的整体然后在里面加入各种零件，要不虚构各种零件然后搭建一个整体，而这一切不是只有思验感性的思验整体能够单独完成的。
-</li>
-<li>错误四：所以不是经验知性让你有选择的可能，而是事物表体的现实让你有拆分的可能。所以不是经验知性剖开你的思验，而是对事物表体的不可避免的心理的复刻剖开你的思验，正如事物表体也一样能被行为剖开。
-</li>
+<li>错误一：体验认识的确产生了先验，但这一产生不是通过思验整体，是通过思验感性──它是以感性产生先验，而此时的确没能有任何形式分析，所以后一句话是正确的。</li>
+<li>错误二：需要澄清的是如今的思验整体在思验理性产生之前是不存在的，而在此之前只有思验感性，但由于此刻只有思验感性，说它是一个整体也未尝有错，只是太过容易误解。</li>
+<li>错误三：当经验知性以经验认识的形式浮现，它不存在迫使或者不迫使的意思。试想有关思验整体的概念（九月二十七号日记），当我们有所认知的时候必须在内部重塑一个思验图型（这是一个不可避免的心理行为）且是对外部事物表体的复刻──那么在这里就需要问一个再简单不过的问题，请问有任何表体事物是只能做为一个整体而不能拆分的吗？答案是明显的，所以思验图型的复刻也是明显的，它要不营造一个虚构的整体然后在里面加入各种零件，要不虚构各种零件然后搭建一个整体，而这一切不是只有思验感性的思验整体能够单独完成的。</li>
+<li>错误四：所以不是经验知性让你有选择的可能，而是事物表体的现实让你有拆分的可能。所以不是经验知性剖开你的思验，而是对事物表体的不可避免的心理的复刻剖开你的思验，正如事物表体也一样能被行为剖开。</li>
 </ul>
 
 <p>
@@ -1118,47 +1151,35 @@ for the JavaScript code in this tag.
 </p>
 
 <ul class="org-ul">
-<li>做为只有思验感性时候的思验整体的分化，思验理性让思验图型的复刻有完善的可能，而且思验理性的分化并非从思验感性本身中划分一部分，它是因事物表体形式而起的思验形式（这本身也是另一种意义上复刻），所以不针对任何事物表体，只针对形式。
-</li>
-<li>思验理性是因为事物表体形式而起，而事物表体形式的表现又只能通过经验认识，因此说经验知性产生思验理性并非无稽之谈，之所以受控于思验感性是因为思验整体本身原有的就是思验感性──你无法脱离思验感性的认知重塑你的思验整体。
-</li>
+<li>做为只有思验感性时候的思验整体的分化，思验理性让思验图型的复刻有完善的可能，而且思验理性的分化并非从思验感性本身中划分一部分，它是因事物表体形式而起的思验形式（这本身也是另一种意义上复刻），所以不针对任何事物表体，只针对形式。</li>
+<li>思验理性是因为事物表体形式而起，而事物表体形式的表现又只能通过经验认识，因此说经验知性产生思验理性并非无稽之谈，之所以受控于思验感性是因为思验整体本身原有的就是思验感性──你无法脱离思验感性的认知重塑你的思验整体。</li>
 </ul>
 </div>
 </div>
 
-<div id="outline-container-sec-32" class="outline-2">
-<h2 id="sec-32">2016.10.08</h2>
-<div class="outline-text-2" id="text-32">
+<div id="outline-container-org976fede" class="outline-2">
+<h2 id="org976fede">2016.10.08</h2>
+<div class="outline-text-2" id="text-org976fede">
 <ul class="org-ul">
-<li>个人无意识只是一个形容词，本身并无明确的意义，所以用“经验知性”作为代替，这样前意识到潜意识之间便是经验知性与先验知性的过程了。
-</li>
-<li>同样的，“被动反射”这个名词本身也是模糊不清的意义，它甚至不是一个科学名词，因此用“体验知性”来代替。这样的设置是在认知一途上都从体验开始，只不过将体验分成了感性和知性两条道路（最终形成体验认识和经验认识）。“体验知性”是个一直以来我所困惑的概念，但此刻我以为这样的安置是能够准确描述出它的意义的。
-</li>
-<li>也许会有观点认为知性不存在感情，也就是说我的那个本验假设在我设立“体验知性”的时候已经被推翻，但我以为这是无稽之谈，没有任何证据能够说明知性是不可以包含感情记忆的。
-</li>
-<li>意识是一切认识、思验的表现，前意识念则是认识与知识的根据地，念与感的组成在昨天日记中已经说明。
-</li>
-<li>知识不可能直接运用，所以它必须首先转化为一种认识，然后让意识表现出来。
-</li>
+<li>个人无意识只是一个形容词，本身并无明确的意义，所以用“经验知性”作为代替，这样前意识到潜意识之间便是经验知性与先验知性的过程了。</li>
+<li>同样的，“被动反射”这个名词本身也是模糊不清的意义，它甚至不是一个科学名词，因此用“体验知性”来代替。这样的设置是在认知一途上都从体验开始，只不过将体验分成了感性和知性两条道路（最终形成体验认识和经验认识）。“体验知性”是个一直以来我所困惑的概念，但此刻我以为这样的安置是能够准确描述出它的意义的。</li>
+<li>也许会有观点认为知性不存在感情，也就是说我的那个本验假设在我设立“体验知性”的时候已经被推翻，但我以为这是无稽之谈，没有任何证据能够说明知性是不可以包含感情记忆的。</li>
+<li>意识是一切认识、思验的表现，前意识念则是认识与知识的根据地，念与感的组成在昨天日记中已经说明。</li>
+<li>知识不可能直接运用，所以它必须首先转化为一种认识，然后让意识表现出来。</li>
 <li>我们必须还要再问一个问题，就是当我们清楚了实质和表体作为形式的概念，对于看似个体存在的人是表体还是实质？一个很显然的现况就是我们把意识、甚至包括前意识都当作了表体，而把潜意识当作实质，因此我们是否可以进一步言明哪怕我们个人也只是表体，意识的深究是表体的深究，意识的感知是表体的感知，在对外界的实质和表体的隔阂被确立以后人类自身也存在着隔阂？
 <ul class="org-ul">
-<li>如果这一隔阂是不存在的，那么就又分出两种情况：一种情况是表体和实质被人自身作为一个整体打通了，我们在二者之间有了一条通道可以也值得去探索，而不像以前一样仅仅如天堑一般隔阂；另一种情况是人作为一个整体根本不存在表体和实质的形式，它犹如思验一般只有综合与分析，因为表体和实质的区分到底也只是思验形式的认识上的一种区分，人类自身则不包括在认识范围中。
-</li>
-<li>如果这一隔阂也同样在人类自身上发生，那么不可避免的，当代的我们也同样会遭遇先贤一样的处境──陷入怀疑论、不可知论的漩涡之中无法自拔。这个承认如果单独考虑是更多程度上的感性考虑，不是我们的理性不能下这个结论，而是我们的感性不愿意下这个结论。即使在一方面我们已经形成了公认的潜意识概念，在另一方面我们也已经承认外界不仅仅只是表体，可是当这个两个结论合在一起同时应用在人类身上，我们便开始犹豫不决。
-</li>
-<li>有一点是我所坚持的，那就是表体和实质概念是思验形式上的认识的分支概念，而且在此时的我们已经无法真正追溯到先验的隔阂概念的具体内容，所以也就是说我们认识的表体和实质概念是经验概念，而不是先验概念。经验的一大特征就是多面，你可以从一个经验出发得出一个结论，从另一个经验出发又可以得出完全不同的结论，即使你的论题是相同。在这里同样的情况依旧发生，我们把表体和实质问题转向我们自身，我们自身便存在着角度问题：我们可以说我们的生理和言行就是表体，我们的心理就是实质；我们也可以说我们时刻浮现的思绪就是表体，我们深藏的限制认知的某物就是实质；我们甚至可以在意识空间中将主动意识认为是表体，将被动意识认为是实质……这些认识命题并没有任何错误，问题只在我们将角度（又或者说范围）规范在哪一个程度。
-</li>
-<li>有了这一认识的澄清之后我们再假设将这个问题上升到先验的程度，即不考虑任何经验，然后真正的问题才浮现在我们眼前，三种结果也真正成为可能。可惜我必须承认自己无法解答这个问题，至少我现在无法解答，所以我是秉着把这个问题当做训诫的态度提出并将其谨慎地放置在自己的“主动规范意识”之中。
-</li>
-</ul>
-</li>
+<li>如果这一隔阂是不存在的，那么就又分出两种情况：一种情况是表体和实质被人自身作为一个整体打通了，我们在二者之间有了一条通道可以也值得去探索，而不像以前一样仅仅如天堑一般隔阂；另一种情况是人作为一个整体根本不存在表体和实质的形式，它犹如思验一般只有综合与分析，因为表体和实质的区分到底也只是思验形式的认识上的一种区分，人类自身则不包括在认识范围中。</li>
+<li>如果这一隔阂也同样在人类自身上发生，那么不可避免的，当代的我们也同样会遭遇先贤一样的处境──陷入怀疑论、不可知论的漩涡之中无法自拔。这个承认如果单独考虑是更多程度上的感性考虑，不是我们的理性不能下这个结论，而是我们的感性不愿意下这个结论。即使在一方面我们已经形成了公认的潜意识概念，在另一方面我们也已经承认外界不仅仅只是表体，可是当这个两个结论合在一起同时应用在人类身上，我们便开始犹豫不决。</li>
+<li>有一点是我所坚持的，那就是表体和实质概念是思验形式上的认识的分支概念，而且在此时的我们已经无法真正追溯到先验的隔阂概念的具体内容，所以也就是说我们认识的表体和实质概念是经验概念，而不是先验概念。经验的一大特征就是多面，你可以从一个经验出发得出一个结论，从另一个经验出发又可以得出完全不同的结论，即使你的论题是相同。在这里同样的情况依旧发生，我们把表体和实质问题转向我们自身，我们自身便存在着角度问题：我们可以说我们的生理和言行就是表体，我们的心理就是实质；我们也可以说我们时刻浮现的思绪就是表体，我们深藏的限制认知的某物就是实质；我们甚至可以在意识空间中将主动意识认为是表体，将被动意识认为是实质……这些认识命题并没有任何错误，问题只在我们将角度（又或者说范围）规范在哪一个程度。</li>
+<li>有了这一认识的澄清之后我们再假设将这个问题上升到先验的程度，即不考虑任何经验，然后真正的问题才浮现在我们眼前，三种结果也真正成为可能。可惜我必须承认自己无法解答这个问题，至少我现在无法解答，所以我是秉着把这个问题当做训诫的态度提出并将其谨慎地放置在自己的“主动规范意识”之中。</li>
+</ul></li>
 </ul>
 </div>
 </div>
 
-<div id="outline-container-sec-33" class="outline-2">
-<h2 id="sec-33">2016.10.09</h2>
-<div class="outline-text-2" id="text-33">
+<div id="outline-container-org3795e6a" class="outline-2">
+<h2 id="org3795e6a">2016.10.09</h2>
+<div class="outline-text-2" id="text-org3795e6a">
 <p>
 <b>名词归类的不成熟尝试</b>
 </p>
@@ -1183,7 +1204,7 @@ for the JavaScript code in this tag.
 先验=先验认识=早期体验认识+只有思验感性的思验整体+先验知性
 </p>
 
-<hr  />
+<hr />
 
 <p>
 认识=体验认识+经验认识+经验知识产生的认识+先验认识
@@ -1227,9 +1248,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-34" class="outline-2">
-<h2 id="sec-34">2016.10.10</h2>
-<div class="outline-text-2" id="text-34">
+<div id="outline-container-orga3b0350" class="outline-2">
+<h2 id="orga3b0350">2016.10.10</h2>
+<div class="outline-text-2" id="text-orga3b0350">
 <p>
 <b>经验神话、先验神话、体验神话</b>
 </p>
@@ -1244,9 +1265,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-35" class="outline-2">
-<h2 id="sec-35">2016.10.11</h2>
-<div class="outline-text-2" id="text-35">
+<div id="outline-container-org29e61b4" class="outline-2">
+<h2 id="org29e61b4">2016.10.11</h2>
+<div class="outline-text-2" id="text-org29e61b4">
 <p>
 <b>纯粹经验的经验知识</b>
 </p>
@@ -1265,9 +1286,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-36" class="outline-2">
-<h2 id="sec-36">2016.10.12</h2>
-<div class="outline-text-2" id="text-36">
+<div id="outline-container-org13e7142" class="outline-2">
+<h2 id="org13e7142">2016.10.12</h2>
+<div class="outline-text-2" id="text-org13e7142">
 <p>
 <b>先验认识</b>
 </p>
@@ -1286,35 +1307,28 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-37" class="outline-2">
-<h2 id="sec-37">2016.10.13</h2>
-<div class="outline-text-2" id="text-37">
+<div id="outline-container-org24452de" class="outline-2">
+<h2 id="org24452de">2016.10.13</h2>
+<div class="outline-text-2" id="text-org24452de">
 <p>
 <b>理从何来</b>
 </p>
 
 <ul class="org-ul">
-<li>在企图回答这个问题之前我们需要反过来先问一个问题，什么情况下不需要理性存在？当清楚了先验只是认识，且是感性认识，然后我们便知道了哪怕没有体验的知性与经验记忆我们依旧可以单独完成一个循环，由感性与知性。这一循环可以简述如下：体验感性→思验感性→体验认识→先验知性→先验认识→先验感性→经验认识→思验感性→体验感性。（所谓的“先验感性”原本是用来本验之上的，因为没有了经验记忆的存在所以直接运用在经验认识之上。经验认识在这里也只能作为“经过先验认识的可运用的认识”这一文字意思理解，而不是我们通常所说的知性的经验。）
-</li>
-<li>可我们终究是有记忆的，并因此赋予体验和经验知性的能力（如果这个能力的表述最终被视为歪论，那么也一定有相同目的的能力的全新表述作为代替），一个完整的简单的统觉之下就此有了以几何倍数增长的认识，而一个认识只要被认识到它便永远的在你前意识中──正如两次日记所说的一样，理性就是在这个环境下产生的，当知性、感性的综合与分析做不到让思验在综合的基础上有所分析，理性便是唯一的答案。
-</li>
-<li>理性不等于理，我们的确看起来让理性有了一个答案，但我们并未因此让理也有一个答案。自宋以来理学盛行，我未敢想有所超越，事实上我只是给出了一个虽然以不同文字描述但却形式上类似的答案，只有更加拙劣的可能没有超越的可能。（理性是一种能力，理是一种认知。）
-</li>
-<li>理不是凭空出现的，既然它是一种认知，那么在认知图型上必然有其根源。同时我们虽然至今无法肯定是理性产生了理，还是理产生了理性，但是理性与理密不可分的关系是已经可以确立的，因此我们可以试着跟随理性的脚步来探查理的踪迹。我们知道哪怕理性没有被确立以前认知依旧进行着，在这个时候认知有两种（体验认识和先验认识），分清了已有的认知先后关系之后便只剩下一种──先验认识。先验认识是基础的基础、是常识的常识，如今的我们哪怕将它看作是一切认知的根源也并不过分，所以我们初步的假设是可以这样说的：理从先验来。
-</li>
-<li>事情从来不是这样简单，正如知性的拓展最终发展到理性的产生一样，我们只说理从先验来也是不合时宜的，当我们深入到理性的产生的那种记忆纷呈、显象缤纷却无法给出形式分析下的统一的时候，我们知道理虽从先验来，但也只是一小块再平常没有的基石而已。正如经验记忆来自体验知性却只受到被本验利用的先验认识的某部分的间接修饰一样，在理性从知性来的历程中真正的理之源泉应该是经验认识。
-</li>
-<li>仅仅如此判断还是不够的，我们可以因为思验形式的确立而确立理性从知性来，可我们不该就此遗忘理性与知识的关系，进而忽略理与知识的关系。并非仅仅理性产生知识，理也不可能等于知识，但是知识的双面来源是可以套入理的来源的，因为作为理性能力的理的认知不是固有不变的某种究极知识，如果希望从理性方面更有效率地分析理必须还有一个更加直观明确的来源，和知识一样，自体验认识来。
-</li>
-<li>理从何来？理自以先验认识为常识的经验认识来，理自以生理器官为感觉的体验认识来，我们甚至还可以武断地进一步假设理是认知的原则性认知，理是认知的判断规范性认知。
-</li>
+<li>在企图回答这个问题之前我们需要反过来先问一个问题，什么情况下不需要理性存在？当清楚了先验只是认识，且是感性认识，然后我们便知道了哪怕没有体验的知性与经验记忆我们依旧可以单独完成一个循环，由感性与知性。这一循环可以简述如下：体验感性→思验感性→体验认识→先验知性→先验认识→先验感性→经验认识→思验感性→体验感性。（所谓的“先验感性”原本是用来本验之上的，因为没有了经验记忆的存在所以直接运用在经验认识之上。经验认识在这里也只能作为“经过先验认识的可运用的认识”这一文字意思理解，而不是我们通常所说的知性的经验。）</li>
+<li>可我们终究是有记忆的，并因此赋予体验和经验知性的能力（如果这个能力的表述最终被视为歪论，那么也一定有相同目的的能力的全新表述作为代替），一个完整的简单的统觉之下就此有了以几何倍数增长的认识，而一个认识只要被认识到它便永远的在你前意识中──正如两次日记所说的一样，理性就是在这个环境下产生的，当知性、感性的综合与分析做不到让思验在综合的基础上有所分析，理性便是唯一的答案。</li>
+<li>理性不等于理，我们的确看起来让理性有了一个答案，但我们并未因此让理也有一个答案。自宋以来理学盛行，我未敢想有所超越，事实上我只是给出了一个虽然以不同文字描述但却形式上类似的答案，只有更加拙劣的可能没有超越的可能。（理性是一种能力，理是一种认知。）</li>
+<li>理不是凭空出现的，既然它是一种认知，那么在认知图型上必然有其根源。同时我们虽然至今无法肯定是理性产生了理，还是理产生了理性，但是理性与理密不可分的关系是已经可以确立的，因此我们可以试着跟随理性的脚步来探查理的踪迹。我们知道哪怕理性没有被确立以前认知依旧进行着，在这个时候认知有两种（体验认识和先验认识），分清了已有的认知先后关系之后便只剩下一种──先验认识。先验认识是基础的基础、是常识的常识，如今的我们哪怕将它看作是一切认知的根源也并不过分，所以我们初步的假设是可以这样说的：理从先验来。</li>
+<li>事情从来不是这样简单，正如知性的拓展最终发展到理性的产生一样，我们只说理从先验来也是不合时宜的，当我们深入到理性的产生的那种记忆纷呈、显象缤纷却无法给出形式分析下的统一的时候，我们知道理虽从先验来，但也只是一小块再平常没有的基石而已。正如经验记忆来自体验知性却只受到被本验利用的先验认识的某部分的间接修饰一样，在理性从知性来的历程中真正的理之源泉应该是经验认识。</li>
+<li>仅仅如此判断还是不够的，我们可以因为思验形式的确立而确立理性从知性来，可我们不该就此遗忘理性与知识的关系，进而忽略理与知识的关系。并非仅仅理性产生知识，理也不可能等于知识，但是知识的双面来源是可以套入理的来源的，因为作为理性能力的理的认知不是固有不变的某种究极知识，如果希望从理性方面更有效率地分析理必须还有一个更加直观明确的来源，和知识一样，自体验认识来。</li>
+<li>理从何来？理自以先验认识为常识的经验认识来，理自以生理器官为感觉的体验认识来，我们甚至还可以武断地进一步假设理是认知的原则性认知，理是认知的判断规范性认知。</li>
 </ul>
 </div>
 </div>
 
-<div id="outline-container-sec-38" class="outline-2">
-<h2 id="sec-38">2016.10.14</h2>
-<div class="outline-text-2" id="text-38">
+<div id="outline-container-org10e80fa" class="outline-2">
+<h2 id="org10e80fa">2016.10.14</h2>
+<div class="outline-text-2" id="text-org10e80fa">
 <p>
 <b>环境适应问题</b>
 </p>
@@ -1333,9 +1347,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-39" class="outline-2">
-<h2 id="sec-39">2016.10.15</h2>
-<div class="outline-text-2" id="text-39">
+<div id="outline-container-org2b86046" class="outline-2">
+<h2 id="org2b86046">2016.10.15</h2>
+<div class="outline-text-2" id="text-org2b86046">
 <p>
 <b>思验感性整体的理念</b>
 </p>
@@ -1354,9 +1368,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-40" class="outline-2">
-<h2 id="sec-40">2016.10.16</h2>
-<div class="outline-text-2" id="text-40">
+<div id="outline-container-org5a70938" class="outline-2">
+<h2 id="org5a70938">2016.10.16</h2>
+<div class="outline-text-2" id="text-org5a70938">
 <p>
 <b>内容、形式、整体</b>
 </p>
@@ -1366,12 +1380,9 @@ for the JavaScript code in this tag.
 </p>
 
 <ul class="org-ul">
-<li>内容凭借的是认识，包括体验感性认识、经验知性认识、知识知性认识三种。可以发现内容的认识并非认识概念下所隶属的全部，这是因为内容做为对象认知组成部分之一它首要的基础就是能够随时随地被主动认识到，而不是曾经被认识到，又或被利用认识到。
-</li>
-<li>形式凭借的是知识，而知识凭借的是理性、知性、感性三者的结合，感性和知性做为内容的本有物并非形式所专用（以对象的对象为形式所使用），所以形式真正的重点在于理性。有错觉十分容易以为形式本身就是对内容的综合，因为毕竟知识对于认识来说是归纳性质的，但必须清楚这种归纳是建立在对认识的分析基础上的，我们是发现了分析的形式上的同一，而归纳仅仅只是后来者的作用而已，并非行为意义本身。
-</li>
-<li>整体凭借的是意识，包括被动意识、主动意识、主动规范意识三种。所谓整体，其实就是将内容与形式融合在一起，只是这种融合不是简单的相互明确对应的关系的融合，而是交错的，理论上说你现有认知下有多少种认识和知识就有多少种倍数的融合可能。可因为意识的有限毕竟无法完全一一尝试，因此从实际出发整体的融合虽然是交错的，但也是规律的，哪怕我们常说“融会贯通”那也只是有归属的融合（这时候才用到形式的归纳作用，或者更高层次的理念作为归属依据）。
-</li>
+<li>内容凭借的是认识，包括体验感性认识、经验知性认识、知识知性认识三种。可以发现内容的认识并非认识概念下所隶属的全部，这是因为内容做为对象认知组成部分之一它首要的基础就是能够随时随地被主动认识到，而不是曾经被认识到，又或被利用认识到。</li>
+<li>形式凭借的是知识，而知识凭借的是理性、知性、感性三者的结合，感性和知性做为内容的本有物并非形式所专用（以对象的对象为形式所使用），所以形式真正的重点在于理性。有错觉十分容易以为形式本身就是对内容的综合，因为毕竟知识对于认识来说是归纳性质的，但必须清楚这种归纳是建立在对认识的分析基础上的，我们是发现了分析的形式上的同一，而归纳仅仅只是后来者的作用而已，并非行为意义本身。</li>
+<li>整体凭借的是意识，包括被动意识、主动意识、主动规范意识三种。所谓整体，其实就是将内容与形式融合在一起，只是这种融合不是简单的相互明确对应的关系的融合，而是交错的，理论上说你现有认知下有多少种认识和知识就有多少种倍数的融合可能。可因为意识的有限毕竟无法完全一一尝试，因此从实际出发整体的融合虽然是交错的，但也是规律的，哪怕我们常说“融会贯通”那也只是有归属的融合（这时候才用到形式的归纳作用，或者更高层次的理念作为归属依据）。</li>
 </ul>
 
 <p>
@@ -1380,9 +1391,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-41" class="outline-2">
-<h2 id="sec-41">2016.10.17</h2>
-<div class="outline-text-2" id="text-41">
+<div id="outline-container-org9c8bd14" class="outline-2">
+<h2 id="org9c8bd14">2016.10.17</h2>
+<div class="outline-text-2" id="text-org9c8bd14">
 <p>
 <b>理念感性</b>
 </p>
@@ -1397,9 +1408,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-42" class="outline-2">
-<h2 id="sec-42">2016.10.18</h2>
-<div class="outline-text-2" id="text-42">
+<div id="outline-container-org5036612" class="outline-2">
+<h2 id="org5036612">2016.10.18</h2>
+<div class="outline-text-2" id="text-org5036612">
 <p>
 <b>以己度人</b>
 </p>
@@ -1423,38 +1434,29 @@ for the JavaScript code in this tag.
 <ul class="org-ul">
 <li>先验存在
 <ul class="org-ul">
-<li>表体与实质的隔阂
-</li>
-</ul>
-</li>
+<li>表体与实质的隔阂</li>
+</ul></li>
 <li>经验存在
 <ul class="org-ul">
-<li>表体与表体的隔阂
-</li>
-<li>存在与不在的定性（定义与性质）
-</li>
-</ul>
-</li>
+<li>表体与表体的隔阂</li>
+<li>存在与不在的定性（定义与性质）</li>
+</ul></li>
 </ul>
 </div>
 </div>
 
-<div id="outline-container-sec-43" class="outline-2">
-<h2 id="sec-43">2016.10.19</h2>
-<div class="outline-text-2" id="text-43">
+<div id="outline-container-org6d6c4d9" class="outline-2">
+<h2 id="org6d6c4d9">2016.10.19</h2>
+<div class="outline-text-2" id="text-org6d6c4d9">
 <p>
 <b>手段</b>
 </p>
 
 <ul class="org-ul">
-<li>表现
-</li>
-<li>分析
-</li>
-<li>综合
-</li>
-<li>融合
-</li>
+<li>表现</li>
+<li>分析</li>
+<li>综合</li>
+<li>融合</li>
 </ul>
 
 <p>
@@ -1471,9 +1473,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-44" class="outline-2">
-<h2 id="sec-44">2016.10.20</h2>
-<div class="outline-text-2" id="text-44">
+<div id="outline-container-org4ef4d4c" class="outline-2">
+<h2 id="org4ef4d4c">2016.10.20</h2>
+<div class="outline-text-2" id="text-org4ef4d4c">
 <p>
 <b>固定范围、相对范围</b>
 </p>
@@ -1492,9 +1494,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-45" class="outline-2">
-<h2 id="sec-45">2016.10.21</h2>
-<div class="outline-text-2" id="text-45">
+<div id="outline-container-orgc327901" class="outline-2">
+<h2 id="orgc327901">2016.10.21</h2>
+<div class="outline-text-2" id="text-orgc327901">
 <p>
 <b>何为验</b>
 </p>
@@ -1504,12 +1506,9 @@ for the JavaScript code in this tag.
 </p>
 
 <ul class="org-ul">
-<li>有所觉。认识起于觉，是运用生理基础有所察觉，然后才在心理开始认识。
-</li>
-<li>有所证。认识在于证，是运用现有认知有所证明，然后才在心理有所认识。
-</li>
-<li>有所用。认识终于用，是运用心理认识有所应用，然后才在生理转为反映。
-</li>
+<li>有所觉。认识起于觉，是运用生理基础有所察觉，然后才在心理开始认识。</li>
+<li>有所证。认识在于证，是运用现有认知有所证明，然后才在心理有所认识。</li>
+<li>有所用。认识终于用，是运用心理认识有所应用，然后才在生理转为反映。</li>
 </ul>
 
 <p>
@@ -1522,9 +1521,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-46" class="outline-2">
-<h2 id="sec-46">2016.10.22</h2>
-<div class="outline-text-2" id="text-46">
+<div id="outline-container-orgd405c70" class="outline-2">
+<h2 id="orgd405c70">2016.10.22</h2>
+<div class="outline-text-2" id="text-orgd405c70">
 <p>
 <b>时间先后</b>
 </p>
@@ -1547,9 +1546,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-47" class="outline-2">
-<h2 id="sec-47">2016.10.23</h2>
-<div class="outline-text-2" id="text-47">
+<div id="outline-container-org38e1c31" class="outline-2">
+<h2 id="org38e1c31">2016.10.23</h2>
+<div class="outline-text-2" id="text-org38e1c31">
 <p>
 <b>空间陈列</b>
 </p>
@@ -1568,9 +1567,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-48" class="outline-2">
-<h2 id="sec-48">2016.10.24</h2>
-<div class="outline-text-2" id="text-48">
+<div id="outline-container-orgf04bbbe" class="outline-2">
+<h2 id="orgf04bbbe">2016.10.24</h2>
+<div class="outline-text-2" id="text-orgf04bbbe">
 <p>
 <b>条件回溯与追溯</b>
 </p>
@@ -1593,9 +1592,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-49" class="outline-2">
-<h2 id="sec-49">2016.10.25</h2>
-<div class="outline-text-2" id="text-49">
+<div id="outline-container-org399c3f2" class="outline-2">
+<h2 id="org399c3f2">2016.10.25</h2>
+<div class="outline-text-2" id="text-org399c3f2">
 <p>
 <b>反论怀疑</b>
 </p>
@@ -1603,18 +1602,12 @@ for the JavaScript code in this tag.
 <ul class="org-ul">
 <li>我到底承认自己的否定是以怀疑为基础的，所以当我第一次看到怀疑的时候虽然强烈反驳其荒谬却从未将之弃如敝履，而是不自觉地执迷其中无法自拔。
 <ul class="org-ul">
-<li>此处怀疑是康德反论的怀疑，而不是通常意义上怀疑论的怀疑。
-</li>
-<li>所谓反论即矛盾的冲突具体所在或者对立的区分具体所在，不是意味着正反的任何一方。我们自然可以就此将其置放在理性之上（康德为营造纯粹理性以规定先验幻相所以只将其置放在理性之上），但是将反论的范围扩大到一切认知亦未尝不可。
-</li>
-<li>一个严酷的事实是当发现了反论的任何一方有新的认识，它必将打倒或者占据矛盾、对立的另一方，因为它在我们看来是更进一步的认识而以前已有的认识则只是陈旧的，未必适用于当前思考角度的。这一情况直到正反的另一方也有了更新的认识并循环上述过程，更新在这里就意味着在已有的一切认识基础之上通过认知所可能的来源有新的认识，并且这个新认识是原来所未有的、具有驳斥和批判概念的。
-</li>
-<li>双方的较量不是有新认识就可以马上有优势的存在，它是需要一个过程用以将片面的认识转化为更大范围的认识并与原有正反双方任何一方认识在范围概念上契合，而在应用的契合之后还需要进一步的辩证，辩证第一步就是怀疑。
-</li>
-<li>这样的怀疑符合我原来否定的规定，即在新得资本的情况下推到原有资本并重建资本，而不是像怀疑论的怀疑一样在固有资本的情况下推到原有资本而不重建任何资本。
-</li>
-</ul>
-</li>
+<li>此处怀疑是康德反论的怀疑，而不是通常意义上怀疑论的怀疑。</li>
+<li>所谓反论即矛盾的冲突具体所在或者对立的区分具体所在，不是意味着正反的任何一方。我们自然可以就此将其置放在理性之上（康德为营造纯粹理性以规定先验幻相所以只将其置放在理性之上），但是将反论的范围扩大到一切认知亦未尝不可。</li>
+<li>一个严酷的事实是当发现了反论的任何一方有新的认识，它必将打倒或者占据矛盾、对立的另一方，因为它在我们看来是更进一步的认识而以前已有的认识则只是陈旧的，未必适用于当前思考角度的。这一情况直到正反的另一方也有了更新的认识并循环上述过程，更新在这里就意味着在已有的一切认识基础之上通过认知所可能的来源有新的认识，并且这个新认识是原来所未有的、具有驳斥和批判概念的。</li>
+<li>双方的较量不是有新认识就可以马上有优势的存在，它是需要一个过程用以将片面的认识转化为更大范围的认识并与原有正反双方任何一方认识在范围概念上契合，而在应用的契合之后还需要进一步的辩证，辩证第一步就是怀疑。</li>
+<li>这样的怀疑符合我原来否定的规定，即在新得资本的情况下推到原有资本并重建资本，而不是像怀疑论的怀疑一样在固有资本的情况下推到原有资本而不重建任何资本。</li>
+</ul></li>
 </ul>
 
 <p>
@@ -1624,21 +1617,17 @@ for the JavaScript code in this tag.
 <ul class="org-ul">
 <li>对先验时间、空间、存在的列举并没有违反潜意识黑幕概念的规定，因为列举出来的仅仅只是先验的形式，而没有任何先验内容。试问具体先后是什么、陈列是什么、隔阂是什么……这些问题我并不能回答，因为它们都是内容的，而我之所以不能回答就是因为处在黑幕之中。
 <ul class="org-ul">
-<li>与之相反，任何体验认识和经验认识、乃至衍生出来的经验知识我们都能找到它们至少是有隶属关系的整体、形式、内容的任何一方，并且能够通过检验现实对象相互对应。
-</li>
-<li>黑幕在这里就像舞台的帷幕一样，所遮拦的是具体的内容认识，为此我们再也做不到用现实对象和黑幕之后的一切认识对应起来并得以修正、检验。而从另一方面说，当我们靠近黑幕，黑幕能够凸显出其背后认识的轮廓，并从轮廓中展现一个整体，因此潜意识的确可以被描述、形容，只是一切描述、形容都是黑幕的形式、整体，没有内容。
-</li>
-<li>理念在这里是一个特殊的概念，它有着黑幕的一切特征，可在我看来它并不属于潜意识，还需要进一步考察。
-</li>
-</ul>
-</li>
+<li>与之相反，任何体验认识和经验认识、乃至衍生出来的经验知识我们都能找到它们至少是有隶属关系的整体、形式、内容的任何一方，并且能够通过检验现实对象相互对应。</li>
+<li>黑幕在这里就像舞台的帷幕一样，所遮拦的是具体的内容认识，为此我们再也做不到用现实对象和黑幕之后的一切认识对应起来并得以修正、检验。而从另一方面说，当我们靠近黑幕，黑幕能够凸显出其背后认识的轮廓，并从轮廓中展现一个整体，因此潜意识的确可以被描述、形容，只是一切描述、形容都是黑幕的形式、整体，没有内容。</li>
+<li>理念在这里是一个特殊的概念，它有着黑幕的一切特征，可在我看来它并不属于潜意识，还需要进一步考察。</li>
+</ul></li>
 </ul>
 </div>
 </div>
 
-<div id="outline-container-sec-50" class="outline-2">
-<h2 id="sec-50">2016.10.26</h2>
-<div class="outline-text-2" id="text-50">
+<div id="outline-container-orgc6e6ea6" class="outline-2">
+<h2 id="orgc6e6ea6">2016.10.26</h2>
+<div class="outline-text-2" id="text-orgc6e6ea6">
 <p>
 <b>有限无限</b>
 </p>
@@ -1661,9 +1650,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-51" class="outline-2">
-<h2 id="sec-51">2016.10.27</h2>
-<div class="outline-text-2" id="text-51">
+<div id="outline-container-orgcd4fcbe" class="outline-2">
+<h2 id="orgcd4fcbe">2016.10.27</h2>
+<div class="outline-text-2" id="text-orgcd4fcbe">
 <p>
 <b>矛盾对立与时间空间</b>
 </p>
@@ -1686,9 +1675,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-52" class="outline-2">
-<h2 id="sec-52">2016.10.28</h2>
-<div class="outline-text-2" id="text-52">
+<div id="outline-container-org603f4e2" class="outline-2">
+<h2 id="org603f4e2">2016.10.28</h2>
+<div class="outline-text-2" id="text-org603f4e2">
 <p>
 <b>知性无感</b>
 </p>
@@ -1711,9 +1700,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-53" class="outline-2">
-<h2 id="sec-53">2016.10.29</h2>
-<div class="outline-text-2" id="text-53">
+<div id="outline-container-org9006af3" class="outline-2">
+<h2 id="org9006af3">2016.10.29</h2>
+<div class="outline-text-2" id="text-org9006af3">
 <p>
 <b>对因果的两点反思</b>
 </p>
@@ -1721,35 +1710,27 @@ for the JavaScript code in this tag.
 <ul class="org-ul">
 <li>一个循环的大视角所限定的不再是个人，是因个人循环而联系起来的整个世界循环。在这个世界循环中因个人的局限性有太多未可知、无法知，但就已经被认知的世界循环中我们能够找到现实的辩证对象，而不是因对象的缺失陷入思验黑洞。
 <ul class="org-ul">
-<li>被设想的世界概念下的自然因果序列与循环有很大不同，其中最大的区别在于因果的前者演变为后者以后就再也不可能改变，后者无法通过任何方式对前者有任何影响，而这是于实际对象的观察显象不符的。
-</li>
-<li>如果将因果双方置于时间先后之下，进而说明时间序列之前的前者和时间序列之后的前者已经完全不同，这似乎是一种让人信服的说法，可是这个说法来自一个根本性的错误。因为时间就自身而言是不被直观的，我们之所以能够认识到时间的存在是因为首先认识到了简单的因果先后关系的存在（即之前所说变化的直观演绎），如今我们又想通过时间先后进而反过来证明因果先后的区别，这是毫无理由的（除非时间自身作为一个可供直观的对象被认知，如此以时间为参照可以证明）。
-</li>
-<li>如果有自由被设定的因存在，那么现有固化的因果序列就会被打破（甚至因此不存在任何序列），因为没有理由证明这个自由被设定的因只在最初被设定，而不能被后天人工设定。我们可以因为因果对象的繁复无法理清所有的因果序列，甚至因为因果序列的久远对它最早的起因和尚未结束的最终的果无法认知，但是就因此假设一个自由被设定的存在而言是盲目荒谬的。
-</li>
-<li>关于起源和终结，无论循环还是因果，唯一可以肯定的就是与人无关，妄图用人类思维套入世界进行解释这本身就是一种僭越。
-</li>
-</ul>
-</li>
+<li>被设想的世界概念下的自然因果序列与循环有很大不同，其中最大的区别在于因果的前者演变为后者以后就再也不可能改变，后者无法通过任何方式对前者有任何影响，而这是于实际对象的观察显象不符的。</li>
+<li>如果将因果双方置于时间先后之下，进而说明时间序列之前的前者和时间序列之后的前者已经完全不同，这似乎是一种让人信服的说法，可是这个说法来自一个根本性的错误。因为时间就自身而言是不被直观的，我们之所以能够认识到时间的存在是因为首先认识到了简单的因果先后关系的存在（即之前所说变化的直观演绎），如今我们又想通过时间先后进而反过来证明因果先后的区别，这是毫无理由的（除非时间自身作为一个可供直观的对象被认知，如此以时间为参照可以证明）。</li>
+<li>如果有自由被设定的因存在，那么现有固化的因果序列就会被打破（甚至因此不存在任何序列），因为没有理由证明这个自由被设定的因只在最初被设定，而不能被后天人工设定。我们可以因为因果对象的繁复无法理清所有的因果序列，甚至因为因果序列的久远对它最早的起因和尚未结束的最终的果无法认知，但是就因此假设一个自由被设定的存在而言是盲目荒谬的。</li>
+<li>关于起源和终结，无论循环还是因果，唯一可以肯定的就是与人无关，妄图用人类思维套入世界进行解释这本身就是一种僭越。</li>
+</ul></li>
 </ul>
 
 
 <ul class="org-ul">
 <li>单纯=单一+纯粹
 <ul class="org-ul">
-<li>单一：空间概念下的独立个体。
-</li>
-<li>纯粹：除物我之外再无它物。
-</li>
-</ul>
-</li>
+<li>单一：空间概念下的独立个体。</li>
+<li>纯粹：除物我之外再无它物。</li>
+</ul></li>
 </ul>
 </div>
 </div>
 
-<div id="outline-container-sec-54" class="outline-2">
-<h2 id="sec-54">2016.10.30</h2>
-<div class="outline-text-2" id="text-54">
+<div id="outline-container-org520bc84" class="outline-2">
+<h2 id="org520bc84">2016.10.30</h2>
+<div class="outline-text-2" id="text-org520bc84">
 <p>
 <b>循环自由所在</b>
 </p>
@@ -1764,9 +1745,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-55" class="outline-2">
-<h2 id="sec-55">2016.10.31</h2>
-<div class="outline-text-2" id="text-55">
+<div id="outline-container-org12915c0" class="outline-2">
+<h2 id="org12915c0">2016.10.31</h2>
+<div class="outline-text-2" id="text-org12915c0">
 <p>
 <b>辩证的字面意思</b>
 </p>
@@ -1776,10 +1757,8 @@ for the JavaScript code in this tag.
 </p>
 
 <ul class="org-ul">
-<li>思辨。思辨是以思验理性出发一切反论怀疑基础上的否定资本所在，好比律师的辩护必须做到首先推倒原思辨命题（这一推倒无论是自己所为还是对方所为，其漏洞所在必可作为下一步命题的出发点或者参考）并驳倒对方命题，然后再驳倒的前提之下建立新的思辨命题。
-</li>
-<li>实证。实证并不是单以体验为基础，对于辩证双方任何一方的实证必须在体验认识和经验认识上同时得到观点的统一（同时保证其出发的对象必须是现实存在的且是同一对象），然后才能成为单方面的实证（实际证据）并因此必须具有实验可重复性。
-</li>
+<li>思辨。思辨是以思验理性出发一切反论怀疑基础上的否定资本所在，好比律师的辩护必须做到首先推倒原思辨命题（这一推倒无论是自己所为还是对方所为，其漏洞所在必可作为下一步命题的出发点或者参考）并驳倒对方命题，然后再驳倒的前提之下建立新的思辨命题。</li>
+<li>实证。实证并不是单以体验为基础，对于辩证双方任何一方的实证必须在体验认识和经验认识上同时得到观点的统一（同时保证其出发的对象必须是现实存在的且是同一对象），然后才能成为单方面的实证（实际证据）并因此必须具有实验可重复性。</li>
 </ul>
 
 <p>
@@ -1787,21 +1766,17 @@ for the JavaScript code in this tag.
 </p>
 
 <ul class="org-ul">
-<li>思辩与实证不分先后，同时进行，双方互为基石，且不可以单方面穷究并因此失去对方的支持。
-</li>
-<li>有爱无信。对辩证的任何一方可以存在感情上的偏爱，但是不可以形成单方面的信仰或执迷，这必然会造成辩证对方辩护与证明的缺失。
-</li>
-<li>对从同一范围论题出发单纯体验认识或经验认识的不同只能作为辩证双方论断命题的存在，而不能变成双方的辩护或证明。
-</li>
-<li>实践只能是实证的开始，自省也只能是思辨的开始。
-</li>
+<li>思辩与实证不分先后，同时进行，双方互为基石，且不可以单方面穷究并因此失去对方的支持。</li>
+<li>有爱无信。对辩证的任何一方可以存在感情上的偏爱，但是不可以形成单方面的信仰或执迷，这必然会造成辩证对方辩护与证明的缺失。</li>
+<li>对从同一范围论题出发单纯体验认识或经验认识的不同只能作为辩证双方论断命题的存在，而不能变成双方的辩护或证明。</li>
+<li>实践只能是实证的开始，自省也只能是思辨的开始。</li>
 </ul>
 </div>
 </div>
 
-<div id="outline-container-sec-56" class="outline-2">
-<h2 id="sec-56">2016.11.01</h2>
-<div class="outline-text-2" id="text-56">
+<div id="outline-container-org8d0c124" class="outline-2">
+<h2 id="org8d0c124">2016.11.01</h2>
+<div class="outline-text-2" id="text-org8d0c124">
 <p>
 <b>一次否定的辩护</b>
 </p>
@@ -1816,9 +1791,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-57" class="outline-2">
-<h2 id="sec-57">2016.11.02</h2>
-<div class="outline-text-2" id="text-57">
+<div id="outline-container-org50f8059" class="outline-2">
+<h2 id="org50f8059">2016.11.02</h2>
+<div class="outline-text-2" id="text-org50f8059">
 <p>
 <b>对象的直接和间接</b>
 </p>
@@ -1837,9 +1812,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-58" class="outline-2">
-<h2 id="sec-58">2016.11.03</h2>
-<div class="outline-text-2" id="text-58">
+<div id="outline-container-org8771d9b" class="outline-2">
+<h2 id="org8771d9b">2016.11.03</h2>
+<div class="outline-text-2" id="text-org8771d9b">
 <p>
 <b>参照只是条件不变的对象</b>
 </p>
@@ -1854,33 +1829,27 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-59" class="outline-2">
-<h2 id="sec-59">2016.11.04</h2>
-<div class="outline-text-2" id="text-59">
+<div id="outline-container-orgb09a4fe" class="outline-2">
+<h2 id="orgb09a4fe">2016.11.04</h2>
+<div class="outline-text-2" id="text-orgb09a4fe">
 <p>
 <b>表象与显象</b>
 </p>
 
 <ul class="org-ul">
-<li>表体的认识是现象的。
-</li>
-<li>在现象中可以分出表体的表象和表体的显象，分别对应表体经验认识和表体体验认识。
-</li>
-<li>表象是可知觉的主观，显象是可直觉的直观。
-</li>
-<li>对象的规定是在表象和显象的基础之上找到二者认识统一的现象，进而从现象中认识表体的实在。
-</li>
-<li>非生命表体的知性是我们所无法接触的，因为非生命表体任何的表现对于表体自身而言都只能是感性的，知性必须是表体通过除自身以外工具运用地表现出来。工具在这里意味着可以脱离表体自身表现被指定的唯一表体，在没有其他因素干扰的情况下脱离了空间与时间（空间和时间在这里也属于非生命表体的对象）的环境限制，不会因为这一表体的不存在而丧失原有的功能（相应的，正因为空间和时间的持久存在所以其功能作用也是持久的，我们自然也可以将空间和时间的持久功能作为空间和时间的感性实在的反向证明之一）。
-</li>
-<li>对于表象和显象的先后以及对于人类而言表体与经验、体验的先后的探讨等同条件的回溯和追溯。
-</li>
+<li>表体的认识是现象的。</li>
+<li>在现象中可以分出表体的表象和表体的显象，分别对应表体经验认识和表体体验认识。</li>
+<li>表象是可知觉的主观，显象是可直觉的直观。</li>
+<li>对象的规定是在表象和显象的基础之上找到二者认识统一的现象，进而从现象中认识表体的实在。</li>
+<li>非生命表体的知性是我们所无法接触的，因为非生命表体任何的表现对于表体自身而言都只能是感性的，知性必须是表体通过除自身以外工具运用地表现出来。工具在这里意味着可以脱离表体自身表现被指定的唯一表体，在没有其他因素干扰的情况下脱离了空间与时间（空间和时间在这里也属于非生命表体的对象）的环境限制，不会因为这一表体的不存在而丧失原有的功能（相应的，正因为空间和时间的持久存在所以其功能作用也是持久的，我们自然也可以将空间和时间的持久功能作为空间和时间的感性实在的反向证明之一）。</li>
+<li>对于表象和显象的先后以及对于人类而言表体与经验、体验的先后的探讨等同条件的回溯和追溯。</li>
 </ul>
 </div>
 </div>
 
-<div id="outline-container-sec-60" class="outline-2">
-<h2 id="sec-60">2016.11.05</h2>
-<div class="outline-text-2" id="text-60">
+<div id="outline-container-orgb7c8933" class="outline-2">
+<h2 id="orgb7c8933">2016.11.05</h2>
+<div class="outline-text-2" id="text-orgb7c8933">
 <p>
 <b>手段是间接对象</b>
 </p>
@@ -1894,17 +1863,15 @@ for the JavaScript code in this tag.
 </p>
 
 <ul class="org-ul">
-<li>对于从原有辩证思辨基础上衍生出来的虚构思辨依旧运用原有手段进行理解，在实证看来是找不到相应的证明，因此对实证而言是不可知的。
-</li>
-<li>对于已经找到的直接对象实证认识没有相应的已知手段进行理解，在思辨看来是找不到相应的辩护，因此对思辨而言是未知的。
-</li>
+<li>对于从原有辩证思辨基础上衍生出来的虚构思辨依旧运用原有手段进行理解，在实证看来是找不到相应的证明，因此对实证而言是不可知的。</li>
+<li>对于已经找到的直接对象实证认识没有相应的已知手段进行理解，在思辨看来是找不到相应的辩护，因此对思辨而言是未知的。</li>
 </ul>
 </div>
 </div>
 
-<div id="outline-container-sec-61" class="outline-2">
-<h2 id="sec-61">2016.11.06</h2>
-<div class="outline-text-2" id="text-61">
+<div id="outline-container-org6976f8f" class="outline-2">
+<h2 id="org6976f8f">2016.11.06</h2>
+<div class="outline-text-2" id="text-org6976f8f">
 <p>
 <b>对象判断</b>
 </p>
@@ -1919,9 +1886,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-62" class="outline-2">
-<h2 id="sec-62">2016.11.07</h2>
-<div class="outline-text-2" id="text-62">
+<div id="outline-container-orgb86d1d7" class="outline-2">
+<h2 id="orgb86d1d7">2016.11.07</h2>
+<div class="outline-text-2" id="text-orgb86d1d7">
 <p>
 <b>不限定的思辨和被限定的实证</b>
 </p>
@@ -1948,9 +1915,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-63" class="outline-2">
-<h2 id="sec-63">2016.11.08</h2>
-<div class="outline-text-2" id="text-63">
+<div id="outline-container-orgd7c8861" class="outline-2">
+<h2 id="orgd7c8861">2016.11.08</h2>
+<div class="outline-text-2" id="text-orgd7c8861">
 <p>
 <b>形式玄想</b>
 </p>
@@ -1972,19 +1939,16 @@ for the JavaScript code in this tag.
 </p>
 
 <ul class="org-ul">
-<li>实质是除代表某一表体的直接对象以外内部间接对象的统称。
-</li>
-<li>表体是以认识为中心面对一切现象的直接对象来源的统称。
-</li>
-<li>幻象是对认识单纯思辨产生的没有任何实际现象支持的无参照辩护的统称。
-</li>
+<li>实质是除代表某一表体的直接对象以外内部间接对象的统称。</li>
+<li>表体是以认识为中心面对一切现象的直接对象来源的统称。</li>
+<li>幻象是对认识单纯思辨产生的没有任何实际现象支持的无参照辩护的统称。</li>
 </ul>
 </div>
 </div>
 
-<div id="outline-container-sec-64" class="outline-2">
-<h2 id="sec-64">2016.11.09</h2>
-<div class="outline-text-2" id="text-64">
+<div id="outline-container-org13a99c8" class="outline-2">
+<h2 id="org13a99c8">2016.11.09</h2>
+<div class="outline-text-2" id="text-org13a99c8">
 <p>
 <b>条件的隶属和附属</b>
 </p>
@@ -1999,9 +1963,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-65" class="outline-2">
-<h2 id="sec-65">2016.11.10</h2>
-<div class="outline-text-2" id="text-65">
+<div id="outline-container-orgb29c814" class="outline-2">
+<h2 id="orgb29c814">2016.11.10</h2>
+<div class="outline-text-2" id="text-orgb29c814">
 <p>
 <b>因果的自由</b>
 </p>
@@ -2020,9 +1984,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-66" class="outline-2">
-<h2 id="sec-66">2016.11.11</h2>
-<div class="outline-text-2" id="text-66">
+<div id="outline-container-org8825d7a" class="outline-2">
+<h2 id="org8825d7a">2016.11.11</h2>
+<div class="outline-text-2" id="text-org8825d7a">
 <p>
 <b>因果形式和循环形式</b>
 </p>
@@ -2041,9 +2005,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-67" class="outline-2">
-<h2 id="sec-67">2016.11.12</h2>
-<div class="outline-text-2" id="text-67">
+<div id="outline-container-org1441a6e" class="outline-2">
+<h2 id="org1441a6e">2016.11.12</h2>
+<div class="outline-text-2" id="text-org1441a6e">
 <p>
 <b>实质黑幕</b>
 </p>
@@ -2062,9 +2026,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-68" class="outline-2">
-<h2 id="sec-68">2016.11.13</h2>
-<div class="outline-text-2" id="text-68">
+<div id="outline-container-orga2af499" class="outline-2">
+<h2 id="orga2af499">2016.11.13</h2>
+<div class="outline-text-2" id="text-orga2af499">
 <p>
 <b>理性所得后天先验的可能</b>
 </p>
@@ -2091,9 +2055,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-69" class="outline-2">
-<h2 id="sec-69">2016.11.14</h2>
-<div class="outline-text-2" id="text-69">
+<div id="outline-container-orgece8868" class="outline-2">
+<h2 id="orgece8868">2016.11.14</h2>
+<div class="outline-text-2" id="text-orgece8868">
 <p>
 <b>先后与参照初谈</b>
 </p>
@@ -2105,24 +2069,18 @@ for the JavaScript code in this tag.
 <ul class="org-ul">
 <li>从经验存在考虑。
 <ul class="org-ul">
-<li>对存在与不在的区分已经自行区分了对象的先后，哪怕是在同一对象之中，对对象状态演绎的诠释，从一个对象表体固态不变认识到其变化的状态，并排列出这些对象状态的顺序，亦即先后。这是在基础时间概念之下的先后，也就是说因为有了时间的参照，先后才得以成立，在时间之中先后意味着演绎的更替。
-</li>
-<li>对表体和表体隔阂的认识也能够区分对象的先后，只是对象在这里不可能是同一的，它至少有两个对象。因为隔阂的定性，对象表体之间必然是独立的，而这一独立可以被直观到其显象的先后概念。这是在基础空间概念之下的先后，因为有了空间的参照，先后被确立为物与物之间、人与人之间方位的排列。
-</li>
-</ul>
-</li>
+<li>对存在与不在的区分已经自行区分了对象的先后，哪怕是在同一对象之中，对对象状态演绎的诠释，从一个对象表体固态不变认识到其变化的状态，并排列出这些对象状态的顺序，亦即先后。这是在基础时间概念之下的先后，也就是说因为有了时间的参照，先后才得以成立，在时间之中先后意味着演绎的更替。</li>
+<li>对表体和表体隔阂的认识也能够区分对象的先后，只是对象在这里不可能是同一的，它至少有两个对象。因为隔阂的定性，对象表体之间必然是独立的，而这一独立可以被直观到其显象的先后概念。这是在基础空间概念之下的先后，因为有了空间的参照，先后被确立为物与物之间、人与人之间方位的排列。</li>
+</ul></li>
 </ul>
 
 
 <ul class="org-ul">
 <li>从理性逻辑考虑。
 <ul class="org-ul">
-<li>如果我们暂时放下辩证的考虑，进行单纯的思辨，我们会发现无论是对什么概念试图进行推论，我们总能意识到这一概念如果没有更本源的概念作为支撑，这一概念从严格意义上说就是不成立的（回溯如此，追溯也不能例外）。自然，无穷尽的思辨早已被证明人力所不能及，但就不限定的思辨而言我们也早已确定下了众多虽然不完全但是切实无法避免的推论序列。对这些序列的排序也是在其中区分了先后的概念，它并不依赖外界某参照，因为它所思辨的对象本身就不是实存的，它的参照只是理性所得的断言以及理性针对的对象本身，亦即因果形式之先后。
-</li>
-<li>针对现实的理性逻辑是对现实认识的区分的再次区分（详见 10 月 16 号日记），在现实之中区分出整体、内容、形式三个概念，并在这三个概念之中进行无法打破的良性循环。逻辑循环乍看之下似乎从根本上否定了先后的存在，的确从循环大局的角度看先后是不存在的，但是不应该忘记这个逻辑循环并不是为形式专有服务的，它是在形式与内容（用逻辑解释现实，现实又反过来作为逻辑的支撑）之间轮替，进而在轮替之中找到表体的整体认识，从这个意义上说循环也有先后，即形式与内容轮替循环之先后。
-</li>
-</ul>
-</li>
+<li>如果我们暂时放下辩证的考虑，进行单纯的思辨，我们会发现无论是对什么概念试图进行推论，我们总能意识到这一概念如果没有更本源的概念作为支撑，这一概念从严格意义上说就是不成立的（回溯如此，追溯也不能例外）。自然，无穷尽的思辨早已被证明人力所不能及，但就不限定的思辨而言我们也早已确定下了众多虽然不完全但是切实无法避免的推论序列。对这些序列的排序也是在其中区分了先后的概念，它并不依赖外界某参照，因为它所思辨的对象本身就不是实存的，它的参照只是理性所得的断言以及理性针对的对象本身，亦即因果形式之先后。</li>
+<li>针对现实的理性逻辑是对现实认识的区分的再次区分（详见 10 月 16 号日记），在现实之中区分出整体、内容、形式三个概念，并在这三个概念之中进行无法打破的良性循环。逻辑循环乍看之下似乎从根本上否定了先后的存在，的确从循环大局的角度看先后是不存在的，但是不应该忘记这个逻辑循环并不是为形式专有服务的，它是在形式与内容（用逻辑解释现实，现实又反过来作为逻辑的支撑）之间轮替，进而在轮替之中找到表体的整体认识，从这个意义上说循环也有先后，即形式与内容轮替循环之先后。</li>
+</ul></li>
 </ul>
 
 <p>
@@ -2131,9 +2089,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-70" class="outline-2">
-<h2 id="sec-70">2016.11.15</h2>
-<div class="outline-text-2" id="text-70">
+<div id="outline-container-org61a28a4" class="outline-2">
+<h2 id="org61a28a4">2016.11.15</h2>
+<div class="outline-text-2" id="text-org61a28a4">
 <p>
 <b>后天感性的理念满足 - 切实理想初谈</b>
 </p>
@@ -2148,9 +2106,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-71" class="outline-2">
-<h2 id="sec-71">2016.11.16</h2>
-<div class="outline-text-2" id="text-71">
+<div id="outline-container-org023741e" class="outline-2">
+<h2 id="org023741e">2016.11.16</h2>
+<div class="outline-text-2" id="text-org023741e">
 <p>
 <b>对先验理念和切实理想之完美的否定</b>
 </p>
@@ -2169,9 +2127,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-72" class="outline-2">
-<h2 id="sec-72">2016.11.17</h2>
-<div class="outline-text-2" id="text-72">
+<div id="outline-container-org718bacc" class="outline-2">
+<h2 id="org718bacc">2016.11.17</h2>
+<div class="outline-text-2" id="text-org718bacc">
 <p>
 <b>对用循环推翻无条件的一次辩护</b>
 </p>
@@ -2190,9 +2148,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-73" class="outline-2">
-<h2 id="sec-73">2016.11.18</h2>
-<div class="outline-text-2" id="text-73">
+<div id="outline-container-orgdbceb19" class="outline-2">
+<h2 id="orgdbceb19">2016.11.18</h2>
+<div class="outline-text-2" id="text-orgdbceb19">
 <p>
 <b>问题、答案、解答初谈</b>
 </p>
@@ -2200,49 +2158,37 @@ for the JavaScript code in this tag.
 <ul class="org-ul">
 <li>首先明确的是问题，问题从何而来？
 <ul class="org-ul">
-<li>问题从现象来，在现象中区分出来的显象和表象被感官世界所包围，以体验感性认识和经验知性认识的身份展现在意识之中。可是这样的认识不是完全的，这样的认识没有将其形式、甚至将其整体所能够表现出来的一切内容一齐涌入意识，它需要我们人为的加工才能被厘清，因此可以说问题从现象来。
-</li>
-<li>问题从思辨来，在对现象的人为加工之中不可避免地，我们会对加工的本身程序提出质疑，并且随时尝试着提出比之原有程序更为精密高效的加工程序。可是新的程序从来不会因为被提出就被接受，它必须经历思辨的反复，然后在思辨之中磨合或抛弃，这样的思辨行为就会在现象问题之上、甚至抛开现象带来新的问题。
-</li>
-<li>问题从实践来，当我们将上述问题得到阶段性的解答，那么下一步就是运用这样的解答来对感官世界做出改变。这种改变依旧是以认识展现出来，可是作为认识的基础不再是表体现象，也不再是思辨的反复，而是表体内容的形式知识，所以此时的认识是一个被意象的整体，需要在这个意象整体的认识之上重新化为表体内容的实践认识──简单而言，即对于如何行为产生新的问题。
-</li>
-</ul>
-</li>
+<li>问题从现象来，在现象中区分出来的显象和表象被感官世界所包围，以体验感性认识和经验知性认识的身份展现在意识之中。可是这样的认识不是完全的，这样的认识没有将其形式、甚至将其整体所能够表现出来的一切内容一齐涌入意识，它需要我们人为的加工才能被厘清，因此可以说问题从现象来。</li>
+<li>问题从思辨来，在对现象的人为加工之中不可避免地，我们会对加工的本身程序提出质疑，并且随时尝试着提出比之原有程序更为精密高效的加工程序。可是新的程序从来不会因为被提出就被接受，它必须经历思辨的反复，然后在思辨之中磨合或抛弃，这样的思辨行为就会在现象问题之上、甚至抛开现象带来新的问题。</li>
+<li>问题从实践来，当我们将上述问题得到阶段性的解答，那么下一步就是运用这样的解答来对感官世界做出改变。这种改变依旧是以认识展现出来，可是作为认识的基础不再是表体现象，也不再是思辨的反复，而是表体内容的形式知识，所以此时的认识是一个被意象的整体，需要在这个意象整体的认识之上重新化为表体内容的实践认识──简单而言，即对于如何行为产生新的问题。</li>
+</ul></li>
 </ul>
 
 
 <ul class="org-ul">
 <li>最后可以被发掘出来的是答案，对于答案不是探讨它从何来，而是探讨答案之性质，什么是答案？我们自然可以说对问题有所回答就是答案，但是现阶段的问题被区分成三种，那么在这三种问题的回答中是否是同一性质的？
 <ul class="org-ul">
-<li>对现象问题的回答既是最先被回答也是最后被回答，最先是因为它必须首先让体验认识和经验认识到针对同一个现象问题在认识趋向上同一，最后则是因为想要从认知三个层次（内容、形式、整体）全方位地对现象问题进行完整解答，那么它所包括的就不只是认识现象那么简单，需要在上述三个问题都被解答以后才能有一个完整的答案。
-</li>
-<li>在思辨之中其实没有答案，正如我所坚持的，思辨只有辩护。对思辨问题的探讨永远是在追求更精密高效的程序之上，而且因为这样的程序实在太多太繁，因此程序的规范、乃至程序至高的想象也永远是被日常辩护的原素并衍生出相应的辩护词，以为的答案。
-</li>
-<li>实践问题的回答是被永久性确定下来的，它的永久性参照就是时间和空间，这样的特殊性是上述两种答案所没有的。当一个实践问题有所回答，那么这个实践问题所代表时间和空间就已经被确定下来，而且随之被确定下来的还有两个在时间和空间限定下的对象（其中一个必定是人类个体），最后对象实践行为及其后来的影响也被唯一且永久地记录下来，这是真实的答案。
-</li>
-</ul>
-</li>
+<li>对现象问题的回答既是最先被回答也是最后被回答，最先是因为它必须首先让体验认识和经验认识到针对同一个现象问题在认识趋向上同一，最后则是因为想要从认知三个层次（内容、形式、整体）全方位地对现象问题进行完整解答，那么它所包括的就不只是认识现象那么简单，需要在上述三个问题都被解答以后才能有一个完整的答案。</li>
+<li>在思辨之中其实没有答案，正如我所坚持的，思辨只有辩护。对思辨问题的探讨永远是在追求更精密高效的程序之上，而且因为这样的程序实在太多太繁，因此程序的规范、乃至程序至高的想象也永远是被日常辩护的原素并衍生出相应的辩护词，以为的答案。</li>
+<li>实践问题的回答是被永久性确定下来的，它的永久性参照就是时间和空间，这样的特殊性是上述两种答案所没有的。当一个实践问题有所回答，那么这个实践问题所代表时间和空间就已经被确定下来，而且随之被确定下来的还有两个在时间和空间限定下的对象（其中一个必定是人类个体），最后对象实践行为及其后来的影响也被唯一且永久地记录下来，这是真实的答案。</li>
+</ul></li>
 </ul>
 
 
 <ul class="org-ul">
 <li>理性是一种能力，亦是问题答案被解答的凭借，可是这样的凭借也不是唯一的，很难说清在被列举的复数凭借之中哪些是理性，哪些是凭借的理性的再次凭借。让我们就此进行一番梳理，不至于在理性原有功能之外盲目强求其所不存在的用途。
 <ul class="org-ul">
-<li>理性第一功能是分析，在现象问题的初步及其最后解答中理性所扮演的就是一个分析者。诚然，理性分析的要素皆非理性己出，因此一切现象问题的直接认识及其被列举的答案候选（即体验认识、经验认识、乃至经验知识）从能力的凭借看只能够是已经被凭借的理性的再次凭借，理性通过它们有所解答。
-</li>
-<li>理性第二功能是否定，在思辨问题不限定的答复中理性扮演着时刻否定的角色。理性此处所坚持的只是否定本身，因此在反论双方的变换更替、乃至其所拥有的辩护词都只是理性的再次凭借，因为理性在没有限制的情况下必然能够从原有的一方更替到相反的另一方并拥有一套新的辩护。
-</li>
-<li>理性第三功能是规范，在实践问题时刻被记录永久唯一的答复中理性扮演的是一个规范者。这样的规范不是思辨程序因为杂多才有所规范，而是保证从意象整体认识到表体实践行为地完美执行，不至于因为其中的隔阂乃至自身缺陷偏离原有的趋向，以至被实践的答案根本与解答经过无关。
-</li>
-</ul>
-</li>
+<li>理性第一功能是分析，在现象问题的初步及其最后解答中理性所扮演的就是一个分析者。诚然，理性分析的要素皆非理性己出，因此一切现象问题的直接认识及其被列举的答案候选（即体验认识、经验认识、乃至经验知识）从能力的凭借看只能够是已经被凭借的理性的再次凭借，理性通过它们有所解答。</li>
+<li>理性第二功能是否定，在思辨问题不限定的答复中理性扮演着时刻否定的角色。理性此处所坚持的只是否定本身，因此在反论双方的变换更替、乃至其所拥有的辩护词都只是理性的再次凭借，因为理性在没有限制的情况下必然能够从原有的一方更替到相反的另一方并拥有一套新的辩护。</li>
+<li>理性第三功能是规范，在实践问题时刻被记录永久唯一的答复中理性扮演的是一个规范者。这样的规范不是思辨程序因为杂多才有所规范，而是保证从意象整体认识到表体实践行为地完美执行，不至于因为其中的隔阂乃至自身缺陷偏离原有的趋向，以至被实践的答案根本与解答经过无关。</li>
+</ul></li>
 </ul>
 </div>
 </div>
 
-<div id="outline-container-sec-74" class="outline-2">
-<h2 id="sec-74">2016.11.19</h2>
-<div class="outline-text-2" id="text-74">
+<div id="outline-container-org812f4c9" class="outline-2">
+<h2 id="org812f4c9">2016.11.19</h2>
+<div class="outline-text-2" id="text-org812f4c9">
 <p>
 <b>有条件绝对初谈</b>
 </p>
@@ -2261,9 +2207,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-75" class="outline-2">
-<h2 id="sec-75">2016.11.20</h2>
-<div class="outline-text-2" id="text-75">
+<div id="outline-container-orgf1198c6" class="outline-2">
+<h2 id="orgf1198c6">2016.11.20</h2>
+<div class="outline-text-2" id="text-orgf1198c6">
 <p>
 <b>形式名词初谈</b>
 </p>
@@ -2274,9 +2220,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-76" class="outline-2">
-<h2 id="sec-76">2016.11.21</h2>
-<div class="outline-text-2" id="text-76">
+<div id="outline-container-org9940319" class="outline-2">
+<h2 id="org9940319">2016.11.21</h2>
+<div class="outline-text-2" id="text-org9940319">
 <p>
 <b>思验、体验重谈</b>
 </p>
@@ -2295,9 +2241,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-77" class="outline-2">
-<h2 id="sec-77">2016.11.22</h2>
-<div class="outline-text-2" id="text-77">
+<div id="outline-container-orgfa2f1df" class="outline-2">
+<h2 id="orgfa2f1df">2016.11.22</h2>
+<div class="outline-text-2" id="text-orgfa2f1df">
 <p>
 <b>因果层次</b>
 </p>
@@ -2316,9 +2262,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-78" class="outline-2">
-<h2 id="sec-78">2016.11.23</h2>
-<div class="outline-text-2" id="text-78">
+<div id="outline-container-org00c7e85" class="outline-2">
+<h2 id="org00c7e85">2016.11.23</h2>
+<div class="outline-text-2" id="text-org00c7e85">
 <p>
 <b>矛盾对立与时间空间再谈</b>
 </p>
@@ -2333,9 +2279,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-79" class="outline-2">
-<h2 id="sec-79">2016.11.24</h2>
-<div class="outline-text-2" id="text-79">
+<div id="outline-container-orgc186f5d" class="outline-2">
+<h2 id="orgc186f5d">2016.11.24</h2>
+<div class="outline-text-2" id="text-orgc186f5d">
 <p>
 <b>有条件绝对的一次辩护</b>
 </p>
@@ -2350,9 +2296,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-80" class="outline-2">
-<h2 id="sec-80">2016.11.25</h2>
-<div class="outline-text-2" id="text-80">
+<div id="outline-container-org81df5bf" class="outline-2">
+<h2 id="org81df5bf">2016.11.25</h2>
+<div class="outline-text-2" id="text-org81df5bf">
 <p>
 <b>认知的层次和层面</b>
 </p>
@@ -2371,9 +2317,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-81" class="outline-2">
-<h2 id="sec-81">2016.11.26</h2>
-<div class="outline-text-2" id="text-81">
+<div id="outline-container-org06e6508" class="outline-2">
+<h2 id="org06e6508">2016.11.26</h2>
+<div class="outline-text-2" id="text-org06e6508">
 <p>
 <b>层面横跨问题初谈</b>
 </p>
@@ -2392,9 +2338,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-82" class="outline-2">
-<h2 id="sec-82">2016.11.27</h2>
-<div class="outline-text-2" id="text-82">
+<div id="outline-container-orgfefd9e7" class="outline-2">
+<h2 id="orgfefd9e7">2016.11.27</h2>
+<div class="outline-text-2" id="text-orgfefd9e7">
 <p>
 <b>条件名词</b>
 </p>
@@ -2409,9 +2355,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-83" class="outline-2">
-<h2 id="sec-83">2016.11.28</h2>
-<div class="outline-text-2" id="text-83">
+<div id="outline-container-org10bfad7" class="outline-2">
+<h2 id="org10bfad7">2016.11.28</h2>
+<div class="outline-text-2" id="text-org10bfad7">
 <p>
 <b>因果层面</b>
 </p>
@@ -2426,9 +2372,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-84" class="outline-2">
-<h2 id="sec-84">2016.11.29</h2>
-<div class="outline-text-2" id="text-84">
+<div id="outline-container-org6b4910b" class="outline-2">
+<h2 id="org6b4910b">2016.11.29</h2>
+<div class="outline-text-2" id="text-org6b4910b">
 <p>
 <b>矛盾条件</b>
 </p>
@@ -2443,9 +2389,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-85" class="outline-2">
-<h2 id="sec-85">2016.11.30</h2>
-<div class="outline-text-2" id="text-85">
+<div id="outline-container-org0821c49" class="outline-2">
+<h2 id="org0821c49">2016.11.30</h2>
+<div class="outline-text-2" id="text-org0821c49">
 <p>
 <b>还是实证的二个意义</b>
 </p>
@@ -2464,9 +2410,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-86" class="outline-2">
-<h2 id="sec-86">2016.12.01</h2>
-<div class="outline-text-2" id="text-86">
+<div id="outline-container-org37cc448" class="outline-2">
+<h2 id="org37cc448">2016.12.01</h2>
+<div class="outline-text-2" id="text-org37cc448">
 <p>
 <b>广义矛盾，所谓对立</b>
 </p>
@@ -2477,9 +2423,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-87" class="outline-2">
-<h2 id="sec-87">2016.12.02</h2>
-<div class="outline-text-2" id="text-87">
+<div id="outline-container-orgf36636f" class="outline-2">
+<h2 id="orgf36636f">2016.12.02</h2>
+<div class="outline-text-2" id="text-orgf36636f">
 <p>
 <b>循环的内部和外部</b>
 </p>
@@ -2494,9 +2440,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-88" class="outline-2">
-<h2 id="sec-88">2016.12.03</h2>
-<div class="outline-text-2" id="text-88">
+<div id="outline-container-orgb46b316" class="outline-2">
+<h2 id="orgb46b316">2016.12.03</h2>
+<div class="outline-text-2" id="text-orgb46b316">
 <p>
 <b>综合、融合再谈</b>
 </p>
@@ -2515,9 +2461,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-89" class="outline-2">
-<h2 id="sec-89">2016.12.04</h2>
-<div class="outline-text-2" id="text-89">
+<div id="outline-container-org78f010a" class="outline-2">
+<h2 id="org78f010a">2016.12.04</h2>
+<div class="outline-text-2" id="text-org78f010a">
 <p>
 <b>图型的范导和构建</b>
 </p>
@@ -2532,9 +2478,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-90" class="outline-2">
-<h2 id="sec-90">2016.12.05</h2>
-<div class="outline-text-2" id="text-90">
+<div id="outline-container-orgc3a87e4" class="outline-2">
+<h2 id="orgc3a87e4">2016.12.05</h2>
+<div class="outline-text-2" id="text-orgc3a87e4">
 <p>
 <b>以己度人再谈</b>
 </p>
@@ -2549,9 +2495,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-91" class="outline-2">
-<h2 id="sec-91">2016.12.06</h2>
-<div class="outline-text-2" id="text-91">
+<div id="outline-container-org73b81ee" class="outline-2">
+<h2 id="org73b81ee">2016.12.06</h2>
+<div class="outline-text-2" id="text-org73b81ee">
 <p>
 <b>意志给予和无意志被给予</b>
 </p>
@@ -2570,9 +2516,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-92" class="outline-2">
-<h2 id="sec-92">2016.12.07</h2>
-<div class="outline-text-2" id="text-92">
+<div id="outline-container-orgbeef095" class="outline-2">
+<h2 id="orgbeef095">2016.12.07</h2>
+<div class="outline-text-2" id="text-orgbeef095">
 <p>
 <b>源始和终结区别</b>
 </p>
@@ -2591,9 +2537,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-93" class="outline-2">
-<h2 id="sec-93">2016.12.08</h2>
-<div class="outline-text-2" id="text-93">
+<div id="outline-container-org01fabdd" class="outline-2">
+<h2 id="org01fabdd">2016.12.08</h2>
+<div class="outline-text-2" id="text-org01fabdd">
 <p>
 <b>有条件绝对之于否定</b>
 </p>
@@ -2608,9 +2554,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-94" class="outline-2">
-<h2 id="sec-94">2016.12.09</h2>
-<div class="outline-text-2" id="text-94">
+<div id="outline-container-org4bfc3da" class="outline-2">
+<h2 id="org4bfc3da">2016.12.09</h2>
+<div class="outline-text-2" id="text-org4bfc3da">
 <p>
 <b>虚构无质，实存无象</b>
 </p>
@@ -2625,9 +2571,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-95" class="outline-2">
-<h2 id="sec-95">2016.12.10</h2>
-<div class="outline-text-2" id="text-95">
+<div id="outline-container-org6aa12d0" class="outline-2">
+<h2 id="org6aa12d0">2016.12.10</h2>
+<div class="outline-text-2" id="text-org6aa12d0">
 <p>
 <b>先验实证初谈</b>
 </p>
@@ -2642,9 +2588,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-96" class="outline-2">
-<h2 id="sec-96">2016.12.11</h2>
-<div class="outline-text-2" id="text-96">
+<div id="outline-container-org9456bc9" class="outline-2">
+<h2 id="org9456bc9">2016.12.11</h2>
+<div class="outline-text-2" id="text-org9456bc9">
 <p>
 <b>形式先验</b>
 </p>
@@ -2659,9 +2605,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-97" class="outline-2">
-<h2 id="sec-97">2016.12.12</h2>
-<div class="outline-text-2" id="text-97">
+<div id="outline-container-orgd442029" class="outline-2">
+<h2 id="orgd442029">2016.12.12</h2>
+<div class="outline-text-2" id="text-orgd442029">
 <p>
 <b>知识和定义精确初谈</b>
 </p>
@@ -2680,9 +2626,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-98" class="outline-2">
-<h2 id="sec-98">2016.12.13</h2>
-<div class="outline-text-2" id="text-98">
+<div id="outline-container-org46c636e" class="outline-2">
+<h2 id="org46c636e">2016.12.13</h2>
+<div class="outline-text-2" id="text-org46c636e">
 <p>
 <b>数学和意志</b>
 </p>
@@ -2697,9 +2643,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-99" class="outline-2">
-<h2 id="sec-99">2016.12.14</h2>
-<div class="outline-text-2" id="text-99">
+<div id="outline-container-org0e3aa06" class="outline-2">
+<h2 id="org0e3aa06">2016.12.14</h2>
+<div class="outline-text-2" id="text-org0e3aa06">
 <p>
 <b>判断与独断</b>
 </p>
@@ -2714,9 +2660,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-100" class="outline-2">
-<h2 id="sec-100">2016.12.15</h2>
-<div class="outline-text-2" id="text-100">
+<div id="outline-container-orgb4cc138" class="outline-2">
+<h2 id="orgb4cc138">2016.12.15</h2>
+<div class="outline-text-2" id="text-orgb4cc138">
 <p>
 <b>理念或理想切实范导以及理性的切实构建初谈</b>
 </p>
@@ -2731,9 +2677,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-101" class="outline-2">
-<h2 id="sec-101">2016.12.16</h2>
-<div class="outline-text-2" id="text-101">
+<div id="outline-container-org5212b77" class="outline-2">
+<h2 id="org5212b77">2016.12.16</h2>
+<div class="outline-text-2" id="text-org5212b77">
 <p>
 <b>理性思辨以及言辞辩护</b>
 </p>
@@ -2748,9 +2694,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-102" class="outline-2">
-<h2 id="sec-102">2016.12.17</h2>
-<div class="outline-text-2" id="text-102">
+<div id="outline-container-org72e2ca6" class="outline-2">
+<h2 id="org72e2ca6">2016.12.17</h2>
+<div class="outline-text-2" id="text-org72e2ca6">
 <p>
 <b>思辨自由</b>
 </p>
@@ -2765,9 +2711,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-103" class="outline-2">
-<h2 id="sec-103">2016.12.18</h2>
-<div class="outline-text-2" id="text-103">
+<div id="outline-container-org5f253ec" class="outline-2">
+<h2 id="org5f253ec">2016.12.18</h2>
+<div class="outline-text-2" id="text-org5f253ec">
 <p>
 <b>思辨与矛盾检查</b>
 </p>
@@ -2786,9 +2732,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-104" class="outline-2">
-<h2 id="sec-104">2016.12.19</h2>
-<div class="outline-text-2" id="text-104">
+<div id="outline-container-orgd409297" class="outline-2">
+<h2 id="orgd409297">2016.12.19</h2>
+<div class="outline-text-2" id="text-orgd409297">
 <p>
 <b>思辨、辩护与因果</b>
 </p>
@@ -2803,9 +2749,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-105" class="outline-2">
-<h2 id="sec-105">2016.12.20</h2>
-<div class="outline-text-2" id="text-105">
+<div id="outline-container-org3c010fb" class="outline-2">
+<h2 id="org3c010fb">2016.12.20</h2>
+<div class="outline-text-2" id="text-org3c010fb">
 <p>
 <b>思辨怀疑</b>
 </p>
@@ -2820,9 +2766,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-106" class="outline-2">
-<h2 id="sec-106">2016.12.21</h2>
-<div class="outline-text-2" id="text-106">
+<div id="outline-container-org6289bc7" class="outline-2">
+<h2 id="org6289bc7">2016.12.21</h2>
+<div class="outline-text-2" id="text-org6289bc7">
 <p>
 <b>假设预设</b>
 </p>
@@ -2837,9 +2783,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-107" class="outline-2">
-<h2 id="sec-107">2016.12.22</h2>
-<div class="outline-text-2" id="text-107">
+<div id="outline-container-orgce7da06" class="outline-2">
+<h2 id="orgce7da06">2016.12.22</h2>
+<div class="outline-text-2" id="text-orgce7da06">
 <p>
 <b>辩护的争辩</b>
 </p>
@@ -2850,9 +2796,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-108" class="outline-2">
-<h2 id="sec-108">2016.12.23</h2>
-<div class="outline-text-2" id="text-108">
+<div id="outline-container-orgaccee31" class="outline-2">
+<h2 id="orgaccee31">2016.12.23</h2>
+<div class="outline-text-2" id="text-orgaccee31">
 <p>
 <b>争辩的规范</b>
 </p>
@@ -2863,9 +2809,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-109" class="outline-2">
-<h2 id="sec-109">2016.12.24</h2>
-<div class="outline-text-2" id="text-109">
+<div id="outline-container-org6024032" class="outline-2">
+<h2 id="org6024032">2016.12.24</h2>
+<div class="outline-text-2" id="text-org6024032">
 <p>
 <b>表证和实证</b>
 </p>
@@ -2884,9 +2830,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-110" class="outline-2">
-<h2 id="sec-110">2016.12.25</h2>
-<div class="outline-text-2" id="text-110">
+<div id="outline-container-org23b22df" class="outline-2">
+<h2 id="org23b22df">2016.12.25</h2>
+<div class="outline-text-2" id="text-org23b22df">
 <p>
 <b>层面交流的唯一手段</b>
 </p>
@@ -2901,9 +2847,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-111" class="outline-2">
-<h2 id="sec-111">2016.12.26</h2>
-<div class="outline-text-2" id="text-111">
+<div id="outline-container-orga4f346d" class="outline-2">
+<h2 id="orga4f346d">2016.12.26</h2>
+<div class="outline-text-2" id="text-orga4f346d">
 <p>
 <b>断论和推论</b>
 </p>
@@ -2918,9 +2864,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-112" class="outline-2">
-<h2 id="sec-112">2016.12.27</h2>
-<div class="outline-text-2" id="text-112">
+<div id="outline-container-org8618a05" class="outline-2">
+<h2 id="org8618a05">2016.12.27</h2>
+<div class="outline-text-2" id="text-org8618a05">
 <p>
 <b>因果合理性</b>
 </p>
@@ -2935,9 +2881,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-113" class="outline-2">
-<h2 id="sec-113">2016.12.28</h2>
-<div class="outline-text-2" id="text-113">
+<div id="outline-container-orge0b0745" class="outline-2">
+<h2 id="orge0b0745">2016.12.28</h2>
+<div class="outline-text-2" id="text-orge0b0745">
 <p>
 <b>证明的佐证</b>
 </p>
@@ -2952,9 +2898,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-114" class="outline-2">
-<h2 id="sec-114">2016.12.29</h2>
-<div class="outline-text-2" id="text-114">
+<div id="outline-container-org06a56fc" class="outline-2">
+<h2 id="org06a56fc">2016.12.29</h2>
+<div class="outline-text-2" id="text-org06a56fc">
 <p>
 <b>辩证循环</b>
 </p>
@@ -2973,9 +2919,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-115" class="outline-2">
-<h2 id="sec-115">2016.12.30</h2>
-<div class="outline-text-2" id="text-115">
+<div id="outline-container-org574368d" class="outline-2">
+<h2 id="org574368d">2016.12.30</h2>
+<div class="outline-text-2" id="text-org574368d">
 <p>
 <b>思验形式认识意义上的实质层面的概念和应用假设</b>
 </p>
@@ -2990,9 +2936,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-116" class="outline-2">
-<h2 id="sec-116">2016.12.31</h2>
-<div class="outline-text-2" id="text-116">
+<div id="outline-container-org2811378" class="outline-2">
+<h2 id="org2811378">2016.12.31</h2>
+<div class="outline-text-2" id="text-org2811378">
 <p>
 <b>理的合理和非理</b>
 </p>
@@ -3007,9 +2953,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-117" class="outline-2">
-<h2 id="sec-117">2017.01.01</h2>
-<div class="outline-text-2" id="text-117">
+<div id="outline-container-org09049f7" class="outline-2">
+<h2 id="org09049f7">2017.01.01</h2>
+<div class="outline-text-2" id="text-org09049f7">
 <p>
 <b>用条件序列解释的理念</b>
 </p>
@@ -3020,9 +2966,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-118" class="outline-2">
-<h2 id="sec-118">2017.01.02</h2>
-<div class="outline-text-2" id="text-118">
+<div id="outline-container-org2a81952" class="outline-2">
+<h2 id="org2a81952">2017.01.02</h2>
+<div class="outline-text-2" id="text-org2a81952">
 <p>
 <b>理性在实践上的用途 - 理想满足</b>
 </p>
@@ -3037,9 +2983,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-119" class="outline-2">
-<h2 id="sec-119">2017.01.03</h2>
-<div class="outline-text-2" id="text-119">
+<div id="outline-container-org9b13c73" class="outline-2">
+<h2 id="org9b13c73">2017.01.03</h2>
+<div class="outline-text-2" id="text-org9b13c73">
 <p>
 <b>所谓应用的极致</b>
 </p>
@@ -3054,9 +3000,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-120" class="outline-2">
-<h2 id="sec-120">2017.01.04</h2>
-<div class="outline-text-2" id="text-120">
+<div id="outline-container-org25063a5" class="outline-2">
+<h2 id="org25063a5">2017.01.04</h2>
+<div class="outline-text-2" id="text-org25063a5">
 <p>
 <b>所谓概念的极致</b>
 </p>
@@ -3075,9 +3021,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-121" class="outline-2">
-<h2 id="sec-121">2017.01.05</h2>
-<div class="outline-text-2" id="text-121">
+<div id="outline-container-orga9eee46" class="outline-2">
+<h2 id="orga9eee46">2017.01.05</h2>
+<div class="outline-text-2" id="text-orga9eee46">
 <p>
 <b>对象身份改变之缘由</b>
 </p>
@@ -3092,9 +3038,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-122" class="outline-2">
-<h2 id="sec-122">2017.01.06</h2>
-<div class="outline-text-2" id="text-122">
+<div id="outline-container-orgf079d00" class="outline-2">
+<h2 id="orgf079d00">2017.01.06</h2>
+<div class="outline-text-2" id="text-orgf079d00">
 <p>
 <b>层次的知识和认识再谈</b>
 </p>
@@ -3121,9 +3067,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-123" class="outline-2">
-<h2 id="sec-123">2017.01.07</h2>
-<div class="outline-text-2" id="text-123">
+<div id="outline-container-org7bb6565" class="outline-2">
+<h2 id="org7bb6565">2017.01.07</h2>
+<div class="outline-text-2" id="text-org7bb6565">
 <p>
 <b>意志给予和表体给予的信赖</b>
 </p>
@@ -3142,9 +3088,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-124" class="outline-2">
-<h2 id="sec-124">2017.01.08</h2>
-<div class="outline-text-2" id="text-124">
+<div id="outline-container-orgb08f821" class="outline-2">
+<h2 id="orgb08f821">2017.01.08</h2>
+<div class="outline-text-2" id="text-orgb08f821">
 <p>
 <b>纯粹是模拟的</b>
 </p>
@@ -3159,9 +3105,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-125" class="outline-2">
-<h2 id="sec-125">2017.01.09</h2>
-<div class="outline-text-2" id="text-125">
+<div id="outline-container-orgf343406" class="outline-2">
+<h2 id="orgf343406">2017.01.09</h2>
+<div class="outline-text-2" id="text-orgf343406">
 <p>
 <b>整体之与理性构建和知性归纳</b>
 </p>
@@ -3176,9 +3122,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-126" class="outline-2">
-<h2 id="sec-126">2017.01.10</h2>
-<div class="outline-text-2" id="text-126">
+<div id="outline-container-org6b20491" class="outline-2">
+<h2 id="org6b20491">2017.01.10</h2>
+<div class="outline-text-2" id="text-org6b20491">
 <p>
 <b>表体和抽象各自指定的层次含义尝试</b>
 </p>
@@ -3193,9 +3139,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-127" class="outline-2">
-<h2 id="sec-127">2017.01.11</h2>
-<div class="outline-text-2" id="text-127">
+<div id="outline-container-org8a9440c" class="outline-2">
+<h2 id="org8a9440c">2017.01.11</h2>
+<div class="outline-text-2" id="text-org8a9440c">
 <p>
 <b>意志的超然和克制</b>
 </p>
@@ -3212,9 +3158,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-128" class="outline-2">
-<h2 id="sec-128">2017.01.12</h2>
-<div class="outline-text-2" id="text-128">
+<div id="outline-container-orgc7943e9" class="outline-2">
+<h2 id="orgc7943e9">2017.01.12</h2>
+<div class="outline-text-2" id="text-orgc7943e9">
 <p>
 <b>序列三维</b>
 </p>
@@ -3233,9 +3179,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-129" class="outline-2">
-<h2 id="sec-129">2017.01.13</h2>
-<div class="outline-text-2" id="text-129">
+<div id="outline-container-org3b2a9e7" class="outline-2">
+<h2 id="org3b2a9e7">2017.01.13</h2>
+<div class="outline-text-2" id="text-org3b2a9e7">
 <p>
 <b>意志在理性规范上的可能迷罔</b>
 </p>
@@ -3250,9 +3196,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-130" class="outline-2">
-<h2 id="sec-130">2017.01.14</h2>
-<div class="outline-text-2" id="text-130">
+<div id="outline-container-orgcf2ad9e" class="outline-2">
+<h2 id="orgcf2ad9e">2017.01.14</h2>
+<div class="outline-text-2" id="text-orgcf2ad9e">
 <p>
 <b>意志原则和证明</b>
 </p>
@@ -3267,9 +3213,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-131" class="outline-2">
-<h2 id="sec-131">2017.01.15</h2>
-<div class="outline-text-2" id="text-131">
+<div id="outline-container-org57ba07a" class="outline-2">
+<h2 id="org57ba07a">2017.01.15</h2>
+<div class="outline-text-2" id="text-org57ba07a">
 <p>
 <b>意志原则在思验上的倾向选择</b>
 </p>
@@ -3284,9 +3230,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-132" class="outline-2">
-<h2 id="sec-132">2017.01.16</h2>
-<div class="outline-text-2" id="text-132">
+<div id="outline-container-org8a3ccf9" class="outline-2">
+<h2 id="org8a3ccf9">2017.01.16</h2>
+<div class="outline-text-2" id="text-org8a3ccf9">
 <p>
 <b>存在无意志</b>
 </p>
@@ -3297,9 +3243,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-133" class="outline-2">
-<h2 id="sec-133">2017.01.17</h2>
-<div class="outline-text-2" id="text-133">
+<div id="outline-container-org85159dd" class="outline-2">
+<h2 id="org85159dd">2017.01.17</h2>
+<div class="outline-text-2" id="text-org85159dd">
 <p>
 <b>先验的先天和后天再谈</b>
 </p>
@@ -3322,9 +3268,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-134" class="outline-2">
-<h2 id="sec-134">2017.01.18</h2>
-<div class="outline-text-2" id="text-134">
+<div id="outline-container-org504c139" class="outline-2">
+<h2 id="org504c139">2017.01.18</h2>
+<div class="outline-text-2" id="text-org504c139">
 <p>
 <b>空间前后</b>
 </p>
@@ -3339,9 +3285,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-135" class="outline-2">
-<h2 id="sec-135">2017.01.19</h2>
-<div class="outline-text-2" id="text-135">
+<div id="outline-container-org998ab2a" class="outline-2">
+<h2 id="org998ab2a">2017.01.19</h2>
+<div class="outline-text-2" id="text-org998ab2a">
 <p>
 <b>个体认知的时间的附加和依赖</b>
 </p>
@@ -3360,9 +3306,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-136" class="outline-2">
-<h2 id="sec-136">2017.01.20</h2>
-<div class="outline-text-2" id="text-136">
+<div id="outline-container-org547256e" class="outline-2">
+<h2 id="org547256e">2017.01.20</h2>
+<div class="outline-text-2" id="text-org547256e">
 <p>
 <b>意志原则在表体上的倾向给予</b>
 </p>
@@ -3377,9 +3323,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-137" class="outline-2">
-<h2 id="sec-137">2017.01.21</h2>
-<div class="outline-text-2" id="text-137">
+<div id="outline-container-org0102bc7" class="outline-2">
+<h2 id="org0102bc7">2017.01.21</h2>
+<div class="outline-text-2" id="text-org0102bc7">
 <p>
 <b>先验与象</b>
 </p>
@@ -3394,9 +3340,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-138" class="outline-2">
-<h2 id="sec-138">2017.01.22</h2>
-<div class="outline-text-2" id="text-138">
+<div id="outline-container-org4b45977" class="outline-2">
+<h2 id="org4b45977">2017.01.22</h2>
+<div class="outline-text-2" id="text-org4b45977">
 <p>
 <b>形式玄想再谈</b>
 </p>
@@ -3411,9 +3357,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-139" class="outline-2">
-<h2 id="sec-139">2017.01.23</h2>
-<div class="outline-text-2" id="text-139">
+<div id="outline-container-orgc91062c" class="outline-2">
+<h2 id="orgc91062c">2017.01.23</h2>
+<div class="outline-text-2" id="text-orgc91062c">
 <p>
 <b>时间序列的怀疑</b>
 </p>
@@ -3428,9 +3374,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-140" class="outline-2">
-<h2 id="sec-140">2017.01.24</h2>
-<div class="outline-text-2" id="text-140">
+<div id="outline-container-org9c5aa82" class="outline-2">
+<h2 id="org9c5aa82">2017.01.24</h2>
+<div class="outline-text-2" id="text-org9c5aa82">
 <p>
 <b>后天因意志原则造成的自我隔阂</b>
 </p>
@@ -3441,9 +3387,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-141" class="outline-2">
-<h2 id="sec-141">2017.01.25</h2>
-<div class="outline-text-2" id="text-141">
+<div id="outline-container-org570ab4c" class="outline-2">
+<h2 id="org570ab4c">2017.01.25</h2>
+<div class="outline-text-2" id="text-org570ab4c">
 <p>
 <b>假设得以成立的三种切实预设</b>
 </p>
@@ -3458,9 +3404,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-142" class="outline-2">
-<h2 id="sec-142">2017.01.26</h2>
-<div class="outline-text-2" id="text-142">
+<div id="outline-container-orgbe15939" class="outline-2">
+<h2 id="orgbe15939">2017.01.26</h2>
+<div class="outline-text-2" id="text-orgbe15939">
 <p>
 <b>意志和知性的附加</b>
 </p>
@@ -3475,9 +3421,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-143" class="outline-2">
-<h2 id="sec-143">2017.01.27</h2>
-<div class="outline-text-2" id="text-143">
+<div id="outline-container-org422c77f" class="outline-2">
+<h2 id="org422c77f">2017.01.27</h2>
+<div class="outline-text-2" id="text-org422c77f">
 <p>
 <b>感性形式在联结对象和显象上的运作</b>
 </p>
@@ -3492,9 +3438,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-144" class="outline-2">
-<h2 id="sec-144">2017.01.28</h2>
-<div class="outline-text-2" id="text-144">
+<div id="outline-container-org4e1be74" class="outline-2">
+<h2 id="org4e1be74">2017.01.28</h2>
+<div class="outline-text-2" id="text-org4e1be74">
 <p>
 <b>初见的感再谈</b>
 </p>
@@ -3504,12 +3450,9 @@ for the JavaScript code in this tag.
 </p>
 
 <ul class="org-ul">
-<li>条件一：在对象未曾谋面的天然条件下还需要保证初见结果是感受是强烈的，一次平凡的初见感性是不可能得到主导的运用。
-</li>
-<li>条件二：如果是带有明确目的的初见，那么这样的目的首先必须是针对个体的，而不应该为了个体以外团体目的的。
-</li>
-<li>条件三：初见建立在双方对话或者行为合作的基础上，一次仅仅面对面沉默的初见只能是平凡的初见。
-</li>
+<li>条件一：在对象未曾谋面的天然条件下还需要保证初见结果是感受是强烈的，一次平凡的初见感性是不可能得到主导的运用。</li>
+<li>条件二：如果是带有明确目的的初见，那么这样的目的首先必须是针对个体的，而不应该为了个体以外团体目的的。</li>
+<li>条件三：初见建立在双方对话或者行为合作的基础上，一次仅仅面对面沉默的初见只能是平凡的初见。</li>
 </ul>
 
 <p>
@@ -3519,25 +3462,21 @@ for the JavaScript code in this tag.
 <ul class="org-ul">
 <li>填补式。该类初见在去年八月的两篇日记里面已经有所表述，其大意只是说明我所拥有初见的感之所以是强烈的，是因为我在过去经验中的偏爱被当前初见对象唤醒，因此得到了感性体验的满足。被用于填补的有两种偏爱可能：
 <ul class="org-ul">
-<li>一种是对过去对象经验的偏爱。如果过去经验的偏爱在现实中得到而后失去了对象的体现，那么这种偏爱就是空白残缺的，所以当一个初见的对象在眼前出现，在条件限制下有可能仅仅自我以为地将其填补进入经验的空白当中，严格来说我并未因对象而感受强烈，只是心理得到了空白被填补地满足所以强烈。
-</li>
-<li>一种是在经验中得到从未体验尝试可能的偏爱。经验来源并非总是能够得到体验尝试的，如果有一种体验尝试从未体验却完全有可能在现实中得到实践，那么这种实践的渴望也就等同于偏爱，同时因为体验的空白初见的对象也就有可能被填补进入这种渴望当中，我同样并未因对象而感受强烈，同样是心理满足了尝试的渴望。
-</li>
-</ul>
-</li>
+<li>一种是对过去对象经验的偏爱。如果过去经验的偏爱在现实中得到而后失去了对象的体现，那么这种偏爱就是空白残缺的，所以当一个初见的对象在眼前出现，在条件限制下有可能仅仅自我以为地将其填补进入经验的空白当中，严格来说我并未因对象而感受强烈，只是心理得到了空白被填补地满足所以强烈。</li>
+<li>一种是在经验中得到从未体验尝试可能的偏爱。经验来源并非总是能够得到体验尝试的，如果有一种体验尝试从未体验却完全有可能在现实中得到实践，那么这种实践的渴望也就等同于偏爱，同时因为体验的空白初见的对象也就有可能被填补进入这种渴望当中，我同样并未因对象而感受强烈，同样是心理满足了尝试的渴望。</li>
+</ul></li>
 </ul>
 
 
 <ul class="org-ul">
-<li>交感式。在精神分析治疗当中有一个特殊的过程被称为移情，治疗者和被治疗者在大量言语的心理沟通当中得到强烈感情的交互，有时治疗者也会谨慎利用因移情而起的信赖辅助心理治疗地更深入进行。在初见当中不可能有大量或者长期的沟通产生，因此真正的移情是不可能存在的，但是如果说移情是一个完整的过程，那么初见必然有资格成为移情的萌芽及其组成部分，亦即交互目的和感性体验得到统一。一个基本的统一可以是在填补基础上得到双方各自的满足，或者在明确的目的上得到双方的符合，而进一步的体验初步确认则被明确是双方言辞的呼应以及意志倾向的同类性。此时我的确在更多地关注对象给予的经验，但是这样地关注与其说是为对象而关注，不如说是首先为得到确认而关注，如果这个确认是不成立的、又或后期深入被认为是不成立的，那么初见的感也就是平凡的了。
-</li>
+<li>交感式。在精神分析治疗当中有一个特殊的过程被称为移情，治疗者和被治疗者在大量言语的心理沟通当中得到强烈感情的交互，有时治疗者也会谨慎利用因移情而起的信赖辅助心理治疗地更深入进行。在初见当中不可能有大量或者长期的沟通产生，因此真正的移情是不可能存在的，但是如果说移情是一个完整的过程，那么初见必然有资格成为移情的萌芽及其组成部分，亦即交互目的和感性体验得到统一。一个基本的统一可以是在填补基础上得到双方各自的满足，或者在明确的目的上得到双方的符合，而进一步的体验初步确认则被明确是双方言辞的呼应以及意志倾向的同类性。此时我的确在更多地关注对象给予的经验，但是这样地关注与其说是为对象而关注，不如说是首先为得到确认而关注，如果这个确认是不成立的、又或后期深入被认为是不成立的，那么初见的感也就是平凡的了。</li>
 </ul>
 </div>
 </div>
 
-<div id="outline-container-sec-145" class="outline-2">
-<h2 id="sec-145">2017.01.29</h2>
-<div class="outline-text-2" id="text-145">
+<div id="outline-container-orgf2f50b9" class="outline-2">
+<h2 id="orgf2f50b9">2017.01.29</h2>
+<div class="outline-text-2" id="text-orgf2f50b9">
 <p>
 <b>图型与序列</b>
 </p>
@@ -3552,9 +3491,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-146" class="outline-2">
-<h2 id="sec-146">2017.01.30</h2>
-<div class="outline-text-2" id="text-146">
+<div id="outline-container-org04b93ec" class="outline-2">
+<h2 id="org04b93ec">2017.01.30</h2>
+<div class="outline-text-2" id="text-org04b93ec">
 <p>
 <b>序列在图型中的绝对迷罔</b>
 </p>
@@ -3569,9 +3508,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-147" class="outline-2">
-<h2 id="sec-147">2017.01.31</h2>
-<div class="outline-text-2" id="text-147">
+<div id="outline-container-org98b3f5f" class="outline-2">
+<h2 id="org98b3f5f">2017.01.31</h2>
+<div class="outline-text-2" id="text-org98b3f5f">
 <p>
 <b>图型与对象与理</b>
 </p>
@@ -3586,9 +3525,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-148" class="outline-2">
-<h2 id="sec-148">2017.02.01</h2>
-<div class="outline-text-2" id="text-148">
+<div id="outline-container-orgfe7b2fd" class="outline-2">
+<h2 id="orgfe7b2fd">2017.02.01</h2>
+<div class="outline-text-2" id="text-orgfe7b2fd">
 <p>
 <b>三种类比</b>
 </p>
@@ -3598,27 +3537,24 @@ for the JavaScript code in this tag.
 </p>
 
 <ul class="org-ul">
-<li>类比可以是对照区别的表现。此时我在思验中放置的首先需要规定相同预设的两个同一层面、同一层次的认识，而后一个对象图型的整体也需要是类比的认识所共有的，最后被类比的认识需要确认的是现有认识是否夹带并隶属或者附属的不同条件，如果是已被明确的，那么类比的进行也需要在认识的条件中展开。考量类比具体进行，那么被考量的到底只是对认识的言辞表述进行审查，以及在认识序列当中对于对象的相同发源，考察各自的分歧所在。因此我最后得到的只是类比的理性辩护，而不可能直接将类比应用于表体的呈现，哪怕这样类比的正确是早已被证明的。
-</li>
+<li>类比可以是对照区别的表现。此时我在思验中放置的首先需要规定相同预设的两个同一层面、同一层次的认识，而后一个对象图型的整体也需要是类比的认识所共有的，最后被类比的认识需要确认的是现有认识是否夹带并隶属或者附属的不同条件，如果是已被明确的，那么类比的进行也需要在认识的条件中展开。考量类比具体进行，那么被考量的到底只是对认识的言辞表述进行审查，以及在认识序列当中对于对象的相同发源，考察各自的分歧所在。因此我最后得到的只是类比的理性辩护，而不可能直接将类比应用于表体的呈现，哪怕这样类比的正确是早已被证明的。</li>
 </ul>
 
 
 <ul class="org-ul">
-<li>类比可以是归纳统一的表现。对于知性无疑的归纳作用不可不问归纳的具体进行，我何以归纳、如何归纳？在此我必须承认作为个体的归纳行为我首先是排除式的，亦即在类比的对照区别当中如果是审查无疑的，那么我最后得到保留的也就仅仅一个认识，其他被以为相同的认识是被排除的。而后得到保留的唯一认识之所以被认为是归纳统一的，是因为这样的认识并非直接以为知性行为，而是需要再一次将认识的含义与序列的对象图型进行类比，最后产生的也就只是独立于原有认识以外单纯含义的对象形式。因此归纳统一并不仅仅认识的对照类比，还需要一种对表体被给予认识带有的倾向含义进行序列对象的类比，以此得到对象在表体中的统一倾向含义的形式应用。
-</li>
+<li>类比可以是归纳统一的表现。对于知性无疑的归纳作用不可不问归纳的具体进行，我何以归纳、如何归纳？在此我必须承认作为个体的归纳行为我首先是排除式的，亦即在类比的对照区别当中如果是审查无疑的，那么我最后得到保留的也就仅仅一个认识，其他被以为相同的认识是被排除的。而后得到保留的唯一认识之所以被认为是归纳统一的，是因为这样的认识并非直接以为知性行为，而是需要再一次将认识的含义与序列的对象图型进行类比，最后产生的也就只是独立于原有认识以外单纯含义的对象形式。因此归纳统一并不仅仅认识的对照类比，还需要一种对表体被给予认识带有的倾向含义进行序列对象的类比，以此得到对象在表体中的统一倾向含义的形式应用。</li>
 </ul>
 
 
 <ul class="org-ul">
-<li>类比可以是意志倾向的表现。一种自我选择的倾向可以在表体中得到实行的应用，而对于应用重新反馈个体的被给予认识也在思验中完全可以有所挑拣和忽略地进行，哪怕被给予的反馈认识与自我选择是矛盾的，只要这样的矛盾不被明确凸显就可以掩盖在意志倾向背后不被提出。那么我如何得到这种意志倾向在表体认识中有所表现倾向含义的挑拣行为，它的答案依旧只可能是类比的，对于类比的倾向无须在归纳统一中另行附加知性的审慎，而只是需要一个判断的肯定和否定以及感性形式的联结。在此类比的体现依旧是全然倾向含义的，但是类比的真正功能是自然运作的，亦即是被预设的。
-</li>
+<li>类比可以是意志倾向的表现。一种自我选择的倾向可以在表体中得到实行的应用，而对于应用重新反馈个体的被给予认识也在思验中完全可以有所挑拣和忽略地进行，哪怕被给予的反馈认识与自我选择是矛盾的，只要这样的矛盾不被明确凸显就可以掩盖在意志倾向背后不被提出。那么我如何得到这种意志倾向在表体认识中有所表现倾向含义的挑拣行为，它的答案依旧只可能是类比的，对于类比的倾向无须在归纳统一中另行附加知性的审慎，而只是需要一个判断的肯定和否定以及感性形式的联结。在此类比的体现依旧是全然倾向含义的，但是类比的真正功能是自然运作的，亦即是被预设的。</li>
 </ul>
 </div>
 </div>
 
-<div id="outline-container-sec-149" class="outline-2">
-<h2 id="sec-149">2017.02.02</h2>
-<div class="outline-text-2" id="text-149">
+<div id="outline-container-org9767baf" class="outline-2">
+<h2 id="org9767baf">2017.02.02</h2>
+<div class="outline-text-2" id="text-org9767baf">
 <p>
 <b>意识初谈</b>
 </p>
@@ -3633,9 +3569,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-150" class="outline-2">
-<h2 id="sec-150">2017.02.03</h2>
-<div class="outline-text-2" id="text-150">
+<div id="outline-container-orgd185fc6" class="outline-2">
+<h2 id="orgd185fc6">2017.02.03</h2>
+<div class="outline-text-2" id="text-orgd185fc6">
 <p>
 <b>知性的表象诠释和归纳</b>
 </p>
@@ -3650,9 +3586,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-151" class="outline-2">
-<h2 id="sec-151">2017.02.04</h2>
-<div class="outline-text-2" id="text-151">
+<div id="outline-container-org9155f3c" class="outline-2">
+<h2 id="org9155f3c">2017.02.04</h2>
+<div class="outline-text-2" id="text-org9155f3c">
 <p>
 <b>显象和表象的联结</b>
 </p>
@@ -3667,9 +3603,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-152" class="outline-2">
-<h2 id="sec-152">2017.02.05</h2>
-<div class="outline-text-2" id="text-152">
+<div id="outline-container-org7c23c5c" class="outline-2">
+<h2 id="org7c23c5c">2017.02.05</h2>
+<div class="outline-text-2" id="text-org7c23c5c">
 <p>
 <b>演绎的范导意识和构建意志</b>
 </p>
@@ -3688,9 +3624,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-153" class="outline-2">
-<h2 id="sec-153">2017.02.06</h2>
-<div class="outline-text-2" id="text-153">
+<div id="outline-container-org1c9f6fa" class="outline-2">
+<h2 id="org1c9f6fa">2017.02.06</h2>
+<div class="outline-text-2" id="text-org1c9f6fa">
 <p>
 <b>倾向在含义上表现造成的自我隔阂</b>
 </p>
@@ -3705,9 +3641,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-154" class="outline-2">
-<h2 id="sec-154">2017.02.07</h2>
-<div class="outline-text-2" id="text-154">
+<div id="outline-container-org1c1b2ba" class="outline-2">
+<h2 id="org1c1b2ba">2017.02.07</h2>
+<div class="outline-text-2" id="text-org1c1b2ba">
 <p>
 <b>认识综合在合理妥协和表体实际上的因果比重</b>
 </p>
@@ -3722,9 +3658,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-155" class="outline-2">
-<h2 id="sec-155">2017.02.08</h2>
-<div class="outline-text-2" id="text-155">
+<div id="outline-container-org22b06b7" class="outline-2">
+<h2 id="org22b06b7">2017.02.08</h2>
+<div class="outline-text-2" id="text-org22b06b7">
 <p>
 <b>用表体隔阂反证起点意识是空</b>
 </p>
@@ -3739,9 +3675,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-156" class="outline-2">
-<h2 id="sec-156">2017.02.09</h2>
-<div class="outline-text-2" id="text-156">
+<div id="outline-container-org63f7f8d" class="outline-2">
+<h2 id="org63f7f8d">2017.02.09</h2>
+<div class="outline-text-2" id="text-org63f7f8d">
 <p>
 <b>感性形式的训练初谈</b>
 </p>
@@ -3756,9 +3692,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-157" class="outline-2">
-<h2 id="sec-157">2017.02.10</h2>
-<div class="outline-text-2" id="text-157">
+<div id="outline-container-org56c9f79" class="outline-2">
+<h2 id="org56c9f79">2017.02.10</h2>
+<div class="outline-text-2" id="text-org56c9f79">
 <p>
 <b>知性形式在归纳显象上的联结</b>
 </p>
@@ -3773,9 +3709,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-158" class="outline-2">
-<h2 id="sec-158">2017.02.11</h2>
-<div class="outline-text-2" id="text-158">
+<div id="outline-container-orgff621de" class="outline-2">
+<h2 id="orgff621de">2017.02.11</h2>
+<div class="outline-text-2" id="text-orgff621de">
 <p>
 <b>意识先天和后天的空</b>
 </p>
@@ -3790,9 +3726,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-159" class="outline-2">
-<h2 id="sec-159">2017.02.12</h2>
-<div class="outline-text-2" id="text-159">
+<div id="outline-container-org82da242" class="outline-2">
+<h2 id="org82da242">2017.02.12</h2>
+<div class="outline-text-2" id="text-org82da242">
 <p>
 <b>意识印象</b>
 </p>
@@ -3807,9 +3743,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-160" class="outline-2">
-<h2 id="sec-160">2017.02.13</h2>
-<div class="outline-text-2" id="text-160">
+<div id="outline-container-org6854460" class="outline-2">
+<h2 id="org6854460">2017.02.13</h2>
+<div class="outline-text-2" id="text-org6854460">
 <p>
 <b>综合、融合续谈</b>
 </p>
@@ -3819,27 +3755,24 @@ for the JavaScript code in this tag.
 </p>
 
 <ul class="org-ul">
-<li>在表体层面内容层次，去年十二月三号日记的明确即专对内容层次的综合、融合行为而言，但还需要几点补充说明。我在表体被给予的显象中并没有任何综合和融合行为，因为行为的产生必须首先意志倾向的附加，所以在显象中综合通过一种感性在对被给予显象感受的直觉类比以意志倾向的实行表现出来，在表象中融合则通过知性在对意识印象和被给予显象的条件归纳以言辞表述的诠释表现出来。意志实行之所以被赋予综合的名义是因为在实行之前首先的类比即是综合的一种，而在实行之后更成为当前时间序列被直觉接纳的判断并归入感受之中，因此是综合的。
-</li>
+<li>在表体层面内容层次，去年十二月三号日记的明确即专对内容层次的综合、融合行为而言，但还需要几点补充说明。我在表体被给予的显象中并没有任何综合和融合行为，因为行为的产生必须首先意志倾向的附加，所以在显象中综合通过一种感性在对被给予显象感受的直觉类比以意志倾向的实行表现出来，在表象中融合则通过知性在对意识印象和被给予显象的条件归纳以言辞表述的诠释表现出来。意志实行之所以被赋予综合的名义是因为在实行之前首先的类比即是综合的一种，而在实行之后更成为当前时间序列被直觉接纳的判断并归入感受之中，因此是综合的。</li>
 </ul>
 
 
 <ul class="org-ul">
-<li>在表体层面形式层次唯有综合的存在，而没有融合的余地，因为形式层次永远都是面对认识的，甚至是在认识中更加细分、面对首先知性释义的表象认识。知性释义已经经过的条件融合行为在形式之中是在杂多认识当中审查言辞诠释背后各自融合条件的行为，形式的统一在于首先条件的统一，而后在通过如此条件的统一进行认识的归纳，以此唯有知性在其中进行，是被综合的。
-</li>
+<li>在表体层面形式层次唯有综合的存在，而没有融合的余地，因为形式层次永远都是面对认识的，甚至是在认识中更加细分、面对首先知性释义的表象认识。知性释义已经经过的条件融合行为在形式之中是在杂多认识当中审查言辞诠释背后各自融合条件的行为，形式的统一在于首先条件的统一，而后在通过如此条件的统一进行认识的归纳，以此唯有知性在其中进行，是被综合的。</li>
 </ul>
 
 
 <ul class="org-ul">
-<li>在表体层面整体层次则是融合的运作，而没有综合的余地，运作意味着无需意志、单纯天然预设进行的。预设并非固定不变、恒定的某物或某概念，这样的整体认知会随意识印象在时间序列的进行由以更新并得到思验明确的。在一个感性图型或者被构建的序列中可以得到整体的明确，之所以被认为是融合的，是因为任何认识的思验都只会带来图型或者序列之中以为条件的构建，而不可能独立其外，超越被规范的整体（除非本身对象已然不同，但同时也会随之被并入另一个对象的整体当中）。
-</li>
+<li>在表体层面整体层次则是融合的运作，而没有综合的余地，运作意味着无需意志、单纯天然预设进行的。预设并非固定不变、恒定的某物或某概念，这样的整体认知会随意识印象在时间序列的进行由以更新并得到思验明确的。在一个感性图型或者被构建的序列中可以得到整体的明确，之所以被认为是融合的，是因为任何认识的思验都只会带来图型或者序列之中以为条件的构建，而不可能独立其外，超越被规范的整体（除非本身对象已然不同，但同时也会随之被并入另一个对象的整体当中）。</li>
 </ul>
 </div>
 </div>
 
-<div id="outline-container-sec-161" class="outline-2">
-<h2 id="sec-161">2017.02.14</h2>
-<div class="outline-text-2" id="text-161">
+<div id="outline-container-orgca24782" class="outline-2">
+<h2 id="orgca24782">2017.02.14</h2>
+<div class="outline-text-2" id="text-orgca24782">
 <p>
 <b>从矛盾入手体象差距</b>
 </p>
@@ -3862,9 +3795,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-162" class="outline-2">
-<h2 id="sec-162">2017.02.15</h2>
-<div class="outline-text-2" id="text-162">
+<div id="outline-container-orgc37d0f6" class="outline-2">
+<h2 id="orgc37d0f6">2017.02.15</h2>
+<div class="outline-text-2" id="text-orgc37d0f6">
 <p>
 <b>存在不在，不在存在</b>
 </p>
@@ -3883,9 +3816,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-163" class="outline-2">
-<h2 id="sec-163">2017.02.16</h2>
-<div class="outline-text-2" id="text-163">
+<div id="outline-container-org95d4378" class="outline-2">
+<h2 id="org95d4378">2017.02.16</h2>
+<div class="outline-text-2" id="text-org95d4378">
 <p>
 <b>感性内容的克制训练第一步</b>
 </p>
@@ -3900,9 +3833,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-164" class="outline-2">
-<h2 id="sec-164">2017.02.17</h2>
-<div class="outline-text-2" id="text-164">
+<div id="outline-container-org3493ba7" class="outline-2">
+<h2 id="org3493ba7">2017.02.17</h2>
+<div class="outline-text-2" id="text-org3493ba7">
 <p>
 <b>知性的提问 - 理想缘由</b>
 </p>
@@ -3917,9 +3850,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-165" class="outline-2">
-<h2 id="sec-165">2017.02.18</h2>
-<div class="outline-text-2" id="text-165">
+<div id="outline-container-org171e287" class="outline-2">
+<h2 id="org171e287">2017.02.18</h2>
+<div class="outline-text-2" id="text-org171e287">
 <p>
 <b>分析的行为和能力</b>
 </p>
@@ -3938,9 +3871,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-166" class="outline-2">
-<h2 id="sec-166">2017.02.19</h2>
-<div class="outline-text-2" id="text-166">
+<div id="outline-container-orgabb33d6" class="outline-2">
+<h2 id="orgabb33d6">2017.02.19</h2>
+<div class="outline-text-2" id="text-orgabb33d6">
 <p>
 <b>对分析和综合行为定性混搅的迷罔</b>
 </p>
@@ -3955,9 +3888,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-167" class="outline-2">
-<h2 id="sec-167">2017.02.20</h2>
-<div class="outline-text-2" id="text-167">
+<div id="outline-container-orge562359" class="outline-2">
+<h2 id="orge562359">2017.02.20</h2>
+<div class="outline-text-2" id="text-orge562359">
 <p>
 <b>从手段得到的方法含义</b>
 </p>
@@ -3976,9 +3909,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-168" class="outline-2">
-<h2 id="sec-168">2017.02.21</h2>
-<div class="outline-text-2" id="text-168">
+<div id="outline-container-orgc323397" class="outline-2">
+<h2 id="orgc323397">2017.02.21</h2>
+<div class="outline-text-2" id="text-orgc323397">
 <p>
 <b>条件的孤立初谈</b>
 </p>
@@ -3997,9 +3930,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-169" class="outline-2">
-<h2 id="sec-169">2017.02.22</h2>
-<div class="outline-text-2" id="text-169">
+<div id="outline-container-orgd89ea2b" class="outline-2">
+<h2 id="orgd89ea2b">2017.02.22</h2>
+<div class="outline-text-2" id="text-orgd89ea2b">
 <p>
 <b>意识的虚假综合</b>
 </p>
@@ -4014,9 +3947,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-170" class="outline-2">
-<h2 id="sec-170">2017.02.23</h2>
-<div class="outline-text-2" id="text-170">
+<div id="outline-container-orge8a042d" class="outline-2">
+<h2 id="orge8a042d">2017.02.23</h2>
+<div class="outline-text-2" id="text-orge8a042d">
 <p>
 <b>对象指定初谈</b>
 </p>
@@ -4035,9 +3968,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-171" class="outline-2">
-<h2 id="sec-171">2017.02.24</h2>
-<div class="outline-text-2" id="text-171">
+<div id="outline-container-org1babff1" class="outline-2">
+<h2 id="org1babff1">2017.02.24</h2>
+<div class="outline-text-2" id="text-org1babff1">
 <p>
 <b>意志明确的三种倾向的理</b>
 </p>
@@ -4060,9 +3993,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-172" class="outline-2">
-<h2 id="sec-172">2017.02.25</h2>
-<div class="outline-text-2" id="text-172">
+<div id="outline-container-org34205ce" class="outline-2">
+<h2 id="org34205ce">2017.02.25</h2>
+<div class="outline-text-2" id="text-org34205ce">
 <p>
 <b>抽象融合的条件孤立</b>
 </p>
@@ -4077,9 +4010,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-173" class="outline-2">
-<h2 id="sec-173">2017.02.26</h2>
-<div class="outline-text-2" id="text-173">
+<div id="outline-container-org9842584" class="outline-2">
+<h2 id="org9842584">2017.02.26</h2>
+<div class="outline-text-2" id="text-org9842584">
 <p>
 <b>因果方法和在言辞表达上的迷罔</b>
 </p>
@@ -4093,10 +4026,8 @@ for the JavaScript code in this tag.
 </p>
 
 <ul class="org-ul">
-<li>对象 A 因为动力 C 所以得到对象 A 的一种改变；
-</li>
-<li>对象 B 因为对象 A 的一种改变所以得到对象 B 的一种改变。
-</li>
+<li>对象 A 因为动力 C 所以得到对象 A 的一种改变；</li>
+<li>对象 B 因为对象 A 的一种改变所以得到对象 B 的一种改变。</li>
 </ul>
 
 <p>
@@ -4104,8 +4035,7 @@ for the JavaScript code in this tag.
 </p>
 
 <ul class="org-ul">
-<li>因为动力 C 所以对象 A 得到一种改变。
-</li>
+<li>因为动力 C 所以对象 A 得到一种改变。</li>
 </ul>
 
 <p>
@@ -4114,9 +4044,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-174" class="outline-2">
-<h2 id="sec-174">2017.02.27</h2>
-<div class="outline-text-2" id="text-174">
+<div id="outline-container-org29bdd1d" class="outline-2">
+<h2 id="org29bdd1d">2017.02.27</h2>
+<div class="outline-text-2" id="text-org29bdd1d">
 <p>
 <b>表体对象的组成</b>
 </p>
@@ -4135,9 +4065,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-175" class="outline-2">
-<h2 id="sec-175">2017.02.28</h2>
-<div class="outline-text-2" id="text-175">
+<div id="outline-container-orgfdcb7d6" class="outline-2">
+<h2 id="orgfdcb7d6">2017.02.28</h2>
+<div class="outline-text-2" id="text-orgfdcb7d6">
 <p>
 <b>表象中的演绎</b>
 </p>
@@ -4152,9 +4082,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-176" class="outline-2">
-<h2 id="sec-176">2017.03.01</h2>
-<div class="outline-text-2" id="text-176">
+<div id="outline-container-org28d1e70" class="outline-2">
+<h2 id="org28d1e70">2017.03.01</h2>
+<div class="outline-text-2" id="text-org28d1e70">
 <p>
 <b>是人做人</b>
 </p>
@@ -4173,9 +4103,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-177" class="outline-2">
-<h2 id="sec-177">2017.03.02</h2>
-<div class="outline-text-2" id="text-177">
+<div id="outline-container-org7209dad" class="outline-2">
+<h2 id="org7209dad">2017.03.02</h2>
+<div class="outline-text-2" id="text-org7209dad">
 <p>
 <b>演绎的表象</b>
 </p>
@@ -4190,9 +4120,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-178" class="outline-2">
-<h2 id="sec-178">2017.03.03</h2>
-<div class="outline-text-2" id="text-178">
+<div id="outline-container-org9f4e984" class="outline-2">
+<h2 id="org9f4e984">2017.03.03</h2>
+<div class="outline-text-2" id="text-org9f4e984">
 <p>
 <b>意志态度</b>
 </p>
@@ -4207,9 +4137,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-179" class="outline-2">
-<h2 id="sec-179">2017.03.04</h2>
-<div class="outline-text-2" id="text-179">
+<div id="outline-container-org2066dde" class="outline-2">
+<h2 id="org2066dde">2017.03.04</h2>
+<div class="outline-text-2" id="text-org2066dde">
 <p>
 <b>自然与实体</b>
 </p>
@@ -4228,9 +4158,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-180" class="outline-2">
-<h2 id="sec-180">2017.03.05</h2>
-<div class="outline-text-2" id="text-180">
+<div id="outline-container-orga39ebd3" class="outline-2">
+<h2 id="orga39ebd3">2017.03.05</h2>
+<div class="outline-text-2" id="text-orga39ebd3">
 <p>
 <b>象的状态和对象 - 象与象差距初谈</b>
 </p>
@@ -4245,9 +4175,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-181" class="outline-2">
-<h2 id="sec-181">2017.03.06</h2>
-<div class="outline-text-2" id="text-181">
+<div id="outline-container-orgf18f725" class="outline-2">
+<h2 id="orgf18f725">2017.03.06</h2>
+<div class="outline-text-2" id="text-orgf18f725">
 <p>
 <b>预设的形式迷罔和满足</b>
 </p>
@@ -4268,9 +4198,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-182" class="outline-2">
-<h2 id="sec-182">2017.03.07</h2>
-<div class="outline-text-2" id="text-182">
+<div id="outline-container-org477f427" class="outline-2">
+<h2 id="org477f427">2017.03.07</h2>
+<div class="outline-text-2" id="text-org477f427">
 <p>
 <b>类比推论的实质结论</b>
 </p>
@@ -4285,9 +4215,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-183" class="outline-2">
-<h2 id="sec-183">2017.03.08</h2>
-<div class="outline-text-2" id="text-183">
+<div id="outline-container-org27a101e" class="outline-2">
+<h2 id="org27a101e">2017.03.08</h2>
+<div class="outline-text-2" id="text-org27a101e">
 <p>
 <b>理与倾向</b>
 </p>
@@ -4312,9 +4242,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-184" class="outline-2">
-<h2 id="sec-184">2017.03.09</h2>
-<div class="outline-text-2" id="text-184">
+<div id="outline-container-orga34df05" class="outline-2">
+<h2 id="orga34df05">2017.03.09</h2>
+<div class="outline-text-2" id="text-orga34df05">
 <p>
 <b>先验即无验</b>
 </p>
@@ -4329,9 +4259,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-185" class="outline-2">
-<h2 id="sec-185">2017.03.10</h2>
-<div class="outline-text-2" id="text-185">
+<div id="outline-container-org1c5b8b0" class="outline-2">
+<h2 id="org1c5b8b0">2017.03.10</h2>
+<div class="outline-text-2" id="text-org1c5b8b0">
 <p>
 <b>对象的定义和含义</b>
 </p>
@@ -4350,9 +4280,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-186" class="outline-2">
-<h2 id="sec-186">2017.03.11</h2>
-<div class="outline-text-2" id="text-186">
+<div id="outline-container-orgd109463" class="outline-2">
+<h2 id="orgd109463">2017.03.11</h2>
+<div class="outline-text-2" id="text-orgd109463">
 <p>
 <b>意志和先验的关系</b>
 </p>
@@ -4367,9 +4297,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-187" class="outline-2">
-<h2 id="sec-187">2017.03.12</h2>
-<div class="outline-text-2" id="text-187">
+<div id="outline-container-orgf147b18" class="outline-2">
+<h2 id="orgf147b18">2017.03.12</h2>
+<div class="outline-text-2" id="text-orgf147b18">
 <p>
 <b>个体的把握面对实体的拥有</b>
 </p>
@@ -4384,9 +4314,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-188" class="outline-2">
-<h2 id="sec-188">2017.03.13</h2>
-<div class="outline-text-2" id="text-188">
+<div id="outline-container-orgc5a8065" class="outline-2">
+<h2 id="orgc5a8065">2017.03.13</h2>
+<div class="outline-text-2" id="text-orgc5a8065">
 <p>
 <b>意志的存在态度</b>
 </p>
@@ -4401,9 +4331,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-189" class="outline-2">
-<h2 id="sec-189">2017.03.14</h2>
-<div class="outline-text-2" id="text-189">
+<div id="outline-container-orgb8e3068" class="outline-2">
+<h2 id="orgb8e3068">2017.03.14</h2>
+<div class="outline-text-2" id="text-orgb8e3068">
 <p>
 <b>理知的拥有迷罔</b>
 </p>
@@ -4418,9 +4348,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-190" class="outline-2">
-<h2 id="sec-190">2017.03.15</h2>
-<div class="outline-text-2" id="text-190">
+<div id="outline-container-orgdcad6a2" class="outline-2">
+<h2 id="orgdcad6a2">2017.03.15</h2>
+<div class="outline-text-2" id="text-orgdcad6a2">
 <p>
 <b>自省出发和能力亦为纯粹的模拟的结论</b>
 </p>
@@ -4435,9 +4365,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-191" class="outline-2">
-<h2 id="sec-191">2017.03.16</h2>
-<div class="outline-text-2" id="text-191">
+<div id="outline-container-org8536230" class="outline-2">
+<h2 id="org8536230">2017.03.16</h2>
+<div class="outline-text-2" id="text-org8536230">
 <p>
 <b>对意志、抽象、意识三者关系的一种观点说明</b>
 </p>
@@ -4456,9 +4386,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-192" class="outline-2">
-<h2 id="sec-192">2017.03.17</h2>
-<div class="outline-text-2" id="text-192">
+<div id="outline-container-orgd06e86b" class="outline-2">
+<h2 id="orgd06e86b">2017.03.17</h2>
+<div class="outline-text-2" id="text-orgd06e86b">
 <p>
 <b>拥有解释的序列深度和把握解释的序列广度</b>
 </p>
@@ -4477,9 +4407,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-193" class="outline-2">
-<h2 id="sec-193">2017.03.18</h2>
-<div class="outline-text-2" id="text-193">
+<div id="outline-container-org3a9cfaf" class="outline-2">
+<h2 id="org3a9cfaf">2017.03.18</h2>
+<div class="outline-text-2" id="text-org3a9cfaf">
 <p>
 <b>形式继承和内容继承</b>
 </p>
@@ -4498,9 +4428,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-194" class="outline-2">
-<h2 id="sec-194">2017.03.19</h2>
-<div class="outline-text-2" id="text-194">
+<div id="outline-container-org6586d79" class="outline-2">
+<h2 id="org6586d79">2017.03.19</h2>
+<div class="outline-text-2" id="text-org6586d79">
 <p>
 <b>模拟在自省中</b>
 </p>
@@ -4515,9 +4445,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-195" class="outline-2">
-<h2 id="sec-195">2017.03.20</h2>
-<div class="outline-text-2" id="text-195">
+<div id="outline-container-orgaa7e61e" class="outline-2">
+<h2 id="orgaa7e61e">2017.03.20</h2>
+<div class="outline-text-2" id="text-orgaa7e61e">
 <p>
 <b>从形式继承得到意志同样的超然</b>
 </p>
@@ -4532,9 +4462,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-196" class="outline-2">
-<h2 id="sec-196">2017.03.21</h2>
-<div class="outline-text-2" id="text-196">
+<div id="outline-container-orge1b78b3" class="outline-2">
+<h2 id="orge1b78b3">2017.03.21</h2>
+<div class="outline-text-2" id="text-orge1b78b3">
 <p>
 <b>概念含义到内容演绎 - 恒久和实在与否</b>
 </p>
@@ -4553,9 +4483,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-197" class="outline-2">
-<h2 id="sec-197">2017.03.22</h2>
-<div class="outline-text-2" id="text-197">
+<div id="outline-container-org194c812" class="outline-2">
+<h2 id="org194c812">2017.03.22</h2>
+<div class="outline-text-2" id="text-org194c812">
 <p>
 <b>迷罔本身初谈</b>
 </p>
@@ -4570,9 +4500,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-198" class="outline-2">
-<h2 id="sec-198">2017.03.23</h2>
-<div class="outline-text-2" id="text-198">
+<div id="outline-container-org321f95b" class="outline-2">
+<h2 id="org321f95b">2017.03.23</h2>
+<div class="outline-text-2" id="text-org321f95b">
 <p>
 <b>为空而空</b>
 </p>
@@ -4587,9 +4517,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-199" class="outline-2">
-<h2 id="sec-199">2017.03.24</h2>
-<div class="outline-text-2" id="text-199">
+<div id="outline-container-orgef19cc6" class="outline-2">
+<h2 id="orgef19cc6">2017.03.24</h2>
+<div class="outline-text-2" id="text-orgef19cc6">
 <p>
 <b>概念联结</b>
 </p>
@@ -4608,9 +4538,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-200" class="outline-2">
-<h2 id="sec-200">2017.03.25</h2>
-<div class="outline-text-2" id="text-200">
+<div id="outline-container-org03a7316" class="outline-2">
+<h2 id="org03a7316">2017.03.25</h2>
+<div class="outline-text-2" id="text-org03a7316">
 <p>
 <b>感性内容的理解训练第二步</b>
 </p>
@@ -4628,9 +4558,9 @@ for the JavaScript code in this tag.
 </p>
 </div>
 </div>
-<div id="outline-container-sec-201" class="outline-2">
-<h2 id="sec-201">2017.03.26</h2>
-<div class="outline-text-2" id="text-201">
+<div id="outline-container-org1659f90" class="outline-2">
+<h2 id="org1659f90">2017.03.26</h2>
+<div class="outline-text-2" id="text-org1659f90">
 <p>
 <b>显象存在</b>
 </p>
@@ -4645,9 +4575,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-202" class="outline-2">
-<h2 id="sec-202">2017.03.27</h2>
-<div class="outline-text-2" id="text-202">
+<div id="outline-container-org7df890a" class="outline-2">
+<h2 id="org7df890a">2017.03.27</h2>
+<div class="outline-text-2" id="text-org7df890a">
 <p>
 <b>形式的再细分</b>
 </p>
@@ -4666,9 +4596,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-203" class="outline-2">
-<h2 id="sec-203">2017.03.28</h2>
-<div class="outline-text-2" id="text-203">
+<div id="outline-container-org84f34d6" class="outline-2">
+<h2 id="org84f34d6">2017.03.28</h2>
+<div class="outline-text-2" id="text-org84f34d6">
 <p>
 <b>意志沉湎</b>
 </p>
@@ -4689,9 +4619,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-204" class="outline-2">
-<h2 id="sec-204">2017.03.29</h2>
-<div class="outline-text-2" id="text-204">
+<div id="outline-container-orgda98179" class="outline-2">
+<h2 id="orgda98179">2017.03.29</h2>
+<div class="outline-text-2" id="text-orgda98179">
 <p>
 <b>理性没有综合却有其归纳的说明</b>
 </p>
@@ -4706,9 +4636,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-205" class="outline-2">
-<h2 id="sec-205">2017.03.30</h2>
-<div class="outline-text-2" id="text-205">
+<div id="outline-container-org2577ace" class="outline-2">
+<h2 id="org2577ace">2017.03.30</h2>
+<div class="outline-text-2" id="text-org2577ace">
 <p>
 <b>感性内容的推论训练第三步</b>
 </p>
@@ -4727,9 +4657,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-206" class="outline-2">
-<h2 id="sec-206">2017.03.31</h2>
-<div class="outline-text-2" id="text-206">
+<div id="outline-container-org0aaad04" class="outline-2">
+<h2 id="org0aaad04">2017.03.31</h2>
+<div class="outline-text-2" id="text-org0aaad04">
 <p>
 <b>类比结论即以量词指定表体</b>
 </p>
@@ -4744,9 +4674,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-207" class="outline-2">
-<h2 id="sec-207">2017.04.01</h2>
-<div class="outline-text-2" id="text-207">
+<div id="outline-container-org0444e44" class="outline-2">
+<h2 id="org0444e44">2017.04.01</h2>
+<div class="outline-text-2" id="text-org0444e44">
 <p>
 <b>模拟原本就是理倾向的起点</b>
 </p>
@@ -4761,9 +4691,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-208" class="outline-2">
-<h2 id="sec-208">2017.04.02</h2>
-<div class="outline-text-2" id="text-208">
+<div id="outline-container-org11ce968" class="outline-2">
+<h2 id="org11ce968">2017.04.02</h2>
+<div class="outline-text-2" id="text-org11ce968">
 <p>
 <b>以能力为概念出发得到纯然知性的名词含义构建</b>
 </p>
@@ -4784,9 +4714,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-209" class="outline-2">
-<h2 id="sec-209">2017.04.03</h2>
-<div class="outline-text-2" id="text-209">
+<div id="outline-container-org9f09ace" class="outline-2">
+<h2 id="org9f09ace">2017.04.03</h2>
+<div class="outline-text-2" id="text-org9f09ace">
 <p>
 <b>倾向溯源在无条件者绝对的迷罔</b>
 </p>
@@ -4801,9 +4731,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-210" class="outline-2">
-<h2 id="sec-210">2017.04.04</h2>
-<div class="outline-text-2" id="text-210">
+<div id="outline-container-org53bd31c" class="outline-2">
+<h2 id="org53bd31c">2017.04.04</h2>
+<div class="outline-text-2" id="text-org53bd31c">
 <p>
 <b>意志在理面前学到的克制</b>
 </p>
@@ -4818,9 +4748,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-211" class="outline-2">
-<h2 id="sec-211">2017.04.05</h2>
-<div class="outline-text-2" id="text-211">
+<div id="outline-container-org04ebd4b" class="outline-2">
+<h2 id="org04ebd4b">2017.04.05</h2>
+<div class="outline-text-2" id="text-org04ebd4b">
 <p>
 <b>倾向两种溯源以及各自的不可释义 - 理和空</b>
 </p>
@@ -4835,9 +4765,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-212" class="outline-2">
-<h2 id="sec-212">2017.04.06</h2>
-<div class="outline-text-2" id="text-212">
+<div id="outline-container-org6923f5d" class="outline-2">
+<h2 id="org6923f5d">2017.04.06</h2>
+<div class="outline-text-2" id="text-org6923f5d">
 <p>
 <b>无条件的命名即为对象拥有的前提含义</b>
 </p>
@@ -4852,9 +4782,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-213" class="outline-2">
-<h2 id="sec-213">2017.04.07</h2>
-<div class="outline-text-2" id="text-213">
+<div id="outline-container-org8c771ee" class="outline-2">
+<h2 id="org8c771ee">2017.04.07</h2>
+<div class="outline-text-2" id="text-org8c771ee">
 <p>
 <b>倾向的选择迷罔</b>
 </p>
@@ -4869,9 +4799,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-214" class="outline-2">
-<h2 id="sec-214">2017.04.08</h2>
-<div class="outline-text-2" id="text-214">
+<div id="outline-container-org5d51f55" class="outline-2">
+<h2 id="org5d51f55">2017.04.08</h2>
+<div class="outline-text-2" id="text-org5d51f55">
 <p>
 <b>意志沉湎续谈</b>
 </p>
@@ -4886,9 +4816,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-215" class="outline-2">
-<h2 id="sec-215">2017.04.09</h2>
-<div class="outline-text-2" id="text-215">
+<div id="outline-container-org0aa3c5d" class="outline-2">
+<h2 id="org0aa3c5d">2017.04.09</h2>
+<div class="outline-text-2" id="text-org0aa3c5d">
 <p>
 <b>思验存在的坚持和放弃</b>
 </p>
@@ -4903,9 +4833,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-216" class="outline-2">
-<h2 id="sec-216">2017.04.10</h2>
-<div class="outline-text-2" id="text-216">
+<div id="outline-container-orgd1040f6" class="outline-2">
+<h2 id="orgd1040f6">2017.04.10</h2>
+<div class="outline-text-2" id="text-orgd1040f6">
 <p>
 <b>用模拟对思验存在的隔阂说明一种</b>
 </p>
@@ -4920,9 +4850,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-217" class="outline-2">
-<h2 id="sec-217">2017.04.11</h2>
-<div class="outline-text-2" id="text-217">
+<div id="outline-container-org51e61ba" class="outline-2">
+<h2 id="org51e61ba">2017.04.11</h2>
+<div class="outline-text-2" id="text-org51e61ba">
 <p>
 <b>实体的用词</b>
 </p>
@@ -4937,9 +4867,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-218" class="outline-2">
-<h2 id="sec-218">2017.04.12</h2>
-<div class="outline-text-2" id="text-218">
+<div id="outline-container-org38bb3f2" class="outline-2">
+<h2 id="org38bb3f2">2017.04.12</h2>
+<div class="outline-text-2" id="text-org38bb3f2">
 <p>
 <b>隔阂的独立只限实体</b>
 </p>
@@ -4954,9 +4884,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-219" class="outline-2">
-<h2 id="sec-219">2017.04.13</h2>
-<div class="outline-text-2" id="text-219">
+<div id="outline-container-orgb334641" class="outline-2">
+<h2 id="orgb334641">2017.04.13</h2>
+<div class="outline-text-2" id="text-orgb334641">
 <p>
 <b>独立前提下的独立含义</b>
 </p>
@@ -4971,9 +4901,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-220" class="outline-2">
-<h2 id="sec-220">2017.04.14</h2>
-<div class="outline-text-2" id="text-220">
+<div id="outline-container-org2ea173f" class="outline-2">
+<h2 id="org2ea173f">2017.04.14</h2>
+<div class="outline-text-2" id="text-org2ea173f">
 <p>
 <b>感性内容的情绪训练第四步</b>
 </p>
@@ -4988,9 +4918,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-221" class="outline-2">
-<h2 id="sec-221">2017.04.15</h2>
-<div class="outline-text-2" id="text-221">
+<div id="outline-container-orgc9087e0" class="outline-2">
+<h2 id="orgc9087e0">2017.04.15</h2>
+<div class="outline-text-2" id="text-orgc9087e0">
 <p>
 <b>自我隔阂的含义和它的下一步</b>
 </p>
@@ -5005,9 +4935,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-222" class="outline-2">
-<h2 id="sec-222">2017.04.16</h2>
-<div class="outline-text-2" id="text-222">
+<div id="outline-container-orga1bf88b" class="outline-2">
+<h2 id="orga1bf88b">2017.04.16</h2>
+<div class="outline-text-2" id="text-orga1bf88b">
 <p>
 <b>倾向坚持的隔阂冲突</b>
 </p>
@@ -5026,9 +4956,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-223" class="outline-2">
-<h2 id="sec-223">2017.04.17</h2>
-<div class="outline-text-2" id="text-223">
+<div id="outline-container-org9391edc" class="outline-2">
+<h2 id="org9391edc">2017.04.17</h2>
+<div class="outline-text-2" id="text-org9391edc">
 <p>
 <b>内外显象</b>
 </p>
@@ -5043,9 +4973,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-224" class="outline-2">
-<h2 id="sec-224">2017.04.18</h2>
-<div class="outline-text-2" id="text-224">
+<div id="outline-container-org9c1f8ba" class="outline-2">
+<h2 id="org9c1f8ba">2017.04.18</h2>
+<div class="outline-text-2" id="text-org9c1f8ba">
 <p>
 <b>个体把握价值谈</b>
 </p>
@@ -5064,9 +4994,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-225" class="outline-2">
-<h2 id="sec-225">2017.04.19</h2>
-<div class="outline-text-2" id="text-225">
+<div id="outline-container-org9729813" class="outline-2">
+<h2 id="org9729813">2017.04.19</h2>
+<div class="outline-text-2" id="text-org9729813">
 <p>
 <b>理想的止步</b>
 </p>
@@ -5081,9 +5011,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-226" class="outline-2">
-<h2 id="sec-226">2017.04.20</h2>
-<div class="outline-text-2" id="text-226">
+<div id="outline-container-org2cd8f05" class="outline-2">
+<h2 id="org2cd8f05">2017.04.20</h2>
+<div class="outline-text-2" id="text-org2cd8f05">
 <p>
 <b>推论和表体因果</b>
 </p>
@@ -5098,9 +5028,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-227" class="outline-2">
-<h2 id="sec-227">2017.04.21</h2>
-<div class="outline-text-2" id="text-227">
+<div id="outline-container-org6b7c7e3" class="outline-2">
+<h2 id="org6b7c7e3">2017.04.21</h2>
+<div class="outline-text-2" id="text-org6b7c7e3">
 <p>
 <b>行为判断的综合与分析</b>
 </p>
@@ -5115,9 +5045,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-228" class="outline-2">
-<h2 id="sec-228">2017.04.22</h2>
-<div class="outline-text-2" id="text-228">
+<div id="outline-container-orgfaf2254" class="outline-2">
+<h2 id="orgfaf2254">2017.04.22</h2>
+<div class="outline-text-2" id="text-orgfaf2254">
 <p>
 <b>理念的人为止步</b>
 </p>
@@ -5132,9 +5062,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-229" class="outline-2">
-<h2 id="sec-229">2017.04.23</h2>
-<div class="outline-text-2" id="text-229">
+<div id="outline-container-org929b554" class="outline-2">
+<h2 id="org929b554">2017.04.23</h2>
+<div class="outline-text-2" id="text-org929b554">
 <p>
 <b>两种用以明确倾向的方法</b>
 </p>
@@ -5153,9 +5083,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-230" class="outline-2">
-<h2 id="sec-230">2017.04.24</h2>
-<div class="outline-text-2" id="text-230">
+<div id="outline-container-orga66a122" class="outline-2">
+<h2 id="orga66a122">2017.04.24</h2>
+<div class="outline-text-2" id="text-orga66a122">
 <p>
 <b>后天拥有价值谈</b>
 </p>
@@ -5170,9 +5100,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-231" class="outline-2">
-<h2 id="sec-231">2017.04.25</h2>
-<div class="outline-text-2" id="text-231">
+<div id="outline-container-org4584894" class="outline-2">
+<h2 id="org4584894">2017.04.25</h2>
+<div class="outline-text-2" id="text-org4584894">
 <p>
 <b>理性的模拟对象 - 体的对立</b>
 </p>
@@ -5191,9 +5121,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-232" class="outline-2">
-<h2 id="sec-232">2017.04.26</h2>
-<div class="outline-text-2" id="text-232">
+<div id="outline-container-orge003291" class="outline-2">
+<h2 id="orge003291">2017.04.26</h2>
+<div class="outline-text-2" id="text-orge003291">
 <p>
 <b>从迷罔对理性规范功能的必要说明</b>
 </p>
@@ -5208,9 +5138,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-233" class="outline-2">
-<h2 id="sec-233">2017.04.27</h2>
-<div class="outline-text-2" id="text-233">
+<div id="outline-container-orgc077861" class="outline-2">
+<h2 id="orgc077861">2017.04.27</h2>
+<div class="outline-text-2" id="text-orgc077861">
 <p>
 <b>从理性的萌芽对倾向的绝对的否定</b>
 </p>
@@ -5225,9 +5155,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-234" class="outline-2">
-<h2 id="sec-234">2017.04.28</h2>
-<div class="outline-text-2" id="text-234">
+<div id="outline-container-orgc2cbc2e" class="outline-2">
+<h2 id="orgc2cbc2e">2017.04.28</h2>
+<div class="outline-text-2" id="text-orgc2cbc2e">
 <p>
 <b>感情的减少和深入</b>
 </p>
@@ -5242,9 +5172,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-235" class="outline-2">
-<h2 id="sec-235">2017.04.29</h2>
-<div class="outline-text-2" id="text-235">
+<div id="outline-container-org7c7fa68" class="outline-2">
+<h2 id="org7c7fa68">2017.04.29</h2>
+<div class="outline-text-2" id="text-org7c7fa68">
 <p>
 <b>在情绪的产生中分辨感情影响</b>
 </p>
@@ -5259,9 +5189,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-236" class="outline-2">
-<h2 id="sec-236">2017.04.30</h2>
-<div class="outline-text-2" id="text-236">
+<div id="outline-container-org4aa9070" class="outline-2">
+<h2 id="org4aa9070">2017.04.30</h2>
+<div class="outline-text-2" id="text-org4aa9070">
 <p>
 <b>感情对情绪的两种影响</b>
 </p>
@@ -5280,9 +5210,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-237" class="outline-2">
-<h2 id="sec-237">2017.05.01</h2>
-<div class="outline-text-2" id="text-237">
+<div id="outline-container-orgcbf524e" class="outline-2">
+<h2 id="orgcbf524e">2017.05.01</h2>
+<div class="outline-text-2" id="text-orgcbf524e">
 <p>
 <b>假设的怀疑二例初谈</b>
 </p>
@@ -5301,9 +5231,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-238" class="outline-2">
-<h2 id="sec-238">2017.05.02</h2>
-<div class="outline-text-2" id="text-238">
+<div id="outline-container-org34c2c1a" class="outline-2">
+<h2 id="org34c2c1a">2017.05.02</h2>
+<div class="outline-text-2" id="text-org34c2c1a">
 <p>
 <b>对经验来说的超验来源</b>
 </p>
@@ -5318,9 +5248,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-239" class="outline-2">
-<h2 id="sec-239">2017.05.03</h2>
-<div class="outline-text-2" id="text-239">
+<div id="outline-container-orgbd99ca6" class="outline-2">
+<h2 id="orgbd99ca6">2017.05.03</h2>
+<div class="outline-text-2" id="text-orgbd99ca6">
 <p>
 <b>推论的界线 - 经验实存</b>
 </p>
@@ -5335,9 +5265,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-240" class="outline-2">
-<h2 id="sec-240">2017.05.04</h2>
-<div class="outline-text-2" id="text-240">
+<div id="outline-container-org634c107" class="outline-2">
+<h2 id="org634c107">2017.05.04</h2>
+<div class="outline-text-2" id="text-org634c107">
 <p>
 <b>意志问答 - 怀疑的应用</b>
 </p>
@@ -5352,9 +5282,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-241" class="outline-2">
-<h2 id="sec-241">2017.05.05</h2>
-<div class="outline-text-2" id="text-241">
+<div id="outline-container-org8be0805" class="outline-2">
+<h2 id="org8be0805">2017.05.05</h2>
+<div class="outline-text-2" id="text-org8be0805">
 <p>
 <b>自我道德与理性的关系</b>
 </p>
@@ -5369,9 +5299,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-242" class="outline-2">
-<h2 id="sec-242">2017.05.06</h2>
-<div class="outline-text-2" id="text-242">
+<div id="outline-container-orgfcc48d3" class="outline-2">
+<h2 id="orgfcc48d3">2017.05.06</h2>
+<div class="outline-text-2" id="text-orgfcc48d3">
 <p>
 <b>情绪面对理性概念时的产生</b>
 </p>
@@ -5386,9 +5316,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-243" class="outline-2">
-<h2 id="sec-243">2017.05.07</h2>
-<div class="outline-text-2" id="text-243">
+<div id="outline-container-org37b3835" class="outline-2">
+<h2 id="org37b3835">2017.05.07</h2>
+<div class="outline-text-2" id="text-org37b3835">
 <p>
 <b>形式规律下的情绪、感情、理性概念界线尝试</b>
 </p>
@@ -5403,9 +5333,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-244" class="outline-2">
-<h2 id="sec-244">2017.05.08</h2>
-<div class="outline-text-2" id="text-244">
+<div id="outline-container-org423aadd" class="outline-2">
+<h2 id="org423aadd">2017.05.08</h2>
+<div class="outline-text-2" id="text-org423aadd">
 <p>
 <b>界限与界线在序列上的说明</b>
 </p>
@@ -5420,9 +5350,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-245" class="outline-2">
-<h2 id="sec-245">2017.05.09</h2>
-<div class="outline-text-2" id="text-245">
+<div id="outline-container-org5d8a6d4" class="outline-2">
+<h2 id="org5d8a6d4">2017.05.09</h2>
+<div class="outline-text-2" id="text-org5d8a6d4">
 <p>
 <b>知性两种应用续谈</b>
 </p>
@@ -5441,9 +5371,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-246" class="outline-2">
-<h2 id="sec-246">2017.05.10</h2>
-<div class="outline-text-2" id="text-246">
+<div id="outline-container-org5e47cb5" class="outline-2">
+<h2 id="org5e47cb5">2017.05.10</h2>
+<div class="outline-text-2" id="text-org5e47cb5">
 <p>
 <b>个体切实选择初谈</b>
 </p>
@@ -5458,9 +5388,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-247" class="outline-2">
-<h2 id="sec-247">2017.05.11</h2>
-<div class="outline-text-2" id="text-247">
+<div id="outline-container-orgdea3e55" class="outline-2">
+<h2 id="orgdea3e55">2017.05.11</h2>
+<div class="outline-text-2" id="text-orgdea3e55">
 <p>
 <b>理念和理想在个体上的一个缺陷</b>
 </p>
@@ -5479,9 +5409,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-248" class="outline-2">
-<h2 id="sec-248">2017.05.12</h2>
-<div class="outline-text-2" id="text-248">
+<div id="outline-container-orgc0dff26" class="outline-2">
+<h2 id="orgc0dff26">2017.05.12</h2>
+<div class="outline-text-2" id="text-orgc0dff26">
 <p>
 <b>后天感性的理念之欲望</b>
 </p>
@@ -5496,9 +5426,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-249" class="outline-2">
-<h2 id="sec-249">2017.05.13</h2>
-<div class="outline-text-2" id="text-249">
+<div id="outline-container-org779db6e" class="outline-2">
+<h2 id="org779db6e">2017.05.13</h2>
+<div class="outline-text-2" id="text-org779db6e">
 <p>
 <b>道德没有价值的衡量</b>
 </p>
@@ -5513,9 +5443,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-250" class="outline-2">
-<h2 id="sec-250">2017.05.14</h2>
-<div class="outline-text-2" id="text-250">
+<div id="outline-container-org633868f" class="outline-2">
+<h2 id="org633868f">2017.05.14</h2>
+<div class="outline-text-2" id="text-org633868f">
 <p>
 <b>自我道德只有被动</b>
 </p>
@@ -5530,9 +5460,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-251" class="outline-2">
-<h2 id="sec-251">2017.05.15</h2>
-<div class="outline-text-2" id="text-251">
+<div id="outline-container-org8f69182" class="outline-2">
+<h2 id="org8f69182">2017.05.15</h2>
+<div class="outline-text-2" id="text-org8f69182">
 <p>
 <b>被认为的伦理道德尝试</b>
 </p>
@@ -5547,9 +5477,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-252" class="outline-2">
-<h2 id="sec-252">2017.05.16​</h2>
-<div class="outline-text-2" id="text-252">
+<div id="outline-container-org1fe97f8" class="outline-2">
+<h2 id="org1fe97f8">2017.05.16​</h2>
+<div class="outline-text-2" id="text-org1fe97f8">
 <p>
 <b>伦理的公理不等于伦理道德</b>
 </p>
@@ -5564,9 +5494,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-253" class="outline-2">
-<h2 id="sec-253">2017.05.17</h2>
-<div class="outline-text-2" id="text-253">
+<div id="outline-container-org3ec7862" class="outline-2">
+<h2 id="org3ec7862">2017.05.17</h2>
+<div class="outline-text-2" id="text-org3ec7862">
 <p>
 <b>形式的倾向类比运用</b>
 </p>
@@ -5581,9 +5511,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-254" class="outline-2">
-<h2 id="sec-254">2017.05.18</h2>
-<div class="outline-text-2" id="text-254">
+<div id="outline-container-org28edcf3" class="outline-2">
+<h2 id="org28edcf3">2017.05.18</h2>
+<div class="outline-text-2" id="text-org28edcf3">
 <p>
 <b>情绪的含义矛盾复合</b>
 </p>
@@ -5598,9 +5528,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-255" class="outline-2">
-<h2 id="sec-255">2017.05.19</h2>
-<div class="outline-text-2" id="text-255">
+<div id="outline-container-org3e1f398" class="outline-2">
+<h2 id="org3e1f398">2017.05.19</h2>
+<div class="outline-text-2" id="text-org3e1f398">
 <p>
 <b>情绪的对象转移</b>
 </p>
@@ -5615,9 +5545,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-256" class="outline-2">
-<h2 id="sec-256">2017.05.20</h2>
-<div class="outline-text-2" id="text-256">
+<div id="outline-container-orged3d00a" class="outline-2">
+<h2 id="orged3d00a">2017.05.20</h2>
+<div class="outline-text-2" id="text-orged3d00a">
 <p>
 <b>理念与理想的感情</b>
 </p>
@@ -5632,9 +5562,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-257" class="outline-2">
-<h2 id="sec-257">2017.05.21</h2>
-<div class="outline-text-2" id="text-257">
+<div id="outline-container-org8e094e1" class="outline-2">
+<h2 id="org8e094e1">2017.05.21</h2>
+<div class="outline-text-2" id="text-org8e094e1">
 <p>
 <b>倾向情绪 - 人格塑造第一步</b>
 </p>
@@ -5649,9 +5579,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-258" class="outline-2">
-<h2 id="sec-258">2017.05.22</h2>
-<div class="outline-text-2" id="text-258">
+<div id="outline-container-org0cce87d" class="outline-2">
+<h2 id="org0cce87d">2017.05.22</h2>
+<div class="outline-text-2" id="text-org0cce87d">
 <p>
 <b>界线的道德纯理</b>
 </p>
@@ -5662,9 +5592,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-259" class="outline-2">
-<h2 id="sec-259">2017.05.23</h2>
-<div class="outline-text-2" id="text-259">
+<div id="outline-container-org9bec5ac" class="outline-2">
+<h2 id="org9bec5ac">2017.05.23</h2>
+<div class="outline-text-2" id="text-org9bec5ac">
 <p>
 <b>先验即无验再谈 - 全面怀疑的唯一弥补</b>
 </p>
@@ -5679,9 +5609,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-260" class="outline-2">
-<h2 id="sec-260">2017.05.24</h2>
-<div class="outline-text-2" id="text-260">
+<div id="outline-container-org9a0234c" class="outline-2">
+<h2 id="org9a0234c">2017.05.24</h2>
+<div class="outline-text-2" id="text-org9a0234c">
 <p>
 <b>空的倾向情绪 - 全面怀疑变种</b>
 </p>
@@ -5696,9 +5626,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-261" class="outline-2">
-<h2 id="sec-261">2017.05.25</h2>
-<div class="outline-text-2" id="text-261">
+<div id="outline-container-org57dd784" class="outline-2">
+<h2 id="org57dd784">2017.05.25</h2>
+<div class="outline-text-2" id="text-org57dd784">
 <p>
 <b>概念对象在实体对象上的继承 - 兼谈综合与融合的面对</b>
 </p>
@@ -5713,9 +5643,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-262" class="outline-2">
-<h2 id="sec-262">2017.05.26</h2>
-<div class="outline-text-2" id="text-262">
+<div id="outline-container-org753af0b" class="outline-2">
+<h2 id="org753af0b">2017.05.26</h2>
+<div class="outline-text-2" id="text-org753af0b">
 <p>
 <b>理念的欲望和理念的缺陷</b>
 </p>
@@ -5730,9 +5660,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-263" class="outline-2">
-<h2 id="sec-263">2017.05.27</h2>
-<div class="outline-text-2" id="text-263">
+<div id="outline-container-org87efe85" class="outline-2">
+<h2 id="org87efe85">2017.05.27</h2>
+<div class="outline-text-2" id="text-org87efe85">
 <p>
 <b>情绪的对象依赖</b>
 </p>
@@ -5747,9 +5677,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-264" class="outline-2">
-<h2 id="sec-264">2017.05.28</h2>
-<div class="outline-text-2" id="text-264">
+<div id="outline-container-org3b5819a" class="outline-2">
+<h2 id="org3b5819a">2017.05.28</h2>
+<div class="outline-text-2" id="text-org3b5819a">
 <p>
 <b>迷罔情绪</b>
 </p>
@@ -5764,9 +5694,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-265" class="outline-2">
-<h2 id="sec-265">2017.05.29</h2>
-<div class="outline-text-2" id="text-265">
+<div id="outline-container-orgd27b5e5" class="outline-2">
+<h2 id="orgd27b5e5">2017.05.29</h2>
+<div class="outline-text-2" id="text-orgd27b5e5">
 <p>
 <b>名词的感性不限定</b>
 </p>
@@ -5781,9 +5711,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-266" class="outline-2">
-<h2 id="sec-266">2017.05.30</h2>
-<div class="outline-text-2" id="text-266">
+<div id="outline-container-orgb501dbc" class="outline-2">
+<h2 id="orgb501dbc">2017.05.30</h2>
+<div class="outline-text-2" id="text-orgb501dbc">
 <p>
 <b>自我道德的含义不同</b>
 </p>
@@ -5798,9 +5728,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-267" class="outline-2">
-<h2 id="sec-267">2017.05.31</h2>
-<div class="outline-text-2" id="text-267">
+<div id="outline-container-orgae67893" class="outline-2">
+<h2 id="orgae67893">2017.05.31</h2>
+<div class="outline-text-2" id="text-orgae67893">
 <p>
 <b>倾向自我 - 人格塑造第二步</b>
 </p>
@@ -5815,9 +5745,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-268" class="outline-2">
-<h2 id="sec-268">2017.06.01</h2>
-<div class="outline-text-2" id="text-268">
+<div id="outline-container-orgd9cc659" class="outline-2">
+<h2 id="orgd9cc659">2017.06.01</h2>
+<div class="outline-text-2" id="text-orgd9cc659">
 <p>
 <b>倾向意志 - 人格塑造第三步</b>
 </p>
@@ -5832,9 +5762,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-269" class="outline-2">
-<h2 id="sec-269">2017.06.02</h2>
-<div class="outline-text-2" id="text-269">
+<div id="outline-container-org508d619" class="outline-2">
+<h2 id="org508d619">2017.06.02</h2>
+<div class="outline-text-2" id="text-org508d619">
 <p>
 <b>条件名词区分的后天把握和拥有</b>
 </p>
@@ -5849,9 +5779,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-270" class="outline-2">
-<h2 id="sec-270">2017.06.03</h2>
-<div class="outline-text-2" id="text-270">
+<div id="outline-container-orgecfe460" class="outline-2">
+<h2 id="orgecfe460">2017.06.03</h2>
+<div class="outline-text-2" id="text-orgecfe460">
 <p>
 <b>两种道德的交汇</b>
 </p>
@@ -5866,9 +5796,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-271" class="outline-2">
-<h2 id="sec-271">2017.06.04</h2>
-<div class="outline-text-2" id="text-271">
+<div id="outline-container-orgbc31826" class="outline-2">
+<h2 id="orgbc31826">2017.06.04</h2>
+<div class="outline-text-2" id="text-orgbc31826">
 <p>
 <b>单一道德概念续谈</b>
 </p>
@@ -5883,9 +5813,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-272" class="outline-2">
-<h2 id="sec-272">2017.06.05</h2>
-<div class="outline-text-2" id="text-272">
+<div id="outline-container-orgc229498" class="outline-2">
+<h2 id="orgc229498">2017.06.05</h2>
+<div class="outline-text-2" id="text-orgc229498">
 <p>
 <b>道德的感性</b>
 </p>
@@ -5900,9 +5830,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-273" class="outline-2">
-<h2 id="sec-273">2017.06.06</h2>
-<div class="outline-text-2" id="text-273">
+<div id="outline-container-orgce3b3ce" class="outline-2">
+<h2 id="orgce3b3ce">2017.06.06</h2>
+<div class="outline-text-2" id="text-orgce3b3ce">
 <p>
 <b>手段概念和概念方法</b>
 </p>
@@ -5917,9 +5847,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-274" class="outline-2">
-<h2 id="sec-274">2017.06.07</h2>
-<div class="outline-text-2" id="text-274">
+<div id="outline-container-orgd6de871" class="outline-2">
+<h2 id="orgd6de871">2017.06.07</h2>
+<div class="outline-text-2" id="text-orgd6de871">
 <p>
 <b>手段与方法的层次说明</b>
 </p>
@@ -5929,14 +5859,12 @@ for the JavaScript code in this tag.
 </p>
 
 <ul class="org-ul">
-<li>手段概念起步于实践的内容，而其概念的终点则是形式的含义，最后只有在内容与形式的结合以后才能得到有限整体的对象察觉，这一整体不是概念可以描述、不是手段可以掌控，而只是在个体的感性中因为各自的分工有所知觉的指定而已。对手段本身而言，它的每一种表现也同样是内容的，但对手段的描述却与其概念产生同步，当概念的对象收获了概念的形式含义，那么手段也就在这样的含义当中指定了它自身的规律，否则内容到形式的转变对概念自身而言便是无从归纳产生的。在这个意义上，一个表体概念的产生不仅仅在于实践表体内容以后得到表体含义，同样在于自个体面对表体对象以后行为自身从内容到形式的转化。
-</li>
+<li>手段概念起步于实践的内容，而其概念的终点则是形式的含义，最后只有在内容与形式的结合以后才能得到有限整体的对象察觉，这一整体不是概念可以描述、不是手段可以掌控，而只是在个体的感性中因为各自的分工有所知觉的指定而已。对手段本身而言，它的每一种表现也同样是内容的，但对手段的描述却与其概念产生同步，当概念的对象收获了概念的形式含义，那么手段也就在这样的含义当中指定了它自身的规律，否则内容到形式的转变对概念自身而言便是无从归纳产生的。在这个意义上，一个表体概念的产生不仅仅在于实践表体内容以后得到表体含义，同样在于自个体面对表体对象以后行为自身从内容到形式的转化。</li>
 </ul>
 
 
 <ul class="org-ul">
-<li>方法概念的特殊在于抽象层面纯粹是个体内部的行为，只有在个体的内部已经有所规范以后才会扩散在个体之外的表体当中，所以不是方法产生概念、而是概念产生方法，或者更为精确的说是概念的整体产生了方法、而方法才后续产生了概念的含义。因为个体内部无论是否为抽象所知，只要概念的对象是指定的，那么这样的对象就是概念层次上的整体，可是因为指定的整体依旧不为抽象所知，所以方法的产生是在整体的指定以后分流其中之一（或者其中一部分）以为整体到形式的含义明确，最后才是形式的含义到内容到证明可能。对方法来说，整体的未知是个体从未知到可知的必然提出，却也对已知的暂时片面有所承认，所以在其全局的指导下含义到底有着何种程度的知觉是在方法的掌控之中，乃至其证明的提出也只是方法为验证含义起见才提出的必要参照而已。
-</li>
+<li>方法概念的特殊在于抽象层面纯粹是个体内部的行为，只有在个体的内部已经有所规范以后才会扩散在个体之外的表体当中，所以不是方法产生概念、而是概念产生方法，或者更为精确的说是概念的整体产生了方法、而方法才后续产生了概念的含义。因为个体内部无论是否为抽象所知，只要概念的对象是指定的，那么这样的对象就是概念层次上的整体，可是因为指定的整体依旧不为抽象所知，所以方法的产生是在整体的指定以后分流其中之一（或者其中一部分）以为整体到形式的含义明确，最后才是形式的含义到内容到证明可能。对方法来说，整体的未知是个体从未知到可知的必然提出，却也对已知的暂时片面有所承认，所以在其全局的指导下含义到底有着何种程度的知觉是在方法的掌控之中，乃至其证明的提出也只是方法为验证含义起见才提出的必要参照而已。</li>
 </ul>
 
 <p>
@@ -5945,9 +5873,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-275" class="outline-2">
-<h2 id="sec-275">2017.06.08</h2>
-<div class="outline-text-2" id="text-275">
+<div id="outline-container-org68aaa2f" class="outline-2">
+<h2 id="org68aaa2f">2017.06.08</h2>
+<div class="outline-text-2" id="text-org68aaa2f">
 <p>
 <b>手段的道德的自我和伦理说明</b>
 </p>
@@ -5962,9 +5890,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-276" class="outline-2">
-<h2 id="sec-276">2017.06.09</h2>
-<div class="outline-text-2" id="text-276">
+<div id="outline-container-org62729f4" class="outline-2">
+<h2 id="org62729f4">2017.06.09</h2>
+<div class="outline-text-2" id="text-org62729f4">
 <p>
 <b>手段克制的说明</b>
 </p>
@@ -5979,9 +5907,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-277" class="outline-2">
-<h2 id="sec-277">2017.06.10</h2>
-<div class="outline-text-2" id="text-277">
+<div id="outline-container-org611eaa7" class="outline-2">
+<h2 id="org611eaa7">2017.06.10</h2>
+<div class="outline-text-2" id="text-org611eaa7">
 <p>
 <b>道德的理性克制</b>
 </p>
@@ -5996,9 +5924,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-278" class="outline-2">
-<h2 id="sec-278">2017.06.11</h2>
-<div class="outline-text-2" id="text-278">
+<div id="outline-container-org81d01be" class="outline-2">
+<h2 id="org81d01be">2017.06.11</h2>
+<div class="outline-text-2" id="text-org81d01be">
 <p>
 <b>道德的存在 - 经验依存</b>
 </p>
@@ -6013,9 +5941,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-279" class="outline-2">
-<h2 id="sec-279">2017.06.12</h2>
-<div class="outline-text-2" id="text-279">
+<div id="outline-container-org74facfa" class="outline-2">
+<h2 id="org74facfa">2017.06.12</h2>
+<div class="outline-text-2" id="text-org74facfa">
 <p>
 <b>依存的存在性质</b>
 </p>
@@ -6030,9 +5958,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-280" class="outline-2">
-<h2 id="sec-280">2017.06.13</h2>
-<div class="outline-text-2" id="text-280">
+<div id="outline-container-org0dc24d1" class="outline-2">
+<h2 id="org0dc24d1">2017.06.13</h2>
+<div class="outline-text-2" id="text-org0dc24d1">
 <p>
 <b>思辨的理性自由是反自由</b>
 </p>
@@ -6047,9 +5975,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-281" class="outline-2">
-<h2 id="sec-281">2017.06.14</h2>
-<div class="outline-text-2" id="text-281">
+<div id="outline-container-orgbcb7010" class="outline-2">
+<h2 id="orgbcb7010">2017.06.14</h2>
+<div class="outline-text-2" id="text-orgbcb7010">
 <p>
 <b>道德意志的必要产生</b>
 </p>
@@ -6064,9 +5992,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-282" class="outline-2">
-<h2 id="sec-282">2017.06.15</h2>
-<div class="outline-text-2" id="text-282">
+<div id="outline-container-orgdbc253d" class="outline-2">
+<h2 id="orgdbc253d">2017.06.15</h2>
+<div class="outline-text-2" id="text-orgdbc253d">
 <p>
 <b>自由的方法</b>
 </p>
@@ -6081,9 +6009,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-283" class="outline-2">
-<h2 id="sec-283">2017.06.16</h2>
-<div class="outline-text-2" id="text-283">
+<div id="outline-container-orgad1cd47" class="outline-2">
+<h2 id="orgad1cd47">2017.06.16</h2>
+<div class="outline-text-2" id="text-orgad1cd47">
 <p>
 <b>方法入手理念和理想的缺陷</b>
 </p>
@@ -6098,9 +6026,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-284" class="outline-2">
-<h2 id="sec-284">2017.06.17</h2>
-<div class="outline-text-2" id="text-284">
+<div id="outline-container-org83dd9dc" class="outline-2">
+<h2 id="org83dd9dc">2017.06.17</h2>
+<div class="outline-text-2" id="text-org83dd9dc">
 <p>
 <b>以言辞看到最初的知性整体</b>
 </p>
@@ -6115,9 +6043,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-285" class="outline-2">
-<h2 id="sec-285">2017.06.18</h2>
-<div class="outline-text-2" id="text-285">
+<div id="outline-container-org4c70b59" class="outline-2">
+<h2 id="org4c70b59">2017.06.18</h2>
+<div class="outline-text-2" id="text-org4c70b59">
 <p>
 <b>从思辨看到的反自由开始反思</b>
 </p>
@@ -6132,9 +6060,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-286" class="outline-2">
-<h2 id="sec-286">2017.06.19</h2>
-<div class="outline-text-2" id="text-286">
+<div id="outline-container-orge142a6e" class="outline-2">
+<h2 id="orge142a6e">2017.06.19</h2>
+<div class="outline-text-2" id="text-orge142a6e">
 <p>
 <b>情绪强度和频率对感情的影响</b>
 </p>
@@ -6149,9 +6077,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-287" class="outline-2">
-<h2 id="sec-287">2017.06.20</h2>
-<div class="outline-text-2" id="text-287">
+<div id="outline-container-org97c25bc" class="outline-2">
+<h2 id="org97c25bc">2017.06.20</h2>
+<div class="outline-text-2" id="text-org97c25bc">
 <p>
 <b>感性概念的自我表现</b>
 </p>
@@ -6166,9 +6094,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-288" class="outline-2">
-<h2 id="sec-288">2017.06.21</h2>
-<div class="outline-text-2" id="text-288">
+<div id="outline-container-org15ee133" class="outline-2">
+<h2 id="org15ee133">2017.06.21</h2>
+<div class="outline-text-2" id="text-org15ee133">
 <p>
 <b>感性概念在感情的首先自我隔阂及其解决</b>
 </p>
@@ -6183,9 +6111,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-289" class="outline-2">
-<h2 id="sec-289">2017.06.22</h2>
-<div class="outline-text-2" id="text-289">
+<div id="outline-container-org7817810" class="outline-2">
+<h2 id="org7817810">2017.06.22</h2>
+<div class="outline-text-2" id="text-org7817810">
 <p>
 <b>后天认知的实质层面从对象定义开始</b>
 </p>
@@ -6196,9 +6124,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-290" class="outline-2">
-<h2 id="sec-290">2017.06.23</h2>
-<div class="outline-text-2" id="text-290">
+<div id="outline-container-orgb6241e4" class="outline-2">
+<h2 id="orgb6241e4">2017.06.23</h2>
+<div class="outline-text-2" id="text-orgb6241e4">
 <p>
 <b>因果必然和因果破坏</b>
 </p>
@@ -6213,9 +6141,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-291" class="outline-2">
-<h2 id="sec-291">2017.06.24</h2>
-<div class="outline-text-2" id="text-291">
+<div id="outline-container-org395e891" class="outline-2">
+<h2 id="org395e891">2017.06.24</h2>
+<div class="outline-text-2" id="text-org395e891">
 <p>
 <b>意志的自由</b>
 </p>
@@ -6230,9 +6158,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-292" class="outline-2">
-<h2 id="sec-292">2017.06.25</h2>
-<div class="outline-text-2" id="text-292">
+<div id="outline-container-org92d4610" class="outline-2">
+<h2 id="org92d4610">2017.06.25</h2>
+<div class="outline-text-2" id="text-org92d4610">
 <p>
 <b>手段持续以及相应义务</b>
 </p>
@@ -6247,9 +6175,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-293" class="outline-2">
-<h2 id="sec-293">2017.06.26</h2>
-<div class="outline-text-2" id="text-293">
+<div id="outline-container-org6f6556a" class="outline-2">
+<h2 id="org6f6556a">2017.06.26</h2>
+<div class="outline-text-2" id="text-org6f6556a">
 <p>
 <b>道德面对的两种自然</b>
 </p>
@@ -6264,9 +6192,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-294" class="outline-2">
-<h2 id="sec-294">2017.06.27</h2>
-<div class="outline-text-2" id="text-294">
+<div id="outline-container-org57104c8" class="outline-2">
+<h2 id="org57104c8">2017.06.27</h2>
+<div class="outline-text-2" id="text-org57104c8">
 <p>
 <b>从方法得到的感情融合行为</b>
 </p>
@@ -6277,9 +6205,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-295" class="outline-2">
-<h2 id="sec-295">2017.06.28</h2>
-<div class="outline-text-2" id="text-295">
+<div id="outline-container-org26b778a" class="outline-2">
+<h2 id="org26b778a">2017.06.28</h2>
+<div class="outline-text-2" id="text-org26b778a">
 <p>
 <b>抽象感情在理性概念以后的应用</b>
 </p>
@@ -6294,9 +6222,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-296" class="outline-2">
-<h2 id="sec-296">2017.06.29</h2>
-<div class="outline-text-2" id="text-296">
+<div id="outline-container-orgca75445" class="outline-2">
+<h2 id="orgca75445">2017.06.29</h2>
+<div class="outline-text-2" id="text-orgca75445">
 <p>
 <b>感情抽象概念与情绪对象之间的联结及其持久性</b>
 </p>
@@ -6311,9 +6239,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-297" class="outline-2">
-<h2 id="sec-297">2017.06.30</h2>
-<div class="outline-text-2" id="text-297">
+<div id="outline-container-org70868e5" class="outline-2">
+<h2 id="org70868e5">2017.06.30</h2>
+<div class="outline-text-2" id="text-org70868e5">
 <p>
 <b>情绪在感性概念上的纯粹</b>
 </p>
@@ -6328,9 +6256,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-298" class="outline-2">
-<h2 id="sec-298">2017.07.01</h2>
-<div class="outline-text-2" id="text-298">
+<div id="outline-container-org060c109" class="outline-2">
+<h2 id="org060c109">2017.07.01</h2>
+<div class="outline-text-2" id="text-org060c109">
 <p>
 <b>简单情绪强度参照的建立</b>
 </p>
@@ -6345,9 +6273,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-299" class="outline-2">
-<h2 id="sec-299">2017.07.02</h2>
-<div class="outline-text-2" id="text-299">
+<div id="outline-container-orgdba15c7" class="outline-2">
+<h2 id="orgdba15c7">2017.07.02</h2>
+<div class="outline-text-2" id="text-orgdba15c7">
 <p>
 <b>知性划分初谈</b>
 </p>
@@ -6370,9 +6298,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-300" class="outline-2">
-<h2 id="sec-300">2017.07.03</h2>
-<div class="outline-text-2" id="text-300">
+<div id="outline-container-org52ea7ae" class="outline-2">
+<h2 id="org52ea7ae">2017.07.03</h2>
+<div class="outline-text-2" id="text-org52ea7ae">
 <p>
 <b>知性划分的反向推论</b>
 </p>
@@ -6401,9 +6329,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-301" class="outline-2">
-<h2 id="sec-301">2017.07.04</h2>
-<div class="outline-text-2" id="text-301">
+<div id="outline-container-org5b3d261" class="outline-2">
+<h2 id="org5b3d261">2017.07.04</h2>
+<div class="outline-text-2" id="text-org5b3d261">
 <p>
 <b>感情可知到已知</b>
 </p>
@@ -6418,9 +6346,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-302" class="outline-2">
-<h2 id="sec-302">2017.07.05</h2>
-<div class="outline-text-2" id="text-302">
+<div id="outline-container-org984a932" class="outline-2">
+<h2 id="org984a932">2017.07.05</h2>
+<div class="outline-text-2" id="text-org984a932">
 <p>
 <b>道德的未知</b>
 </p>
@@ -6435,9 +6363,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-303" class="outline-2">
-<h2 id="sec-303">2017.07.06</h2>
-<div class="outline-text-2" id="text-303">
+<div id="outline-container-org67eae6f" class="outline-2">
+<h2 id="org67eae6f">2017.07.06</h2>
+<div class="outline-text-2" id="text-org67eae6f">
 <p>
 <b>含义的认识与知识</b>
 </p>
@@ -6452,9 +6380,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-304" class="outline-2">
-<h2 id="sec-304">2017.07.07</h2>
-<div class="outline-text-2" id="text-304">
+<div id="outline-container-org1804243" class="outline-2">
+<h2 id="org1804243">2017.07.07</h2>
+<div class="outline-text-2" id="text-org1804243">
 <p>
 <b>从道德依存看道德是非</b>
 </p>
@@ -6469,9 +6397,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-305" class="outline-2">
-<h2 id="sec-305">2017.07.08</h2>
-<div class="outline-text-2" id="text-305">
+<div id="outline-container-org2d49122" class="outline-2">
+<h2 id="org2d49122">2017.07.08</h2>
+<div class="outline-text-2" id="text-org2d49122">
 <p>
 <b>行为是知性已知的唯一标准</b>
 </p>
@@ -6486,9 +6414,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-306" class="outline-2">
-<h2 id="sec-306">2017.07.09</h2>
-<div class="outline-text-2" id="text-306">
+<div id="outline-container-org82a4b1a" class="outline-2">
+<h2 id="org82a4b1a">2017.07.09</h2>
+<div class="outline-text-2" id="text-org82a4b1a">
 <p>
 <b>自我隔阂的道德解决再谈</b>
 </p>
@@ -6503,9 +6431,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-307" class="outline-2">
-<h2 id="sec-307">2017.07.10</h2>
-<div class="outline-text-2" id="text-307">
+<div id="outline-container-org0183f5b" class="outline-2">
+<h2 id="org0183f5b">2017.07.10</h2>
+<div class="outline-text-2" id="text-org0183f5b">
 <p>
 <b>道德从自我到伦理的单向</b>
 </p>
@@ -6526,9 +6454,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-308" class="outline-2">
-<h2 id="sec-308">2017.07.11</h2>
-<div class="outline-text-2" id="text-308">
+<div id="outline-container-org770c054" class="outline-2">
+<h2 id="org770c054">2017.07.11</h2>
+<div class="outline-text-2" id="text-org770c054">
 <p>
 <b>从道德看后天对自然的修补</b>
 </p>
@@ -6543,9 +6471,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-309" class="outline-2">
-<h2 id="sec-309">2017.07.12</h2>
-<div class="outline-text-2" id="text-309">
+<div id="outline-container-orgf0b73f9" class="outline-2">
+<h2 id="orgf0b73f9">2017.07.12</h2>
+<div class="outline-text-2" id="text-orgf0b73f9">
 <p>
 <b>道德极端与绝对之否定</b>
 </p>
@@ -6560,9 +6488,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-310" class="outline-2">
-<h2 id="sec-310">2017.07.13</h2>
-<div class="outline-text-2" id="text-310">
+<div id="outline-container-org9ef0cdb" class="outline-2">
+<h2 id="org9ef0cdb">2017.07.13</h2>
+<div class="outline-text-2" id="text-org9ef0cdb">
 <p>
 <b>个体意志尊严与道德第一维护初谈</b>
 </p>
@@ -6577,9 +6505,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-311" class="outline-2">
-<h2 id="sec-311">2017.07.14</h2>
-<div class="outline-text-2" id="text-311">
+<div id="outline-container-orgb173746" class="outline-2">
+<h2 id="orgb173746">2017.07.14</h2>
+<div class="outline-text-2" id="text-orgb173746">
 <p>
 <b>表体表象尊严与道德第二维护初谈</b>
 </p>
@@ -6594,9 +6522,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-312" class="outline-2">
-<h2 id="sec-312">2017.07.15</h2>
-<div class="outline-text-2" id="text-312">
+<div id="outline-container-orgcd16881" class="outline-2">
+<h2 id="orgcd16881">2017.07.15</h2>
+<div class="outline-text-2" id="text-orgcd16881">
 <p>
 <b>否定与否认</b>
 </p>
@@ -6611,9 +6539,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-313" class="outline-2">
-<h2 id="sec-313">2017.07.16</h2>
-<div class="outline-text-2" id="text-313">
+<div id="outline-container-orgdc0ec53" class="outline-2">
+<h2 id="orgdc0ec53">2017.07.16</h2>
+<div class="outline-text-2" id="text-orgdc0ec53">
 <p>
 <b>道德应用之后感性依旧界限</b>
 </p>
@@ -6628,9 +6556,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-314" class="outline-2">
-<h2 id="sec-314">2017.07.17</h2>
-<div class="outline-text-2" id="text-314">
+<div id="outline-container-org163c76f" class="outline-2">
+<h2 id="org163c76f">2017.07.17</h2>
+<div class="outline-text-2" id="text-org163c76f">
 <p>
 <b>道德应用与情绪约束</b>
 </p>
@@ -6645,9 +6573,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-315" class="outline-2">
-<h2 id="sec-315">2017.07.18</h2>
-<div class="outline-text-2" id="text-315">
+<div id="outline-container-orga7c40e9" class="outline-2">
+<h2 id="orga7c40e9">2017.07.18</h2>
+<div class="outline-text-2" id="text-orga7c40e9">
 <p>
 <b>证明的求证</b>
 </p>
@@ -6662,9 +6590,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-316" class="outline-2">
-<h2 id="sec-316">2017.07.19</h2>
-<div class="outline-text-2" id="text-316">
+<div id="outline-container-orgedfa848" class="outline-2">
+<h2 id="orgedfa848">2017.07.19</h2>
+<div class="outline-text-2" id="text-orgedfa848">
 <p>
 <b>倾向是概念已知集合</b>
 </p>
@@ -6679,9 +6607,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-317" class="outline-2">
-<h2 id="sec-317">2017.07.20</h2>
-<div class="outline-text-2" id="text-317">
+<div id="outline-container-orgd20bf7e" class="outline-2">
+<h2 id="orgd20bf7e">2017.07.20</h2>
+<div class="outline-text-2" id="text-orgd20bf7e">
 <p>
 <b>概念第一自省 - 溯源行为对概念和条件的影响</b>
 </p>
@@ -6696,9 +6624,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-318" class="outline-2">
-<h2 id="sec-318">2017.07.21</h2>
-<div class="outline-text-2" id="text-318">
+<div id="outline-container-org3472f4e" class="outline-2">
+<h2 id="org3472f4e">2017.07.21</h2>
+<div class="outline-text-2" id="text-org3472f4e">
 <p>
 <b>概念第二自省</b>
 </p>
@@ -6708,21 +6636,19 @@ for the JavaScript code in this tag.
 </p>
 
 <ul class="org-ul">
-<li>第一种处境是自省看见了概念的侧重在概念的历程中始终的一致，然后它便质疑这种侧重有无任何概念所必需的权威，因为无论含义和定义的先后，二者的结合在纯粹的判断中都既排除了全面在绝对范围的可能，也认为局限在个体的独立上就等于全面。可是自省并不能因为如此判断的结论就将概念的成立否定不顾，它不能忽视概念的现有条件已经将概念侧重的成立，而这样的侧重要么忠实于局限、要么忠实于全面，所以自省唯一的改变只能在侧重的已有并且不容更替以后反向概念另一边检视要求，然后在概念的方法面前对概念的求证有所追求，在概念的手段面前对概念的否认有所追求。
-</li>
+<li>第一种处境是自省看见了概念的侧重在概念的历程中始终的一致，然后它便质疑这种侧重有无任何概念所必需的权威，因为无论含义和定义的先后，二者的结合在纯粹的判断中都既排除了全面在绝对范围的可能，也认为局限在个体的独立上就等于全面。可是自省并不能因为如此判断的结论就将概念的成立否定不顾，它不能忽视概念的现有条件已经将概念侧重的成立，而这样的侧重要么忠实于局限、要么忠实于全面，所以自省唯一的改变只能在侧重的已有并且不容更替以后反向概念另一边检视要求，然后在概念的方法面前对概念的求证有所追求，在概念的手段面前对概念的否认有所追求。</li>
 </ul>
 
 
 <ul class="org-ul">
-<li>第二种处境自省会在概念的侧重首先看清概念及其一切条件所在层面和层次，然后在自省的排列之下不仅仅概念单方面一致的侧重，而是分清概念在某层面、某层次上的侧重。概念与其说是在定义或者含义上永久的侧重，不如说概念是因为层面首先的注重然后才会得到定义与含义的实际侧重。这对个体来说定义固然只有在抽象层面得到、含义也固然只有在表体层面得到，而在先验与后天来说含义的知性诠释因为先验的表现与隔阂所以是全面、定义的知性综合因为后天的拥有与渐进所以是局限，因此自省并非为概念被明确的侧重而追求所谓平衡，只是在个体的三个序列之上为排列概念的一切而追求层面与层次的区分，进而得到概念区分以后侧重实际的一致与不同。
-</li>
+<li>第二种处境自省会在概念的侧重首先看清概念及其一切条件所在层面和层次，然后在自省的排列之下不仅仅概念单方面一致的侧重，而是分清概念在某层面、某层次上的侧重。概念与其说是在定义或者含义上永久的侧重，不如说概念是因为层面首先的注重然后才会得到定义与含义的实际侧重。这对个体来说定义固然只有在抽象层面得到、含义也固然只有在表体层面得到，而在先验与后天来说含义的知性诠释因为先验的表现与隔阂所以是全面、定义的知性综合因为后天的拥有与渐进所以是局限，因此自省并非为概念被明确的侧重而追求所谓平衡，只是在个体的三个序列之上为排列概念的一切而追求层面与层次的区分，进而得到概念区分以后侧重实际的一致与不同。</li>
 </ul>
 </div>
 </div>
 
-<div id="outline-container-sec-319" class="outline-2">
-<h2 id="sec-319">2017.07.22</h2>
-<div class="outline-text-2" id="text-319">
+<div id="outline-container-org13b6aee" class="outline-2">
+<h2 id="org13b6aee">2017.07.22</h2>
+<div class="outline-text-2" id="text-org13b6aee">
 <p>
 <b>命题的条件必需怀疑</b>
 </p>
@@ -6737,9 +6663,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-320" class="outline-2">
-<h2 id="sec-320">2017.07.23</h2>
-<div class="outline-text-2" id="text-320">
+<div id="outline-container-orgaea79c6" class="outline-2">
+<h2 id="orgaea79c6">2017.07.23</h2>
+<div class="outline-text-2" id="text-orgaea79c6">
 <p>
 <b>感性概念的成立</b>
 </p>
@@ -6750,9 +6676,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-321" class="outline-2">
-<h2 id="sec-321">2017.07.24</h2>
-<div class="outline-text-2" id="text-321">
+<div id="outline-container-orgc1f84a9" class="outline-2">
+<h2 id="orgc1f84a9">2017.07.24</h2>
+<div class="outline-text-2" id="text-orgc1f84a9">
 <p>
 <b>概念第二自省续谈</b>
 </p>
@@ -6767,9 +6693,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-322" class="outline-2">
-<h2 id="sec-322">2017.07.25</h2>
-<div class="outline-text-2" id="text-322">
+<div id="outline-container-orgf20c475" class="outline-2">
+<h2 id="orgf20c475">2017.07.25</h2>
+<div class="outline-text-2" id="text-orgf20c475">
 <p>
 <b>道德手段以表象产生的附属方法概念</b>
 </p>
@@ -6780,9 +6706,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-323" class="outline-2">
-<h2 id="sec-323">2017.07.26</h2>
-<div class="outline-text-2" id="text-323">
+<div id="outline-container-org896099a" class="outline-2">
+<h2 id="org896099a">2017.07.26</h2>
+<div class="outline-text-2" id="text-org896099a">
 <p>
 <b>知性以后的空</b>
 </p>
@@ -6797,9 +6723,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-324" class="outline-2">
-<h2 id="sec-324">2017.07.27</h2>
-<div class="outline-text-2" id="text-324">
+<div id="outline-container-org443fc72" class="outline-2">
+<h2 id="org443fc72">2017.07.27</h2>
+<div class="outline-text-2" id="text-org443fc72">
 <p>
 <b>意志持续的空</b>
 </p>
@@ -6820,9 +6746,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-325" class="outline-2">
-<h2 id="sec-325">2017.07.28</h2>
-<div class="outline-text-2" id="text-325">
+<div id="outline-container-orgaa0b501" class="outline-2">
+<h2 id="orgaa0b501">2017.07.28</h2>
+<div class="outline-text-2" id="text-orgaa0b501">
 <p>
 <b>从倾向情绪开始成立的倾向含义侧重</b>
 </p>
@@ -6833,9 +6759,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-326" class="outline-2">
-<h2 id="sec-326">2017.07.29</h2>
-<div class="outline-text-2" id="text-326">
+<div id="outline-container-orgf5b51bf" class="outline-2">
+<h2 id="orgf5b51bf">2017.07.29</h2>
+<div class="outline-text-2" id="text-orgf5b51bf">
 <p>
 <b>从倾向成立看见的纯理开始倾向定义侧重</b>
 </p>
@@ -6846,9 +6772,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-327" class="outline-2">
-<h2 id="sec-327">2017.07.30</h2>
-<div class="outline-text-2" id="text-327">
+<div id="outline-container-orga955bb4" class="outline-2">
+<h2 id="orga955bb4">2017.07.30</h2>
+<div class="outline-text-2" id="text-orga955bb4">
 <p>
 <b>迷罔情绪在理性明确与判断</b>
 </p>
@@ -6859,9 +6785,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-328" class="outline-2">
-<h2 id="sec-328">2017.07.31</h2>
-<div class="outline-text-2" id="text-328">
+<div id="outline-container-org1f8f995" class="outline-2">
+<h2 id="org1f8f995">2017.07.31</h2>
+<div class="outline-text-2" id="text-org1f8f995">
 <p>
 <b>道德附属方法概念的定位及其是非牵涉</b>
 </p>
@@ -6876,9 +6802,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-329" class="outline-2">
-<h2 id="sec-329">2017.08.01</h2>
-<div class="outline-text-2" id="text-329">
+<div id="outline-container-org3e4de3f" class="outline-2">
+<h2 id="org3e4de3f">2017.08.01</h2>
+<div class="outline-text-2" id="text-org3e4de3f">
 <p>
 <b>怀疑形式</b>
 </p>
@@ -6888,21 +6814,19 @@ for the JavaScript code in this tag.
 </p>
 
 <ul class="org-ul">
-<li>名词在对象的异议即以当前名词与对象的不相符合所以怀疑地提出异议，而怀疑的行为在假设的成立以后最终则将名词代替。因为一切名词都有它代表的概念所有，而在概念既然可以是视为异议的提出必然与原本名词下的概念冲突或背反，所以等同于将原本概念因为缺陷的不可弥补所以将它在对象上的成立完全推翻，以名词的表象替换实际上另一种概念，然后以为与对象是相称的。从怀疑的行为上可以命名为对象的反论怀疑，纠缠于个体能够观察到的对象自身的正确性、客观性，而不问在个体的干涉下对象可以如何理解、应该如何理解。
-</li>
+<li>名词在对象的异议即以当前名词与对象的不相符合所以怀疑地提出异议，而怀疑的行为在假设的成立以后最终则将名词代替。因为一切名词都有它代表的概念所有，而在概念既然可以是视为异议的提出必然与原本名词下的概念冲突或背反，所以等同于将原本概念因为缺陷的不可弥补所以将它在对象上的成立完全推翻，以名词的表象替换实际上另一种概念，然后以为与对象是相称的。从怀疑的行为上可以命名为对象的反论怀疑，纠缠于个体能够观察到的对象自身的正确性、客观性，而不问在个体的干涉下对象可以如何理解、应该如何理解。</li>
 </ul>
 
 
 <ul class="org-ul">
-<li>概念在对象的异议则是在对象与名词得到完全的保留前提下，怀疑仅仅异议于概念的言辞某处漏洞所在然后提出，而当怀疑的行为在假设的成立以后不会替换名词、更不可能替换对象，而只是替换名词在概念上的细节。是概念的条件构建本身不曾严谨，或者概念本身必须经历的更新趋向，所以怀疑的提出促进了在对象的客观与在个体的名词准确上有所利用。从这类怀疑的行为上看可以命名为对象的思辨怀疑，不仅仅思辨于概念自身推论的进行，更思辨于概念推论漏洞的进行，以此为怀疑保留最小的在意志问答上的应用。
-</li>
+<li>概念在对象的异议则是在对象与名词得到完全的保留前提下，怀疑仅仅异议于概念的言辞某处漏洞所在然后提出，而当怀疑的行为在假设的成立以后不会替换名词、更不可能替换对象，而只是替换名词在概念上的细节。是概念的条件构建本身不曾严谨，或者概念本身必须经历的更新趋向，所以怀疑的提出促进了在对象的客观与在个体的名词准确上有所利用。从这类怀疑的行为上看可以命名为对象的思辨怀疑，不仅仅思辨于概念自身推论的进行，更思辨于概念推论漏洞的进行，以此为怀疑保留最小的在意志问答上的应用。</li>
 </ul>
 </div>
 </div>
 
-<div id="outline-container-sec-330" class="outline-2">
-<h2 id="sec-330">2017.08.02</h2>
-<div class="outline-text-2" id="text-330">
+<div id="outline-container-org75feb68" class="outline-2">
+<h2 id="org75feb68">2017.08.02</h2>
+<div class="outline-text-2" id="text-org75feb68">
 <p>
 <b>否定与否认形式</b>
 </p>
@@ -6912,14 +6836,12 @@ for the JavaScript code in this tag.
 </p>
 
 <ul class="org-ul">
-<li>否定于对象在名词的修正。对象在个体的观察下有两种大类，一种是个体抽象所设立的拥有存在，一种是表体自身的实体存在。当对象以拥有存在的面目出现，否定所面对的也就只是唯一对象、唯一名词、唯一概念，其中抽象之所以设立拥有的存在是因为对象与概念在抽象中的相连，所以否定了对象也就否定了概念，反而对于知性的释义而言名词是不变的，一切否定因为个体的设立所以个体能够推翻。当对象以实体存在的面目出现，否定无法做到在对象上的直接推翻，但是对于完全抽象的名词与概念来说，在对象的考察却是与个体身份等同且多数的，个体面对了唯一名词、唯一概念、复数对象，所以个体在否定之前首先做到的就是定义归纳。此时名词与概念因为同处于抽象是相连的，在概念的定义行为等于名词的归纳，否定则针对了这一定义的对象，它不曾直接否定对象的存在，但是它否定了以个体的名词及其以下概念与表体体对象的归纳，其中不变的是名词与概念，而只有对象在定义中改变，以此转变名词的覆盖与概念的应用范围。
-</li>
+<li>否定于对象在名词的修正。对象在个体的观察下有两种大类，一种是个体抽象所设立的拥有存在，一种是表体自身的实体存在。当对象以拥有存在的面目出现，否定所面对的也就只是唯一对象、唯一名词、唯一概念，其中抽象之所以设立拥有的存在是因为对象与概念在抽象中的相连，所以否定了对象也就否定了概念，反而对于知性的释义而言名词是不变的，一切否定因为个体的设立所以个体能够推翻。当对象以实体存在的面目出现，否定无法做到在对象上的直接推翻，但是对于完全抽象的名词与概念来说，在对象的考察却是与个体身份等同且多数的，个体面对了唯一名词、唯一概念、复数对象，所以个体在否定之前首先做到的就是定义归纳。此时名词与概念因为同处于抽象是相连的，在概念的定义行为等于名词的归纳，否定则针对了这一定义的对象，它不曾直接否定对象的存在，但是它否定了以个体的名词及其以下概念与表体体对象的归纳，其中不变的是名词与概念，而只有对象在定义中改变，以此转变名词的覆盖与概念的应用范围。</li>
 </ul>
 
 
 <ul class="org-ul">
-<li>否认于对象在概念的拒绝。因为作为抽象拥有存在的对象由概念设立，所以否认的提出也就不可能转向针对原本的设立概念提出拒绝或者概念本身提出拒绝设立对象，对象在否认行为上只有以表体的实体存在面目出现，而否认所拒绝的也只有同样定义的对象拒绝纳入以及以定义之后含义在表体对象上的表象拒绝。否定是以同样名词与概念不变前提下在对象的一种实践行为，不是求证时确认的需求可以做出否认的肯定，而是必须在名词与概念已经辩证以后已知的个体实践行为，它拒绝的不是对象本身，是拒绝了个体在对象上的认知。
-</li>
+<li>否认于对象在概念的拒绝。因为作为抽象拥有存在的对象由概念设立，所以否认的提出也就不可能转向针对原本的设立概念提出拒绝或者概念本身提出拒绝设立对象，对象在否认行为上只有以表体的实体存在面目出现，而否认所拒绝的也只有同样定义的对象拒绝纳入以及以定义之后含义在表体对象上的表象拒绝。否定是以同样名词与概念不变前提下在对象的一种实践行为，不是求证时确认的需求可以做出否认的肯定，而是必须在名词与概念已经辩证以后已知的个体实践行为，它拒绝的不是对象本身，是拒绝了个体在对象上的认知。</li>
 </ul>
 
 <blockquote>
@@ -6930,9 +6852,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-331" class="outline-2">
-<h2 id="sec-331">2017.08.03</h2>
-<div class="outline-text-2" id="text-331">
+<div id="outline-container-orgedd9164" class="outline-2">
+<h2 id="orgedd9164">2017.08.03</h2>
+<div class="outline-text-2" id="text-orgedd9164">
 <p>
 <b>归属的一与义初谈</b>
 </p>
@@ -6951,9 +6873,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-332" class="outline-2">
-<h2 id="sec-332">2017.08.04</h2>
-<div class="outline-text-2" id="text-332">
+<div id="outline-container-orga247fdb" class="outline-2">
+<h2 id="orga247fdb">2017.08.04</h2>
+<div class="outline-text-2" id="text-orga247fdb">
 <p>
 <b>道德附属方法概念的相类</b>
 </p>
@@ -6964,9 +6886,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-333" class="outline-2">
-<h2 id="sec-333">2017.08.05</h2>
-<div class="outline-text-2" id="text-333">
+<div id="outline-container-orga7aa5ca" class="outline-2">
+<h2 id="orga7aa5ca">2017.08.05</h2>
+<div class="outline-text-2" id="text-orga7aa5ca">
 <p>
 <b>意志的存在态度再谈 - 存在的感性知觉应对</b>
 </p>
@@ -6976,20 +6898,17 @@ for the JavaScript code in this tag.
 </p>
 
 <ul class="org-ul">
-<li>因为“虚构无质、实存无象”而自问。感性看见在理性的一系列明确中存在首先是不同的，后天认知的一切缺少了必须的实质存在，所以抽象又将它模拟为实质认识，最终在它模拟的存在当中只有认识的象存在（亦即条件存在）。反之在一切被确认为实体的对象当中如果没有演绎的继续，那么存在也就只是存在，对个体而言所谓认知的象是实体自身所没有的，而仅仅依靠于个体将它经验阐述的。由此感性的第一存在自问就是询问抽象无质、实存无象于个体而言哪个重要，在个体面临行为主动的抉择时哪个重要性除理性确认的界限衡量以外可以被偏爱的保留以及抛弃？
-</li>
+<li>因为“虚构无质、实存无象”而自问。感性看见在理性的一系列明确中存在首先是不同的，后天认知的一切缺少了必须的实质存在，所以抽象又将它模拟为实质认识，最终在它模拟的存在当中只有认识的象存在（亦即条件存在）。反之在一切被确认为实体的对象当中如果没有演绎的继续，那么存在也就只是存在，对个体而言所谓认知的象是实体自身所没有的，而仅仅依靠于个体将它经验阐述的。由此感性的第一存在自问就是询问抽象无质、实存无象于个体而言哪个重要，在个体面临行为主动的抉择时哪个重要性除理性确认的界限衡量以外可以被偏爱的保留以及抛弃？</li>
 </ul>
 
 
 <ul class="org-ul">
-<li>因为“存在无意志”而自问。如果一种存在根本不在乎意志与否，实存的无象也就根本不是任何实存固有的缺陷，而仅仅在个体的实存以后、意志的虚构看来实存被加予的缺陷。那么感性在这里看见的存在一种是实存的对象无关意志、另一种虚构的对象则完全意志，这两种存在即便都已经被理性所明确，那么也就既可以因为意志自发的亲疏得到自问偏爱的直接，同样也会因为实存的客观及其对实存的依赖得到自问虚构的质疑。
-</li>
+<li>因为“存在无意志”而自问。如果一种存在根本不在乎意志与否，实存的无象也就根本不是任何实存固有的缺陷，而仅仅在个体的实存以后、意志的虚构看来实存被加予的缺陷。那么感性在这里看见的存在一种是实存的对象无关意志、另一种虚构的对象则完全意志，这两种存在即便都已经被理性所明确，那么也就既可以因为意志自发的亲疏得到自问偏爱的直接，同样也会因为实存的客观及其对实存的依赖得到自问虚构的质疑。</li>
 </ul>
 
 
 <ul class="org-ul">
-<li>因为“思验存在的坚持和放弃”而自问。理性在看见意志的抽象成立即使感性自问的偏爱也无法否认实存的客观和依赖，同样即使感性质疑于虚构的存在也无法否认抽象的既有并影响作为实体的个体行为主动，所以在理性的下一步明确就为抽象得到具体的思验存在，而在其中将思验存在与实存阐述为互有坚持与放弃。这在理性看来是完全合理的，并且不是理性因感性的自问而提出的创新方案，反而自意志的抽象成立以后理性本就如此行动的，理性只是将思验存在用坚持与放弃的言辞明确，而不是将它提出以后加入原本不同的行动当中。存在或许在理性中已经看似秩序井然地合理，但是感性却必须再次自问所谓坚持与放弃纵然随模拟而得到自然的规范，个体又如何肯定思验存在不是自然规范以后实存的一部分或者演变，而必须是与实存同样独立的存在？
-</li>
+<li>因为“思验存在的坚持和放弃”而自问。理性在看见意志的抽象成立即使感性自问的偏爱也无法否认实存的客观和依赖，同样即使感性质疑于虚构的存在也无法否认抽象的既有并影响作为实体的个体行为主动，所以在理性的下一步明确就为抽象得到具体的思验存在，而在其中将思验存在与实存阐述为互有坚持与放弃。这在理性看来是完全合理的，并且不是理性因感性的自问而提出的创新方案，反而自意志的抽象成立以后理性本就如此行动的，理性只是将思验存在用坚持与放弃的言辞明确，而不是将它提出以后加入原本不同的行动当中。存在或许在理性中已经看似秩序井然地合理，但是感性却必须再次自问所谓坚持与放弃纵然随模拟而得到自然的规范，个体又如何肯定思验存在不是自然规范以后实存的一部分或者演变，而必须是与实存同样独立的存在？</li>
 </ul>
 
 <p>
@@ -6998,9 +6917,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-334" class="outline-2">
-<h2 id="sec-334">2017.08.06</h2>
-<div class="outline-text-2" id="text-334">
+<div id="outline-container-org09c0396" class="outline-2">
+<h2 id="org09c0396">2017.08.06</h2>
+<div class="outline-text-2" id="text-org09c0396">
 <p>
 <b>道德应用的需求区分</b>
 </p>
@@ -7011,9 +6930,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-335" class="outline-2">
-<h2 id="sec-335">2017.08.07</h2>
-<div class="outline-text-2" id="text-335">
+<div id="outline-container-org56e0cb1" class="outline-2">
+<h2 id="org56e0cb1">2017.08.07</h2>
+<div class="outline-text-2" id="text-org56e0cb1">
 <p>
 <b>在一切道德应用的极端首先情绪极端</b>
 </p>
@@ -7028,9 +6947,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-336" class="outline-2">
-<h2 id="sec-336">2017.08.08</h2>
-<div class="outline-text-2" id="text-336">
+<div id="outline-container-org9425836" class="outline-2">
+<h2 id="org9425836">2017.08.08</h2>
+<div class="outline-text-2" id="text-org9425836">
 <p>
 <b>抽象中归属的所有权利</b>
 </p>
@@ -7045,9 +6964,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-337" class="outline-2">
-<h2 id="sec-337">2017.08.09</h2>
-<div class="outline-text-2" id="text-337">
+<div id="outline-container-org113f315" class="outline-2">
+<h2 id="org113f315">2017.08.09</h2>
+<div class="outline-text-2" id="text-org113f315">
 <p>
 <b>感情的抽象核心</b>
 </p>
@@ -7058,9 +6977,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-338" class="outline-2">
-<h2 id="sec-338">2017.08.10</h2>
-<div class="outline-text-2" id="text-338">
+<div id="outline-container-org9b75878" class="outline-2">
+<h2 id="org9b75878">2017.08.10</h2>
+<div class="outline-text-2" id="text-org9b75878">
 <p>
 <b>概念第三自省 - 从归属的所有看概念切实定义</b>
 </p>
@@ -7075,9 +6994,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-339" class="outline-2">
-<h2 id="sec-339">2017.08.11</h2>
-<div class="outline-text-2" id="text-339">
+<div id="outline-container-org92d3575" class="outline-2">
+<h2 id="org92d3575">2017.08.11</h2>
+<div class="outline-text-2" id="text-org92d3575">
 <p>
 <b>概念第三自省续谈 - 根据概念定义看对象表体与主体倾向</b>
 </p>
@@ -7088,9 +7007,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-340" class="outline-2">
-<h2 id="sec-340">2017.08.12</h2>
-<div class="outline-text-2" id="text-340">
+<div id="outline-container-orgc772253" class="outline-2">
+<h2 id="orgc772253">2017.08.12</h2>
+<div class="outline-text-2" id="text-orgc772253">
 <p>
 <b>概念第三自省续谈 - 从定义对手段实践与方法求证的修改</b>
 </p>
@@ -7101,9 +7020,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-341" class="outline-2">
-<h2 id="sec-341">2017.08.13</h2>
-<div class="outline-text-2" id="text-341">
+<div id="outline-container-org37c5fcf" class="outline-2">
+<h2 id="org37c5fcf">2017.08.13</h2>
+<div class="outline-text-2" id="text-org37c5fcf">
 <p>
 <b>自由与道德前提</b>
 </p>
@@ -7118,9 +7037,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-342" class="outline-2">
-<h2 id="sec-342">2017.08.14</h2>
-<div class="outline-text-2" id="text-342">
+<div id="outline-container-org287d965" class="outline-2">
+<h2 id="org287d965">2017.08.14</h2>
+<div class="outline-text-2" id="text-org287d965">
 <p>
 <b>空的理性手段概念</b>
 </p>
@@ -7131,9 +7050,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-343" class="outline-2">
-<h2 id="sec-343">2017.08.15</h2>
-<div class="outline-text-2" id="text-343">
+<div id="outline-container-org10b1988" class="outline-2">
+<h2 id="org10b1988">2017.08.15</h2>
+<div class="outline-text-2" id="text-org10b1988">
 <p>
 <b>空的感性概念</b>
 </p>
@@ -7152,9 +7071,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-344" class="outline-2">
-<h2 id="sec-344">2017.08.16</h2>
-<div class="outline-text-2" id="text-344">
+<div id="outline-container-org63fd89e" class="outline-2">
+<h2 id="org63fd89e">2017.08.16</h2>
+<div class="outline-text-2" id="text-org63fd89e">
 <p>
 <b>感性概念在理性的自我认识</b>
 </p>
@@ -7165,9 +7084,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-345" class="outline-2">
-<h2 id="sec-345">2017.08.17</h2>
-<div class="outline-text-2" id="text-345">
+<div id="outline-container-org06e255a" class="outline-2">
+<h2 id="org06e255a">2017.08.17</h2>
+<div class="outline-text-2" id="text-org06e255a">
 <p>
 <b>自我认识在自我道德的处理</b>
 </p>
@@ -7182,9 +7101,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-346" class="outline-2">
-<h2 id="sec-346">2017.08.18</h2>
-<div class="outline-text-2" id="text-346">
+<div id="outline-container-org3d5d577" class="outline-2">
+<h2 id="org3d5d577">2017.08.18</h2>
+<div class="outline-text-2" id="text-org3d5d577">
 <p>
 <b>抽象的迷罔与反思 - 空的虚无再认识</b>
 </p>
@@ -7195,9 +7114,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-347" class="outline-2">
-<h2 id="sec-347">2017.08.19</h2>
-<div class="outline-text-2" id="text-347">
+<div id="outline-container-org2b82d33" class="outline-2">
+<h2 id="org2b82d33">2017.08.19</h2>
+<div class="outline-text-2" id="text-org2b82d33">
 <p>
 <b>广义自我与伦理道德</b>
 </p>
@@ -7214,9 +7133,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-348" class="outline-2">
-<h2 id="sec-348">2017.08.20</h2>
-<div class="outline-text-2" id="text-348">
+<div id="outline-container-orgcf7b336" class="outline-2">
+<h2 id="orgcf7b336">2017.08.20</h2>
+<div class="outline-text-2" id="text-orgcf7b336">
 <p>
 <b>广义自我的责任与伦理道德的自然</b>
 </p>
@@ -7227,9 +7146,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-349" class="outline-2">
-<h2 id="sec-349">2017.08.21</h2>
-<div class="outline-text-2" id="text-349">
+<div id="outline-container-org159f06c" class="outline-2">
+<h2 id="org159f06c">2017.08.21</h2>
+<div class="outline-text-2" id="text-org159f06c">
 <p>
 <b>实践的迷罔一种 - 实践持续再谈</b>
 </p>
@@ -7244,9 +7163,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-350" class="outline-2">
-<h2 id="sec-350">2017.08.22</h2>
-<div class="outline-text-2" id="text-350">
+<div id="outline-container-org915913e" class="outline-2">
+<h2 id="org915913e">2017.08.22</h2>
+<div class="outline-text-2" id="text-org915913e">
 <p>
 <b>意志主动的需求区分</b>
 </p>
@@ -7261,9 +7180,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-351" class="outline-2">
-<h2 id="sec-351">2017.08.23</h2>
-<div class="outline-text-2" id="text-351">
+<div id="outline-container-org0cbc629" class="outline-2">
+<h2 id="org0cbc629">2017.08.23</h2>
+<div class="outline-text-2" id="text-org0cbc629">
 <p>
 <b>意志主动的需求复合</b>
 </p>
@@ -7273,14 +7192,12 @@ for the JavaScript code in this tag.
 </p>
 
 <ul class="org-ul">
-<li>理想欲望需求与理念欲望需求。理想欲望是在实践需求与欲望需求之间产生，无论两种基本需求提出的先后，只是精确在了单一的表体对象上个体的意志同样对该对象有着不同含义的需求必要。这在理念欲望中则由求证需求与欲望需求复合产生，只是比之理想欲望更容易在求证需求的提出以后产生虽然在对象却更加另类的欲望需求，因为求证所根据的方法式概念有着纯理核心的想象，个体不能阻碍感性同时对其反应。在需求的复合以后因为含义的不同、乃至在能力的根本运用上有着不同，不能在复合以后有着综合与融合首先的行为可能，反而必须在行为主导上有着各自含义不同而不同地提出，即按照实践所得附属寻求欲望或者按照欲望所得附属寻求实践、这在理念欲望的需求上也是相同，而在对象的具体不同以后有着意志不同能力不同地选择。
-</li>
+<li>理想欲望需求与理念欲望需求。理想欲望是在实践需求与欲望需求之间产生，无论两种基本需求提出的先后，只是精确在了单一的表体对象上个体的意志同样对该对象有着不同含义的需求必要。这在理念欲望中则由求证需求与欲望需求复合产生，只是比之理想欲望更容易在求证需求的提出以后产生虽然在对象却更加另类的欲望需求，因为求证所根据的方法式概念有着纯理核心的想象，个体不能阻碍感性同时对其反应。在需求的复合以后因为含义的不同、乃至在能力的根本运用上有着不同，不能在复合以后有着综合与融合首先的行为可能，反而必须在行为主导上有着各自含义不同而不同地提出，即按照实践所得附属寻求欲望或者按照欲望所得附属寻求实践、这在理念欲望的需求上也是相同，而在对象的具体不同以后有着意志不同能力不同地选择。</li>
 </ul>
 
 
 <ul class="org-ul">
-<li>实践求证需求与求证实践需求。实践求证与求证实践的先后是严谨的，因为他们各自根据的概念不同首先有着附属的关系。在手段式概念附属某方法式概念以后，对产生实践需求的对象上就一定有着同样因为附属的条件产生的方法式概念对同一对象有求证需求，实践求证的复合因此产生；而在方法式概念附属手段式概念以后，需求的复合与实践求证类似，这种概念的条件关系促使对象的需求提出，二者皆无法得到有根据的否定。因为同样在需求的提出上是理性的关系，两种复合的需求在基本的先后规定以后，是由实践参考了求证的含义必要或者求证差参考了实践的含义必要，所以在最终行为的主导上依旧是含义清晰的唯一，只是在意志的考察看来对行为有着双向利用。
-</li>
+<li>实践求证需求与求证实践需求。实践求证与求证实践的先后是严谨的，因为他们各自根据的概念不同首先有着附属的关系。在手段式概念附属某方法式概念以后，对产生实践需求的对象上就一定有着同样因为附属的条件产生的方法式概念对同一对象有求证需求，实践求证的复合因此产生；而在方法式概念附属手段式概念以后，需求的复合与实践求证类似，这种概念的条件关系促使对象的需求提出，二者皆无法得到有根据的否定。因为同样在需求的提出上是理性的关系，两种复合的需求在基本的先后规定以后，是由实践参考了求证的含义必要或者求证差参考了实践的含义必要，所以在最终行为的主导上依旧是含义清晰的唯一，只是在意志的考察看来对行为有着双向利用。</li>
 </ul>
 
 <p>
@@ -7289,9 +7206,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-352" class="outline-2">
-<h2 id="sec-352">2017.08.24</h2>
-<div class="outline-text-2" id="text-352">
+<div id="outline-container-orgfb6e3e2" class="outline-2">
+<h2 id="orgfb6e3e2">2017.08.24</h2>
+<div class="outline-text-2" id="text-orgfb6e3e2">
 <p>
 <b>知性的需求</b>
 </p>
@@ -7302,9 +7219,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-353" class="outline-2">
-<h2 id="sec-353">2017.08.25</h2>
-<div class="outline-text-2" id="text-353">
+<div id="outline-container-orgb20f310" class="outline-2">
+<h2 id="orgb20f310">2017.08.25</h2>
+<div class="outline-text-2" id="text-orgb20f310">
 <p>
 <b>欲望欲求与需求在感性情绪的变化</b>
 </p>
@@ -7315,9 +7232,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-354" class="outline-2">
-<h2 id="sec-354">2017.08.26</h2>
-<div class="outline-text-2" id="text-354">
+<div id="outline-container-org75d5485" class="outline-2">
+<h2 id="org75d5485">2017.08.26</h2>
+<div class="outline-text-2" id="text-org75d5485">
 <p>
 <b>在空的考察以后反思自由</b>
 </p>
@@ -7328,9 +7245,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-355" class="outline-2">
-<h2 id="sec-355">2017.08.27</h2>
-<div class="outline-text-2" id="text-355">
+<div id="outline-container-orgd89fe8d" class="outline-2">
+<h2 id="orgd89fe8d">2017.08.27</h2>
+<div class="outline-text-2" id="text-orgd89fe8d">
 <p>
 <b>自由以一个理念的考察</b>
 </p>
@@ -7345,9 +7262,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-356" class="outline-2">
-<h2 id="sec-356">2017.08.28</h2>
-<div class="outline-text-2" id="text-356">
+<div id="outline-container-orgdd211f3" class="outline-2">
+<h2 id="orgdd211f3">2017.08.28</h2>
+<div class="outline-text-2" id="text-orgdd211f3">
 <p>
 <b>伦理道德与实践的责任</b>
 </p>
@@ -7358,9 +7275,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-357" class="outline-2">
-<h2 id="sec-357">2017.08.29</h2>
-<div class="outline-text-2" id="text-357">
+<div id="outline-container-org4eb97c8" class="outline-2">
+<h2 id="org4eb97c8">2017.08.29</h2>
+<div class="outline-text-2" id="text-org4eb97c8">
 <p>
 <b>空与责任 - 在理性方法概念的可能</b>
 </p>
@@ -7371,9 +7288,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-358" class="outline-2">
-<h2 id="sec-358">2017.08.30</h2>
-<div class="outline-text-2" id="text-358">
+<div id="outline-container-orga0d1dda" class="outline-2">
+<h2 id="orga0d1dda">2017.08.30</h2>
+<div class="outline-text-2" id="text-orga0d1dda">
 <p>
 <b>自我道德的实践责任</b>
 </p>
@@ -7388,9 +7305,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-359" class="outline-2">
-<h2 id="sec-359">2017.08.31</h2>
-<div class="outline-text-2" id="text-359">
+<div id="outline-container-org3b45561" class="outline-2">
+<h2 id="org3b45561">2017.08.31</h2>
+<div class="outline-text-2" id="text-org3b45561">
 <p>
 <b>直觉在感性的运用</b>
 </p>
@@ -7401,9 +7318,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-360" class="outline-2">
-<h2 id="sec-360">2017.09.01</h2>
-<div class="outline-text-2" id="text-360">
+<div id="outline-container-org8176065" class="outline-2">
+<h2 id="org8176065">2017.09.01</h2>
+<div class="outline-text-2" id="text-org8176065">
 <p>
 <b>直观到直觉 - 感性运作到运用</b>
 </p>
@@ -7414,9 +7331,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-361" class="outline-2">
-<h2 id="sec-361">2017.09.02</h2>
-<div class="outline-text-2" id="text-361">
+<div id="outline-container-org59354d6" class="outline-2">
+<h2 id="org59354d6">2017.09.02</h2>
+<div class="outline-text-2" id="text-org59354d6">
 <p>
 <b>概念相关原则与准则</b>
 </p>
@@ -7427,9 +7344,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-362" class="outline-2">
-<h2 id="sec-362">2017.09.03</h2>
-<div class="outline-text-2" id="text-362">
+<div id="outline-container-org5a88dd2" class="outline-2">
+<h2 id="org5a88dd2">2017.09.03</h2>
+<div class="outline-text-2" id="text-org5a88dd2">
 <p>
 <b>法则意志比之概念原则与准则</b>
 </p>
@@ -7444,9 +7361,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-363" class="outline-2">
-<h2 id="sec-363">2017.09.04</h2>
-<div class="outline-text-2" id="text-363">
+<div id="outline-container-orgf490bf3" class="outline-2">
+<h2 id="orgf490bf3">2017.09.04</h2>
+<div class="outline-text-2" id="text-orgf490bf3">
 <p>
 <b>理性的自然</b>
 </p>
@@ -7457,9 +7374,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-364" class="outline-2">
-<h2 id="sec-364">2017.09.05</h2>
-<div class="outline-text-2" id="text-364">
+<div id="outline-container-orge354307" class="outline-2">
+<h2 id="orge354307">2017.09.05</h2>
+<div class="outline-text-2" id="text-orge354307">
 <p>
 <b>感情的无不同于空</b>
 </p>
@@ -7470,9 +7387,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-365" class="outline-2">
-<h2 id="sec-365">2017.09.06</h2>
-<div class="outline-text-2" id="text-365">
+<div id="outline-container-orgf22f4c9" class="outline-2">
+<h2 id="orgf22f4c9">2017.09.06</h2>
+<div class="outline-text-2" id="text-orgf22f4c9">
 <p>
 <b>广义自我作为反自由的经验来源</b>
 </p>
@@ -7483,9 +7400,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-366" class="outline-2">
-<h2 id="sec-366">2017.09.07</h2>
-<div class="outline-text-2" id="text-366">
+<div id="outline-container-org6bc3220" class="outline-2">
+<h2 id="org6bc3220">2017.09.07</h2>
+<div class="outline-text-2" id="text-org6bc3220">
 <p>
 <b>自由与未知</b>
 </p>
@@ -7496,9 +7413,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-367" class="outline-2">
-<h2 id="sec-367">2017.09.08</h2>
-<div class="outline-text-2" id="text-367">
+<div id="outline-container-orge7f6e0b" class="outline-2">
+<h2 id="orge7f6e0b">2017.09.08</h2>
+<div class="outline-text-2" id="text-orge7f6e0b">
 <p>
 <b>理性概念构建对因果句式的放弃</b>
 </p>
@@ -7509,9 +7426,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-368" class="outline-2">
-<h2 id="sec-368">2017.09.09</h2>
-<div class="outline-text-2" id="text-368">
+<div id="outline-container-orga778135" class="outline-2">
+<h2 id="orga778135">2017.09.09</h2>
+<div class="outline-text-2" id="text-orga778135">
 <p>
 <b>推论的抽象因果模拟</b>
 </p>
@@ -7522,9 +7439,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-369" class="outline-2">
-<h2 id="sec-369">2017.09.10</h2>
-<div class="outline-text-2" id="text-369">
+<div id="outline-container-org5772141" class="outline-2">
+<h2 id="org5772141">2017.09.10</h2>
+<div class="outline-text-2" id="text-org5772141">
 <p>
 <b>伦理道德实践在对象的考量</b>
 </p>
@@ -7535,9 +7452,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-370" class="outline-2">
-<h2 id="sec-370">2017.09.11</h2>
-<div class="outline-text-2" id="text-370">
+<div id="outline-container-orgf53d014" class="outline-2">
+<h2 id="orgf53d014">2017.09.11</h2>
+<div class="outline-text-2" id="text-orgf53d014">
 <p>
 <b>伦理道德考量以后的附属概念利用</b>
 </p>
@@ -7548,9 +7465,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-371" class="outline-2">
-<h2 id="sec-371">2017.09.12</h2>
-<div class="outline-text-2" id="text-371">
+<div id="outline-container-org73228db" class="outline-2">
+<h2 id="org73228db">2017.09.12</h2>
+<div class="outline-text-2" id="text-org73228db">
 <p>
 <b>自我道德界线的含义初谈</b>
 </p>
@@ -7561,9 +7478,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-372" class="outline-2">
-<h2 id="sec-372">2017.09.13</h2>
-<div class="outline-text-2" id="text-372">
+<div id="outline-container-org86b94f4" class="outline-2">
+<h2 id="org86b94f4">2017.09.13</h2>
+<div class="outline-text-2" id="text-org86b94f4">
 <p>
 <b>对象怀疑的迷罔</b>
 </p>
@@ -7574,9 +7491,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-373" class="outline-2">
-<h2 id="sec-373">2017.09.14</h2>
-<div class="outline-text-2" id="text-373">
+<div id="outline-container-org97847cf" class="outline-2">
+<h2 id="org97847cf">2017.09.14</h2>
+<div class="outline-text-2" id="text-org97847cf">
 <p>
 <b>广义自我在对象怀疑的反思</b>
 </p>
@@ -7591,9 +7508,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-374" class="outline-2">
-<h2 id="sec-374">2017.09.15</h2>
-<div class="outline-text-2" id="text-374">
+<div id="outline-container-org2b04ba6" class="outline-2">
+<h2 id="org2b04ba6">2017.09.15</h2>
+<div class="outline-text-2" id="text-org2b04ba6">
 <p>
 <b>广义自我的对象感情支持</b>
 </p>
@@ -7604,9 +7521,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-375" class="outline-2">
-<h2 id="sec-375">2017.09.16</h2>
-<div class="outline-text-2" id="text-375">
+<div id="outline-container-org8770019" class="outline-2">
+<h2 id="org8770019">2017.09.16</h2>
+<div class="outline-text-2" id="text-org8770019">
 <p>
 <b>以道德附属概念不能得到个体或者对象判断</b>
 </p>
@@ -7615,7 +7532,7 @@ for the JavaScript code in this tag.
 因为道德附属概念的出发虽然都是以名词的单一和方法的单一得到的，但是它判断与其思辨产生的都是以表象为目标，这样的表象有在对象、也有在个体，可却永远不可能成为个体或者对象本身定论的判断、以任何一个名词背后如何严谨的道德附属概念含义。这样的结论本在道德的实践以后根本无需说明即可得到，但是对道德附属概念的滥用却从未因它的不言自明而有所停止，个体惯以表象结论对象、个体也惯以思辨结论自身，因为只有这样的判断才能够带来在浩瀚印象当中最为紧密的、即便不甚严谨的对象组合以及自我认识。对任何道德的处理而言，它直接面对的永远只是表象，对任何道德附属概念的构建而言，它直接面对则必须在道德的处理下更隔阂一层间接的表体参考，所以在它方法式的背后只要经过了自我道德最初的检验那么便只有表象带来的单纯含义构建在它抽象纯理当中。思验可以带来对象组合与辨识下表象在附属概念归纳的相类，也可以带来思辨自身对附属概念的偏爱与多次尝试，但是对象的表象不能保证它的自然经历就是附属概念的方法归纳以下，个体更不能保证无论自我与伦理的应用都以单一附属概念的参考为其实践的全部，在对象它是不可能得到保证的、在个体则是不被允许的。个体可以因为对道德附属概念判断名实相符的憧憬得到在它表象可行时有所基础的更新需求，这一需求不会带来任何除更新的含义可能任何意外的收获，而个体试图履行在它道德应用的实践也根本不再需要这样的判断支持，它不会带来任何实践的需求满足有所增益或者有所减损。
 </p>
 
-<hr  />
+<hr />
 
 <p>
 道德的每次应用是思验的每次进行，思验的每次进行必然伴随自然的情绪反馈，在有理性的思验明确为依据以后独立在道德思验以下的情绪，就是道德感情的产生。因为依据的是思验明确的道德应用统一，不是情绪自身释义以后的统一，所以情绪与感情只是对道德而言不同释义的自省参照，除非有意志于在道德的应用统一以后只允许统一的情绪被释义，那么就是仅仅目的需求于实践的客观与其绝对履行，而不首先询问实践应用在思验当中的对错。由此在感性的唯一统一是针对了道德与其应用在形式态度上助益而产生，在内容已有的理性统一下并不允许感性运用的二次统一。
@@ -7800,13 +7717,20 @@ for the JavaScript code in this tag.
 <p>
 2018.05.11
 </p>
+
+<p>
+二零一八年二月十三日再论：当我看见先天的律法已经将讨论的自由完全排斥于外，因为这个自由依旧是从个体角度出发进行讨论和分类的。我无法得知任何先天的律法在我是如此、在他同样是如此，律法本身明确含义的缺损和范畴的狭隘使这一论证缺失导致无法进一步证明在个体以上所表现的但同样为个体所默认拥有的自由依旧在先天及其定义律法是排斥在外、视为不可知的。所以自由在先天未能通过后天个体、乃至先天个体得到任何确切的证明，所以不能得知在经验依存以外的自由在先天是否意态有无，仅此而已。
+</p>
+
+<p>
+2018.06.24
+</p>
 </div>
 </div>
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Mudan</p>
-<p class="date">Created: 2018-05-12 周六 07:50</p>
-<p class="creator"><a href="http://www.gnu.org/software/emacs/">Emacs</a> 25.3.1 (<a href="http://orgmode.org">Org</a> mode 8.2.10)</p>
+<p class="date">Created: 2018-06-24 周日 17:42</p>
 <p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>
