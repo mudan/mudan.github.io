@@ -1,0 +1,441 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2020-08-23 周日 20:20 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>充足理由律的四重根 1813</title>
+<meta name="generator" content="Org mode" />
+<meta name="author" content="Mudan" />
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+  /*]]>*/-->
+</style>
+<link rel="stylesheet" type="text/css" href="./emacs-book.css" />
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2020 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+</head>
+<body>
+<div id="content">
+<h1 class="title">充足理由律的四重根 1813</h1>
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#org7c8d34b">归同法则；统一律 homogeneität</a></li>
+<li><a href="#org9df7b7f">分异法则；分解律 Specifikation</a></li>
+<li><a href="#org67199fc">充足理由律：任何事物都有其为什么存在而不是不存在的理由。</a>
+<ul>
+<li><a href="#orge22cf88">关于充足理由律的证明：由于每一个证明都是某种已被认识了的事物的依据，并且如果我们对这件事物继续要求证明，不论怎样，我们最终都会得到这样一些命题，这些命题表达了一切思维和认识的形式和规律，因而也就是表达了它们的条件，从而，一切思维和和认识也就在于这些命题和条件的运用。这样，确定性不过就是与这些条件、形式和规律的一致，因此它们自身的确定性是不能再由其他命题来证明的。</a></li>
+<li><a href="#orge6f114a">主体对象的第一个层次就是直观的、完整的、经验的表象层次。这些表象的形式就是内在和外在的感觉形式，或者说时间和空间。</a>
+<ul>
+<li><a href="#orgcb2b901">以因果规律的形式而出现，因此称为关于生成的充足理由律。就所涉及的是对象状态的出现和消失而言，所有在我们表象的范围内呈现自身的对象都是通过它而被联结起来，也就是说，在时间的流动中形成了经验实在的复合体。</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<ul class="org-ul">
+<li><b>References</b>
+<ul class="org-ul">
+<li><a href="./descartes-spinoza.html">笛卡尔和斯宾诺莎对上帝、存在、理由的看法</a></li>
+<li><a href="./hume-kant.html">休谟因果到康德先验</a></li>
+<li><a href="./cls-experience.html">叔本华论经验实在</a></li>
+<li><a href="./cls-intellectuality.html">叔本华论知性的先验</a></li>
+</ul></li>
+</ul>
+
+
+<p>
+<b>先验的法则，理性是本质的，预先就假定自然同自身的一致。</b>
+</p>
+
+<div id="outline-container-org7c8d34b" class="outline-2">
+<h2 id="org7c8d34b">归同法则；统一律 homogeneität</h2>
+<div class="outline-text-2" id="text-org7c8d34b">
+<p>
+通过观察事物的类似性和一致性，把事物综合为类，再由类到种、由种到属，如此等等，直到最后达到最有概括性的概念为止。
+</p>
+
+<p>
+14 世纪逻辑学家、圣方济各会修士奥卡姆的威廉：“如无必要，切勿增加实体的数目。”
+</p>
+</div>
+</div>
+
+<div id="outline-container-org9df7b7f" class="outline-2">
+<h2 id="org9df7b7f">分异法则；分解律 Specifikation</h2>
+<div class="outline-text-2" id="text-org9df7b7f">
+<p>
+把同一个综合概念中的不同的属彼此加以区分，不应当混淆每一个属中较高级的种和较低级的种，不要跳过任何下级的种，更不直接在综合概念下将它加以分类。每个概念都允许再行划分，不过没有一个会退回到单纯的直观。
+</p>
+
+<blockquote>
+<p>
+康德：“不要轻率地减少实体的多样性。”
+</p>
+
+<p>
+康德 纯粹理性批判 1781 B871：“把就其类别和起源而言彼此有别的知识隔离开来，并小心翼翼地防止它们与其他在应用中通常相结合的知识混为一体，这是非常重要的。化学家在分解物质时、数学家在其纯粹的量的学说中所做的事情，哲学家更有责任勉力为之，以便能够准确无误地规定一个特殊种类的知识在四处漫游的知性应用那里所占的份额、其自身的价值和影响。”
+</p>
+</blockquote>
+</div>
+</div>
+
+<div id="outline-container-org67199fc" class="outline-2">
+<h2 id="org67199fc">充足理由律：任何事物都有其为什么存在而不是不存在的理由。</h2>
+<div class="outline-text-2" id="text-org67199fc">
+<p>
+一切事物必有其理由的先验假设，使之有权在任何地方去探求为什么，才有把握地把这个为什么称为一切科学之母。
+充足理由律都能使我们有理由去询问一个为什么，这是它的一个本质的性质。
+</p>
+
+<ul class="org-ul">
+<li>理由 Grund：认识和证明一个事物的存在</li>
+<li>原因 Ursache：认识和证明一个事物为什么存在</li>
+</ul>
+
+<p>
+<a href="./descartes-spinoza.html">笛卡尔和斯宾诺莎对上帝、存在、理由的看法</a>
+</p>
+
+<blockquote>
+<p>
+凯斯维特 Kiesewetter 《逻辑学》：“逻辑的理由（认识的理由）与事实的理由（原因）是不能混淆的。充足理由律属于逻辑学，因果规律则属于形而上学。前者是思维的基本原则，后者则是经验的基本原则。原因涉及真实的事物，逻辑的理由则只是用于观念。”
+</p>
+</blockquote>
+
+<p>
+<a href="./hume-kant.html">休谟因果到康德先验</a>
+</p>
+
+<p>
+诸如完美、无限这些属性就是一个既定观念的本质，没有这些属性，这个观念就不会被理解。这些属性本身的本质属性，同样可以由纯粹的逻辑分析而得知，结果就有了逻辑的真理，这就是它们在既定的观念中具有认识的理由。于是现实性或存在这种属性也可以从这种武断的思维观念中抽取，与之相应客体立即被断定为独立于这一观念而真实存在着。
+</p>
+
+<blockquote>
+<p>
+亚里士多德《后分析篇》第七章：给一个事物下定义同证明它的存在，永远是彼此分开的两码事；因为其中一个告诉我们这个事物是什么意思，而另一个则是指这样一个事物是存在的。他说：“存在并不属于一个事物的本质，因为存在并不是一种特性。”
+</p>
+</blockquote>
+
+<p>
+如果一个观念潜在包含了它所有的本质属性，那么只通过分析判断就明显地从这个观念中把这些属性展示出来，它们的总和就是这个观念的定义——这个定义与其观念本身只是形式上的差别，并无内容的不同。就这些判断表现出它的本质来说，它们有在观念中存在的理由。从它们的理由来考察，也可以把这些判断看成那个观念的结论。
+</p>
+</div>
+
+<div id="outline-container-orge22cf88" class="outline-3">
+<h3 id="orge22cf88">关于充足理由律的证明：由于每一个证明都是某种已被认识了的事物的依据，并且如果我们对这件事物继续要求证明，不论怎样，我们最终都会得到这样一些命题，这些命题表达了一切思维和认识的形式和规律，因而也就是表达了它们的条件，从而，一切思维和和认识也就在于这些命题和条件的运用。这样，确定性不过就是与这些条件、形式和规律的一致，因此它们自身的确定性是不能再由其他命题来证明的。</h3>
+<div class="outline-text-3" id="text-orge22cf88">
+<p>
+我们进行认识活动的意识，把自身体现为内在的和外在的感性（或说接收力）以及知性和理性，又进一步把自己划分为主体的和对象的，此外还包含着无。成为主体的对象和成为我们的表象是同一回事。所有我们的表象都是主体的对象，而所有主体的对象都是我们的表象。我们的全部表象都在一种有规律的联系中相互依赖，这种有规则的联系可以被确认为先验的，并且正因为是这样，任何彼此独立的存在物，任何单个的或孤立的东西，都不能成为我们的对象。充足理由律从自身的“普遍”意义上所表明的，就是这种联系。
+</p>
+</div>
+</div>
+
+<div id="outline-container-orge6f114a" class="outline-3">
+<h3 id="orge6f114a">主体对象的第一个层次就是直观的、完整的、经验的表象层次。这些表象的形式就是内在和外在的感觉形式，或者说时间和空间。</h3>
+<div class="outline-text-3" id="text-orge6f114a">
+<p>
+两种经验的表象形式都有着根本的区别，这是由于对其中一个来说本质的东西，对于另一个来说不具有任何意义。然而经验的从属于实在有序复合体的表象，还是在这两种形式中同时出现，而且两种形式的内在统一就是实在的条件。
+</p>
+
+<ul class="org-ul">
+<li>假如时间是这些表象唯一形式，那么就不会有共存，因而也就没有任何永恒的东西，也不存在延续。因为时间只有被充实才能被感知，而且它的进程只有通过充实于其中的东西所发生的变化才能被感知。因此，一个对象的永恒只有同另一个与之共存的对象所发生的变化相对照，才能被认识。</li>
+<li>假如空间是这些表象唯一形式，一切事物都是互相并列的，那么就会不存在有变化，因为变化是状态的连续，而连续只有在时间中才是可能的。</li>
+</ul>
+
+<p>
+经验的实在，尽管只是就知性而言，从这些形式的相互渗透中产生了，而且是作为一种集合的表象产生，形成一个复合体。属于这一层次的每一单个表象都是复合体的一部分，都按照先验的法则来取得自己在其中的位置。
+</p>
+
+<p>
+<a href="./cls-experience.html">叔本华论经验实在</a>
+</p>
+
+<ul class="org-ul">
+<li>如果我们对一个对象的客观性加以抽象，或者说对它被表象出来的东西加以抽象，如果把它作为对象的性质去掉然而却希望保留些什么，我们所遇见的就只能是主体。相反，如果我们对主体的主观性进行抽象而又想得到留下来的东西，那么这就将走向唯物主义。</li>
+</ul>
+</div>
+
+<div id="outline-container-orgcb2b901" class="outline-4">
+<h4 id="orgcb2b901">以因果规律的形式而出现，因此称为关于生成的充足理由律。就所涉及的是对象状态的出现和消失而言，所有在我们表象的范围内呈现自身的对象都是通过它而被联结起来，也就是说，在时间的流动中形成了经验实在的复合体。</h4>
+<div class="outline-text-4" id="text-orgcb2b901">
+<p>
+因果规律：当一个或几个真实的对象转变为任何一种新的状态时，另一个状态必定在它之前就存在了，新的状态根据这个在先状态而有规则地相继出现。这种前后相继称之为因果运动，伴随发生称之为变化，前一状态叫做原因，后一状态叫做结果。
+</p>
+
+<ul class="org-ul">
+<li>当一种状态为造成一个新的状态的其他一切必要条件都已具备，而只缺一个条件时，这一个条件的最终来临，在某种意义上说就被称作是基本的原因，因为在这里得到了变化。但是如果排除这种考虑，那么任何作为原因状态的单一的条件，都不会仅仅由于它是最后出现而在确定因果联系的时候对其他条件具有一般的优先地位，从全面考虑的意义上说，只有导致它的后继状态出现的整体状态，才可被认为是原因。那些加在一起完成和构成原因的单个的必需物，可以被称作原因的要素，甚至称作原因的条件，所以原因是可以再进一步分解为这些要素或条件的。</li>
+</ul>
+
+<p>
+因果规律是唯一并且专门涉及到物质状态的变化的，此外不涉及任何其他东西，因此如果不在讨论这些变化，就不应当引进因果规律。
+</p>
+
+<p>
+以因果规律为根源，产生两个必然结果作为先验的认识因而作为无可非议并且毫无例外的认识而被认可。
+</p>
+
+<ul class="org-ul">
+<li>惯性规律。证明一个可能存在于其中的任何一种状态（静止状态以及任何一种运动状态），除非有某种原因伴随发生而将它改变或取消，必定是毫无变化、毫不减少或增大地保持原状。</li>
+<li>实体不灭规律。因果规律只适用于物体的状态，但不适用于承受这些状态的存在，把这个存在称为实体，确切表明它是外在于一切产生和消失的。实体既不能产生，也不能消失，在宇宙中存在的量既不能增加也不能减少。</li>
+</ul>
+
+<p>
+作为每一种变化的决定者的因果关系，根据三种不同形式使自己在自然界得到体现。
+</p>
+
+<ul class="org-ul">
+<li>作为最严格意义上的原因的形式。使无机界中的变化随之产生的原因，也就是构成机械学、物理学和化学的主题的结果随之产生的原因，还阐明了在原因的状态承受着与它所造成结果的状态相等的变化。</li>
+<li>作为刺激的形式。支配有机的生命世界，也就是支配着各种植物的生命和作为动物界生命中无意识部分的植物性成分，作用与反作用是不等的，原因的强化甚至可能导致相反的结果。</li>
+<li>作为动机的形式。支配动物生命本身，也就是支配着一切动物外部的、有意识地进行的活动。动机的媒介就是认识，因而理智是为动机的感受性所需要的，动物的真正特征也就在于认识能力和表象能力。</li>
+</ul>
+
+<p>
+原因、刺激和动机之间的区别显然只是存在物的接受性的不同程度的结果，接受性越强，所受影响的性质也就越可以微弱。“动机的形成”是经历认识的因果关系，理智是动机的工具，具有最高程度的接受性。再则人的双重理智，不仅具有直观的认识，也具有抽象的认识，这种抽象的认识并不局限于当前的东西。人具有理性，因而他具有运用明确的意识作出抉择的力量，能够对各种彼此互相排斥的动机进行权衡，换言之，能够让这些动机在自己的意志面前进行较量。
+</p>
+
+<p>
+<a href="./cls-intellectuality.html">叔本华论知性的先验</a>
+</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: Mudan</p>
+<p class="date">Created: 2020-08-23 周日 20:20</p>
+<p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>

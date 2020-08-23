@@ -1,7 +1,7 @@
 body {
   font-size: 100%;
-  font-family: Menlo, Consolas, monospace, "PT Sans Caption", "Microsoft YaHei", sans-serif;
-  margin: 15px 10% 10px 10%;
+  font-family: Menlo, Consolas, monospace, "Source Han Serif", "PT Sans Caption", "Microsoft YaHei", sans-serif;
+  margin: 5px 10% 10px 10%;
   background: #fff;
   line-height: 1.555;
   text-justify: inter-ideographic;
@@ -33,19 +33,6 @@ p a {
   background-repeat: repeat-x;
   background-size: 2px 2px;
   background-position: 0 22px;
-}
-
-pre {
-    border: 0px solid #ccc;
-    box-shadow: 0px 0px 0px #eee;
-    margin: 0.6em;
-    border-left: 3px solid #ddd;
-    line-height: 1.15;
-    letter-spacing: -0.02em;
-    padding: 8pt;
-    font-size: 24px;
-    font-family: "Kaiti SC", Kaiti;
-    overflow: auto;
 }
 
 a {
@@ -92,7 +79,7 @@ h4 {
 
 blockquote {
   margin-left: 2em;
-  padding-left: 0.5em;
+  padding-left: 0.2em;
   margin-right: 2em;
   border-left: 3px solid #ddd;
   font-style: normal;
@@ -109,45 +96,22 @@ blockquote p {
   margin-bottom: 0;
 }
 
+.verse {
+  margin-left: 2em;
+  padding-left: 0.4em;
+  margin-right: 2em;
+  border-left: 3px solid #ddd;
+  font-style: normal;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 24px;
+  font-family: "Kaiti SC", Kaiti;
+}
+
 img{
   display: block;
   margin-left: auto;
   margin-right: auto;
 }
-
-#table-of-contents {
-    	font-size: 15pt;
-   	position: fixed;
-  	right: 0em;
- 	top: 0em;
-    	background: white;
-    	-webkit-box-shadow: 0 0 1em #777777;
-    	-moz-box-shadow: 0 0 1em #777777;
-    	-webkit-border-bottom-left-radius: 5px;
-    	-moz-border-radius-bottomleft: 5px;
-    	text-align: right;
-/* ensure doesn't flow off the screen when expanded */
-    	max-height: 80%;
-    	overflow: auto;
-	}
-
-#table-of-contents h2 {
-      	font-size: 12pt;
-      	max-width: 9em;
-      	font-weight: normal;
-      	padding-left: 0.5em;
-      	padding-left: 0.5em;
-      	padding-top: 0.05em;
-      	padding-bottom: 0.05em;
-	}
-
-#table-of-contents #text-table-of-contents {
-      	display: none;
-      	text-align: left;
-	}
-
-#table-of-contents:hover #text-table-of-contents {
-      	display: block;
-      	padding: 0.5em;
-      	margin-top: -1.5em;
-	}

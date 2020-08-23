@@ -2,24 +2,35 @@
 #+STARTUP: showall
 #+OPTIONS: toc:nil num:nil
 #+HTML_HEAD: <link rel="stylesheet" type="text/css" href="emacs.css" />
+			   
+[[./write/fire.pdf][心理的火 PDF]]
 
-[[./writer/fire.org][心理的火]]
+[[./write/xh-rz.org][2016 - 2017年日记 个人基本经验的基本认知杂录]]
 
-[[./writer/xh-rz.org][日记-个人基本经验的基本认知杂录]]
+
+* Read
+
+[[./read/dx.org][大学注疏摘录]]
+
+[[./read/zy.pdf][中庸註釋摘抄 PDF]]
+
+[[./read/mz.org][孟子·告子上下/尽心上下 注疏摘录]]
+
+[[./read/xlj.org][小逻辑 1817 格奥尔格・威廉・弗里德里希・黑格尔]]
+
+[[./read/cls.org][充足理由律的四重根 1813 亚瑟・叔本华]]
+
+[[./read/churchill/yygjsl.org][英语国家史略 温斯顿·丘吉尔]]
+
+[[./read/painting.org][名画览 暂空]]
+
+[[https://beta.workflowy.com/s/classical-music/jCY53vG51znxRFaQ][Classical music list in workflowy]]
 
 * Emacs
 
 [[./Emacs/The_Org_Manual/The_Org_Manual.org][The Org Manual 笔记]]
 
 [[./Emacs/Helm/Helm.org][Helm 工具包]]
-
-* Read
-
-[[./read/dx.org][大学注疏摘录]]
-
-[[./read/mz.org][孟子·告子上下/尽心上下 注疏摘录]]
-
-[[./read/churchill/yygjsl.org][英语国家史略.英.温斯顿·丘吉尔]]
 
 * Linux
 

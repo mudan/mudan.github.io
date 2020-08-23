@@ -1,0 +1,588 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2020-08-23 周日 19:59 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>小逻辑 1817</title>
+<meta name="generator" content="Org mode" />
+<meta name="author" content="Mudan" />
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+  /*]]>*/-->
+</style>
+<link rel="stylesheet" type="text/css" href="./emacs-book.css" />
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2020 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+</head>
+<body>
+<div id="content">
+<h1 class="title">小逻辑 1817</h1>
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#org96842ce">哲学不可以假定表象所直接接受的为其对象，不可以假定在认识的开端和进程里有一种现成的认识方法。</a>
+<ul>
+<li><a href="#orgeebddf2">1、皆以真理为对象，就真理的最高意义而言，上帝即是真理，而且唯有上帝才是真理。</a>
+<ul>
+<li><a href="#org7518d0d">凡是在意识内的都是可以经验的，它们的内容是无限的。</a></li>
+<li><a href="#org349270e">哲学的要求可以是这样的：精神，作为感觉和直观，以感性事物为对象；作为想象，以形象为对象；作为意志，以目的为对象。但就精神相反于或仅相异于它的这些特定存在形式和它的各个对象而言，复要求它自己的最高的内在性，思维的满足，而以思维为它的对象。</a></li>
+</ul>
+</li>
+<li><a href="#org5fa68bb">2、皆研究有限事物的世界，研究自然界和人的精神，研究自然界和人的精神相互间的关系，以及它们与上帝（即二者的真理）的关系。</a>
+<ul>
+<li><a href="#org83d4b97">哲学必能熟知其对象，可以定义为对象的思维着的考察。</a></li>
+</ul>
+</li>
+<li><a href="#org5fead75">就思想的全部普遍性而言，它就是理念或绝对。关于理念或绝对的科学，本质上应是一个体系，因为真理作为具体的，它必定是在自身中展开其自身，而且必定是联系在一起的和保持在一起的统一体，换言之，真理就是全体。全体的自由性，与各个环节的必然性，只有通过对各环节加以区别和规定才有可能。</a></li>
+</ul>
+</li>
+<li><a href="#org803f01c">逻辑学研究纯粹理念，所谓纯粹理念就是思维的最抽象的要素所形成的理念。</a>
+<ul>
+<li><a href="#org14fa503">思维和对象的关系是主动的，是对某物的反思，因此思维活动的产物、普遍概念就包含有事情的价值，亦即本质、内在实质、真理。</a>
+<ul>
+<li><a href="#org56a7fd1">形而上学第一部分是本体论，关于本质的抽象规定的学说。</a></li>
+<li><a href="#org829576d">形而上学第二部分是理性心理学或灵魂学，研究灵魂的形而上学的本性，亦即把精神当作一个实体研究。</a></li>
+<li><a href="#org21c5898">形而上学第三部分是宇宙论，探讨世界，世界的偶然性、必然性、永恒性、在时空中的限制，世界在变化中的形式的规律，以及人类的自由和恶的起源。</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<ul class="org-ul">
+<li><b>References</b>
+<ul class="org-ul">
+<li><a href="./xlj-me.html">黑格尔言我</a></li>
+<li><a href="./engels-sensibility.html">恩格斯讨论感性相外、并列、相续问题</a></li>
+<li><a href="./hume-kant.html">休谟因果到康德先验</a></li>
+<li><a href="./xlj-cognition.html">黑格尔认识形式</a></li>
+<li><a href="./xlj-myth.html">黑格尔谈神话的人类堕落</a></li>
+<li><a href="./xlj-truth.html">黑格尔的真理</a></li>
+<li><a href="./metaphysics-soul.html">形而上学灵魂与物</a></li>
+<li><a href="./greek-scholasticism.html">希腊哲学与经院哲学</a></li>
+</ul></li>
+</ul>
+
+<div id="outline-container-org96842ce" class="outline-2">
+<h2 id="org96842ce">哲学不可以假定表象所直接接受的为其对象，不可以假定在认识的开端和进程里有一种现成的认识方法。</h2>
+<div class="outline-text-2" id="text-org96842ce">
+<p>
+哲学对象类似宗教对象。
+哲学是以思想、范畴，或更确切地说，是以概念去代替表象。
+具有思想与概念是一回事，知道符合这些思想和概念的表象、直观、情绪又是一回事。
+假如哲学的看法与宗教的观念之间出现了差异，哲学必须辩明它的各种规定何以异于宗教观念的理由。
+</p>
+</div>
+
+<div id="outline-container-orgeebddf2" class="outline-3">
+<h3 id="orgeebddf2">1、皆以真理为对象，就真理的最高意义而言，上帝即是真理，而且唯有上帝才是真理。</h3>
+<div class="outline-text-3" id="text-orgeebddf2">
+<p>
+纯思和概念的范围
+</p>
+</div>
+
+<div id="outline-container-org7518d0d" class="outline-4">
+<h4 id="org7518d0d">凡是在意识内的都是可以经验的，它们的内容是无限的。</h4>
+<div class="outline-text-4" id="text-org7518d0d">
+<p>
+广义讲来，心灵（vovs）或精神（精神表示心灵的较深刻的意义）是世界的原因；狭义讲来，法律的、道德的和宗教的情绪其内容都只是以思维为根源和基地。
+</p>
+
+<p>
+康德的批判哲学主要观点，即在于教人在进行探究上帝以及事物的本质等问题之前，先对于认识能力本身作一番考察工夫。但要想执行考察认识的工作，却只有在认识的活动过程中才可进行。考察所谓认识的工具，与对认识加以认识，乃是一回事。
+</p>
+</div>
+</div>
+
+<div id="outline-container-org349270e" class="outline-4">
+<h4 id="org349270e">哲学的要求可以是这样的：精神，作为感觉和直观，以感性事物为对象；作为想象，以形象为对象；作为意志，以目的为对象。但就精神相反于或仅相异于它的这些特定存在形式和它的各个对象而言，复要求它自己的最高的内在性，思维的满足，而以思维为它的对象。</h4>
+<div class="outline-text-4" id="text-org349270e">
+<p>
+认识到思维自身的本性即是辩证法，认识到思维作为理智必陷于矛盾、必自己否定其自身这一根本见解，构成逻辑学上一个主要的课题。
+</p>
+
+<p>
+思维进展的次序总是超出自然的、感觉的意识，超出自感觉材料而推论的意识，提高到思维本身纯粹不杂的要素，因此首先对经验开始的状态取一种疏远的、否定的关系。这样，在这些现象的普遍本质的理念里，思维才得到自身的满足。
+</p>
+
+<ul class="org-ul">
+<li>关于上帝的知识的独立性，本质上即是通过否定感官经验与超脱感官经验而得到的。但假如对知识的间接性加以片面的着重，把它认作制约性的条件，那末便可以说哲学最初起源于后天的事实，是依靠经验而产生的（其实，思维本质上就是对当前的直接经验的否定）。</li>
+</ul>
+
+<p>
+思维自身的反思，从而达到经过中介的直接性，这就是思维的先天成分（das Apriorische），亦即思维的普遍性，思维一般存在它自身内。在普遍性里，思维得到自身的满足，但假如思维对于特殊性采取漠视态度，从而思维对于它自身的发展，也就采取漠视态度了。
+</p>
+
+<ul class="org-ul">
+<li>经验科学的激励补救思维的这种抽象普遍性，一方面经验科学并不停留在个别现象的知觉里，乃是能用思维对于材料加工整理，发现普遍的特质、类别和规律，以供哲学思考；另一方面经验科学也包含有思维本身要进展到这些具体部门的真理的迫切要求。这些被吸收进哲学中的科学内容，由于经过思维的加工，从而取消其顽固的直接性和与料性，同时也就是思维基于自身的一种发展。</li>
+</ul>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org5fa68bb" class="outline-3">
+<h3 id="org5fa68bb">2、皆研究有限事物的世界，研究自然界和人的精神，研究自然界和人的精神相互间的关系，以及它们与上帝（即二者的真理）的关系。</h3>
+<div class="outline-text-3" id="text-org5fa68bb">
+<p>
+活生生的精神的范围、属于原始创造的和自身产生的精神所形成的世界，亦即属于意识所形成的外在和内心的世界。
+</p>
+</div>
+
+<div id="outline-container-org83d4b97" class="outline-4">
+<h4 id="org83d4b97">哲学必能熟知其对象，可以定义为对象的思维着的考察。</h4>
+<div class="outline-text-4" id="text-org83d4b97">
+<p>
+按照时间的次序，人的意识对于对象总是先形成表象，后才形成概念，而且唯有通过表象，依靠表象，人的能思的心灵才进而达到对于事物的思维的认识和把握。
+</p>
+
+<ul class="org-ul">
+<li>意识的内容构成情绪、直观、印象、表象、目的、义务等等，以及思想和概念的规定性的要素，情绪、直观、印象等等就是这个内容所表现的诸形式。</li>
+<li>这个内容，无论它仅是单纯被感觉着，或参杂有思想在内而被感觉着、直观着等等，甚或完全单纯地被思维着，它都保持为一样的东西。在任何一种形式里，或在多种混合的形式里，这个内容都是意识的对象。</li>
+<li>哲学的内容就是现实（Wirklichkeit），这种内容的最初的意识便叫做经验。</li>
+</ul>
+
+<p>
+对于思维的内容必须指出其必然性，对于思维的对象的存在及其规定必须加以证明，才足以满足对于事物作思维着的考察的要求。
+足以令理性自身满足的形式，就是广义的必然性。
+</p>
+
+<ul class="org-ul">
+<li>作为情感、直觉或表象等形式而出现，这些形式必须与作为形式的思维本身区别开来。</li>
+<li>忽略了一般的思想与哲学上的反思的区别，会误以为这类的反思是我们达到永恒或达到真理的主要条件，甚至是唯一途径。</li>
+</ul>
+<p>
+后思，德文作 Nachdenken，英文作 reflection，亦即反思。反思以思想的本身为内容，力求思想自觉其为思想。
+</p>
+<ul class="org-ul">
+<li>想知道外界对象和事变，以及内心的情绪、直观、意见、表象等的真理必须加以反复思索（Nachdenken）。而对于情绪、表象等加以反复思索，无论如何，至少可以说是把情绪表象等转化为思想了。</li>
+<li>后思（Nachdenken）首先包含了哲学的原则（在此处兼有原始或开端的意义），在路德的宗教改革之后一开始就不是单纯的思想，而是指向现象界的无限量的材料方面，取材于人类对于外界和内心，对于当前的外界自然和当前的心灵和心情的自己的直观和知觉。</li>
+</ul>
+<ul class="org-ul">
+<li>一般科学一方面基于直接的事实，给予的材料，或权宜的假设，主要目标在于求得规律、普遍命题或一种理论；另一方面以心灵对象为经验的知识无法把握，与之关系纯是外在的和偶然的，心灵对象彼此关系也是外在的和偶然的。这两种情形下都不能满足必然性的形式，所以凡是志在弥补这种缺陷以达到真正必然性的知识的反思，就是思辩的思维，亦即真正的哲学思维。这种思辩思维所特有的普遍形式，就是概念。
+<ul class="org-ul">
+<li>哲学与科学的区别在于范畴的变换，思辩的逻辑包含有以前的逻辑与形而上学，保存有同样的思想形式、规律和对象，但同时又用较深广的范畴去发挥和改造它们。</li>
+</ul></li>
+</ul>
+
+<p>
+哲学最高目的在于确认思想与经验的一致，并达到自觉的理性与存在于事物中的理性的和解，亦即达到理性与现实的和解。
+</p>
+
+<ul class="org-ul">
+<li>对于同一内容的意识，哲学与别的认识方式既然仅有形式上的区别，所以哲学必然与现实和经验相一致，至少可以看成是考验哲学真理的外在的试金石。</li>
+<li>黑格尔《法哲学原理》序言：“凡是合乎理性的东西都是现实的，凡是现实的东西都是合乎理性的。”</li>
+</ul>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org5fead75" class="outline-3">
+<h3 id="org5fead75">就思想的全部普遍性而言，它就是理念或绝对。关于理念或绝对的科学，本质上应是一个体系，因为真理作为具体的，它必定是在自身中展开其自身，而且必定是联系在一起的和保持在一起的统一体，换言之，真理就是全体。全体的自由性，与各个环节的必然性，只有通过对各环节加以区别和规定才有可能。</h3>
+<div class="outline-text-3" id="text-org5fead75">
+<p>
+哲学的每一部分都是一个哲学全体，哲学的理念在每一部分里只表达出一个特殊的规定性或因素。部分也是整体，只有打破它特殊因素予之限制，从而建立更广泛的整体而成必然的环节，进而终成理念全体。
+</p>
+
+<p>
+各部门的初步划分，正如最初对于理念的认识一样，只能是某种预想的东西。达到概念的概念，自己满足自己，自己返回自己，哲学这门科学可以分为三部分：
+须认识到个别部门的科学，每一部门的内容既是存在着的对象，同样又是直接地在这内容中向着它的较高范畴（kreis）的过渡，不曾并列，更非静止。
+</p>
+
+<ul class="org-ul">
+<li>逻辑学，研究理念自在自为的科学。</li>
+<li>自然哲学，研究理念的异在或外在化的科学。</li>
+<li>精神哲学，研究理念由它的异在而返回到它自身的科学。</li>
+</ul>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org803f01c" class="outline-2">
+<h2 id="org803f01c">逻辑学研究纯粹理念，所谓纯粹理念就是思维的最抽象的要素所形成的理念。</h2>
+<div class="outline-text-2" id="text-org803f01c">
+<p>
+就思维的通常主观的意义，思维是精神的许多活动或能力之一，与感觉、直观、想象、欲望意志等并列杂陈 → 思维活动的产物，思维的形式或规定性一般是普遍的抽象的东西。思维作为能动性，因而便可称能动的普遍 → 既然活动的产物是普遍性的，则思维便可称自身实现的普遍体 → 就思维被认主体而言，便是能思者，存在的能思的主体的简称就叫我。
+</p>
+
+<p>
+<a href="./xlj-me.html">黑格尔言我</a>
+</p>
+
+<ul class="org-ul">
+<li>感性事物与思想的区别在于前者的特点是个别性的。既是个别之物也是彼此联系，所以凡是感性事物都是些彼此相外 Aussereinander 的个别东西，它们确切抽象的形式，是彼此并列 Nebeneinander 和彼此相续 Nacheinander 的。</li>
+</ul>
+
+<p>
+<a href="./engels-sensibility.html">恩格斯讨论感性相外、并列、相续问题</a>
+</p>
+
+<ul class="org-ul">
+<li>多种个别化的、简单的规定或谓词，不管有无内在联系，勉强连缀在一起，这些谓词虽以其主词为联系，但它们之间仍然是互相外在的。表象与知性的区别，在于知性尚能建立普遍与特殊、原因与效果等关系，从而使表象的孤立化的表象规定有必然性的联系，而表象只能让这些孤立化的规定在模糊的意识背景里彼此挨近排列。二者的区别还具有更大的重要性，因为一般讲来，哲学除了把表象转变为思想，更进一步把单纯抽象的思想转变为概念之外，没有别的工作。</li>
+</ul>
+</div>
+
+<div id="outline-container-org14fa503" class="outline-3">
+<h3 id="org14fa503">思维和对象的关系是主动的，是对某物的反思，因此思维活动的产物、普遍概念就包含有事情的价值，亦即本质、内在实质、真理。</h3>
+<div class="outline-text-3" id="text-org14fa503">
+<p>
+反思作用总是去寻求那固定的、长住的、自身规定的、统摄特殊的普遍原则，这种普遍原则就是事物的本质和真理。当规定普遍时，便与单纯直接的、外在的和个别的形成对立。普遍作为普遍是人所不见不闻，只对精神而存在的。
+</p>
+
+<p>
+<a href="./hume-kant.html">休谟因果到康德先验</a>
+</p>
+
+<p>
+在思维内即直接包含自由，因为思想是有着普遍性的活动，因而是一种抽象的自己和自己联系，换言之，就思维的主观性而言，乃是一个没有规定的自在存在，但就思维的内容而言，却又同时包含有事情及事情的各种规定，只有思维深入事物的实质，方能算得真思想。
+</p>
+
+<p>
+<a href="./xlj-cognition.html">黑格尔认识形式</a>
+</p>
+
+<ul class="org-ul">
+<li>逻辑学中所说的思想是指纯粹思想而言，所说精神也是纯粹自在的精神，亦即自由的精神，因为自由正是在他物中即是在自己本身中、自己依赖自己、自己是自己的决定者。</li>
+<li>对逻辑规定加以自在自为的考察还有一层深远的意义，即在于我们是从思维的本身去推演出这些思维的规定，并且即从这些思维规定的本身来看它们是否是真的。并不是从外面把它们袭取而来并勉强给予定义，也不是把它们拿来与它们出现在我们意识中的形态漫加比较而指出其价值和有效性。</li>
+</ul>
+
+<p>
+<a href="./xlj-truth.html">黑格尔的真理</a>
+</p>
+
+<ul class="org-ul">
+<li>把真理认作自身的符合，构成逻辑学的真正兴趣。因为在通常意识里，关于思维规定的真理问题就完全不会发生。因此，逻辑学的职务也可以说是在于考察思维规定把握真理的能力和限度。</li>
+</ul>
+
+<p>
+思想，按照这样的规定，可以叫客观的思想，甚至那些最初在普通形式逻辑里惯于只当作被意识了的思维形式，也可以算作客观的形式。
+</p>
+
+<ul class="org-ul">
+<li>说思想作为客观思想是世界的内在本质，似乎这样一来就会以为自然事物也是有意识的，对此还有一方面把思维看成事物的内在活动、一方面说人与自然事物的区别在于有思维的矛盾。因此必须说自然界是一个没有意识的思想体系，或像谢林所说，一种顽冥化 versteinerte 的理智。为免除误会，最好用思想规定或思想范畴以代替思想一词。在这个思想范畴的体系里，普遍意义下的主观与客观的对立是消除了的。</li>
+<li>思想不但构成外界事物的实体 Substanz，而且构成精神性的东西的普遍实体。就人是有思想的来说，他是一个有普遍性者，但只有当他意识到他自身的普遍性时，他才是有思想的。自然界不能使它所含蕴的理性 Nous 得到意识。</li>
+<li>我们的表象表现出两种情况，或者内容虽是一个经过思考的内容，而形式却未经过思考，或者正与此相反，形式虽属于思想，而内容则与思想不相干。
+<ul class="org-ul">
+<li>譬如当我说忿怒、玫瑰、希望等词，这些词所包含的内容都是感觉所熟悉的，但我用普遍的方式、用思想的形式，把这些内容说出来，这样就排斥了许多个别情况，只用普遍的语言来表达那个内容，但那个内容仍然是感性的。反之，当我有上帝的表象时，这内容诚然是纯思的，但形式却是感性的，像我直接亲自感觉到的上帝的形式那样。在前种情况下材料是外界给予的，而形式则属于思维，在第二种情况下思维是内容的源泉，但通过感觉的形式这内容表现为给与的东西，因此是外在地来到精神里的。</li>
+</ul></li>
+</ul>
+
+<p>
+思想对客观性第一态度是素朴的，没有意识到自身所包含的矛盾和思想自身与信仰的对立，却相信只靠反思作用即可认识真理，即可使客体的真实性质呈现在意识前面。
+</p>
+
+<ul class="org-ul">
+<li>康德以前的形而上学认为思维的规定即是事物的基本规定，并根据这个前提，坚持思想可以认识一切存在，因而凡是思维所想本身就是被认识了的。它们认为抽象的孤立的思想概念即本身自足，可以用来表达真理而有效准，没有考察知性概念的真正内容和价值，也没有考察纯用谓词去说明绝对的形式是否妥当。</li>
+<li>只能产生有限规定，并且只能在有限规定中活动的思维，便叫做知性。对有限事物必须用有限的名言以称谓之，这正是知性施展其功能的处所。</li>
+</ul>
+
+<p>
+如果所有思维规定都受一种固定的对立的限制，这就是说，如果这些思维规定都只是有限的，那末思维便不适合于把握真理、认识绝对，而真理也不能显现于思维中。
+</p>
+
+<ul class="org-ul">
+<li>思维规定的有限性有两层看法。第一，认为思维规定只能主观的，永远有一客观的（对象）和它们对立。第二，认为各思维规定的内容是有限的，因此各规定间即彼此对立，而且更尤其和绝对对立。</li>
+<li>必须把有限的、单纯理智的思维与无限的理性的思维区别开。凡是直接地、个别地得来的思维规定，都是有限的规定。但真理本身是无限的，它不能用有限的范畴所能表达并带进意识的。</li>
+<li>企图用有限的名词去规定理性的对象，就是旧形而上学的缺陷。再则这些谓词既是称谓一个主词的宾词，它们彼此间是有联系的，但就它们的内容而言，又是有差别的，所以它们都是外面拾取而来，彼此缺乏真正的联系。</li>
+</ul>
+
+<p>
+思维的本质是无限的。就形式上讲，所谓有限之物指那物有它的终点，它的存在到某种限度为止，有限之物的持存在于它的对方有联系，这对方就是它的否定，并表明它自己就是有限之物的界限。但思维却自己在自己本身内，自己与自己本身相关联，并以自己本身为对象。
+</p>
+
+<ul class="org-ul">
+<li>当思维思维它自己本身时，则思维的对象同时已不是对象了。换言之，此对象的客观外在性已变成被扬弃了的、观念的东西。思维的有限，只有当它停留在有限的规定里，并认这些有限规定为究竟至极的东西，反之一方面同样有规定，但一方面即在规定和限制过程中扬弃了规定和限制的缺陷。</li>
+<li>有限与无限相互对立时，这本该认作代表全体的无限，仅表现为偏于一面，被有限所限制着的一面。但被限制的无限仍不过只是有限之物而已。</li>
+<li>在逻辑学里，其内容须纯全为思想的形式所决定，如果将这些范畴用来作为上帝或较宽泛的绝对这类主词的谓词，不但是多余的，而且还令人误以为除思想本身的性质外尚另有别的标准。不仅如此，命题的形式，或者说判断的形式不适于表达具体的和玄思的真理，因为判断的形式总是片面，就只是片面而言，它就是不真的。</li>
+</ul>
+
+<p>
+独断论坚执着非此必彼的方式，殊不知具体的玄思的真理恰好不是这样，恰好没有这种片面的坚执，因此也非片面的规定所能穷尽。玄思的真理包含有这些片面的规定自身联合起来的全体，而独断论则坚持各分离的规定，当作固定的真理。
+</p>
+</div>
+
+<div id="outline-container-org56a7fd1" class="outline-4">
+<h4 id="org56a7fd1">形而上学第一部分是本体论，关于本质的抽象规定的学说。</h4>
+<div class="outline-text-4" id="text-org56a7fd1">
+<p>
+这部门的形而上学只能寻求经验的完备性和符合语言习惯的字面分析的正确性，而没有考虑这些规定自在自为的真理性和必然性。
+</p>
+
+<p>
+关于存在、定在或有限性、单纯性、复合性等等本身是否真的概念这一问题，相信只有一个命题才有真错、只能问一个概念加在一个主词上是真是错的问题的人定会奇怪，因为他们认为真与不真只取决于表象的主词与用来称谓主词的概念之间有矛盾。但概念是具体的，概念自身，甚至每一个规定性，本质上一般都是许多不同规定的统一体。因此如果真理除了没有矛盾外别无其他性质，则对于每一概念首先必须考察就它本身说来是不包含这样一种内在矛盾。
+</p>
+</div>
+</div>
+
+<div id="outline-container-org829576d" class="outline-4">
+<h4 id="org829576d">形而上学第二部分是理性心理学或灵魂学，研究灵魂的形而上学的本性，亦即把精神当作一个实体研究。</h4>
+<div class="outline-text-4" id="text-org829576d">
+<p>
+要想在复合性、时间性、质的变化、量的增减的定律支配的范围内去寻求灵魂不灭。
+</p>
+
+<p>
+精神与灵魂有区别，灵魂好像是肉体与精神之间的中介，或两者之间的联系。精神沉浸在全身内为灵魂，灵魂是使身体有生命的原则。
+</p>
+
+<p>
+<a href="./metaphysics-soul.html">形而上学灵魂与物</a>
+</p>
+
+<p>
+理性心理学的任务在通过思维以认识精神，并进而证明这种思想内容的真实性，但既然以精神为思考对象，就不太可能回避精神的特殊现象。精神是主动的，这里主动的意义与经院哲学家曾经说上帝是绝对的主动性的意义是相同的。但由于精神既是主动的，则精神必会表现其自身于外。因此不能把精神看成一个没有过程的存在 ens，像旧形而上学的办法，把精神无过程的内在性和它的外在性截然分开。从精神的具体现实性和能动性考察，就可以认识到精神的外在表现是由它的内在力量所决定的。
+</p>
+</div>
+</div>
+
+<div id="outline-container-org21c5898" class="outline-4">
+<h4 id="org21c5898">形而上学第三部分是宇宙论，探讨世界，世界的偶然性、必然性、永恒性、在时空中的限制，世界在变化中的形式的规律，以及人类的自由和恶的起源。</h4>
+<div class="outline-text-4" id="text-org21c5898">
+<p>
+宇宙论中所认为绝对对立的，主要有下列各范畴：偶然性与必然性；外在必然性与内在必然性；致动因与目的因，或因果律一般与目的；本质或实体与现象；形式与质料；自由与必然；幸福与痛苦；善与恶。
+</p>
+
+<p>
+宇宙论并不把它的对象看成一个具体的全体，而是只按抽象的规定去看对象，它的主要兴趣只在揭示出所谓普遍的宇宙规律。想要对这些问题提出一个满意答复，最不应该把抽象的知性规定坚执为最后的规定，也就是说，不可认为对立的两个规定任何一方有其本身的持存性似的，但康德以前形而上学却大都采用这种固执孤立的观点。
+</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: Mudan</p>
+<p class="date">Created: 2020-08-23 周日 19:59</p>
+<p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>

@@ -1,0 +1,7 @@
+#+TITLE:     恩格斯讨论感性相外、并列、相续问
+#+OPTIONS: toc:nil num:nil
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="./emacs.css" />
+
+[[./xlj.org][小逻辑 1817]]
+
+P84 恩格斯在《自然辩证法》中评论到这里所说的感性的东西或表象有着相外、并列、相续诸规定或特定问题。见《马克思恩格斯全集》第二十卷，第 547 页。

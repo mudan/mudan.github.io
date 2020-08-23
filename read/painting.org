@@ -1,0 +1,3 @@
+#+TITLE:     名画览
+#+OPTIONS: num:nil
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="./emacs-book.css" />
