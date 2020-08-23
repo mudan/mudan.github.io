@@ -16,7 +16,7 @@ Caspar David Friedrich 1774.09.05 - 1840.05.07
 
 他在 1809 年画的《橡树下的寺院》便是混合著死亡的题材于风景中。画中是一块荒芜的坟场，画面下方隐约可以见到几个僧侣正抬着一副棺木准备下葬。但是在几棵枯萎参天的橡树和残破的寺院下，这幅葬礼图几乎不可辨识，铅灰的天空把枯树照得只剩一株株黑影，而颓败的寺院只剩下一面墙，看起来像是一矗巨型的墓碑，整幅景致阴冷神秘，明净的光围把累赘的生命净化为一种灵性的境界；使这幅画充满了宗教的讯息。弗里德里希的作品强调尖锐的明暗对比和空无的精神表现，混合著古典主义的严谨技法和浪漫主义的情愫。他的风景画与歌德的小说、贝多芬的音乐，成为德国浪漫主义的佼佼者。
 
-二战时期，希特勒使用了弗里德里希的《凝月》画作为纳粹宣传，因此在二战后的几十年弗里德里希的画作并不获重视。 
+二战时期，希特勒使用了弗里德里希的《凝月》画作为纳粹宣传，因此在二战后的几十年弗里德里希的画作并不获重视。
 
 #+ATTR_HTML: :width 1000
 #+CAPTION: Cairn in Snow, 1807
@@ -25,6 +25,10 @@ Caspar David Friedrich 1774.09.05 - 1840.05.07
 #+ATTR_HTML: :width 1000
 #+CAPTION: Abtei im Eichwald, 1810
 [[./painting/Friedrich/1810 Abtei im Eichwald.jpg]]
+
+#+ATTR_HTML: :width 1000
+#+CAPTION: Morning in the Riesengebirge, 1811
+[[./painting/Friedrich/1811 Morning in the Riesengebirge.jpg]]
 
 #+ATTR_HTML: :width 700
 #+CAPTION: Cross and church in the mountains, 1812
@@ -57,6 +61,11 @@ Caspar David Friedrich 1774.09.05 - 1840.05.07
 #+ATTR_HTML: :width 1000
 #+CAPTION: Evening, 1821
 [[./painting/Friedrich/1821 Evening.jpg]]
+
+#+ATTR_HTML: :width 1000
+#+CAPTION: The Tree of Crows, 1822
+[[./painting/Friedrich/1822 The Tree of Crows.jpg]]
+
 
 #+ATTR_HTML: :width 1000
 #+CAPTION: The Sea of Ice, 1823
