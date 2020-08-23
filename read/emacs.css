@@ -6,6 +6,7 @@ body {
   line-height: 1.555;
   text-justify: inter-ideographic;
   padding: 2em;
+  padding-left: 0.5em;
   font-size: 1.3rem;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
