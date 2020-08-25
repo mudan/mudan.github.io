@@ -7,3 +7,5 @@
 [[./painting/friedrich.org][Caspar David Friedrich 1774.09.05 - 1840.05.07]]
 
 [[./painting/aivazovsky.org][Ivan Konstantinovich Aivazovsky 1817.07.29 - 1900.05.05]]
+
+[[./painting/carlos.org][Carlos Sebastián Pedro Hubert de Haes 1826.01.27 - 1898.06.17]]

@@ -1,0 +1,91 @@
+#+TITLE:     Carlos Sebastián Pedro Hubert de Haes
+#+OPTIONS: num:nil
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="../emacs-book.css" />
+
+# C-c C-x C-v (org-toggle-inline-images)
+
+卡洛斯·塞巴斯蒂安·佩德罗·乌伯特·德·阿埃斯 1826.01.27 - 1898.06.17
+
+#+ATTR_HTML: :width 650
+#+CAPTION: 肖像画
+[[./Carlos-de-Haes.jpg]]
+
+19 世纪比利时裔西班牙画家，他以现实主义风景画的创作而闻名于世，和赫纳罗·佩雷斯·比利亚米尔和奥雷利亚诺·德·贝鲁埃特并称为 19 世纪西班牙三大风景画家。 
+
+卡洛斯出生于布鲁塞尔的一个商人家庭。1835 年，全家搬到了西班牙马拉加。在那里，他跟随画家路易斯·德拉克鲁斯·罗伊斯学习新古典主义肖像画。约 1850 年至 1855 年间，卡洛斯跟随弗拉芒的风景画大师约瑟夫·奎诺继续学习绘画。在布鲁塞尔，他遇到了其他的欧洲知名画家。后来又访问了荷兰、法国和德国。在返回马德里后，他在全国美术展览中获奖。卡洛斯也是 1850 年代现实主义风景画学派兴起的关键人物之一。非常巧合的是，他的画作《石修道院》的完成时间刚好与马德里皇家圣费尔南多美术学院开放的时间赶在了一起。1857 年，他被任命为该学院风景画教授，也是学院的第一位自然现实主义绘画教授。他的学生有海梅·莫雷拉、奥雷利亚诺·德·贝鲁埃特和达里奥·雷戈约斯等人。卡洛斯带着他的学生一起在乡下写生，探索未知的地理自然风景。
+
+他的画作也影响了不少名人。小说家何塞·马丁内斯·鲁伊斯就曾长期观摩卡洛斯的作品而受到启发。其中，《欧罗巴山的曼科尔沃运河》作为最具代表性的 19 世纪西班牙山水画，如今收藏在普拉多博物馆中。1890 年不幸患病，1898 年在马德里逝世。逝世后，尼加拉瓜作家鲁本·达里欧曾写过关于他的纪念作品。弟子海梅·莫雷拉是他的遗嘱执行人之一，他将未展出的画作留给了莫雷拉，如今完好地保存在加泰罗尼亚莱里达莫雷拉博物馆。 
+
+卡洛斯认为，所谓最完美的艺术，应该是在模仿自然中发现真理，这是所有美的源泉。作为一名画家，应该亲自接触自然，拥抱自然。他完全抛弃了浪漫主义观点，是早一代现实主义和外光主义画派的代表人物。在绘画技巧方面，他的笔触虽蕴含印象派的风格特征，但缺乏对光和色的处理，在地理上也与印象派运动的发源地法国相距甚远。他的写实风景画可以与法国巴比松派相提并论。
+
+#+ATTR_HTML: :width 1000
+#+CAPTION: Orillas del Jarama, 1851
+[[./Carlos/1851 Orillas del Jarama.jpg]]
+
+#+ATTR_HTML: :width 1000
+#+CAPTION: Carlos de Haes View near Monasterio de Piedra, 1856
+[[./Carlos/1856 Carlos de Haes View near Monasterio de Piedra.jpg]]
+
+#+ATTR_HTML: :width 1000
+#+CAPTION: Paisaje, 1857
+[[./Carlos/1857 Paisaje.jpg]]
+
+#+ATTR_HTML: :width 600
+#+CAPTION: La vereda, 1871
+[[./Carlos/1871 La vereda.jpg]]
+
+#+ATTR_HTML: :width 1000
+#+CAPTION: Rompientes, 1872
+[[./Carlos/1872 Rompientes.jpg]]
+
+#+ATTR_HTML: :width 1000
+#+CAPTION: Tileworks in the Principe Pio Mountains, 1872
+[[./Carlos/1872 Tileworks in the Principe Pio Mountains.jpg]]
+
+#+ATTR_HTML: :width 600
+#+CAPTION: Los picos de Europa, 1876
+[[./Carlos/1876 Los picos de Europa.jpg]]
+
+#+ATTR_HTML: :width 1000
+#+CAPTION: Canal abandonado. Vriesland (Holanda), 1877
+[[./Carlos/1877 Canal abandonado. Vriesland (Holanda).jpg]]
+
+#+ATTR_HTML: :width 1000
+#+CAPTION: La torre de la iglesia. Cercanías de Douarnenez, 1877-1884
+[[./Carlos/1877 La torre de la iglesia. Cercanías de Douarnenez.jpg]]
+
+#+ATTR_HTML: :width 1000
+#+CAPTION: Douarnenez Steeple, 1877-1884
+[[./Carlos/1877 Douarnenez Steeple.jpg]]
+
+#+ATTR_HTML: :width 1000
+#+CAPTION: Cercanías de Trouville, 1877-1884
+[[./Carlos/1877 Cercanías de Trouville.jpg]]
+
+#+ATTR_HTML: :width 1000
+#+CAPTION: Villerville Beach. Normandy, 1877-1884
+[[./Carlos/1877 Villerville Beach. Normandy.jpg]]
+
+#+ATTR_HTML: :width 1000
+#+CAPTION: Bajamar (Guetary), 1881
+[[./Carlos/1881 Bajamar (Guetary).jpg]]
+
+#+ATTR_HTML: :width 1000
+#+CAPTION: Restos de un naufragio, 1882
+[[./Carlos/1882 Restos de un naufragio.jpeg]]
+
+#+ATTR_HTML: :width 1000
+#+CAPTION: Un barco naufragado, 1883
+[[./Carlos/1883 Un barco naufragado.jpg]]
+
+#+ATTR_HTML: :width 1000
+#+CAPTION: Lagunas holandesas, 1884
+[[./Carlos/1884 Lagunas holandesas.jpeg]]
+
+#+ATTR_HTML: :width 1000
+#+CAPTION: Channel. Netherlands, 1884
+[[./Carlos/1884 Channel. Netherlands.jpeg]]
+
+#+ATTR_HTML: :width 1000
+#+CAPTION: Molinos de viento - Holanda, 1884
+[[./Carlos/1884 Molinos de viento - Holanda.jpeg]]
