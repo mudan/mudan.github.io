@@ -1,0 +1,69 @@
+#+TITLE:     Jean-Baptiste Camille Corot
+#+OPTIONS: num:nil
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="../emacs-book.css" />
+
+# C-c C-x C-v (org-toggle-inline-images)
+
+让-巴蒂斯·卡米耶·柯洛 1796.07.16 - 1875.02.22
+
+#+ATTR_HTML: :width 650
+[[./Jean-Baptiste-Camille-Corot.png]]
+
+法国著名的巴比松派画家，也被誉为 19 世纪最出色的抒情风景画家。画风自然，朴素，充满迷蒙的空间感。
+
+柯洛的一生都住在巴黎，到 26 岁才从商人转为画家，曾在画家米谢隆与柏坦的画室中学画，相当喜爱写生与旅游，追循着他的画，可说踏遍了全法国，以及英国、荷兰、瑞士及意大利乡间等地。从柯洛的画中尤其可看出他很喜欢意大利田野风景。然而柯洛也很擅于画肖像画，欧洲就有不少博物馆也收藏了他的肖像画。
+
+柯洛从 1825 年开始旅行，并一路素描和油画写生他所看到的风景，初期他的风格并不明显，最多只是画面的明度较高，自然光线较为具体，但到了 1850 年代，经过了 25 年的训练，柯洛在 54 岁时发展出他独特的羽毛状画风，此时他所画的树，云，都相当具有蓬松感，画面构图也开始单纯化，有人认为柯洛的画中充满了大量的诗意，多半是指他此时的风景画。他最著名的风景画“维拉达福瑞小镇”Ville d'Avray 也是画于这个时期（1867 年），同时他也是 19 世纪留下画作量最丰富的画家之一。 
+
+
+#+ATTR_HTML: :width 1000
+#+CAPTION: Hagar in the Wilderness, 1835
+[[./Corot/1835 Hagar in the Wilderness.jpg]]
+
+#+ATTR_HTML: :width 1000
+#+CAPTION: The Piazzetta seen from the Riva degli Schiavoni, 1835-1845
+[[./Corot/1835 The Piazzetta seen from the Riva degli Schiavoni.jpg]]
+
+#+ATTR_HTML: :width 700
+#+CAPTION: Moine blanc, assis, lisant, 1850-1855
+[[./Corot/1850 Moine blanc, assis, lisant.jpg]]
+
+#+ATTR_HTML: :width 1000
+#+CAPTION: Cows in a Marshy Landscape, 1860
+[[./Corot/1860 Cows in a Marshy Landscape.jpg]]
+
+#+ATTR_HTML: :width 1000
+#+CAPTION: L'ALLÉE VERTE
+[[./Corot/L'ALLÉE VERTE.jpg]]
+
+#+ATTR_HTML: :width 1000
+#+CAPTION: Orpheus Leading Eurydice from the Underworld, 1861
+[[./Corot/1861 Orpheus Leading Eurydice from the Underworld.jpg]]
+
+#+ATTR_HTML: :width 1000
+#+CAPTION: Souvenir de Mortefontaine, 1864
+[[./Corot/1864 Souvenir de Mortefontaine.jpg]]
+
+#+ATTR_HTML: :width 1000
+#+CAPTION: Ville-d’Avray, 1867
+[[./Corot/1867 Ville-d’Avray.jpg]]
+
+#+ATTR_HTML: :width 1000
+#+CAPTION: The Bridge at Mantes, 1868-1870
+[[./Corot/1868 The Bridge at Mantes.jpg]]
+
+#+ATTR_HTML: :width 1000
+#+CAPTION: Souvenir of Palluel, 1871
+[[./Corot/1871 Souvenir of Palluel.jpg]]
+
+#+ATTR_HTML: :width 1000
+#+CAPTION: Landscape, 1872
+[[./Corot/1872 Landscape.jpg]]
+
+#+ATTR_HTML: :width 1000
+#+CAPTION: Souvenir of a Journey to Coubron, 1873
+[[./Corot/1873 Souvenir of a Journey to Coubron.jpg]]
+
+#+ATTR_HTML: :width 600
+#+CAPTION: Le moine, 1874
+[[./Corot/1874 Le moine.jpg]]

@@ -23,6 +23,10 @@
 [[./Friedrich/1807 Cairn in Snow.jpg]]
 
 #+ATTR_HTML: :width 1000
+#+CAPTION: Der Mönch am Meer, 1808
+[[./Friedrich/1808 Der Mönch am Meer.jpg]]
+
+#+ATTR_HTML: :width 1000
 #+CAPTION: Abtei im Eichwald, 1810
 [[./Friedrich/1810 Abtei im Eichwald.jpg]]
 
