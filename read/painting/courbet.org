@@ -1,0 +1,111 @@
+#+TITLE:     Gustave Courbet
+#+OPTIONS: num:nil
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="../emacs-book.css" />
+
+# C-c C-x C-v (org-toggle-inline-images)
+
+古斯塔夫·库尔贝 1819.06.10 - 1877.12.31
+
+#+ATTR_HTML: :width 600
+#+CAPTION: 肖像画
+[[./Gustave-Courbet.jpg]]
+
+法国著名画家，现实主义画派的创始人。主张艺术应以现实为依据，反对粉饰生活，他的名言是：“我不会画天使，因为我从来没有见过他们。”
+
+库尔贝出生于法国东部紧挨瑞士的杜省奥尔南，父亲雷吉斯·库尔贝（Régis Oudot Courbet）是一位农场主，其母名为塞尔维（Sylvie），他的姐妹佐埃（Zoé）、泽莉（Zélie）和朱丽叶（Juliette）是他最早的模特。1839年他到巴黎学习法律，常到卢浮宫观摩大师们的绘画，在父亲的支持下改学绘画，先在斯特本和海森画室学习，但不久离开，自行以临摹大师们的作品学习。
+
+1849年，他回到家乡，创作了《碎石工》、《奥南的葬礼》等如实反映生活的作品，成为现实主义艺术的领导人，他坚决反对旧的传统观念和习俗，成为背叛传统画派的新一代艺术家的领袖。他还创作了许多著名的风景画，并写作了散文和政论文，呼吁民主和自由。1856年，他访问德国，受到热烈的欢迎。
+
+库尔贝拒绝了拿破仑三世授予的荣誉军团十字奖章，使他的人气大增，1871年成立巴黎公社后，他被选为公社委员、艺术家协会主席，负责博物馆工作，他坚决主张推倒象征帝国主义战争的旺多姆圆柱。这个铜柱是拿破仑为了炫耀侵略战绩，用缴获的1200门大炮熔铸成的，上面刻着拿破仑历次战绩。公社通过法令说它是：“野蛮行为的纪念物”，是“对军国主义的赞扬”，于1871年5月16日予以拆毁。巴黎公社失败后，他被捕入狱，判决他入狱6个月并赔偿重新立起旺多姆圆柱所需的资金30万法郎，为躲避这笔债款，出狱后他只好逃亡国外，于1873年流亡瑞士，在瑞士死于饮酒过量造成的肝硬化。
+
+#+ATTR_HTML: :width 1000
+#+CAPTION: Marine ou Vue d'Honfleur, 1841
+[[./Courbet/1841 Marine ou Vue d'Honfleur.jpg]]
+
+#+ATTR_HTML: :width 1000
+#+CAPTION: Autoportrait au chien noir, 1842
+[[./Courbet/1842 Autoportrait au chien noir.jpg]]
+
+#+ATTR_HTML: :width 600
+#+CAPTION: L'homme à la pipe, 1848
+[[./Courbet/1848 L’homme à la pipe.jpg]]
+
+#+ATTR_HTML: :width 1400
+#+CAPTION: A Burial at Ornans, 1849
+[[./Courbet/1849 A Burial at Ornans.jpg]]
+
+#+ATTR_HTML: :width 1000
+#+CAPTION: The Stone Breakers, 1849
+[[./Courbet/1849 The Stone Breakers.jpg]]
+
+#+ATTR_HTML: :width 1000
+#+CAPTION: Les Paysans de Flagey, 1850
+[[./Courbet/1850 Les Paysans de Flagey.jpg]]
+
+#+ATTR_HTML: :width 700
+#+CAPTION: Lutteurs, 1853
+[[./Courbet/1853 Lutteurs.jpg]]
+
+#+ATTR_HTML: :width 700
+#+CAPTION: Portrait de Bruyas, 1854
+[[./Courbet/1854 Portrait de Bruyas.jpg]]
+
+#+ATTR_HTML: :width 1000
+#+CAPTION: Les Bords de la mer à Palavas, 1854
+[[./Courbet/1854 Les Bords de la mer à Palavas.jpg]]
+
+#+ATTR_HTML: :width 1000
+#+CAPTION: Le Bord de la Mer a Palavas ou L'Artiste Devant la Mer, 1854
+[[./Courbet/1854 Le Bord de la Mer a Palavas ou L'Artiste Devant la Mer.jpg]]
+
+#+ATTR_HTML: :width 1000
+#+CAPTION: Le Ruisseau du Puits-Noir; vallée de la Loue, 1855
+[[./Courbet/1855 Le Ruisseau du Puits-Noir; vallée de la Loue.jpg]]
+
+#+ATTR_HTML: :width 1000
+#+CAPTION: LAtelier du peintre, 1855
+[[./Courbet/1855 LAtelier du peintre.jpg]]
+
+#+ATTR_HTML: :width 600
+#+CAPTION: L'Amazone, 1856
+[[./Courbet/1856 L'Amazone.jpg]]
+
+#+ATTR_HTML: :width 1000
+#+CAPTION: Valley, 1857
+[[./Courbet/1857 Valley.jpg]]
+
+#+ATTR_HTML: :width 1000
+#+CAPTION: Jo, den vackra irländskan, 1866
+[[./Courbet/1866 Jo, den vackra irländskan.jpg]]
+
+#+ATTR_HTML: :width 1000
+#+CAPTION: Effet de neige, 1866-1868
+[[./Courbet/1866 Effet de neige.jpg]]
+
+#+ATTR_HTML: :width 1000
+#+CAPTION: The Fishing Boat, 1865
+[[./Courbet/1865 The Fishing Boat.jpg]]
+
+#+ATTR_HTML: :width 1000
+#+CAPTION: La Mer en automne, 1867
+[[./Courbet/1867 La Mer en automne.jpg]]
+
+#+ATTR_HTML: :width 1000
+#+CAPTION: La vague, 1869
+[[./Courbet/1869 La vague.jpg]]
+
+#+ATTR_HTML: :width 1000
+#+CAPTION: La mer orageuse dit aussi La vague, 1870
+[[./Courbet/1870 La mer orageuse dit aussi La vague.jpg]]
+
+#+ATTR_HTML: :width 1000
+#+CAPTION: ÄNature morte avec pommes et grenadesl, 1871
+[[./Courbet/1871 ÄNature morte avec pommes et grenadesl.jpg]]
+
+#+ATTR_HTML: :width 1000
+#+CAPTION: A Hut in the Mountains, 1874
+[[./Courbet/1874 A Hut in the Mountains.jpg]]
+
+#+ATTR_HTML: :width 1000
+#+CAPTION: Chillon Castle, 1874-1877
+[[./Courbet/1874 Chillon Castle.jpg]]
