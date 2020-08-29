@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2020-08-29 ���� 17:59 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>小逻辑 1817</title>
+<meta name="generator" content="Org mode" />
+<meta name="author" content="Mudan" />
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+  /*]]>*/-->
+</style>
+<link rel="stylesheet" type="text/css" href="./emacs-book.css" />
+<script type="text/javascript">
+// @license magnet:?xt=urn:btih:1f739d935676111cfff4b4693e3816e664797050&amp;dn=gpl-3.0.txt GPL-v3-or-Later
+<!--/*--><![CDATA[/*><!--*/
+     function CodeHighlightOn(elem, id)
+     {
+       var target = document.getElementById(id);
+       if(null != target) {
+         elem.cacheClassElem = elem.className;
+         elem.cacheClassTarget = target.className;
+         target.className = "code-highlighted";
+         elem.className   = "code-highlighted";
+       }
+     }
+     function CodeHighlightOff(elem, id)
+     {
+       var target = document.getElementById(id);
+       if(elem.cacheClassElem)
+         elem.className = elem.cacheClassElem;
+       if(elem.cacheClassTarget)
+         target.className = elem.cacheClassTarget;
+     }
+    /*]]>*///-->
+// @license-end
+</script>
+</head>
+<body>
+<div id="content">
+<h1 class="title">小逻辑 1817</h1>
+
+<div id="outline-container-org1a7433e" class="outline-2">
+<h2 id="org1a7433e">哲学不可以假定表象所直接接受的为其对象，不可以假定在认识的开端和进程里有一种现成的认识方法。</h2>
+<div class="outline-text-2" id="text-org1a7433e">
+<p>
+哲学对象类似宗教对象。
+</p>
+
+<p>
+哲学是以思想、范畴，或更确切地说，是以概念去代替表象。
+</p>
+
+<p>
+具有思想与概念是一回事，知道符合这些思想和概念的表象、直观、情绪又是一回事。
+</p>
+
+<p>
+假如哲学的看法与宗教的观念之间出现了差异，哲学必须辩明它的各种规定何以异于宗教观念的理由。
+</p>
+
+<ul class="org-ul">
+<li><a href="./hg1-y0.哲学以真理为对象.html">哲学以真理为对象</a></li>
+<li><a href="./hg-y1.哲学以有限事物的世界为对象.html">哲学以有限事物的世界为对象</a></li>
+</ul>
+</div>
+
+<div id="outline-container-orgb512f06" class="outline-3">
+<h3 id="orgb512f06">就思想的全部普遍性而言，它就是理念或绝对。关于理念或绝对的科学，本质上应是一个体系，因为真理作为具体的，它必定是在自身中展开其自身，而且必定是联系在一起的和保持在一起的统一体，换言之，真理就是全体。全体的自由性，与各个环节的必然性，只有通过对各环节加以区别和规定才有可能。</h3>
+<div class="outline-text-3" id="text-orgb512f06">
+<p>
+哲学的每一部分都是一个<b>哲学全体</b>，哲学的理念在每一部分里只表达出一个特殊的规定性或因素。部分也是整体，只有打破它特殊因素予之限制，从而建立更广泛的整体而成必然的环节，进而终成理念全体。
+</p>
+
+<p>
+各部门的初步划分，正如最初对于理念的认识一样，只能是某种预想的东西。达到概念的概念，自己满足自己，自己返回自己，哲学这门科学可以分为三部分：
+须认识到个别部门的科学，每一部门的内容既是存在着的对象，同样又是直接地在这内容中向着它的较高范畴（kreis）的过渡，不曾并列，更非静止。
+</p>
+
+<ul class="org-ul">
+<li>逻辑学，研究理念自在自为的科学。</li>
+<li>自然哲学，研究理念的异在或外在化的科学。</li>
+<li>精神哲学，研究理念由它的异在而返回到它自身的科学。</li>
+</ul>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org96c8dbf" class="outline-2">
+<h2 id="org96c8dbf">逻辑学研究纯粹理念，所谓纯粹理念就是思维的最抽象的要素所形成的理念。</h2>
+<div class="outline-text-2" id="text-org96c8dbf">
+<p>
+就思维的通常主观的意义，思维是精神的许多活动或能力之一，与感觉、直观、想象、欲望意志等并列杂陈 → 思维活动的产物，思维的形式或规定性一般是普遍的抽象的东西。思维作为能动性，因而便可称能动的普遍 → 既然活动的产物是普遍性的，则思维便可称自身实现的普遍体 → 就思维被认主体而言，便是能思者，<b>存在的能思的主体的</b>简称就叫我。<a href="./hg1b.黑格尔言我.html">黑格尔言我</a>
+</p>
+
+<ul class="org-ul">
+<li>感性事物与思想的区别在于前者的特点是个别性的。既是个别之物也是彼此联系，所以凡是感性事物都是些彼此相外 Aussereinander 的个别东西，它们确切抽象的形式，是彼此并列 Nebeneinander 和彼此相续 Nacheinander 的。<a href="./engels-sensibility.html">恩格斯讨论感性相外、并列、相续问题</a></li>
+
+<li>多种个别化的、简单的规定或谓词，不管有无内在联系，勉强连缀在一起，这些谓词虽以其主词为联系，但它们之间仍然是互相外在的。表象与知性的区别，在于知性尚能建立普遍与特殊、原因与效果等关系，从而使表象的孤立化的表象规定有必然性的联系，而表象只能让这些孤立化的规定在模糊的意识背景里彼此挨近排列。二者的区别还具有更大的重要性，因为一般讲来，哲学除了把表象转变为思想，更进一步把单纯抽象的思想转变为概念之外，没有别的工作。</li>
+</ul>
+</div>
+
+<div id="outline-container-org25da2e2" class="outline-3">
+<h3 id="org25da2e2">思维和对象的关系是主动的，是对某物的反思，因此思维活动的产物、普遍概念就包含有事情的价值，亦即本质、内在实质、真理。</h3>
+<div class="outline-text-3" id="text-org25da2e2">
+<ul class="org-ul">
+<li><a href="./hg1-y2.反思的客观思想.html">反思的客观思想</a></li>
+<li><a href="./hg1-y3.有限的无限的思维.html">有限的无限的思维</a></li>
+
+<li><a href="./hg1-s1.形而上学本体论.html">形而上学本体论</a></li>
+<li><a href="./hg1-s2.形而上学理性心理学&amp;灵魂学.html">形而上学理性心理学&amp;灵魂学</a></li>
+<li><a href="./hg1-s3.形而上学宇宙论.html">形而上学宇宙论</a></li>
+<li><a href="./hg1-s4.形而上学自然的或理性的神学.html">形而上学自然的或理性的神学</a></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: Mudan</p>
+<p class="date">Created: 2020-08-29 ���� 17:59</p>
+</div>
+</body>
+</html>

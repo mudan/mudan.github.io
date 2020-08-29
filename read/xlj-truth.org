@@ -1,7 +1,0 @@
-#+TITLE:     黑格尔的真理
-#+OPTIONS: toc:nil num:nil
-#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="./emacs.css" />
-
-[[./xlj.org][小逻辑 1817]]
-
-P98 通常我们总认为我们的表象应与这对象相符合叫做真理，这说法预先假定有一个对象，我们的表象应与这对象相符合。但反之，从哲学的意义来看，概况地抽象地讲来，真理就是思想的内容与其自身的符合。

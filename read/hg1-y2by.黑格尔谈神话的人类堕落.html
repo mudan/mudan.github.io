@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2020-08-29 ���� 17:44 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>黑格尔谈神话的人类堕落</title>
+<meta name="generator" content="Org mode" />
+<meta name="author" content="Mudan" />
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+  /*]]>*/-->
+</style>
+<link rel="stylesheet" type="text/css" href="./emacs.css" />
+<script type="text/javascript">
+// @license magnet:?xt=urn:btih:1f739d935676111cfff4b4693e3816e664797050&amp;dn=gpl-3.0.txt GPL-v3-or-Later
+<!--/*--><![CDATA[/*><!--*/
+     function CodeHighlightOn(elem, id)
+     {
+       var target = document.getElementById(id);
+       if(null != target) {
+         elem.cacheClassElem = elem.className;
+         elem.cacheClassTarget = target.className;
+         target.className = "code-highlighted";
+         elem.className   = "code-highlighted";
+       }
+     }
+     function CodeHighlightOff(elem, id)
+     {
+       var target = document.getElementById(id);
+       if(elem.cacheClassElem)
+         elem.className = elem.cacheClassElem;
+       if(elem.cacheClassTarget)
+         target.className = elem.cacheClassTarget;
+     }
+    /*]]>*///-->
+// @license-end
+</script>
+</head>
+<body>
+<div id="content">
+<h1 class="title">黑格尔谈神话的人类堕落</h1>
+<p>
+<a href="./hg1-y2b.黑格尔认识形式.html">黑格尔认识形式</a>
+<a href="./hg1.小逻辑-1817.html">小逻辑 1817</a>
+</p>
+
+<p>
+P101 关于人的堕落的摩西神话，对于这种分裂的起源和后果曾经给了我们一个古老的观念。这个神话的内容形成了宗教信仰的理论基础，即关于人的原始罪恶及人有赖于神力的解救之必要的学说。试就人类堕落的神话加以仔细考察，便可看出，有如上面所说，这神话却表达了知识和精神生活间的普遍关系。精神生活在其素朴的本能的阶段，表现为无邪的天真和淳朴的信赖。但精神的本质在于扬弃这种自然素朴的状态，因为精神生活之所以异于自然生活，即在其不停留在它的自在存在的阶段，而力求达到自为存在。但这种分裂境地，同样也须加以扬弃，而精神总是要通过自力以返回它原来的统一。这样赢得的统一乃是精神的统一。而导致返回到这种统一的根本动力，即在于思维本身。这就是“击伤的是他的手，医伤的也是他的手” <sup><a id="fnr.1" class="footref" href="#fn.1">1</a></sup>的意思。
+</p>
+
+<p>
+神话中曾经这样说：亚当和夏娃，最初的人，或典型的人，被安置在一个果园里面，园中有一棵生命之树，有一棵善与恶知识之树。据说，上帝曾告诫过他们，禁止摘食知识之树的果子。关于生命之树暂且不提。这里所表示的意思，显然是说人不应寻求知识，而须长保持天真的境界。
+</p>
+
+<p>
+再则，在摩西的神话里，使人离开那原始的谐和的机缘，乃是一外在的诱力，即蛇的引诱。其实，个人进入对立面，即是人本身意识的觉醒，这种受外力引诱是每个人所不断重演的历史。所以蛇的引诱象征善恶的分别，也包含在神性之内。而这种对于善恶的知识，实际上也是人所分享的。当人分有了这种知识时，他便享受了禁果，而与他自己的直接的存在破裂了。对自己的觉醒意识的初次反思，人们发现他们自身是裸体的。赤裸可以说是人的很朴素而基本的特性。他认裸体为可羞耻包含着他的自然存在和感性存在的分离。所以在人的羞耻的情绪里又可以找到穿衣服的精神的和道德的起源，而衣服适应单纯物质上的需要，倒反而只居于次要地位。
+</p>
+
+<p>
+其次，尚须提一下上帝加诸世人的所谓谴责或灾难。天谴观念所着重之点，即在于指出天谴主要的关涉到人与自然的对立。男子应该汗流满面去劳动，女子应该忍受痛苦去生育。此种劳动，细究起来，一方面固是与自然分裂的结果，一方面也是对于这种分裂的征服。
+</p>
+
+<p>
+摩西的神话，并不以亚当和夏娃被逐出乐园而结束。它还意味着更多的东西：“上帝说，看呀，亚当也成为相似于我们当中的一分子了，因为他知道什么是善和恶。”这些话表明知识是神圣的了，不似从前那样，把知识认为是不应该存在的东西了。在这里还包含有对于认为哲学只属于精神的有限性那样说法的一种显明的反驳。哲学是认识，也只有通过认识，人作为上帝的肖像这一原始的使命才会得到实现。这个神话又说到：上帝把人从伊甸园里驱逐出去了，以便阻止他吃那生命之树。这话的真义即在于指出就人的自然方面来说，他确是有限的，同时也是有死的，但就他在认识方面来说，他却是无限的。
+</p>
+
+<p>
+教会上有一熟知的信条，认为人的本性是恶的，并称本性之恶为原始的罪恶。依这个说法，我们必须放弃一种肤浅的观念，即认原始罪恶只是基于最初的人的一种偶然行为。其实由精神的概念即可表明本性是恶的，我们无法想象除认人性为恶之外尚有别种看法。只要就人作为自然的人，就人的行为作为自然的人的行为来说，他所有的一切活动，都是他所不应有的。精神却正与自然相反，精神应是自由的，它是通过自己本身而成为它自己所应该那样。自然对人来说只是人应当加以改造的出发点。与这个有深刻意义的教会信条原始罪恶说正相反对的，便是近代启蒙时期兴起的一个学说，即认人性是善的，因此人应忠于他的本性。
+</p>
+<div id="footnotes">
+<h2 class="footnotes">Footnotes: </h2>
+<div id="text-footnotes">
+
+<div class="footdef"><sup><a id="fn.1" class="footnum" href="#fnr.1">1</a></sup> <div class="footpara"><p class="footpara">
+见《旧约全书・约伯记》第五章，中译本此句全文如下：“你不可轻看全能者的管教，因为他打破又缠裹；他击伤，用手医治。”
+</p></div></div>
+
+
+</div>
+</div></div>
+<div id="postamble" class="status">
+<p class="author">Author: Mudan</p>
+<p class="date">Created: 2020-08-29 ���� 17:44</p>
+</div>
+</body>
+</html>
