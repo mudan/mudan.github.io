@@ -1,0 +1,343 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2020-09-04 ���� 19:59 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Jean-François Millet</title>
+<meta name="generator" content="Org mode" />
+<meta name="author" content="Mudan" />
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+  /*]]>*/-->
+</style>
+<link rel="stylesheet" type="text/css" href="../emacs-book.css" />
+<script type="text/javascript">
+// @license magnet:?xt=urn:btih:1f739d935676111cfff4b4693e3816e664797050&amp;dn=gpl-3.0.txt GPL-v3-or-Later
+<!--/*--><![CDATA[/*><!--*/
+     function CodeHighlightOn(elem, id)
+     {
+       var target = document.getElementById(id);
+       if(null != target) {
+         elem.cacheClassElem = elem.className;
+         elem.cacheClassTarget = target.className;
+         target.className = "code-highlighted";
+         elem.className   = "code-highlighted";
+       }
+     }
+     function CodeHighlightOff(elem, id)
+     {
+       var target = document.getElementById(id);
+       if(elem.cacheClassElem)
+         elem.className = elem.cacheClassElem;
+       if(elem.cacheClassTarget)
+         target.className = elem.cacheClassTarget;
+     }
+    /*]]>*///-->
+// @license-end
+</script>
+</head>
+<body>
+<div id="content">
+<h1 class="title">Jean-François Millet</h1>
+<p>
+让-弗朗索瓦·米勒 1814.10.04 - 1875.01.20
+</p>
+
+
+<div class="figure">
+<p><img src="./Jean-François-Millet.jpg" alt="Jean-François-Millet.jpg" width="650" />
+</p>
+<p><span class="figure-number">Figure 1: </span>肖像画</p>
+</div>
+
+<p>
+法国巴比松派画家，出生于法国诺曼底半岛格鲁什村（Gruchy），耕农家庭之子；童年时曾帮助父亲在田间劳动，因父母忙于田里工作，祖母是他从小最亲近的人。1849年巴黎流行黑热病，米勒携家迁居到巴黎郊区枫丹白露附近的巴比松村，这时米勒已35岁。在巴比松村米勒结识了柯罗、卢梭、特罗容等画家，在这个穷困闭塞的乡村，米勒一住就是27年之久。米勒对大自然和农村生活有一种特殊的深厚感情，他早起晚归，上午在田间劳动，下午就在不大通光的小屋子里作画。米勒的生活异常困苦，但这并没有减弱他对艺术的酷爱和追求，他常常由于没钱买颜料就自己制造木炭条画素描。米勒爱生活、爱劳动、爱农民，他曾说过：“无论如何农民这个题材对于我是最合适的。”米勒在巴比松的第一幅代表作品是《播种者》，以后相继创作了《拾穗者》和《晚钟》等名作。他以写实手法描绘的乡村风俗画闻名法国画坛，被认为是写实主义艺术运动的参与者。罗曼·罗兰在所著的《米勒传》指出：“米勒，这位将全部精神灌注于永恒的意义胜过刹那的古典大师，从来就没有一位画家像他这般，将万物所归的大地给予如此雄壮又伟大的感觉与表现。”
+</p>
+
+
+<div class="figure">
+<p><img src="./Millet/1848 The Winnower.jpg" alt="1848 The Winnower.jpg" width="650" />
+</p>
+<p><span class="figure-number">Figure 2: </span>The Winnower, 1848</p>
+</div>
+
+
+<div class="figure">
+<p><img src="./Millet/1850 The Sower.jpg" alt="1850 The Sower.jpg" width="650" />
+</p>
+<p><span class="figure-number">Figure 3: </span>The Sower, 1850</p>
+</div>
+
+
+<div class="figure">
+<p><img src="./Millet/1854 Paysanne enfournant son pain.jpg" alt="1854 Paysanne enfournant son pain.jpg" width="650" />
+</p>
+<p><span class="figure-number">Figure 4: </span>Paysanne enfournant son pain, 1854</p>
+</div>
+
+
+<div class="figure">
+<p><img src="./Millet/1855 The Potato Harvest.jpg" alt="1855 The Potato Harvest.jpg" width="1000" />
+</p>
+<p><span class="figure-number">Figure 5: </span>The Potato Harvest, 1855</p>
+</div>
+
+
+<div class="figure">
+<p><img src="./Millet/1857 Gleaners.jpg" alt="1857 Gleaners.jpg" width="1000" />
+</p>
+<p><span class="figure-number">Figure 6: </span>Gleaners, 1857</p>
+</div>
+
+
+<div class="figure">
+<p><img src="./Millet/1857 L'Angélus.jpg" alt="1857 L'Angélus.jpg" width="1000" />
+</p>
+<p><span class="figure-number">Figure 7: </span>L&rsquo;Angélus, 1857</p>
+</div>
+
+
+<div class="figure">
+<p><img src="./Millet/1860 The Sheepfold, Moonlight.jpg" alt="1860 The Sheepfold, Moonlight.jpg" width="1000" />
+</p>
+<p><span class="figure-number">Figure 8: </span>The Sheepfold, Moonlight, 1860</p>
+</div>
+
+
+<div class="figure">
+<p><img src="./Millet/1860 The Knitting Lesson.jpg" alt="1860 The Knitting Lesson.jpg" width="650" />
+</p>
+<p><span class="figure-number">Figure 9: </span>The Knitting Lesson, 1860</p>
+</div>
+
+
+<div class="figure">
+<p><img src="./Millet/1865 The Sower.jpg" alt="1865 The Sower.jpg" width="1000" />
+</p>
+<p><span class="figure-number">Figure 10: </span>The Sower, 1865</p>
+</div>
+
+
+<div class="figure">
+<p><img src="./Millet/1865 La fin de la journée;effect du soir.jpg" alt="1865 La fin de la journée;effect du soir.jpg" width="1000" />
+</p>
+<p><span class="figure-number">Figure 11: </span>La fin de la journée;effect du soir, 1865-1867</p>
+</div>
+
+
+<div class="figure">
+<p><img src="./Millet/1868 Spring Landscape with Rainbow.jpg" alt="1868 Spring Landscape with Rainbow.jpg" width="1000" />
+</p>
+<p><span class="figure-number">Figure 12: </span>Spring Landscape with Rainbow 1868-1873</p>
+</div>
+
+
+<div class="figure">
+<p><img src="./Millet/1870 Femme coud à la lumière de la lampe.jpg" alt="1870 Femme coud à la lumière de la lampe.jpg" width="650" />
+</p>
+<p><span class="figure-number">Figure 13: </span>Femme coud à la lumière de la lampe, 1870-1872</p>
+</div>
+
+
+<div class="figure">
+<p><img src="./Millet/1871 L'Eglise de Gréville.jpg" alt="1871 L'Eglise de Gréville.jpg" width="1000" />
+</p>
+<p><span class="figure-number">Figure 14: </span>L&rsquo;Eglise de Gréville, 1871</p>
+</div>
+
+
+<div class="figure">
+<p><img src="./Millet/1874 Hunting Birds at Night.jpg" alt="1874 Hunting Birds at Night.jpg" width="1000" />
+</p>
+<p><span class="figure-number">Figure 15: </span>Hunting Birds at Night, 1874</p>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: Mudan</p>
+<p class="date">Created: 2020-09-04 ���� 19:59</p>
+</div>
+</body>
+</html>

@@ -8,6 +8,8 @@
 
 [[./painting./corot.org][Jean-Baptiste Camille Corot 1796.07.16 - 1875.02.22]]
 
+[[./painting/millet.org][Jean-François Millet 1814.10.04 - 1875.01.20]]
+
 [[./painting/aivazovsky.org][Ivan Konstantinovich Aivazovsky 1817.07.29 - 1900.05.05]]
 
 [[./painting/courbet.org][Gustave Courbet 1819.06.10 - 1877.12.31]]

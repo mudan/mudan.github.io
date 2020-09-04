@@ -1,0 +1,69 @@
+#+TITLE:    Jean-François Millet
+#+OPTIONS: num:nil
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="../emacs-book.css" />
+
+# C-c C-x C-v (org-toggle-inline-images)
+
+让-弗朗索瓦·米勒 1814.10.04 - 1875.01.20
+
+#+ATTR_HTML: :width 650
+#+CAPTION: 肖像画
+[[./Jean-François-Millet.jpg]]
+
+法国巴比松派画家，出生于法国诺曼底半岛格鲁什村（Gruchy），耕农家庭之子；童年时曾帮助父亲在田间劳动，因父母忙于田里工作，祖母是他从小最亲近的人。1849年巴黎流行黑热病，米勒携家迁居到巴黎郊区枫丹白露附近的巴比松村，这时米勒已35岁。在巴比松村米勒结识了柯罗、卢梭、特罗容等画家，在这个穷困闭塞的乡村，米勒一住就是27年之久。米勒对大自然和农村生活有一种特殊的深厚感情，他早起晚归，上午在田间劳动，下午就在不大通光的小屋子里作画。米勒的生活异常困苦，但这并没有减弱他对艺术的酷爱和追求，他常常由于没钱买颜料就自己制造木炭条画素描。米勒爱生活、爱劳动、爱农民，他曾说过：“无论如何农民这个题材对于我是最合适的。”米勒在巴比松的第一幅代表作品是《播种者》，以后相继创作了《拾穗者》和《晚钟》等名作。他以写实手法描绘的乡村风俗画闻名法国画坛，被认为是写实主义艺术运动的参与者。罗曼·罗兰在所著的《米勒传》指出：“米勒，这位将全部精神灌注于永恒的意义胜过刹那的古典大师，从来就没有一位画家像他这般，将万物所归的大地给予如此雄壮又伟大的感觉与表现。”
+
+#+ATTR_HTML: :width 650
+#+CAPTION: The Winnower, 1848
+[[./Millet/1848 The Winnower.jpg]]
+
+#+ATTR_HTML: :width 650
+#+CAPTION: The Sower, 1850
+[[./Millet/1850 The Sower.jpg]]
+
+#+ATTR_HTML: :width 650
+#+CAPTION: Paysanne enfournant son pain, 1854
+[[./Millet/1854 Paysanne enfournant son pain.jpg]]
+
+#+ATTR_HTML: :width 1000
+#+CAPTION: The Potato Harvest, 1855
+[[./Millet/1855 The Potato Harvest.jpg]]
+
+#+ATTR_HTML: :width 1000
+#+CAPTION: Gleaners, 1857
+[[./Millet/1857 Gleaners.jpg]]
+
+#+ATTR_HTML: :width 1000
+#+CAPTION: L'Angélus, 1857
+[[./Millet/1857 L'Angélus.jpg]]
+
+#+ATTR_HTML: :width 1000
+#+CAPTION: The Sheepfold, Moonlight, 1860
+[[./Millet/1860 The Sheepfold, Moonlight.jpg]]
+
+#+ATTR_HTML: :width 650
+#+CAPTION: The Knitting Lesson, 1860
+[[./Millet/1860 The Knitting Lesson.jpg]]
+
+#+ATTR_HTML: :width 1000
+#+CAPTION: The Sower, 1865
+[[./Millet/1865 The Sower.jpg]]
+
+#+ATTR_HTML: :width 1000
+#+CAPTION: La fin de la journée;effect du soir, 1865-1867
+[[./Millet/1865 La fin de la journée;effect du soir.jpg]]
+
+#+ATTR_HTML: :width 1000
+#+CAPTION: Spring Landscape with Rainbow 1868-1873
+[[./Millet/1868 Spring Landscape with Rainbow.jpg]]
+
+#+ATTR_HTML: :width 650
+#+CAPTION: Femme coud à la lumière de la lampe, 1870-1872
+[[./Millet/1870 Femme coud à la lumière de la lampe.jpg]]
+
+#+ATTR_HTML: :width 1000
+#+CAPTION: L'Eglise de Gréville, 1871
+[[./Millet/1871 L'Eglise de Gréville.jpg]]
+
+#+ATTR_HTML: :width 1000
+#+CAPTION: Hunting Birds at Night, 1874
+[[./Millet/1874 Hunting Birds at Night.jpg]]
