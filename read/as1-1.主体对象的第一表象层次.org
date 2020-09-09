@@ -1,4 +1,4 @@
-#+TITLE: 主体对象的第一个层次 - 表象层次
+#+TITLE: 主体对象的第一表象层次
 #+OPTIONS: num:nil
 #+HTML_HEAD: <link rel="stylesheet" type="text/css" href="./emacs-book.css" />
 
