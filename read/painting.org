@@ -4,6 +4,9 @@
 
 # C-c C-x C-v (org-toggle-inline-images)
 
+
+[[./painting/rembrandt.org][Rembrandt Harmenszoon van Rijn 1606.07.15 - 1669.10.04]]
+
 [[./painting/friedrich.org][Caspar David Friedrich 1774.09.05 - 1840.05.07]]
 
 [[./painting./corot.org][Jean-Baptiste Camille Corot 1796.07.16 - 1875.02.22]]
