@@ -1,4 +1,4 @@
-#+TITLE: 以因果规律的形式而出现，因此称为关于生成的充足理由律
+#+TITLE: 以因果规律形式为据关于生成的充足理由律
 #+OPTIONS: num:nil
 #+HTML_HEAD: <link rel="stylesheet" type="text/css" href="./emacs-book.css" />
 
