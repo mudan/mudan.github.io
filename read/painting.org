@@ -20,3 +20,5 @@
 [[./painting/carlos.org][Carlos Sebastián Pedro Hubert de Haes 1826.01.27 - 1898.06.17]]
 
 [[./painting/levitan.org][Isaac Ilyich Levitan 1860.08.30 - 1900.07.22]]
+
+[[./painting/picasso.org][Pablo Ruiz Picasso 1881.10.25 - 1973.04.08]]

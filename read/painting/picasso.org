@@ -1,0 +1,74 @@
+#+TITLE:     Pablo Ruiz Picasso
+#+OPTIONS: num:nil
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="../emacs-book.css" />
+
+巴勃罗・鲁伊斯・毕加索 1881.10.25 - 1973.04.08
+
+
+#+ATTR_HTML: :width 600
+#+CAPTION: 肖像画
+[[./Pablo-Ruiz-Picasso.jpg]]
+
+西班牙著名的艺术家、画家、雕塑家、版画家、舞台设计师、作家和前法国共产党党员，出名于法国，和乔治・布拉克同为立体主义的创始者，是 20 世纪现代艺术的主要代表人物之一，遗作逾两万件。
+
+毕加索的作品通常被分为 4 个时期。时期的名称尚有争议，大致为 “蓝色时期”（1901 年－1904 年）、“粉红色时期”（1904 年－1906 年）、“ 黑人时期”（1907 年－1924 年）和 “晚期”（1946 年－1972 年）。
+
+蓝色时期毕加索受到在西班牙孤单的旅行与他的朋友卡洛斯・卡萨吉马斯的自杀影响，使得这一期间的画作常显现出阴郁的感觉。此时期的画作以蓝与蓝绿的色调为主，极少使用温暖的颜色。蓝色时期开始的确切时间据推测可能是在西班牙 1901 年的春季，也有可能是 1901 年下半在巴黎的日子。在这段时间，毕加索创作了许多描绘著骨瘦如柴的母亲与孩子的作品，用色阴暗，并有时以娼妓与乞丐作为主题。在卡萨吉马斯死后，1901 年秋季，毕加索画了几幅他的画像，并于 1903 年完成了生平最忧郁的作品《生命》（ La Vie ），现收藏于克里夫兰美术馆。
+
+粉红色时期开始于 1904 年，毕加索在巴黎遇见了一位为雕塑家及艺术家工作的模特儿费尔南德・奥利弗（Fernande Olivier），与其坠入爱河。毕加索受到与费尔南德之间的甜蜜关系影响，而大量使用鲜明、乐观的橘、粉红色系，题材多描绘马戏团的人们、杂技表演者与丑角，这成了毕加索的个人特色之一。而 1904 年被视为是蓝色时期与玫瑰时期之间的过渡期。
+
+黑人时期开始于 1906 年毕加索初次看到黑人的雕刻，受到莫大的感动。黑人原始、大胆、强烈的造型，给毕加索很大的刺激。1907 年亚维农的少女画作，成为他创造立体派风格的里程碑。毕加索的立体派，基本上不是纯美学的，是走向理性的、抽象的，将物体重新构成，组合，带给人更新、更深刻的感受。
+
+后期画注目于原始艺术，简化形象。1915-1920 年，画风一度转入写实。1930 年又明显的倾向于超现实主义。第二次世界大战时，毕加索作油画《格尔尼卡》抗议德、意法西斯对西班牙北部小镇格尔尼卡进行狂轰滥炸。这幅画是毕加索最著名的一幅以立体主义、现实主义和超现实主义手法相结合的抽象画，剧烈变形、扭曲和夸张的笔触以及几何彩块堆积、造型抽象，表现了痛苦、受难和兽性，表达了毕加索多种复杂的情感。
+
+#+ATTR_HTML: :width 700
+#+CAPTION: Casagemas dans cercueil, 1901
+[[./Picasso/1901 Casagemas dans cercueil.jpg]]
+
+#+ATTR_HTML: :width 600
+#+CAPTION: Le Gourmet, 1901
+[[./Picasso/1901 Le Gourmet.jpg]]
+
+#+ATTR_HTML: :width 1000
+#+CAPTION: The Blue Room, 1901
+[[./Picasso/1901 The Blue Room.jpg]]
+
+#+ATTR_HTML: :width 700
+#+CAPTION: Portrait of Jaime Sabartes, 1901
+[[./Picasso/1901 Portrait of Jaime Sabartes.jpg]]
+
+#+ATTR_HTML: :width 600
+#+CAPTION: Self-Portrait, 1901
+[[./Picasso/1901 Self-Portrait.jpg]]
+
+#+ATTR_HTML: :width 600
+#+CAPTION: Femme aux Bras Croisés, 1902
+[[./Picasso/1902 Femme aux Bras Croisés.jpg]]
+
+#+ATTR_HTML: :width 600
+#+CAPTION: Melancholy woman, 1902
+[[./Picasso/1902 Melancholy woman.jpg]]
+
+#+ATTR_HTML: :width 600
+#+CAPTION: Seller of gul, 1902
+[[./Picasso/1902 Seller of gul.jpg]]
+
+#+ATTR_HTML: :width 1000
+#+CAPTION: La Soupe, 1903
+[[./Picasso/1903 La Soupe.jpg]]
+
+#+ATTR_HTML: :width 600
+#+CAPTION: La Vie, 1903
+[[./Picasso/1903 La Vie.jpg]]
+
+#+ATTR_HTML: :width 750
+#+CAPTION: Portrait of seniora Soler, 1903
+[[./Picasso/1903 Portrait of seniora Soler.jpg]]
+
+#+ATTR_HTML: :width 600
+#+CAPTION: The Old Guitarist, 1904
+[[./Picasso/1904 The Old Guitarist.jpg]]
+
+#+ATTR_HTML: :width 600
+#+CAPTION: Girl on the ball, 1905
+[[./Picasso/1905 Girl on the ball.jpg]]
