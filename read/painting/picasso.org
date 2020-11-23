@@ -6,7 +6,7 @@
 
 
 #+ATTR_HTML: :width 600
-#+CAPTION: 肖像画
+#+CAPTION: Picasso in 1962
 [[./Pablo-Ruiz-Picasso.jpg]]
 
 西班牙著名的艺术家、画家、雕塑家、版画家、舞台设计师、作家和前法国共产党党员，出名于法国，和乔治・布拉克同为立体主义的创始者，是 20 世纪现代艺术的主要代表人物之一，遗作逾两万件。
@@ -24,6 +24,10 @@
 #+ATTR_HTML: :width 700
 #+CAPTION: Casagemas dans cercueil, 1901
 [[./Picasso/1901 Casagemas dans cercueil.jpg]]
+
+#+ATTR_HTML: :width 700
+#+CAPTION: Le Mort, 1901
+[[./Picasso/1901 Le Mort.jpg]]
 
 #+ATTR_HTML: :width 600
 #+CAPTION: Le Gourmet, 1901
