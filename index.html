@@ -3,12 +3,12 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2020-08-29 ���� 17:23 -->
+<!-- 2021-04-04 Sun 12:28 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Mudan note</title>
 <meta name="generator" content="Org mode" />
-<meta name="author" content="Mudan" />
+<meta name="author" content="mudan" />
 <style type="text/css">
  <!--/*--><![CDATA[/*><!--*/
   .title  { text-align: center;
@@ -40,7 +40,7 @@
   }
   pre.src {
     position: relative;
-    overflow: visible;
+    overflow: auto;
     padding-top: 1.2em;
   }
   pre.src:before {
@@ -52,7 +52,7 @@
     padding: 3px;
     border: 1px solid black;
   }
-  pre.src:hover:before { display: inline;}
+  pre.src:hover:before { display: inline; margin-top: 14px;}
   /* Languages per Org manual */
   pre.src-asymptote:before { content: 'Asymptote'; }
   pre.src-awk:before { content: 'Awk'; }
@@ -195,25 +195,23 @@
 </style>
 <link rel="stylesheet" type="text/css" href="emacs.css" />
 <script type="text/javascript">
-// @license magnet:?xt=urn:btih:1f739d935676111cfff4b4693e3816e664797050&amp;dn=gpl-3.0.txt GPL-v3-or-Later
+// @license magnet:?xt=urn:btih:e95b018ef3580986a04669f1b5879592219e2a7a&dn=public-domain.txt Public Domain
 <!--/*--><![CDATA[/*><!--*/
      function CodeHighlightOn(elem, id)
      {
        var target = document.getElementById(id);
        if(null != target) {
-         elem.cacheClassElem = elem.className;
-         elem.cacheClassTarget = target.className;
-         target.className = "code-highlighted";
-         elem.className   = "code-highlighted";
+         elem.classList.add("code-highlighted");
+         target.classList.add("code-highlighted");
        }
      }
      function CodeHighlightOff(elem, id)
      {
        var target = document.getElementById(id);
-       if(elem.cacheClassElem)
-         elem.className = elem.cacheClassElem;
-       if(elem.cacheClassTarget)
-         target.className = elem.cacheClassTarget;
+       if(null != target) {
+         elem.classList.remove("code-highlighted");
+         target.classList.remove("code-highlighted");
+       }
      }
     /*]]>*///-->
 // @license-end
@@ -230,9 +228,9 @@
 <a href="./write/xh-rz.html">2016 - 2017年日记 个人基本经验的基本认知杂录</a>
 </p>
 
-<div id="outline-container-orgce161e7" class="outline-2">
-<h2 id="orgce161e7">Read</h2>
-<div class="outline-text-2" id="text-orgce161e7">
+<div id="outline-container-orga3347b7" class="outline-2">
+<h2 id="orga3347b7">Read</h2>
+<div class="outline-text-2" id="text-orga3347b7">
 <p>
 <a href="./read/dx.html">大学注疏摘录</a>
 </p>
@@ -242,7 +240,7 @@
 </p>
 
 <p>
-<a href="./read/mz.html">孟子·告子上下/尽心上下 注疏摘录</a>
+<a href="./read/mz.pdf">孟子·告子上下/盡心上下 註疏摘抄 PDF</a>
 </p>
 
 <p>
@@ -258,7 +256,11 @@
 </p>
 
 <p>
-<a href="./read/painting.html">名画览 暂空</a>
+<a href="./read/painting.html">名画览</a>
+</p>
+
+<p>
+<a href="./read/howard-marks.pdf">霍华德・马克斯备忘录 PDF</a>
 </p>
 
 <p>
@@ -267,9 +269,9 @@
 </div>
 </div>
 
-<div id="outline-container-org1d44bf3" class="outline-2">
-<h2 id="org1d44bf3">Emacs</h2>
-<div class="outline-text-2" id="text-org1d44bf3">
+<div id="outline-container-orgef9a6e5" class="outline-2">
+<h2 id="orgef9a6e5">Emacs</h2>
+<div class="outline-text-2" id="text-orgef9a6e5">
 <p>
 <a href="./Emacs/The_Org_Manual/The_Org_Manual.html">The Org Manual 笔记</a>
 </p>
@@ -280,9 +282,9 @@
 </div>
 </div>
 
-<div id="outline-container-org4face2e" class="outline-2">
-<h2 id="org4face2e">Linux</h2>
-<div class="outline-text-2" id="text-org4face2e">
+<div id="outline-container-org0cfc9a5" class="outline-2">
+<h2 id="org0cfc9a5">Linux</h2>
+<div class="outline-text-2" id="text-org0cfc9a5">
 <p>
 <a href="./Linux/tips.html">Linux Tips</a>
 </p>
@@ -294,8 +296,8 @@
 </div>
 </div>
 <div id="postamble" class="status">
-<p class="author">Author: Mudan</p>
-<p class="date">Created: 2020-08-29 ���� 17:23</p>
+<p class="author">Author: mudan</p>
+<p class="date">Created: 2021-04-04 Sun 12:28</p>
 </div>
 </body>
 </html>
