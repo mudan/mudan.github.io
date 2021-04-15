@@ -3,23 +3,30 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<title>大學</title>
-<!-- 2018-01-12 周五 16:10 -->
-<meta  http-equiv="Content-Type" content="text/html;charset=utf-8" />
-<meta  name="generator" content="Org-mode" />
-<meta  name="author" content="Mudan" />
+<!-- 2021-04-15 Thu 22:11 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>大學註疏摘抄</title>
+<meta name="generator" content="Org mode" />
+<meta name="author" content="mudan" />
 <style type="text/css">
  <!--/*--><![CDATA[/*><!--*/
-  .title  { text-align: center; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
   .todo   { font-family: monospace; color: red; }
-  .done   { color: green; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
   .tag    { background-color: #eee; font-family: monospace;
             padding: 2px; font-size: 80%; font-weight: normal; }
   .timestamp { color: #bebebe; }
   .timestamp-kwd { color: #5f9ea0; }
-  .right  { margin-left: auto; margin-right: 0px;  text-align: right; }
-  .left   { margin-left: 0px;  margin-right: auto; text-align: left; }
-  .center { margin-left: auto; margin-right: auto; text-align: center; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
   .underline { text-decoration: underline; }
   #postamble p, #preamble p { font-size: 90%; margin: .2em; }
   p.verse { margin-left: 3%; }
@@ -33,7 +40,7 @@
   }
   pre.src {
     position: relative;
-    overflow: visible;
+    overflow: auto;
     padding-top: 1.2em;
   }
   pre.src:before {
@@ -45,31 +52,128 @@
     padding: 3px;
     border: 1px solid black;
   }
-  pre.src:hover:before { display: inline;}
-  pre.src-sh:before    { content: 'sh'; }
-  pre.src-bash:before  { content: 'sh'; }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
   pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
-  pre.src-R:before     { content: 'R'; }
-  pre.src-perl:before  { content: 'Perl'; }
-  pre.src-java:before  { content: 'Java'; }
-  pre.src-sql:before   { content: 'SQL'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
 
   table { border-collapse:collapse; }
   caption.t-above { caption-side: top; }
   caption.t-bottom { caption-side: bottom; }
   td, th { vertical-align:top;  }
-  th.right  { text-align: center;  }
-  th.left   { text-align: center;   }
-  th.center { text-align: center; }
-  td.right  { text-align: right;  }
-  td.left   { text-align: left;   }
-  td.center { text-align: center; }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
   dt { font-weight: bold; }
-  .footpara:nth-child(2) { display: inline; }
-  .footpara { display: block; }
+  .footpara { display: inline; }
   .footdef  { margin-bottom: 1em; }
   .figure { padding: 1em; }
   .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
   .inlinetask {
     padding: 10px;
     border: 2px solid gray;
@@ -86,78 +190,55 @@
     { font-size: 10px; font-weight: bold; white-space: nowrap; }
   .org-info-js_search-highlight
     { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
   /*]]>*/-->
 </style>
 <link rel="stylesheet" type="text/css" href="./emacs.css" />
 <script type="text/javascript">
-/*
-@licstart  The following is the entire license notice for the
-JavaScript code in this tag.
-
-Copyright (C) 2012-2013 Free Software Foundation, Inc.
-
-The JavaScript code in this tag is free software: you can
-redistribute it and/or modify it under the terms of the GNU
-General Public License (GNU GPL) as published by the Free Software
-Foundation, either version 3 of the License, or (at your option)
-any later version.  The code is distributed WITHOUT ANY WARRANTY;
-without even the implied warranty of MERCHANTABILITY or FITNESS
-FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
-
-As additional permission under GNU GPL version 3 section 7, you
-may distribute non-source (e.g., minimized or compacted) forms of
-that code without the copy of the GNU GPL normally required by
-section 4, provided you include this license notice and a URL
-through which recipients can access the Corresponding Source.
-
-
-@licend  The above is the entire license notice
-for the JavaScript code in this tag.
-*/
+// @license magnet:?xt=urn:btih:e95b018ef3580986a04669f1b5879592219e2a7a&dn=public-domain.txt Public Domain
 <!--/*--><![CDATA[/*><!--*/
- function CodeHighlightOn(elem, id)
- {
-   var target = document.getElementById(id);
-   if(null != target) {
-     elem.cacheClassElem = elem.className;
-     elem.cacheClassTarget = target.className;
-     target.className = "code-highlighted";
-     elem.className   = "code-highlighted";
-   }
- }
- function CodeHighlightOff(elem, id)
- {
-   var target = document.getElementById(id);
-   if(elem.cacheClassElem)
-     elem.className = elem.cacheClassElem;
-   if(elem.cacheClassTarget)
-     target.className = elem.cacheClassTarget;
- }
-/*]]>*///-->
+     function CodeHighlightOn(elem, id)
+     {
+       var target = document.getElementById(id);
+       if(null != target) {
+         elem.classList.add("code-highlighted");
+         target.classList.add("code-highlighted");
+       }
+     }
+     function CodeHighlightOff(elem, id)
+     {
+       var target = document.getElementById(id);
+       if(null != target) {
+         elem.classList.remove("code-highlighted");
+         target.classList.remove("code-highlighted");
+       }
+     }
+    /*]]>*///-->
+// @license-end
 </script>
 </head>
 <body>
 <div id="content">
-<h1 class="title">大學</h1>
+<h1 class="title">大學註疏摘抄</h1>
 <div id="table-of-contents">
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#sec-1">經一章</a></li>
-<li><a href="#sec-2">傳第一章</a></li>
-<li><a href="#sec-3">傳第二章</a></li>
-<li><a href="#sec-4">傳第三章</a></li>
-<li><a href="#sec-5">傳第四章</a></li>
-<li><a href="#sec-6">傳第五章</a></li>
-<li><a href="#sec-7">傳第六章</a></li>
-<li><a href="#sec-8">傳第七章</a></li>
-<li><a href="#sec-9">傳第八章</a></li>
-<li><a href="#sec-10">傳第九章</a></li>
-<li><a href="#sec-11">傳第十章</a></li>
-<li><a href="#sec-12">大學章句序.朱熹</a></li>
-<li><a href="#sec-13">大學問.王守仁</a></li>
-<li><a href="#sec-14">小學之教.胡渭</a></li>
-<li><a href="#sec-15">大學之教.胡渭</a></li>
+<li><a href="#org05c61e0">經一章</a></li>
+<li><a href="#org4179f0f">傳第一章</a></li>
+<li><a href="#orgf245409">傳第二章</a></li>
+<li><a href="#org69ca91c">傳第三章</a></li>
+<li><a href="#org891d00c">傳第四章</a></li>
+<li><a href="#org54b0305">傳第五章</a></li>
+<li><a href="#org54b0dfd">傳第六章</a></li>
+<li><a href="#orgebf7798">傳第七章</a></li>
+<li><a href="#org31817d1">傳第八章</a></li>
+<li><a href="#orgc779071">傳第九章</a></li>
+<li><a href="#org156d362">傳第十章</a></li>
+<li><a href="#org63a617f">大學章句序.朱熹</a></li>
+<li><a href="#org1f35f65">大學問.王守仁</a></li>
+<li><a href="#org4450e3f">小學之教.胡渭</a></li>
+<li><a href="#org171d593">大學之教.胡渭</a></li>
 </ul>
 </div>
 </div>
@@ -169,9 +250,9 @@ for the JavaScript code in this tag.
 鄭曉曰：「《大学》一篇初在《戴記》中，程子始表章，因而更定之，朱子為之章句，今傳習者是也。漢大司農鄭玄所註，唐国子祭酒孔頴達所疏，皆古本也。」
 </p>
 
-<div id="outline-container-sec-1" class="outline-2">
-<h2 id="sec-1">經一章</h2>
-<div class="outline-text-2" id="text-1">
+<div id="outline-container-org05c61e0" class="outline-2">
+<h2 id="org05c61e0">經一章</h2>
+<div class="outline-text-2" id="text-org05c61e0">
 <p>
 鄭子曰：「大學者，以其記博學，可以爲政也。」
 </p>
@@ -224,12 +305,10 @@ for the JavaScript code in this tag.
 <i>史伯璿《大学管窥》：</i>
 </p>
 
-<p>
-<i>當然而未至於極便是有不當然者雜於其中，天理而未盡其極便是有人欲雜於其中。當然善也，九分當然有一分不當然，善未得為至也。天理善也，九分天理有一分人欲亦善而未至也。</i>
-</p>
-
-<p>
-<i>只認『虛靈不昧』底於『具眾理』，『應萬事』者皆不知也，固是無用又何嘗成體。</i>
+<p class="verse">
+<i>當然而未至於極便是有不當然者雜於其中，天理而未盡其極便是有人欲雜於其中。當然善也，九分當然有一分不當然，善未得為至也。天理善也，九分天理有一分人欲亦善而未至也。</i><br />
+<br />
+<i>只認『虛靈不昧』底於『具眾理』，『應萬事』者皆不知也，固是無用又何嘗成體。</i><br />
 </p>
 
 <blockquote>
@@ -242,20 +321,14 @@ for the JavaScript code in this tag.
 朱熹《大學或問》：
 </p>
 
-<p>
-良心便是明德。
-</p>
-
-<p>
-一念竦然自覺其非，便是明之之端。
-</p>
-
-<p>
-明德而不能推之以新民可謂自私……須當以及人，使各明其德，豈可說我自會了，我自樂之，不與人共。
-</p>
-
-<p>
-至善不是明德外別有所謂，只就明德中到極處便是。
+<p class="verse">
+良心便是明德。<br />
+<br />
+一念竦然自覺其非，便是明之之端。<br />
+<br />
+明德而不能推之以新民可謂自私……須當以及人，使各明其德，豈可說我自會了，我自樂之，不與人共。<br />
+<br />
+至善不是明德外別有所謂，只就明德中到極處便是。<br />
 </p>
 
 <blockquote>
@@ -276,11 +349,7 @@ for the JavaScript code in this tag.
 </p>
 
 <p>
-金履祥《大學疏義》：
-</p>
-
-<p>
-古者上自王公，下至庶人之子弟，年八歲則皆入小學，及其十有五年則皆入大學。八歲者，小子也，以其爲小子之學，故謂之小學。十五則大人也，以其爲大人之學，故謂之大學。小學者，養其良心而謹其學業也，大學者，充其知識而措諸事業也。
+金履祥《大學疏義》：古者上自王公，下至庶人之子弟，年八歲則皆入小學，及其十有五年則皆入大學。八歲者，小子也，以其爲小子之學，故謂之小學。十五則大人也，以其爲大人之學，故謂之大學。小學者，養其良心而謹其學業也，大學者，充其知識而措諸事業也。
 </p>
 
 <blockquote>
@@ -345,20 +414,14 @@ for the JavaScript code in this tag.
 朱熹《大學或問》：
 </p>
 
-<p>
-定以理言故曰有，靜以心言故曰能。
-</p>
-
-<p>
-定靜之說，定是理，靜在心，既定於理心便會靜，若不定於理則此心只是東走西走。
-</p>
-
-<p>
-靜是就心止說，安是就身上說。
-</p>
-
-<p>
-知止是知事事物物各有其理，到慮而後能得處便是得所以處事之理。
+<p class="verse">
+定以理言故曰有，靜以心言故曰能。<br />
+<br />
+定靜之說，定是理，靜在心，既定於理心便會靜，若不定於理則此心只是東走西走。<br />
+<br />
+靜是就心止說，安是就身上說。<br />
+<br />
+知止是知事事物物各有其理，到慮而後能得處便是得所以處事之理。<br />
 </p>
 
 <p>
@@ -452,6 +515,7 @@ for the JavaScript code in this tag.
 朱熹曰：「吾聞之敬之一字，聖學所以成始而成終者也。」
 </p>
 </blockquote>
+
 <p>
 <i>大學之教是承小學做來。古者八歲入小學，教之灑掃應對進退等許多節目，皆是持敬之事。及至十有五年入大學，此時持敬工夫已熟，所以收其放心涵養本原。</i>
 </p>
@@ -460,12 +524,10 @@ for the JavaScript code in this tag.
 金履祥《大學疏義》：
 </p>
 
-<p>
-所謂意者心之所發也者，蓋有心則必有意。心之本體固靜正，而意之所向有善惡，惟夫意之所發不實於善而每容邪惡於其間，則心始不能全其本體之正矣，故欲誠其意者先正其心也，而曰『欲正其心者，先誠其意』，何哉？蓋心無形影，未易捉摸，人之所以治其心者亦惟於其發動處着工夫耳。
-</p>
-
-<p>
-誠意者舉其萌動之時言之也，正心者以其平時全體言之也。萌動之際故當致其好惡自慊之實，而平時全體未嘗可無存養密察之功，特誠意之功未加則念慮混淆，意向未實而存養密察之功非惟不可加，抑亦不能加耳，此所以曰『欲正其心者，先誠其意』也。
+<p class="verse">
+所謂意者心之所發也者，蓋有心則必有意。心之本體固靜正，而意之所向有善惡，惟夫意之所發不實於善而每容邪惡於其間，則心始不能全其本體之正矣，故欲誠其意者先正其心也，而曰『欲正其心者，先誠其意』，何哉？蓋心無形影，未易捉摸，人之所以治其心者亦惟於其發動處着工夫耳。<br />
+<br />
+誠意者舉其萌動之時言之也，正心者以其平時全體言之也。萌動之際故當致其好惡自慊之實，而平時全體未嘗可無存養密察之功，特誠意之功未加則念慮混淆，意向未實而存養密察之功非惟不可加，抑亦不能加耳，此所以曰『欲正其心者，先誠其意』也。<br />
 </p>
 
 <p>
@@ -524,16 +586,12 @@ for the JavaScript code in this tag.
 朱熹《大學或問》：
 </p>
 
-<p>
-致知者理在物而推吾之知以知之也，知至者理雖在物而吾心之知已得其極也。
-</p>
-
-<p>
-致知，知之始。意誠，行之始。
-</p>
-
-<p>
-正心如戒懼不睹不聞，誠意如謹獨，又曰由小而大，意小心大。
+<p class="verse">
+致知者理在物而推吾之知以知之也，知至者理雖在物而吾心之知已得其極也。<br />
+<br />
+致知，知之始。意誠，行之始。<br />
+<br />
+正心如戒懼不睹不聞，誠意如謹獨，又曰由小而大，意小心大。<br />
 </p>
 
 <p>
@@ -590,30 +648,26 @@ for the JavaScript code in this tag.
 金履祥《大學疏義》：故嘗謂大學八事合言之爲兩節，而就中析之又爲四節。蓋自修身以上固一節也，然格物致知則窮此理，誠意正心修身則體此理也，齊家以下固一節也，然家則所厚，國與天下則所薄也。
 </p>
 
-<hr  />
+<hr />
 
 <p>
 孔穎逹疏：
 </p>
 
-<p>
-此經大學之道，在於明明徳，在於親民，在止於至善。積徳而行，則近於道也。
-</p>
-
-<p>
-『在明明徳』者，言大學之道在於章明己之光明之徳，謂身有明徳而更張顯之，此其一也。『在親民』者，言大學之道在於親愛於民，是其二也。『在止於至善』者，言大學之道在止處於至善之行，此其三也。言大學之道在於此三事矣。
+<p class="verse">
+此經大學之道，在於明明徳，在於親民，在止於至善。積徳而行，則近於道也。<br />
+<br />
+『在明明徳』者，言大學之道在於章明己之光明之徳，謂身有明徳而更張顯之，此其一也。『在親民』者，言大學之道在於親愛於民，是其二也。『在止於至善』者，言大學之道在止處於至善之行，此其三也。言大學之道在於此三事矣。<br />
 </p>
 
 <p>
 朱熹《大學章句》：
 </p>
 
-<p>
-右經一章，蓋孔子之言，而曾子述之。凡二百五字。其傳十章，則曾子之意而門人記之也。舊本頗有錯簡，今因程子所定，而更考經文，別為序次如左。
-</p>
-
-<p>
-凡千五百四十六字。凡傳文，雜引經傳，若無統紀，然文理接續，血脈貫通，深淺始終，至為精密。熟讀詳味，久當見之，今不盡釋也。
+<p class="verse">
+右經一章，蓋孔子之言，而曾子述之。凡二百五字。其傳十章，則曾子之意而門人記之也。舊本頗有錯簡，今因程子所定，而更考經文，別為序次如左。<br />
+<br />
+凡千五百四十六字。凡傳文，雜引經傳，若無統紀，然文理接續，血脈貫通，深淺始終，至為精密。熟讀詳味，久當見之，今不盡釋也。<br />
 </p>
 
 <p>
@@ -621,14 +675,14 @@ for the JavaScript code in this tag.
 </p>
 
 <p>
-<a href="#sec-13">大學問.王守仁</a>
+<a href="#org1f35f65">大學問.王守仁</a>
 </p>
 </div>
 </div>
 
-<div id="outline-container-sec-2" class="outline-2">
-<h2 id="sec-2">傳第一章</h2>
-<div class="outline-text-2" id="text-2">
+<div id="outline-container-org4179f0f" class="outline-2">
+<h2 id="org4179f0f">傳第一章</h2>
+<div class="outline-text-2" id="text-org4179f0f">
 <p>
 <b>◎　康誥曰：「克明德。」</b>
 </p>
@@ -707,18 +761,10 @@ for the JavaScript code in this tag.
 朱熹《大學章句》：結所引書，皆言自明己德之意。
 </p>
 
-<hr  />
+<hr />
 
 <p>
-朱熹《大學章句》：
-</p>
-
-<p>
-傳之首章釋明明德。
-</p>
-
-<p>
-此通下三章至「止於信」，舊本誤在「沒世不忘」之下。
+朱熹《大學章句》：傳之首章釋明明德。此通下三章至「止於信」，舊本誤在「沒世不忘」之下。
 </p>
 
 <p>
@@ -731,9 +777,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-3" class="outline-2">
-<h2 id="sec-3">傳第二章</h2>
-<div class="outline-text-2" id="text-3">
+<div id="outline-container-orgf245409" class="outline-2">
+<h2 id="orgf245409">傳第二章</h2>
+<div class="outline-text-2" id="text-orgf245409">
 <p>
 <b>◎　湯之盤銘曰：「苟日新，日日新，又日新。」</b>
 </p>
@@ -823,25 +869,17 @@ for the JavaScript code in this tag.
 許謙《讀大學業說》：極字本義是屋棟，借以爲至高、至中之喻，今匝角亭子之棟最可見，故曰至極之義。
 </p>
 
-<hr  />
+<hr />
 
 <p>
-朱熹《大學章句》：
-</p>
-
-<p>
-自新新民，皆欲止於至善也。
-</p>
-
-<p>
-傳之二章釋新民。
+朱熹《大學章句》：自新新民，皆欲止於至善也。傳之二章釋新民。
 </p>
 </div>
 </div>
 
-<div id="outline-container-sec-4" class="outline-2">
-<h2 id="sec-4">傳第三章</h2>
-<div class="outline-text-2" id="text-4">
+<div id="outline-container-org69ca91c" class="outline-2">
+<h2 id="org69ca91c">傳第三章</h2>
+<div class="outline-text-2" id="text-org69ca91c">
 <p>
 <b>◎　詩云：「邦畿千里，惟民所止。」</b>
 </p>
@@ -985,25 +1023,17 @@ for the JavaScript code in this tag.
 陳天祥《大學辨疑》：君子以位言，小人以民言。居位者得以進舉其才德之賢是謂『賢其賢』也，得以周瞻其骨肉之親是謂『親其親』也。爲民者得以稱遂其溫飽之樂是謂『樂其樂』也，得以保有其衣食之利是謂『利其利』也。
 </p>
 
-<hr  />
+<hr />
 
 <p>
-朱熹《大學章句》：
-</p>
-
-<p>
-傳之三章釋止於至善。
-</p>
-
-<p>
-此章內自引淇澳詩以下，舊本誤在誠意章下。
+朱熹《大學章句》：傳之三章釋止於至善。此章內自引淇澳詩以下，舊本誤在誠意章下。
 </p>
 </div>
 </div>
 
-<div id="outline-container-sec-5" class="outline-2">
-<h2 id="sec-5">傳第四章</h2>
-<div class="outline-text-2" id="text-5">
+<div id="outline-container-org891d00c" class="outline-2">
+<h2 id="org891d00c">傳第四章</h2>
+<div class="outline-text-2" id="text-org891d00c">
 <p>
 <b>◎　子曰：「聽訟，吾猶人也，必也使無訟乎。」無情者不得盡其辭。大畏民志，此謂知本。</b>
 </p>
@@ -1042,21 +1072,17 @@ for the JavaScript code in this tag.
 王夫之《禮記章句》：先以功言後以效言，不可舍本而求其末以圖效之大，而本之既先亦非無事於末而末自治，讀者當以意通之。天下之大、民事之眾非可盡如訟之可無也，傳亦言本末相通之理而已。
 </p>
 
-<hr  />
+<hr />
 
 <p>
-朱熹《大學章句》：
-</p>
-
-<p>
-傳之四章釋本末。此章舊本誤在「止於信」下。
+朱熹《大學章句》：傳之四章釋本末。此章舊本誤在「止於信」下。
 </p>
 </div>
 </div>
 
-<div id="outline-container-sec-6" class="outline-2">
-<h2 id="sec-6">傳第五章</h2>
-<div class="outline-text-2" id="text-6">
+<div id="outline-container-org54b0305" class="outline-2">
+<h2 id="org54b0305">傳第五章</h2>
+<div class="outline-text-2" id="text-org54b0305">
 <p>
 <b>◎　此謂知本，</b>
 </p>
@@ -1073,18 +1099,10 @@ for the JavaScript code in this tag.
 朱熹《大學章句》：此句之上別有闕文，此特其結語耳。
 </p>
 
-<hr  />
+<hr />
 
 <p>
-朱熹《大學章句》：
-</p>
-
-<p>
-傳之五章蓋釋格物、致知之義，而今亡矣。
-</p>
-
-<p>
-此章舊本通下章，誤在經文之下。
+朱熹《大學章句》：傳之五章蓋釋格物、致知之義，而今亡矣。此章舊本通下章，誤在經文之下。
 </p>
 
 <blockquote>
@@ -1117,12 +1135,10 @@ for the JavaScript code in this tag.
 胡渭《大學翼真》：
 </p>
 
-<p>
-《大學》所謂本者以綱領言之則明德爲本、新民爲末，以條目言之則修身爲本、家國天下爲末，若至善爲本，將以何爲末乎？至善即天命之性，《中庸》以爲中者，天下之大本，大學無此義，不可附會其說，以知性爲知本也。
-</p>
-
-<p>
-崔氏謂格物之傳寓止至善傳中而非逸簡……然二句作何安頓，斯又崔氏之所未詳也。廣德夏君雨蒼曰『此當在與國人交止於信之下』，余聞之豁然……而思之『知本』與『知至』絕無干涉，『知本』當爲『知止』之譌，若讀『知本』曰『知止』而移置此二句在『止於信』之下則錯簡正而文義亦順，以是始知『君子無所不用其極』乃畧釋『在止於至善』句，而『邦幾』一章復詳釋之。
+<p class="verse">
+《大學》所謂本者以綱領言之則明德爲本、新民爲末，以條目言之則修身爲本、家國天下爲末，若至善爲本，將以何爲末乎？至善即天命之性，《中庸》以爲中者，天下之大本，大學無此義，不可附會其說，以知性爲知本也。<br />
+<br />
+崔氏謂格物之傳寓止至善傳中而非逸簡……然二句作何安頓，斯又崔氏之所未詳也。廣德夏君雨蒼曰『此當在與國人交止於信之下』，余聞之豁然……而思之『知本』與『知至』絕無干涉，『知本』當爲『知止』之譌，若讀『知本』曰『知止』而移置此二句在『止於信』之下則錯簡正而文義亦順，以是始知『君子無所不用其極』乃畧釋『在止於至善』句，而『邦幾』一章復詳釋之。<br />
 </p>
 
 <p>
@@ -1131,9 +1147,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-7" class="outline-2">
-<h2 id="sec-7">傳第六章</h2>
-<div class="outline-text-2" id="text-7">
+<div id="outline-container-org54b0dfd" class="outline-2">
+<h2 id="org54b0dfd">傳第六章</h2>
+<div class="outline-text-2" id="text-org54b0dfd">
 <p>
 <b>◎　所謂誠其意者，毋自欺也，如惡惡臭，如好好色，此之謂自謙，故君子必慎其獨也。</b>
 </p>
@@ -1172,12 +1188,10 @@ for the JavaScript code in this tag.
 金履祥《大學疏義》：
 </p>
 
-<p>
-格物者知之始，誠意者行之始，故格物致知者道學之首而誠意者自修之首也。知及之而行之有不實則終不能有諸己矣，故自修者必以誠意爲首務焉。
-</p>
-
-<p>
-凡昭明有人之地而己心一念之發皆獨也，是則自知而已而豈人之所能知哉。
+<p class="verse">
+格物者知之始，誠意者行之始，故格物致知者道學之首而誠意者自修之首也。知及之而行之有不實則終不能有諸己矣，故自修者必以誠意爲首務焉。<br />
+<br />
+凡昭明有人之地而己心一念之發皆獨也，是則自知而已而豈人之所能知哉。<br />
 </p>
 
 <p>
@@ -1188,16 +1202,12 @@ for the JavaScript code in this tag.
 王夫之《讀四書大全說》：
 </p>
 
-<p>
-誠意者必不自欺而預禁自欺者亦誠意之法，互相為成也。
-</p>
-
-<p>
-苟以意為自，則欺不欺、慊不慊既一意矣，毋自欺而自謙又別立一意以治之，是其為兩意也明甚。若云以後意治前意，終是亡羊補牢之下策……所謂『自』者心也，欲脩其身者所正之心也。蓋心之正者志之持也，是以知其恆存乎中，善而非惡也。
-</p>
-
-<p>
-心之所存善而非惡，意之已動或有惡焉，以陵奪其素正之心則自欺矣。唯誠其意者充此心之善，以灌註乎所動之意而皆實，則吾所存之心周流滿愜而無有餒也，此之謂自謙也。<sub>意欺心，意謙心</sub>
+<p class="verse">
+誠意者必不自欺而預禁自欺者亦誠意之法，互相為成也。<br />
+<br />
+苟以意為自，則欺不欺、慊不慊既一意矣，毋自欺而自謙又別立一意以治之，是其為兩意也明甚。若云以後意治前意，終是亡羊補牢之下策……所謂『自』者心也，欲脩其身者所正之心也。蓋心之正者志之持也，是以知其恆存乎中，善而非惡也。<br />
+<br />
+心之所存善而非惡，意之已動或有惡焉，以陵奪其素正之心則自欺矣。唯誠其意者充此心之善，以灌註乎所動之意而皆實，則吾所存之心周流滿愜而無有餒也，此之謂自謙也。<sub>意欺心</sub>，意謙心<br />
 </p>
 
 <p>
@@ -1277,17 +1287,13 @@ for the JavaScript code in this tag.
 </p>
 
 <p>
-王夫之《讀四書大全說》：以心之不可欺而期於謙，則不得不誠其意，以使此心終始一致，正變一揆而無不慊於其正也。<sub>《中庸》所謂無惡於志</sub>
+王夫之《讀四書大全說》：以心之不可欺而期於謙，則不得不誠其意，以使此心終始一致，正變一揆而無不慊於其正也。_《中庸》所謂無惡於志
 </p>
 
-<hr  />
+<hr />
 
 <p>
-朱熹《大學章句》：
-</p>
-
-<p>
-傳之六章釋誠意。
+朱熹《大學章句》：傳之六章釋誠意。
 </p>
 
 <p>
@@ -1306,12 +1312,10 @@ for the JavaScript code in this tag.
 金履祥《大學疏義》：
 </p>
 
-<p>
-誠意一章大要：自欺是誠意之反說，自慊是誠意之正義，而謹獨是誠意之工夫，則所以無自欺而常自慊者也。
-</p>
-
-<p>
-其知之也糊塗則其行之也必苟且，其見之不真切則其爲之也必不痛快。然世固有知之而未嘗行之者，借曰其知之有未真然亦其意之不能實，故朱子又曰『然或己明而不謹乎，此則其所明又非己有，而無以爲進德之基』，蓋致知不過知之而已，誠意則是果然行之，乃爲君子之實地，故曰『進德之基』。
+<p class="verse">
+誠意一章大要：自欺是誠意之反說，自慊是誠意之正義，而謹獨是誠意之工夫，則所以無自欺而常自慊者也。<br />
+<br />
+其知之也糊塗則其行之也必苟且，其見之不真切則其爲之也必不痛快。然世固有知之而未嘗行之者，借曰其知之有未真然亦其意之不能實，故朱子又曰『然或己明而不謹乎，此則其所明又非己有，而無以爲進德之基』，蓋致知不過知之而已，誠意則是果然行之，乃爲君子之實地，故曰『進德之基』。<br />
 </p>
 
 <blockquote>
@@ -1326,9 +1330,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-8" class="outline-2">
-<h2 id="sec-8">傳第七章</h2>
-<div class="outline-text-2" id="text-8">
+<div id="outline-container-orgebf7798" class="outline-2">
+<h2 id="orgebf7798">傳第七章</h2>
+<div class="outline-text-2" id="text-orgebf7798">
 <p>
 <b>◎　所謂脩身在正其心者，身有所忿懥則不得其正，有所恐懼則不得其正，有所好樂則不得其正，有所憂患則不得其正。</b>
 </p>
@@ -1373,12 +1377,10 @@ for the JavaScript code in this tag.
 胡炳文《大學通》：
 </p>
 
-<p>
-『正其心』此正字是說直內之功夫，蓋謂心之用或有不正，不可不敬以直之也。『不得其正』此正字是說直內之本體，蓋謂心之本體無不正而人自失之也。曰『正其』，曰『其正』，自分體用心。
-</p>
-
-<p>
-夫喜怒哀懼之未發也不可先有期待之心，其將發也不可一有偏繫之心，其已發也不可猶有留滯之心。事之方來、念之方萌是省察時節，前念已過後事未來又是存養時節，存養者存此心本體之正，省察者惟恐此心之用或失之不正也。
+<p class="verse">
+『正其心』此正字是說直內之功夫，蓋謂心之用或有不正，不可不敬以直之也。『不得其正』此正字是說直內之本體，蓋謂心之本體無不正而人自失之也。曰『正其』，曰『其正』，自分體用心。<br />
+<br />
+夫喜怒哀懼之未發也不可先有期待之心，其將發也不可一有偏繫之心，其已發也不可猶有留滯之心。事之方來、念之方萌是省察時節，前念已過後事未來又是存養時節，存養者存此心本體之正，省察者惟恐此心之用或失之不正也。<br />
 </p>
 
 <p>
@@ -1409,18 +1411,16 @@ for the JavaScript code in this tag.
 方愨曰：「上一節說有心者之病，此一節說無心者之病，上一節說心不可有所主，此一節說心不可以無所主。不可有者，私主也。不可無者，存主也……中虛而有主宰者正心之藥方也。」
 </p>
 
-<hr  />
+<hr />
 
 <p>
 朱熹《大學章句》：
 </p>
 
-<p>
-傳之七章釋正心脩身。
-</p>
-
-<p>
-此亦承上章以起下章。蓋意誠則真無惡而實有善矣，所以能存是心以檢其身。然或但知誠意，而不能密察此心之存否，則又無以直內而脩身也。自此以下，並以舊文為正。
+<p class="verse">
+傳之七章釋正心脩身。<br />
+<br />
+此亦承上章以起下章。蓋意誠則真無惡而實有善矣，所以能存是心以檢其身。然或但知誠意，而不能密察此心之存否，則又無以直內而脩身也。自此以下，並以舊文為正。<br />
 </p>
 
 <p>
@@ -1429,9 +1429,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-9" class="outline-2">
-<h2 id="sec-9">傳第八章</h2>
-<div class="outline-text-2" id="text-9">
+<div id="outline-container-org31817d1" class="outline-2">
+<h2 id="org31817d1">傳第八章</h2>
+<div class="outline-text-2" id="text-org31817d1">
 <p>
 <b>◎　所謂齊其家在脩其身者，人之其所親愛而辟焉，之其所賤惡而辟焉，之其所畏敬而辟焉，之其所哀矜而辟焉，之其所慠惰而辟焉。故好而知其惡，惡而知其美者，天下鮮矣。</b>
 </p>
@@ -1480,7 +1480,7 @@ for the JavaScript code in this tag.
 朱熹《大學章句》：諺，俗語也。溺愛者不明，貪得者無厭，是則偏之為害，而家之所以不齊也。
 </p>
 
-<hr  />
+<hr />
 
 <p>
 朱熹《大學章句》：傳之八章釋脩身齊家。
@@ -1492,9 +1492,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-10" class="outline-2">
-<h2 id="sec-10">傳第九章</h2>
-<div class="outline-text-2" id="text-10">
+<div id="outline-container-orgc779071" class="outline-2">
+<h2 id="orgc779071">傳第九章</h2>
+<div class="outline-text-2" id="text-orgc779071">
 <p>
 <b>◎　所謂治國必先齊其家者，其家不可教而能教人者無之，故君子不出家而成教於國：孝者所以事君也，弟者所以事長也，慈者所以使眾也。</b>
 </p>
@@ -1585,12 +1585,10 @@ for the JavaScript code in this tag.
 朱熹《大學或問》：
 </p>
 
-<p>
-恕字之旨以如心爲義，蓋曰如治己之心以治人，如愛己之心以愛人，而非苟然姑息之謂也。
-</p>
-
-<p>
-以恕己之心恕人則是既不知自治其昏而遂推以及人，使其亦將如我之昏而後已也。
+<p class="verse">
+恕字之旨以如心爲義，蓋曰如治己之心以治人，如愛己之心以愛人，而非苟然姑息之謂也。<br />
+<br />
+以恕己之心恕人則是既不知自治其昏而遂推以及人，使其亦將如我之昏而後已也。<br />
 </p>
 
 <p>
@@ -1655,7 +1653,7 @@ for the JavaScript code in this tag.
 <i>陳淳曰：「古之人凡辭有盡而意無窮者多援詩以吟詠其餘意。」</i>
 </p>
 
-<hr  />
+<hr />
 
 <p>
 朱熹《大學章句》：傳之九章釋齊家治國。
@@ -1663,9 +1661,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-11" class="outline-2">
-<h2 id="sec-11">傳第十章</h2>
-<div class="outline-text-2" id="text-11">
+<div id="outline-container-org156d362" class="outline-2">
+<h2 id="org156d362">傳第十章</h2>
+<div class="outline-text-2" id="text-org156d362">
 <p>
 <b>◎　所謂平天下在治其國者：上老老而民興孝，上長長而民興弟，上恤孤而民不倍，是以君子有絜矩之道也。</b>
 </p>
@@ -1811,15 +1809,7 @@ for the JavaScript code in this tag.
 </p>
 
 <p>
-王夫之《讀四書大全說》：
-</p>
-
-<p>
-若夫慎之云者，臨其所事，揀夫不善而執夫善之謂也。
-</p>
-
-<p>
-德者行焉而有得於心之謂也，則凡行而有得者皆可謂之德矣。
+王夫之《讀四書大全說》：若夫慎之云者，臨其所事，揀夫不善而執夫善之謂也。德者行焉而有得於心之謂也，則凡行而有得者皆可謂之德矣。
 </p>
 
 <p>
@@ -1936,16 +1926,12 @@ for the JavaScript code in this tag.
 金履祥《大學疏義》：
 </p>
 
-<p>
-聖，通明也，此猶六德智仁聖義之聖，非大而化之之聖也。
-</p>
-
-<p>
-忌色曰妬，忌才曰媢嫉。
-</p>
-
-<p>
-能容者絜矩者也，不能容者不絜矩者也，絜矩者無人我之間，故能合天下之善，爲天下之利，不絜矩者便一己之私，故欲以一己之私而懷天下之善。
+<p class="verse">
+聖，通明也，此猶六德智仁聖義之聖，非大而化之之聖也。<br />
+<br />
+忌色曰妬，忌才曰媢嫉。<br />
+<br />
+能容者絜矩者也，不能容者不絜矩者也，絜矩者無人我之間，故能合天下之善，爲天下之利，不絜矩者便一己之私，故欲以一己之私而懷天下之善。<br />
 </p>
 
 <p>
@@ -2126,37 +2112,29 @@ for the JavaScript code in this tag.
 朱熹《大學章句》：「彼為善之」，此句上下，疑有闕文誤字。○自，由也，言由小人導之也。此一節，深明以利為利之害，而重言以結之，其丁寧之意切矣。
 </p>
 
-<hr  />
+<hr />
 
 <p>
-孔穎逹疏：
-</p>
-
-<p>
-但欲平天下，先須治國，治國事多，天下理廣，非一義可了，故廣而明之。言欲平天下，先須脩身，然後及物。自近至逺，自内至外，故初明『絜矩之道』，次明散財於人之事，次明用善人、逺惡人。此皆治國、治天下之綱，故㧾而詳悉說也。
+孔穎逹疏：但欲平天下，先須治國，治國事多，天下理廣，非一義可了，故廣而明之。言欲平天下，先須脩身，然後及物。自近至逺，自内至外，故初明『絜矩之道』，次明散財於人之事，次明用善人、逺惡人。此皆治國、治天下之綱，故㧾而詳悉說也。
 </p>
 
 <p>
 朱熹《大學章句》：
 </p>
 
-<p>
-傳之十章釋治國平天下。
-</p>
-
-<p>
-此章之義，務在與民同好惡而不專其利，皆推廣絜矩之意也。能如是，則親賢樂利各得其所，而天下平矣。
-</p>
-
-<p>
-凡傳十章：前四章統論綱領指趣，後六章細論條目功夫。其第五章乃明善之要，第六章乃誠身之本，在初學尤為當務之急，讀者不可以其近而忽之也。
+<p class="verse">
+傳之十章釋治國平天下。<br />
+<br />
+此章之義，務在與民同好惡而不專其利，皆推廣絜矩之意也。能如是，則親賢樂利各得其所，而天下平矣。<br />
+<br />
+凡傳十章：前四章統論綱領指趣，後六章細論條目功夫。其第五章乃明善之要，第六章乃誠身之本，在初學尤為當務之急，讀者不可以其近而忽之也。<br />
 </p>
 </div>
 </div>
 
-<div id="outline-container-sec-12" class="outline-2">
-<h2 id="sec-12">大學章句序.朱熹</h2>
-<div class="outline-text-2" id="text-12">
+<div id="outline-container-org63a617f" class="outline-2">
+<h2 id="org63a617f">大學章句序.朱熹</h2>
+<div class="outline-text-2" id="text-org63a617f">
 <p>
 大學之書，古之大學所以教人之法也。蓋自天降生民，則既莫不與之以仁義禮智之性矣。然其氣質之稟或不能齊，是以不能皆有以知其性之所有而全之也。一有聰明睿智能盡其性者出於其閒，則天必命之以為億兆之君師，使之治而教之，以復其性。此伏羲、神農、黃帝、堯、舜，所以繼天立極，而司徒之職、典樂之官所由設也。
 </p>
@@ -2187,9 +2165,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-13" class="outline-2">
-<h2 id="sec-13">大學問.王守仁</h2>
-<div class="outline-text-2" id="text-13">
+<div id="outline-container-org1f35f65" class="outline-2">
+<h2 id="org1f35f65">大學問.王守仁</h2>
+<div class="outline-text-2" id="text-org1f35f65">
 <blockquote>
 <p>
 《王文成年譜》：正德十三年七月刻古本大學，先生在龍場時疑朱子《大學章句》非聖門本旨，手錄古本，伏讀精思，始信聖人之學本簡易明白。其書止爲一篇原無經傳之分，格物本於誠意原無缺傳可補，以誠意爲主而爲格物致知之功故不必增敬字，以良知指示至善之本體故不必假以見聞，至是錄刻書成，旁爲之釋而引以敘。
@@ -2261,14 +2239,14 @@ for the JavaScript code in this tag.
 </blockquote>
 
 <p>
-<a href="#sec-2">傳第一章</a>
+<a href="#org4179f0f">傳第一章</a>
 </p>
 </div>
 </div>
 
-<div id="outline-container-sec-14" class="outline-2">
-<h2 id="sec-14">小學之教.胡渭</h2>
-<div class="outline-text-2" id="text-14">
+<div id="outline-container-org4450e3f" class="outline-2">
+<h2 id="org4450e3f">小學之教.胡渭</h2>
+<div class="outline-text-2" id="text-org4450e3f">
 <p>
 <i>摘自《大學翼真》</i>
 </p>
@@ -2455,9 +2433,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-sec-15" class="outline-2">
-<h2 id="sec-15">大學之教.胡渭</h2>
-<div class="outline-text-2" id="text-15">
+<div id="outline-container-org171d593" class="outline-2">
+<h2 id="org171d593">大學之教.胡渭</h2>
+<div class="outline-text-2" id="text-org171d593">
 <p>
 <i>摘自《大學翼真》</i>
 </p>
@@ -2714,10 +2692,8 @@ for the JavaScript code in this tag.
 </div>
 </div>
 <div id="postamble" class="status">
-<p class="author">Author: Mudan</p>
-<p class="date">Created: 2018-01-12 周五 16:10</p>
-<p class="creator"><a href="http://www.gnu.org/software/emacs/">Emacs</a> 25.3.1 (<a href="http://orgmode.org">Org</a> mode 8.2.10)</p>
-<p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
+<p class="author">Author: mudan</p>
+<p class="date">Created: 2021-04-15 Thu 22:11</p>
 </div>
 </body>
 </html>
