@@ -1,0 +1,139 @@
+body {
+  font-size: 100%;
+  font-family: Menlo, Consolas, monospace, "PT Sans Caption", "Microsoft YaHei", sans-serif;
+  margin: 15px 6% 10px 2%;
+  background: #fff;
+  line-height: 1.555;
+  text-justify: inter-ideographic;
+  padding: 2em;
+  font-size: 1.3rem;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -moz-font-feature-settings: "liga" on;
+}
+
+p {
+  line-height: 1.58;
+  letter-spacing: -0.003em;
+  color: rgba(0, 0, 0, .8);
+  margin-bottom: 1.3em;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 21px;
+  text-align: justify;
+  text-justify: inter-ideographic;
+  word-break: break-all; 
+}
+
+p a {
+  text-decoration: none;
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.6) 50%);
+  background-repeat: repeat-x;
+  background-size: 2px 2px;
+  background-position: 0 22px;
+}
+
+a {
+  color: rgba(0, 0, 0, .8) !important;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 700 !important;
+  font-style: normal;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  margin: 0.65em 0 0.5em;
+  font-weight: inherit;
+  line-height: 1.2;
+}
+
+h1 {
+  margin-top: 0;
+  font-size: 3.998em;
+}
+
+h2 {
+  font-size: 2.827em;
+}
+
+h3 {
+  font-size: 1.999em;
+}
+
+h4 {
+  font-size: 1.414em;
+}
+
+blockquote {
+  margin-left: 2em;
+  padding-left: 0.5em;
+  margin-right: 2em;
+  border-left: 3px solid #ddd;
+  font-style: normal;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 30px;
+  font-family: "Kaiti SC", Kaiti;
+}
+
+blockquote p {
+  font-style: normal;
+  margin-bottom: 0;
+}
+
+img{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#table-of-contents {
+    	font-size: 15pt;
+   	position: fixed;
+  	right: 0em;
+ 	top: 0em;
+    	background: white;
+    	-webkit-box-shadow: 0 0 1em #777777;
+    	-moz-box-shadow: 0 0 1em #777777;
+    	-webkit-border-bottom-left-radius: 5px;
+    	-moz-border-radius-bottomleft: 5px;
+    	text-align: right;
+/* ensure doesn't flow off the screen when expanded */
+    	max-height: 80%;
+    	overflow: auto;
+	}
+
+#table-of-contents h2 {
+      	font-size: 12pt;
+      	max-width: 9em;
+      	font-weight: normal;
+      	padding-left: 0.5em;
+      	padding-left: 0.5em;
+      	padding-top: 0.05em;
+      	padding-bottom: 0.05em;
+	}
+
+#table-of-contents #text-table-of-contents {
+      	display: none;
+      	text-align: left;
+	}
+
+#table-of-contents:hover #text-table-of-contents {
+      	display: block;
+      	padding: 0.5em;
+      	margin-top: -1.5em;
+	}

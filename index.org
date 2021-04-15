@@ -3,7 +3,9 @@
 #+OPTIONS: toc:nil num:nil
 #+HTML_HEAD: <link rel="stylesheet" type="text/css" href="emacs.css" />
 			   
-[[https://www.yuque.com/docs/share/bbf811f1-0e79-4c2e-866d-94bc174be071][心理的火 - 语雀文档]]
+[[./write/fire.org][心理的火]]
+
+[[./write/moon.org][月光]]
 
 [[./write/xh-rz.org][2016 - 2017年日记 个人基本经验的基本认知杂录]]
 
@@ -11,21 +13,21 @@
 
 [[./read/dx.org][大学注疏摘录]]
 
-[[./read/zy.pdf][中庸註釋摘抄 PDF]]
-
-[[./read/mz.pdf][孟子·告子上下/盡心上下 註疏摘抄 PDF]]
+[[./read/mz.org][孟子・告子上下 / 盡心上下 註疏摘抄]]
 
 [[./read/hg1.小逻辑-1817.org][小逻辑 1817 格奥尔格・威廉・弗里德里希・黑格尔]]
 
 [[./read/as1.充足理由律的四重根-1813.org][充足理由律的四重根 1813 亚瑟・叔本华]]
 
-[[./read/churchill/yygjsl.org][英语国家史略 温斯顿·丘吉尔]]
+[[./read/churchill/yygjsl.org][英语国家史略 温斯顿・丘吉尔]]
 
 [[./read/painting.org][名画览]]
 
+[[https://beta.workflowy.com/s/classical-music/jCY53vG51znxRFaQ][Classical music list in workflowy]]
+
 [[./read/howard-marks.pdf][霍华德・马克斯备忘录 PDF]]
 
-[[https://beta.workflowy.com/s/classical-music/jCY53vG51znxRFaQ][Classical music list in workflowy]]
+[[./read/barton-biggs.org][对冲基金风云录 巴顿・马比格斯]]
 
 * Emacs
 

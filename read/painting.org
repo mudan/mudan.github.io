@@ -9,7 +9,7 @@
 
 [[./painting/friedrich.org][Caspar David Friedrich 1774.09.05 - 1840.05.07]]
 
-[[./painting./corot.org][Jean-Baptiste Camille Corot 1796.07.16 - 1875.02.22]]
+[[./painting/corot.org][Jean-Baptiste Camille Corot 1796.07.16 - 1875.02.22]]
 
 [[./painting/millet.org][Jean-François Millet 1814.10.04 - 1875.01.20]]
 
