@@ -7,6 +7,8 @@
 
 [[./write/moon.org][月光]]
 
+[[./write/word.org][大杂烩 一点思考]]
+
 [[./write/xh-rz.org][2016 - 2017年日记 个人基本经验的基本认知杂录]]
 
 * Read
