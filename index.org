@@ -21,6 +21,8 @@
 
 [[./read/as1.充足理由律的四重根-1813.org][充足理由律的四重根 1813 亚瑟・叔本华]]
 
+[[./read/bismarck.org][金与铁 - 俾斯麦、布莱希罗德与德意志帝国的建立 弗里茨・斯特恩]]
+
 [[./read/churchill/yygjsl.org][英语国家史略 温斯顿・丘吉尔]]
 
 [[./read/painting.org][名画览]]
