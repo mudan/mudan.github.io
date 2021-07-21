@@ -2,6 +2,10 @@
 #+OPTIONS: toc:nil num:nil
 #+HTML_HEAD: <link rel="stylesheet" type="text/css" href="./emacs.css" />
 
+#+begin_center
+/找到文学的永恒，然后写诗歌的现代化。/
+#+end_center
+
 *1*
 
 #+begin_verse
@@ -288,4 +292,28 @@
 推推搡搡走出来，
 原来已经死了，
 眼前只有三个音箱。
+#+end_verse
+
+*13*
+
+#+begin_verse
+雨就这样下着，
+以为它要停，
+偏偏不止，
+反而越发倾盆大起来。
+
+想来意境还是美丽，
+有种酣畅淋漓，
+但又觉得要停了，
+急迫感觉和雨一起狂飙。
+
+突破限制，
+念想已经凶险，
+现实已经灾祸，
+那双手动起来。
+
+也许刹那的优雅，
+同样刹那的悲剧，
+只会记下痛苦，
+也要将自己表现欢乐。
 #+end_verse
