@@ -1,4 +1,4 @@
-#+TITLE:     Mudan note
+#+TITLE:     佚名随趣
 #+STARTUP: showall
 #+OPTIONS: toc:nil num:nil
 #+HTML_HEAD: <link rel="stylesheet" type="text/css" href="emacs.css" />
@@ -13,7 +13,7 @@
 
 [[./write/xh-rz.org][2016 - 2017年日记 个人基本经验的基本认知杂录]]
 
-* Read
+* 杂抄
 
 [[./read/dx.org][大學註疏摘抄]]
 
