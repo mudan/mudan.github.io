@@ -11,6 +11,7 @@
 
 #+begin_verse
 [[./write/watch-42.org][观景 - 42 逍遥说]]
+[[./write/watch-51.org][观景 - 51-...]]
 #+end_verse
 
 [[./write/word.org][大杂烩 一点思考]]
