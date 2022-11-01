@@ -1,4 +1,5 @@
 #+TITLE:     佚名随趣
+#+AUTHOR: 
 #+STARTUP: showall
 #+OPTIONS: toc:nil num:nil
 #+HTML_HEAD: <link rel="stylesheet" type="text/css" href="emacs.css" />
@@ -15,6 +16,8 @@
 #+end_verse
 
 [[./write/word.org][大杂烩 一点思考]]
+
+[[./write/say.org][古诗的狂想与乱语]]
 
 [[./write/xh-rz.org][2016 - 2017年日记 个人基本经验的基本认知杂录]]
 
