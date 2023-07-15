@@ -12,8 +12,9 @@
 
 #+begin_verse
 [[./write/watch-42.org][观景 - 42 逍遥说]]
-[[./write/watch-51.org][观景 - 51-...]]
+[[./write/watch-51.org][观景 - 51-67]]
 [[./write/watch-68.org][观景 - 68 山水动静]]
+[[./write/watch-69.org][观景 - 51-2、69-...]]
 #+end_verse
 
 [[./write/word.org][大杂烩 一点思考]]
