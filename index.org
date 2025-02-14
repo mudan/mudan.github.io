@@ -14,9 +14,10 @@
 [[./write/watch-42.org][观景 - 42 逍遥说]]
 [[./write/watch-51.org][观景 - 51-67]]
 [[./write/watch-68.org][观景 - 68 山水动静]]
-[[./write/watch-69.org][观景 - 51-2、69-...]]
+[[./write/watch-69.org][观景 - 51-2、69-88]]
 [[./write/watch-73.org][观景 - 73 一个男人]]
 [[./write/watch-77.org][观景 - 77 木槿还在吗]]
+[[./write/watch-89.org][观景 - 89 或许逍遥]]
 #+end_verse
 
 [[./write/word.org][大杂烩 一点思考]]
