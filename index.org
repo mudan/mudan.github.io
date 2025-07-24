@@ -18,6 +18,7 @@
 [[./write/watch-73.org][观景 - 73 一个男人]]
 [[./write/watch-77.org][观景 - 77 木槿还在吗]]
 [[./write/watch-89.org][观景 - 89 或许逍遥]]
+[[./write/watch-90.org][观景 - 51-3、90-...]]
 #+end_verse
 
 [[./write/word.org][大杂烩 一点思考]]

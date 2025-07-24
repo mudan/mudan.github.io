@@ -1,0 +1,32 @@
+#+TITLE:     观景
+#+AUTHOR: 
+#+OPTIONS: toc:nil num:nil
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="./emacs.css" />
+
+#+begin_center
+/如今语句浅唱低吟。/
+#+end_center
+
+*51-3*
+
+#+begin_verse
+用拇指与食指捏住太阳，
+漫天昏黄，
+中心一点刺目，
+人声人影徐徐变样。
+
+我回身走进主人书房，
+垒砌着书籍，
+点缀几张剪纸如画，
+还有阳光味道。
+
+余热在驱赶，
+呼唤也让人回到厅堂，
+晚宴已经摆出，
+落座后两位那样欢笑。
+
+于是也仿佛乐天开朗，
+主宾尽欢，
+偶尔不喜他俚语，
+而我也仅仅书匠。
+#+end_verse
